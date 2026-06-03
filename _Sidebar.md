@@ -11,6 +11,7 @@
 ---
 
 **Features**
+- [Data Studio](Data-Studio)
 - [Schemas](Schemas)
 - [Simulation Studio](Simulation-Studio)
 - [Model Library](Model-Library)
@@ -21,8 +22,8 @@
 
 **Working Together**
 - [Collaboration & Sharing](Collaboration-and-Sharing)
-- [Access Levels](Collaboration-and-Sharing#access-levels)
-- [Design Freeze](Collaboration-and-Sharing#design-freeze)
+- [Canvas Sharing](Collaboration-and-Sharing#canvas-access-levels)
+- [Publishing Externally](Collaboration-and-Sharing#publishing-for-external-access)
 
 ---
 

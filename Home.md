@@ -21,10 +21,12 @@
 1. Sign in at [protos.arismachina.com](https://protos.arismachina.com) with your Aris Machina account.
 2. Create or open a **Project**.
 3. Define your data structure using **[Schemas](Schemas)**.
-4. Run simulations in **[Simulation Studio](Simulation-Studio)**.
-5. Access prior knowledge and sources via the **[Knowledge Library](Knowledge-Library)**.
-6. Register reusable models in the **[Model Library](Model-Library)**.
-7. Use **[Copilot](Copilot)** at any step to accelerate your work.
+4. Create data documents and manage them in the **[Data Studio](Data-Studio)**.
+5. Build calculations and run simulations on the **Canvas** (accessed from the project home).
+6. Run individual physics models in **[Simulation Studio](Simulation-Studio)**.
+7. Access prior knowledge and sources via the **[Knowledge Library](Knowledge-Library)**.
+8. Register reusable models in the **[Model Library](Model-Library)**.
+9. Use **[Copilot](Copilot)** at any step to accelerate your work.
 
 ---
 
@@ -62,6 +64,16 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 ---
 
 ## Features at a Glance
+
+> These map to the left sidebar in Protos. **Design:** [Data Studio](Data-Studio), [Simulation Studio](Simulation-Studio). **Library:** [Schemas](Schemas), [Models Library](Model-Library), [Knowledge Library](Knowledge-Library).
+
+### [Data Studio](Data-Studio)
+
+Your workbench for managing and comparing design data before running a simulation. Pick a schema, select which data documents to activate, and the canvas picks them up automatically. Includes side-by-side comparison, inline editing, and charting across document variants.
+
+[→ Data Studio guide](Data-Studio)
+
+---
 
 ### [Schemas](Schemas)
 
