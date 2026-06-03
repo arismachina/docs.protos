@@ -51,11 +51,16 @@ You connect them left to right. Data flows through the chain automatically — w
 
 ## Design Space Exploration (Sweep)
 
-Instead of running one set of inputs at a time, a **sweep** varies a parameter across a range in a single batch run — useful for mapping how an output responds across a design space.
+A sweep means running your canvas across a range of values for a parameter instead of a single value — so instead of one result, you get a full curve.
 
-1. Add a **Parameter** block and configure it with a min, max, and step size instead of a fixed value.
-2. Start sequence — Protos runs all combinations and returns the full output surface.
-3. View results as a chart to find the optimal region.
+You do this with an **array parameter**. Instead of setting temperature = 25, you set it as an array from 10 to 60 across 20 points. Protos generates the list automatically (linear or logarithmic spacing). When the canvas runs, the downstream calculation executes once for each value and returns all results together.
+
+**Example:** you want to see how dissolution rate changes with temperature. Set temperature as an array from 10°C to 60°C, run the canvas, and you get a chart of dissolution rate across the full range — one run instead of dozens.
+
+To set up a sweep:
+1. Add an **array parameter** block instead of a regular parameter.
+2. Set min, max, number of points, and spacing (linear or log).
+3. Start sequence — results come back as a full output surface you can plot.
 
 ---
 
