@@ -12,7 +12,7 @@ The Protos **Copilot** is an AI assistant available across all features. It acce
 
 - [What Copilot Can Do](#what-copilot-can-do)
 - [How to Use It](#how-to-use-it)
-- [Copilot and the Canvas](#copilot-and-the-canvas)
+- [Copilot and Your Data](#copilot-and-your-data)
 - [How Copilot Gets Smarter](#how-copilot-gets-smarter)
 
 ---
@@ -37,10 +37,9 @@ The Copilot panel is available from any screen via the **chat icon** in the bott
 Type in plain language:
 
 - *"What model should I use for ionic conductivity at 60°C?"*
-- *"Structure this CSV into a schema for cathode coating test data."*
-- *"Summarize what changed between design v0.3 and v0.5."*
+- *"Create an Electrode Formulation document from this test report."*
 - *"Are there any prior experiments on this material in the Knowledge Library?"*
-- *"Flag anything unusual in this simulation output."*
+- *"Set up a schema for cathode coating experiments."*
 
 Copilot responses always include **source traces** — click any claim to see where it came from.
 
@@ -60,7 +59,7 @@ Copilot's quality depends on the richness of your workspace:
 
 - **[Model Library](Model-Library):** The more models registered and documented, the better Copilot's simulation configuration suggestions.
 - **[Knowledge Library](Knowledge-Library):** The richer the library, the more relevant connections Copilot can surface as you design.
-- **Schema quality:** Well-defined schemas with units and descriptions give Copilot more signal for data mapping and anomaly detection.
+- **Schema quality:** Well-defined schemas with units and descriptions give Copilot more signal when extracting data from files and creating documents.
 
 Investing in these foundations makes Copilot progressively more useful over time.
 
@@ -70,7 +69,7 @@ Investing in these foundations makes Copilot progressively more useful over time
 
 - [Knowledge Library](Knowledge-Library) — Copilot draws on this to surface relevant prior work
 - [Model Library](Model-Library) — Copilot uses this for simulation configuration recommendations
-- [Schemas](Schemas) — Copilot can suggest and auto-map schema fields
+- [Schemas](Schemas) — Copilot can create and update schemas based on your description
 - [Simulation Studio](Simulation-Studio) — Copilot can recommend model and input configurations
 
 ---

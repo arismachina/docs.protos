@@ -12,7 +12,7 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 - [Creating a Schema](#creating-a-schema)
 - [Field Types](#field-types)
 - [Using Reference Fields](#using-reference-fields)
-- [Connecting External Data Sources](#connecting-external-data-sources)
+- [Bringing External Data into Schemas](#bringing-external-data-into-schemas)
 - [Best Practices](#best-practices)
 
 ---

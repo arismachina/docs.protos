@@ -48,7 +48,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
    - Example: `Battery / Anode / Q2 Optimization`
    - Example: `Thermal / Cell Pack / Thermal Runaway Study`
 3. Add a description: goal, scope, key constraints.
-4. Invite collaborators and set their [access level](Collaboration-and-Sharing#access-levels).
+4. Invite collaborators and set their [access level](Collaboration-and-Sharing#canvas-access-levels).
 
 ### Navigating the Canvas
 
@@ -67,7 +67,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 Define the structure of your engineering data. Instead of disconnected spreadsheets, schemas give every artifact a consistent, queryable shape — reusable across all projects and connectable to external tools.
 
-**What you can schema:** designs, test data, model parameterizations, operating conditions, and any data imported from SharePoint, GitHub, or Google Drive.
+**What you can schema:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Copilot.
 
 [→ Schemas guide](Schemas)
 
@@ -111,12 +111,7 @@ An AI assistant available across all features. It accelerates work by structurin
 
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
-| Role | View | Edit canvas | Share | Freeze / publish |
-|------|------|-------------|-------|-----------------|
-| **Viewer** | ✓ | | | |
-| **Contributor** | ✓ | ✓ | | |
-| **Editor** | ✓ | ✓ | ✓ | |
-| **Admin** | ✓ | ✓ | ✓ | ✓ |
+Share canvases with teammates (view-only for non-owners) or publish them as interactive snapshots for external stakeholders — no Protos account required.
 
 [→ Collaboration & Sharing guide](Collaboration-and-Sharing)
 
@@ -138,7 +133,7 @@ An AI assistant available across all features. It accelerates work by structurin
 | Term | Definition |
 |------|-----------|
 | **Canvas** | The visual graph workspace connecting all project nodes |
-| **Design freeze** | An immutable snapshot of a validated design |
+| **Design freeze** | The point at which a validated design is locked for handoff — achieved in Protos by publishing a canvas snapshot |
 | **Node** | Any artifact on the canvas (design, data, model, result, parameter) |
 | **PSPP** | Process → Structure → Property → Performance |
 | **Schema** | A defined structure for a type of engineering data |

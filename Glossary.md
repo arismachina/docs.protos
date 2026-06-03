@@ -9,7 +9,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 | Term | Definition |
 |------|-----------|
 | **Canvas** | The visual graph workspace in a Protos project, where all nodes (designs, data, models, results) are connected and displayed. See [Home → Project Overview](Home#project-overview). |
-| **Copilot** | The AI assistant embedded across all Protos features — suggests schemas, surfaces knowledge, recommends model configurations, and flags anomalies. Always traces its sources. See [Copilot](Copilot). |
+| **Copilot** | The AI assistant embedded across all Protos features — authors schemas and data documents, surfaces knowledge, and recommends model configurations. Always traces its sources. See [Copilot](Copilot). |
 | **Design freeze** | A concept in the PSPP framework referring to the point at which a validated design is locked for manufacturing handoff. In Protos, this is achieved by publishing a canvas snapshot. |
 | **Design space** | The range of possible parameter combinations for a design, explored via sweeps in [Simulation Studio](Simulation-Studio). |
 | **Node** | Any artifact on the canvas: a design, data entry, simulation result, model call, parameter, or decision. Every node links to its source. |
@@ -26,7 +26,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 ## See Also
 
 - [Home](Home) — start here for an overview of the full platform
-- [Collaboration & Sharing](Collaboration-and-Sharing) — design freeze and version history in practice
+- [Collaboration & Sharing](Collaboration-and-Sharing) — canvas sharing and publishing
 - [Knowledge Library](Knowledge-Library) — trace in action
 
 ---
