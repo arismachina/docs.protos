@@ -23,7 +23,7 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 - Test data and experimental conditions
 - Model parameterizations and input configurations
 - Operating conditions and environmental variables
-- Any structured data imported from external sources (SharePoint, GitHub, Google Drive)
+- Any structured data extracted from external files (SharePoint documents, uploaded PDFs, spreadsheets)
 
 ---
 
@@ -78,30 +78,31 @@ To add a reference field:
 
 ---
 
-## Connecting External Data Sources
+## Bringing External Data into Schemas
 
-Protos ingests data from tools your team already uses and maps columns/fields to your schemas automatically.
+There is no automatic column-mapping import wizard. Instead, Protos uses the **Copilot** to extract data from your existing files and create structured data documents that follow your schema.
 
-### SharePoint / OneDrive
+### How it works
 
-1. Go to **Integrations → SharePoint**.
-2. Authenticate and select the folder or file to link.
-3. In the import wizard, map columns or fields to your schema fields.
-4. Set a sync frequency: manual, daily, or on change.
+1. Define your schema first — the Copilot needs a schema to fill.
+2. In the Copilot chat, upload a file or pull one in from SharePoint.
+3. Ask the Copilot to create a data document from it — e.g. *"Create an Electrode Formulation document from this test report."*
+4. The Copilot reads the file, maps what it finds to your schema fields, and creates the document. It will flag anything it couldn't find or wasn't sure about.
 
-### GitHub
+You review and correct the result before saving.
 
-1. Go to **Integrations → GitHub**.
-2. Authenticate and select the repository and file paths to watch.
-3. Protos monitors for changes and imports new data on push.
-4. Most useful for: model configs, simulation parameters, dataset CSVs.
+### Supported file sources
 
-### Google Drive
+| Source | How to bring it in |
+|--------|--------------------|
+| **Local file** | Upload directly in the Copilot chat (PDF, Excel, TXT) |
+| **SharePoint / OneDrive** | Browse your SharePoint from the Copilot and select a file |
 
-1. Go to **Integrations → Google Drive**.
-2. Authenticate and select the spreadsheet or folder.
-3. Map columns to schema fields in the import wizard.
-4. Click **Import** — Protos creates a structured entry for each row.
+> **Note:** GitHub is not used for data import. GitHub integration in Protos is for registering computational models only — see [Model Library](Model-Library).
+
+### When to use this
+
+This approach works well when you have existing reports, datasheets, or spreadsheets with values you want to capture as structured data. The Copilot handles the messy extraction; your schema guarantees the result is consistent and comparable with other documents of the same type.
 
 ---
 

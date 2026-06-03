@@ -2,115 +2,78 @@
 
 [← Home](Home) · **Collaboration & Sharing**
 
-Protos is built for cross-functional R&D teams. This page covers access control, sharing projects, design freeze for manufacturing handoff, and version history.
+Protos supports sharing canvases with teammates and publishing canvases for external stakeholders.
 
 ---
 
 ## On This Page
 
-- [Access Levels](#access-levels)
-- [Sharing a Project](#sharing-a-project)
-- [Design Freeze](#design-freeze)
-- [Version History](#version-history)
-- [Notifications](#notifications)
+- [Canvas Access Levels](#canvas-access-levels)
+- [Sharing a Canvas](#sharing-a-canvas)
+- [Publishing for External Access](#publishing-for-external-access)
 
 ---
 
-## Access Levels
+## Canvas Access Levels
 
-| Role | View | Edit canvas | Share | Freeze / publish |
-|------|------|-------------|-------|-----------------|
-| **Viewer** | ✓ | | | |
-| **Contributor** | ✓ | ✓ | | |
-| **Editor** | ✓ | ✓ | ✓ | |
-| **Admin** | ✓ | ✓ | ✓ | ✓ |
+Sharing in Protos is at the **canvas level**, not the project level. Projects have a single owner; canvases within that project can be shared individually.
 
-Set a collaborator's role when you invite them, or change it later via **Project → Members**.
+| Level | What they can do |
+|-------|-----------------|
+| **Owner** | View, edit, run, share, and publish the canvas |
+| **View only** | View the canvas and its results — cannot edit or run |
 
----
-
-## Sharing a Project
-
-### Internal sharing
-
-1. Open the project.
-2. Click **Share** in the top-right.
-3. Add team members by email or Aris Machina username.
-4. Set their access level (see table above).
-5. Click **Send invite**.
-
-### External sharing (customers, partners)
-
-> **Before sharing externally:** confirm with the project lead that external access is appropriate for this project and stage.
-
-- Use a **view-only shareable link** — this gives read access without requiring an Aris Machina account.
-- **Remove external access** when the review period ends.
-- Do not grant Contributor or Editor access to external parties without explicit approval from an Admin.
+Non-owners who have been shared a canvas get read-only access. To make changes, they would need to copy the canvas into their own project.
 
 ---
 
-## Design Freeze
+## Sharing a Canvas
 
-A design freeze captures an **immutable, permanently linkable snapshot** of a validated design. Use it for handoff to manufacturing, pilot, or qualification.
+From within a canvas, you can share access in three ways:
 
-### How to freeze a design
+| Method | How it works |
+|--------|-------------|
+| **Individual share** | Add a specific user by their user ID or email address |
+| **Domain share** | Anyone with the same email domain as you gets access automatically |
+| **Public** | Anyone with a Protos account can find and view the canvas |
 
-1. Open the project.
-2. Click **Freeze Design** (top-right menu → **Freeze**).
-3. Add a freeze note covering:
-   - What's included in this freeze
-   - What's intentionally excluded or deferred
-   - Decision owner and date
-4. Confirm.
-
-The frozen snapshot is:
-
-| Property | Detail |
-|----------|--------|
-| **Immutable** | No one can edit it, including Admins |
-| **Permanently linkable** | Stable URL that will never change |
-| **Shareable with downstream systems** | Push to ERP, PLM, and MES for production handoff |
-
-### After a freeze
-
-- A new **draft iteration** is automatically created so work can continue.
-- The frozen version remains accessible in the project's **Version History**.
-- Frozen versions can be compared side-by-side with later iterations.
-
-> **Note:** Design freeze is the only action in Protos that is irreversible by design. The frozen snapshot cannot be edited or deleted — this is intentional, as it provides the audit trail required for manufacturing and qualification processes.
+All shared access is read-only. Only the owner can edit.
 
 ---
 
-## Version History
+## Publishing for External Access
 
-Every project maintains a full, non-destructive version history.
+**Publications** let you share a canvas with people who don't have a Protos account — customers, partners, or reviewers.
 
-- Access it via **Project → History** in the left sidebar.
-- Each version shows: who made the change, when, and a summary of what changed.
-- **Restore** any previous version as a new draft — the history is never deleted.
+A publication is a **snapshot of a canvas** at a point in time, accessible via a public URL.
 
-Version history is separate from design freeze. Versions are rolling snapshots of work in progress; a frozen design is a deliberate, named checkpoint for external handoff.
+### What external viewers can do
 
----
+- See the canvas parameters and outputs
+- Adjust parameter values and re-run the canvas interactively
+- View linked data documents
 
-## Notifications
+### What they cannot see
 
-Team members receive notifications (in-app and optionally by email) when:
+- Your Python calculation code (stripped from the snapshot)
+- Other canvases or projects
+- The Knowledge Library or any internal data
 
-- They are added to a project
-- A node they are watching is updated
-- A design is frozen
-- A [Copilot](Copilot) suggestion is awaiting their review
-- A comment or annotation is added to a node they own
+### How to publish
 
-Configure notification preferences in **Account Settings → Notifications**.
+1. Open the canvas.
+2. Click **Publish**.
+3. Select which canvases to include in the publication.
+4. Optionally set a password for access control.
+5. Share the generated URL.
+
+> **Note:** Publications are snapshots — they do not update automatically when you change the canvas. Re-publish to push an update.
 
 ---
 
 ## See Also
 
-- [Home → Project Overview](Home#project-overview) — creating projects and setting initial access
-- [Copilot](Copilot) — Copilot suggestions may be routed to specific team members for review
+- [Home → Project Overview](Home#project-overview)
 - [Glossary → Design freeze](Glossary), [Glossary → Version](Glossary)
 
 ---

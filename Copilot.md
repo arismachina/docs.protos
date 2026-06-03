@@ -21,13 +21,12 @@ The Protos **Copilot** is an AI assistant available across all features. It acce
 
 | Capability | Example |
 |-----------|---------|
-| **Schema suggestions** | Suggest fields for a new schema based on your domain and project description |
-| **Data mapping** | Auto-map imported CSV columns to an existing schema |
+| **Schema authoring** | Create or update a schema based on your description — e.g. *"Create a schema for anode coating experiments"* |
+| **Data document creation** | Extract structured data from an uploaded file and create a data document following your schema |
 | **Simulation config** | Recommend a model and input configuration based on your design parameters |
 | **Knowledge surfacing** | Find relevant entries from the [Knowledge Library](Knowledge-Library) as you work |
-| **Decision drafts** | Draft a rationale note for a design decision |
-| **Anomaly detection** | Flag unexpected values in test data or simulation outputs |
-| **Summaries** | Summarize the history of a design iteration across versions |
+| **Requirements parsing** | Parse an uploaded spec document into structured KPIs and cell design targets |
+| **Cell design authoring** | Help define or refine cell designs and compare them against requirements |
 
 ---
 
@@ -47,19 +46,11 @@ Copilot responses always include **source traces** — click any claim to see wh
 
 ---
 
-## Copilot and the Canvas
+## Copilot and Your Data
 
-When Copilot surfaces a connection or makes a suggestion, it can take action on the canvas — always with your approval first:
+Copilot can take direct actions in your project — creating schemas, data documents, cell designs, and requirements — based on what you ask it. These actions happen through the chat; the Copilot will tell you what it created or changed.
 
-| Action | What happens |
-|--------|-------------|
-| **Add a node** | Copilot proposes a new node; you confirm before it's added |
-| **Link existing nodes** | Copilot detects related nodes not yet connected and proposes a link |
-| **Annotate a node** | Copilot adds a rationale or knowledge reference to a node |
-
-You always approve before any change is made to the canvas.
-
-**Reviewing Copilot history:** Go to **Project Settings → Copilot History** to see a log of all Copilot interactions on a project, including what was suggested and what was approved or dismissed.
+You can review all Copilot sessions for a project by opening the Copilot panel and browsing past sessions.
 
 ---
 

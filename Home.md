@@ -126,13 +126,10 @@ An AI assistant available across all features. It accelerates work by structurin
 
 | System | What Protos does |
 |--------|-----------------|
-| SharePoint / OneDrive | Import structured data; sync documents |
-| GitHub | Pull code, configs, and datasets into schemas |
-| Google Drive | Import spreadsheets and CSVs |
-| ERP / PLM | Push design freeze data for production handoff |
-| MES | Receive manufacturing feedback to close the PSPP loop |
+| SharePoint / OneDrive | Browse and import files into the Copilot for data extraction |
+| GitHub | Register computational models (Python, scripts) from a repo into the Model Library |
 
-Integration setup details are in the [Schemas → Connecting External Data Sources](Schemas#connecting-external-data-sources) section.
+> **Note:** GitHub is for model registration only — not for importing data into schemas. See [Model Library](Model-Library) for details.
 
 ---
 

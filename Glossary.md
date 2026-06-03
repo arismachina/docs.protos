@@ -10,7 +10,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 |------|-----------|
 | **Canvas** | The visual graph workspace in a Protos project, where all nodes (designs, data, models, results) are connected and displayed. See [Home → Project Overview](Home#project-overview). |
 | **Copilot** | The AI assistant embedded across all Protos features — suggests schemas, surfaces knowledge, recommends model configurations, and flags anomalies. Always traces its sources. See [Copilot](Copilot). |
-| **Design freeze** | An immutable, permanently linkable snapshot of a validated design, used for manufacturing handoff. Once frozen, a design cannot be edited by anyone. See [Collaboration & Sharing → Design Freeze](Collaboration-and-Sharing#design-freeze). |
+| **Design freeze** | A concept in the PSPP framework referring to the point at which a validated design is locked for manufacturing handoff. In Protos, this is achieved by publishing a canvas snapshot. |
 | **Design space** | The range of possible parameter combinations for a design, explored via sweeps in [Simulation Studio](Simulation-Studio). |
 | **Node** | Any artifact on the canvas: a design, data entry, simulation result, model call, parameter, or decision. Every node links to its source. |
 | **PSPP** | Process → Structure → Property → Performance. The reasoning framework underlying Protos — used to trace how manufacturing choices propagate through to physical outcomes. |
@@ -19,7 +19,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 | **Sweep** | A batch simulation run that varies one or more parameters across a range and returns an output surface. See [Simulation Studio → Design Space Exploration](Simulation-Studio#design-space-exploration-sweep). |
 | **TRL** | Technology Readiness Level. Protos is optimized for TRL 0–3 — the early R&D phase where first-principles reasoning and traceability are most critical. |
 | **Trace** | The ability to follow any value in Protos back through its chain of sources to the original reference, experiment, or decision. See [Knowledge Library → Traceability](Knowledge-Library#traceability). |
-| **Version** | A named snapshot of a design or model at a point in time. Versions are immutable once created. See [Collaboration & Sharing → Version History](Collaboration-and-Sharing#version-history). |
+| **Version** | A named snapshot of a model at a point in time, managed in the [Model Library](Model-Library). Model versions are immutable once created, ensuring past simulation results remain reproducible. |
 
 ---
 
