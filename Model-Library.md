@@ -1,14 +1,30 @@
 # Model Library
 
-← [Back to Home](Home)
+[← Home](Home) · **Model Library**
 
-The **Model Library** is a registry of all computational models available in your workspace — physics models, ML models, kinetic models, domain-specific solvers, and custom scripts. Models are registered once and reusable across any project, fully versioned, and traceable.
+The **Model Library** is a registry of all computational models available in your workspace — physics models, ML models, kinetic models, domain-specific solvers, and custom scripts. Models are registered once, reusable across any project, fully versioned, and traceable.
+
+---
+
+## On This Page
+
+- [Why It Exists](#why-it-exists)
+- [Registering a Model](#registering-a-model)
+- [Model Source Types](#model-source-types)
+- [Finding a Model](#finding-a-model)
+- [Model Versioning](#model-versioning)
+- [Best Practices](#best-practices)
 
 ---
 
 ## Why It Exists
 
-Without a shared model library, teams rebuild the same models for each project. Protos makes models **reusable assets**: register once, call from anywhere, track every version, trace every result.
+Without a shared model library, teams rebuild the same models for each project — wasting time and introducing inconsistencies. Protos makes models **first-class reusable assets**:
+
+- Register once, call from any project
+- Every simulation run references the exact model version it used
+- Results remain reproducible indefinitely
+- All inputs, outputs, and provenance are traceable
 
 ---
 
@@ -22,13 +38,15 @@ Without a shared model library, teams rebuild the same models for each project. 
 |-------|-------------|
 | **Name** | Clear, searchable name (e.g. `Doyle-Fuller-Newman Electrochemical Model`) |
 | **Description** | What the model does, when to use it, known limitations |
-| **Domain** | e.g. electrochemistry, thermal, mechanical, materials |
-| **Inputs** | Each input: name, type, unit, required/optional |
+| **Domain** | e.g. `electrochemistry`, `thermal`, `mechanical`, `materials` |
+| **Inputs** | Each input: name, type, unit, required or optional |
 | **Outputs** | Each output: name, type, unit |
 | **Source** | Python script, COMSOL file, external API endpoint, etc. |
 | **Version tag** | e.g. `v1.0.0` — use semantic versioning |
 
-4. Save. The model is now available in [Simulation Studio](Simulation-Studio).
+4. Click **Save**. The model is now available in [Simulation Studio](Simulation-Studio).
+
+> **Tip:** Document inputs and outputs fully — include units, valid ranges, and edge case notes. Future users (including you, six months from now) will thank you.
 
 ---
 
@@ -54,21 +72,41 @@ Without a shared model library, teams rebuild the same models for each project. 
 
 ## Model Versioning
 
-Every update to a model creates a new version:
+Every update to a model creates a new version. This is critical for reproducibility.
 
-- Old simulation runs always reference the **exact model version** they used — results remain reproducible indefinitely.
-- You can compare outputs from different model versions side-by-side in Simulation Studio.
-- To update a model: open it in Model Library → click **New Version** → upload the updated source and update the description.
+| What versioning gives you | Detail |
+|--------------------------|--------|
+| **Reproducibility** | Old simulation runs always reference the exact model version they used — results never change retroactively |
+| **Comparison** | Compare outputs from different model versions side-by-side in [Simulation Studio](Simulation-Studio) |
+| **Audit trail** | Full history of who changed what and when |
+
+**To update a model:**
+
+1. Open the model in the Model Library.
+2. Click **New Version**.
+3. Upload the updated source and revise the description.
+4. Add a changelog note describing what changed.
+
+> **Warning:** Do not delete old model versions. Even if a model is superseded, old versions are needed to reproduce past simulation runs.
 
 ---
 
 ## Best Practices
 
-- **Document inputs and outputs fully**: future users (including you, six months from now) will thank you. Include units, valid ranges, and edge case notes.
-- **Use semantic versioning**: `v1.0.0` → `v1.1.0` for non-breaking updates, `v2.0.0` for breaking changes to inputs/outputs.
-- **Tag models by domain**: makes them much easier to find in Simulation Studio.
-- **Don't delete old versions**: even if a model is superseded, old versions are needed for reproducibility of past runs.
+- **Use semantic versioning:** `v1.0.0` → `v1.1.0` for non-breaking updates, `v2.0.0` for breaking changes to inputs or outputs.
+- **Tag models by domain** — makes them far easier to find in Simulation Studio.
+- **Note known limitations in the description** — an honest description of edge cases prevents misuse and prevents future users from discovering limitations the hard way.
+- **Don't rebuild models already in the library** — search before registering. If a close match exists, consider extending it with a new version instead.
 
 ---
 
-*← [Back to Home](Home)*
+## See Also
+
+- [Simulation Studio](Simulation-Studio) — run models registered here
+- [Schemas](Schemas) — model input/output schemas follow the same field conventions
+- [Knowledge Library](Knowledge-Library) — link model results to knowledge assets
+- [Glossary → Version](Glossary)
+
+---
+
+*[← Back to Home](Home)*
