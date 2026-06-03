@@ -38,9 +38,8 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 | Concept | Description |
 |---------|-------------|
-| **Canvas** | Visual graph of all connected nodes: designs, data, parameters, models, results. Every node traces back to its origin. |
-| **Design iteration** | Every change is versioned. Compare iterations, roll back, and understand exactly what changed and why. |
-| **Traceability** | Every node is linked to its source — an academic paper, internal test, or model output. |
+| **Canvas** | A graph of connected blocks (parameters, inputs, calculations, models, visualizations). Data flows through the chain automatically. |
+| **Traceability** | Field values created by the Copilot link back to the Knowledge Library source they came from. |
 | **PSPP** | The reasoning framework underlying Protos: Process → Structure → Property → Performance. |
 
 ### Creating a Project
@@ -56,10 +55,10 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 | Action | How |
 |--------|-----|
-| Zoom in/out | Scroll or pinch — inspect nodes or see the full picture |
-| Open a node | Click it to view its properties, linked data, and history |
-| Filter nodes | Filter bar: design, test, model, or parameter |
-| Search | Search across all nodes by name or value |
+| Zoom in/out | Scroll or pinch — inspect blocks or see the full picture |
+| Open a block | Click it to view its properties, inputs, and results |
+| Filter | Filter bar: parameter, input, calculation, model, or visualization |
+| Search | Search across all blocks by name |
 
 ---
 

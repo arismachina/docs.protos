@@ -55,9 +55,9 @@ Without a shared model library, teams rebuild the same models for each project â
 | Source type | How it works in Protos |
 |-------------|----------------------|
 | **Python script** | Upload the script; Protos executes it in a managed environment |
-| **COMSOL / FEM file** | Upload the model file; Protos calls it with the specified input parameters |
+| **COMSOL / MATLAB file** | Upload the model file; Protos calls it with the specified input parameters |
 | **External API** | Provide the endpoint URL and auth config; Protos calls it on run |
-| **Wrapped solver** | Pre-packaged domain solvers (Aris-provided or community) |
+| **GitHub repo** | Point to a public GitHub repo; Protos clones it, generates a wrapper, and containerises it |
 
 ---
 
@@ -77,7 +77,7 @@ Every update to a model creates a new version. This is critical for reproducibil
 | What versioning gives you | Detail |
 |--------------------------|--------|
 | **Reproducibility** | Old simulation runs always reference the exact model version they used â€” results never change retroactively |
-| **Comparison** | Compare outputs from different model versions side-by-side in [Simulation Studio](Simulation-Studio) |
+| **Comparison** | Old canvas runs always reference the exact model version they used, so you can see how results changed between versions |
 | **Audit trail** | Full history of who changed what and when |
 
 **To update a model:**

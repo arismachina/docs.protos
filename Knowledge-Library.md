@@ -41,39 +41,39 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 ## Adding to the Library
 
-### Import a paper
+### Upload a file
 
-1. Click **Add → Paper**.
-2. Paste the DOI or upload the PDF.
-3. Protos extracts key data: authors, year, domain, key values — all made searchable.
-4. Tag relevant parameters and add a note about why this paper is relevant to your work.
+1. Click **Add** in the Knowledge Library.
+2. Upload a PDF, TXT, or JSON file — a paper, test report, spec document, or any reference material.
+3. Protos chunks and embeds the content, making it searchable and available as context for the Copilot.
+4. Add tags and a description to make it easier to find later.
 
-> **Best practice:** Link papers to the specific values you're extracting from them, not just the paper itself. A link to a paper is less useful than a link to a paper *at the claim that informed your decision*.
+### Type a note directly
 
-### Capture a decision
+If you want to capture a decision or rationale without a file:
 
-1. On the canvas, right-click any node and select **Add to Knowledge Library**.
-2. Write a short rationale:
-   > *"Chose 1.2 mol/L based on [Reference] showing peak conductivity at this concentration under our temperature range."*
-3. The decision is now discoverable by future users and permanently linked to the design node it annotated.
+1. Click **Add → Text**.
+2. Type the content — e.g. *"Chose 1.2 mol/L based on the conductivity data from the Q1 electrolyte study — peak conductivity at this concentration under our temperature range."*
+3. The note is stored, embedded, and searchable just like an uploaded file.
 
-### Promote experimental results
+### Upload a folder
 
-1. From a test data entry, click **Promote to Knowledge Library**.
-2. Add a summary and relevant tags.
-3. Future projects can discover this result during search and link it to their designs.
+For bulk ingestion of many files at once:
+
+1. Click **Add → Folder**.
+2. Upload a folder of files — Protos processes them in the background.
+3. A progress indicator tracks succeeded and failed files.
 
 ---
 
 ## Traceability
 
-Every value in a design or simulation can be traced back to its knowledge source. Click the **trace icon** on any parameter to see the full chain:
+When the Copilot creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Copilot said so" but the specific source passage.
 
 ```
-Design value
-  └── Model parameter
-        └── Literature reference / experimental result
-              └── Original source (paper, test, decision)
+Field value in data document
+  └── Knowledge Library chunk
+        └── Original uploaded document (paper, report, note)
 ```
 
 This chain is preserved permanently — even if team members leave or projects are archived.
@@ -92,7 +92,7 @@ This chain is preserved permanently — even if team members leave or projects a
 ## See Also
 
 - [Copilot](Copilot) — surfaces Knowledge Library entries automatically as you work
-- [Schemas](Schemas) — promote schema entries to knowledge assets
+- [Schemas](Schemas) — data documents created from knowledge sources link back to their chunks
 - [Simulation Studio](Simulation-Studio) — link simulation results back to knowledge sources
 - [Glossary → Trace](Glossary)
 

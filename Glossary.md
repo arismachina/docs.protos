@@ -12,7 +12,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 | **Copilot** | The AI assistant embedded across all Protos features — authors schemas and data documents, surfaces knowledge, and recommends model configurations. Always traces its sources. See [Copilot](Copilot). |
 | **Design freeze** | A concept in the PSPP framework referring to the point at which a validated design is locked for manufacturing handoff. In Protos, this is achieved by publishing a canvas snapshot. |
 | **Design space** | The range of possible parameter combinations for a design, explored via sweeps in [Simulation Studio](Simulation-Studio). |
-| **Node** | Any artifact on the canvas: a design, data entry, simulation result, model call, parameter, or decision. Every node links to its source. |
+| **Node** | A block on the canvas. Node types are: parameter, input, calculation, model, and visualization. They are connected by arrows that define the data flow. |
 | **PSPP** | Process → Structure → Property → Performance. The reasoning framework underlying Protos — used to trace how manufacturing choices propagate through to physical outcomes. |
 | **Reference field** | A [schema](Schemas) field type that links one schema entry to another, creating relational structure across engineering data. See [Schemas → Using Reference Fields](Schemas#using-reference-fields). |
 | **Schema** | A defined structure for a type of engineering data in Protos (e.g. a test result schema, a design parameter schema). See [Schemas](Schemas). |
@@ -25,9 +25,9 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 
 ## See Also
 
-- [Home](Home) — start here for an overview of the full platform
-- [Collaboration & Sharing](Collaboration-and-Sharing) — canvas sharing and publishing
-- [Knowledge Library](Knowledge-Library) — trace in action
+- [Simulation Studio](Simulation-Studio) — where Canvas, Node, Sweep, and Design space are used in practice
+- [Schemas](Schemas) — where Schema and Reference field are explained in depth
+- [Data Studio](Data-Studio) — where data documents and the canvas connection are shown
 
 ---
 
