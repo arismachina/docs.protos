@@ -65,8 +65,6 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 ## Features at a Glance
 
-> These map to the left sidebar in Protos. **Design:** [Data Studio](Data-Studio), [Simulation Studio](Simulation-Studio). **Library:** [Schemas](Schemas), [Models Library](Model-Library), [Knowledge Library](Knowledge-Library).
-
 ### [Data Studio](Data-Studio)
 
 Your workbench for managing and comparing design data before running a simulation. Pick a schema, select which data documents to activate, and the canvas picks them up automatically. Includes side-by-side comparison, inline editing, and charting across document variants.
