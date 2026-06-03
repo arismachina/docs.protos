@@ -20,7 +20,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 | Type | Examples |
 |------|---------|
-| **Academic literature** | Papers, standards, patents — imported by DOI or PDF upload |
+| **Academic literature** | Papers, standards, patents — uploaded as PDF or TXT files |
 | **Internal reports** | Experimental summaries, design reviews, test reports |
 | **Decisions** | Why a parameter value was chosen; why an approach was rejected |
 | **Experimental results** | Test data promoted to reusable knowledge assets |

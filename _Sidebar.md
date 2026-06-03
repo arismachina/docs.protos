@@ -5,7 +5,7 @@
 ---
 
 **Getting Started**
-- [Quick Start](Home#getting-started)
+- [Getting Started](Home#getting-started)
 - [Projects & Canvas](Home#project-overview)
 
 ---

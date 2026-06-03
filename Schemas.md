@@ -38,7 +38,7 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 
 | Field property | Options |
 |---------------|---------|
-| **Type** | `text`, `number`, `select`, `date`, `reference`, `file` |
+| **Type** | `number`, `string`, `enum`, `boolean`, `date`, `ref` |
 | **Required** | yes / no |
 | **Unit** | e.g. `°C`, `mol/L`, `MPa` |
 | **Description** | Short help text shown to users filling the field |
@@ -53,12 +53,12 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 
 | Type | Use for |
 |------|---------|
-| `text` | Labels, descriptions, free-form notes |
 | `number` | Measurable values — always set a unit |
-| `select` | Categorical choices (e.g. material grade, phase) |
+| `string` | Free-form text — labels, notes, identifiers |
+| `enum` | A fixed list of options (e.g. material grade, phase) |
+| `boolean` | Yes / no flags |
 | `date` | Timestamps for experiments, decisions, imports |
-| `reference` | Link to another schema entry (e.g. test → design) |
-| `file` | Attach raw data files, PDFs, or scripts |
+| `ref` | Link to another data document (e.g. test result → electrode formulation) |
 
 ---
 

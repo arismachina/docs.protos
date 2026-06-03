@@ -22,7 +22,7 @@
 2. Create or open a **Project**.
 3. Define your data structure using **[Schemas](Schemas)**.
 4. Create data documents and manage them in the **[Data Studio](Data-Studio)**.
-5. Build calculations and run simulations on the **Canvas** (accessed from the project home).
+5. Build calculations and run simulations in **[Simulation Studio](Simulation-Studio)** (the canvas).
 6. Run individual physics models in **[Simulation Studio](Simulation-Studio)**.
 7. Access prior knowledge and sources via the **[Knowledge Library](Knowledge-Library)**.
 8. Register reusable models in the **[Model Library](Model-Library)**.
