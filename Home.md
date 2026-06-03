@@ -154,4 +154,4 @@ Share canvases with teammates (view-only for non-owners) or publish them as inte
 
 ---
 
-*Maintained by Aris Machina · Questions? Contact [ella@arismachina.com](mailto:ella@arismachina.com)*
+*Maintained by Aris Machina*
