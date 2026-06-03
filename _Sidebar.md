@@ -1,4 +1,4 @@
-## Protos Wiki
+## Protos Docs
 
 - [Home](Home)
 

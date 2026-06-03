@@ -1,4 +1,4 @@
-# Protos Platform Wiki
+# Protos Docs
 
 > **Protos** is Aris Machina's AI-native R&D workspace for designing and industrializing complex physical systems. It connects first-principles models, experiments, and institutional knowledge into a single, traceable environment — from concept through manufacturing handoff.
 
