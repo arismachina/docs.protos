@@ -36,7 +36,7 @@ You connect them left to right. Data flows through the chain automatically — w
 
 1. Open **Simulation Studio** from the sidebar.
 2. Create a new canvas or open an existing one.
-3. Add blocks and connect them — the Copilot can help build the canvas if you describe what you are modelling.
+3. Add blocks and connect them — the Co-engineer can help build the canvas if you describe what you are modelling.
 4. For any **Calculation** block, mark it as verified before it will execute (this is a trust gate — you confirm the code is safe to run).
 
 ---
@@ -68,7 +68,7 @@ To set up a sweep:
 
 - **Connect inputs from the Data Studio** rather than typing values manually — this links your results back to the exact document that produced them.
 - **Name your canvases clearly** — you can have multiple canvases per project for different calculations.
-- **Use the Copilot** to build calculations — describe what you want to compute and it will write the Python code and wire it up.
+- **Use the Co-engineer** to build calculations — describe what you want to compute and it will write the Python code and wire it up.
 
 ---
 

@@ -24,7 +24,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 | **Internal reports** | Experimental summaries, design reviews, test reports |
 | **Decisions** | Why a parameter value was chosen; why an approach was rejected |
 | **Experimental results** | Test data promoted to reusable knowledge assets |
-| **AI-surfaced connections** | [Copilot](Copilot) surfaces relevant prior work as you design |
+| **AI-surfaced connections** | [Co-engineer](Co-engineer) surfaces relevant prior work as you design |
 
 ---
 
@@ -35,7 +35,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 3. **Filter** by type: paper, internal doc, dataset, or decision.
 4. Click any result to see its full content and **all the places in Protos where it has been used**.
 
-> **Tip:** Before starting a new project or design iteration, search for prior experiments and decisions in the same domain. [Copilot](Copilot) can also surface relevant entries automatically as you work on the canvas.
+> **Tip:** Before starting a new project or design iteration, search for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
 
 ---
 
@@ -45,7 +45,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 1. Click **Add** in the Knowledge Library.
 2. Upload a PDF, TXT, or JSON file — a paper, test report, spec document, or any reference material.
-3. Protos chunks and embeds the content, making it searchable and available as context for the Copilot.
+3. Protos chunks and embeds the content, making it searchable and available as context for the Co-engineer.
 4. Add tags and a description to make it easier to find later.
 
 ### Type a note directly
@@ -68,7 +68,7 @@ For bulk ingestion of many files at once:
 
 ## Traceability
 
-When the Copilot creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Copilot said so" but the specific source passage.
+When the Co-engineer creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Co-engineer said so" but the specific source passage.
 
 ```
 Field value in data document
@@ -91,7 +91,7 @@ This chain is preserved permanently — even if team members leave or projects a
 
 ## See Also
 
-- [Copilot](Copilot) — surfaces Knowledge Library entries automatically as you work
+- [Co-engineer](Co-engineer) — surfaces Knowledge Library entries automatically as you work
 - [Schemas](Schemas) — data documents created from knowledge sources link back to their chunks
 - [Simulation Studio](Simulation-Studio) — link simulation results back to knowledge sources
 - [Glossary → Trace](Glossary)

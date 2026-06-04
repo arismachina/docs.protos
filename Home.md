@@ -16,7 +16,7 @@
 
 ## Getting Started
 
-> **Before you begin:** Search the [Knowledge Library](Knowledge-Library) for prior experiments and decisions relevant to your domain. [Copilot](Copilot) can surface these automatically as you work.
+> **Before you begin:** Search the [Knowledge Library](Knowledge-Library) for prior experiments and decisions relevant to your domain. [Co-engineer](Co-engineer) can surface these automatically as you work.
 
 1. Sign in at [protos.arismachina.com](https://protos.arismachina.com) with your Aris Machina account.
 2. Create or open a **Project**.
@@ -26,7 +26,7 @@
 6. Run individual physics models in **[Simulation Studio](Simulation-Studio)**.
 7. Access prior knowledge and sources via the **[Knowledge Library](Knowledge-Library)**.
 8. Register reusable models in the **[Model Library](Model-Library)**.
-9. Use **[Copilot](Copilot)** at any step to accelerate your work.
+9. Use **[Co-engineer](Co-engineer)** at any step to accelerate your work.
 
 ---
 
@@ -39,7 +39,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 | Concept | Description |
 |---------|-------------|
 | **Canvas** | A graph of connected blocks (parameters, inputs, calculations, models, visualizations). Data flows through the chain automatically. |
-| **Traceability** | Field values created by the Copilot link back to the Knowledge Library source they came from. |
+| **Traceability** | Field values created by the Co-engineer link back to the Knowledge Library source they came from. |
 | **PSPP** | The reasoning framework underlying Protos: Process → Structure → Property → Performance. |
 
 ### Creating a Project
@@ -76,7 +76,7 @@ Your workbench for managing and comparing design data before running a simulatio
 
 Define the structure of your engineering data. Instead of disconnected spreadsheets, schemas give every artifact a consistent, queryable shape — reusable across all projects and connectable to external tools.
 
-**What you can schema:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Copilot.
+**What you can schema:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
 
 [→ Schemas guide](Schemas)
 
@@ -110,11 +110,11 @@ Protos's institutional memory. Every decision, data point, and reference is capt
 
 ---
 
-### [Copilot](Copilot)
+### [Co-engineer](Co-engineer)
 
 An AI assistant available across all features. It accelerates work by structuring data, configuring simulations, and surfacing connections that would otherwise take hours to find manually — always with traceable sources.
 
-[→ Copilot guide](Copilot)
+[→ Co-engineer guide](Co-engineer)
 
 ---
 
@@ -130,7 +130,7 @@ Share canvases with teammates (view-only for non-owners) or publish them as inte
 
 | System | What Protos does |
 |--------|-----------------|
-| SharePoint / OneDrive | Browse and import files into the Copilot for data extraction |
+| SharePoint / OneDrive | Browse and import files into the Co-engineer for data extraction |
 | GitHub | Register computational models (Python, scripts) from a repo into the Model Library |
 
 > **Note:** GitHub is for model registration only — not for importing data into schemas. See [Model Library](Model-Library) for details.
