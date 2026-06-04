@@ -28,8 +28,12 @@
 ---
 
 **Tutorials**
-- [Building Your First Canvas](Tutorial-Simulation-Studio)
+- [Creating Your First Schema](Tutorial-Schemas)
+- [Setting Up Your Knowledge Library](Tutorial-Knowledge-Library)
+- [Working with the Co-engineer](Tutorial-Co-engineer)
 - [Using the Data Studio](Tutorial-Data-Studio)
+- [Registering Your First Model](Tutorial-Model-Library)
+- [Building Your First Canvas](Tutorial-Simulation-Studio)
 
 ---
 
