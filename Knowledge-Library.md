@@ -4,6 +4,8 @@
 
 The **Knowledge Library** is Protos's institutional memory. Every decision, data point, and reference is captured here and linked to the design artifacts that used it — so nothing is ever lost between projects, teams, or people.
 
+> **Set this up before using the Co-engineer.** The Co-engineer draws on the Knowledge Library when creating schemas, filling data documents, and answering questions. The richer the library, the more grounded and traceable its output.
+
 ---
 
 ## On This Page

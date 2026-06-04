@@ -16,17 +16,15 @@
 
 ## Getting Started
 
-> **Before you begin:** Search the [Knowledge Library](Knowledge-Library) for prior experiments and decisions relevant to your domain. [Co-engineer](Co-engineer) can surface these automatically as you work.
+> **You don't have to do everything manually.** The [Co-engineer](Co-engineer) is the primary way to work in Protos. Open it and describe what you want — it will create schemas, populate data documents, build canvases, and search the Knowledge Library for you. Most users start there rather than navigating the features directly.
 
 1. Sign in at [protos.arismachina.com](https://protos.arismachina.com) with your Aris Machina account.
 2. Create or open a **Project**.
-3. Define your data structure using **[Schemas](Schemas)**.
-4. Create data documents and manage them in the **[Data Studio](Data-Studio)**.
-5. Build calculations and run simulations in **[Simulation Studio](Simulation-Studio)** (the canvas).
-6. Run individual physics models in **[Simulation Studio](Simulation-Studio)**.
-7. Access prior knowledge and sources via the **[Knowledge Library](Knowledge-Library)**.
-8. Register reusable models in the **[Model Library](Model-Library)**.
-9. Use **[Co-engineer](Co-engineer)** at any step to accelerate your work.
+3. Upload your reference material to the **[Knowledge Library](Knowledge-Library)** — the Co-engineer draws on this for every task.
+4. Open the **[Co-engineer](Co-engineer)** and describe your project. It will set up schemas, create data documents, and guide you through the workflow.
+5. Review and refine what it creates in the **[Data Studio](Data-Studio)** and **[Schemas](Schemas)** pages.
+6. Build or run simulations in **[Simulation Studio](Simulation-Studio)**.
+7. Register external models in the **[Model Library](Model-Library)** if you have your own simulation code.
 
 ---
 

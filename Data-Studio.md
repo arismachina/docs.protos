@@ -4,6 +4,8 @@
 
 The Data Studio is where you manage your design data and decide what goes into your simulations.
 
+> **The Co-engineer can manage this for you.** Ask it to activate specific documents, create new documents from a file, or set up the Data Studio for a particular schema. You come here directly when you want to compare values visually or edit inline.
+
 ---
 
 ## On This Page

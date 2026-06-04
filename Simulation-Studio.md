@@ -4,6 +4,8 @@
 
 Simulation Studio is the canvas — a visual graph where you build calculations, connect models to your data, and run them. It is the same feature as the canvas, just accessed from the left sidebar.
 
+> **The Co-engineer can build canvases for you.** Describe what you want to calculate and it will create the blocks, write the code, and wire everything together. You then review the code and approve it before it runs.
+
 ---
 
 ## On This Page

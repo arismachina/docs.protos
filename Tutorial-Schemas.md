@@ -4,6 +4,8 @@
 
 This tutorial walks you through building a schema from scratch, explains the decisions you'll make along the way, and shows you what to watch out for. Takes about 5 minutes.
 
+> **You can also ask the Co-engineer to do this for you.** Open the Co-engineer and say *"Create a schema for electrode coating experiments with fields for coating thickness, porosity, active material, and mass loading."* It will build the schema, choose the right types, and set the units — you just review and confirm. Skip to [Tutorial: Working with the Co-engineer](Tutorial-Co-engineer) if you'd rather start there.
+
 ---
 
 ## Step 1 — Open the Schema Editor

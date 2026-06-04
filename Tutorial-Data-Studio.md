@@ -6,6 +6,8 @@
 
 This tutorial shows you how to get your data documents loaded and ready for a simulation. Takes about 5 minutes.
 
+> **The Co-engineer can do this for you.** Ask it: *"Activate the three most recent electrode coating documents in the Data Studio."* It will select and activate the right documents without you needing to navigate here manually. Come to the Data Studio directly when you want to compare values visually or edit inline.
+
 ---
 
 ## Step 1 — Open the Data Studio
@@ -28,23 +30,29 @@ Click the schema you want to work with — for example **Electrode Coating**.
 
 ## Step 3 — Activate documents
 
-All data documents following that schema appear in a list on the left. Click the ones you want to compare — each one becomes a **column** in the table.
+All data documents following that schema appear in a list on the left. Click the ones you want to compare — each one becomes a **column** in the table, with all fields as rows.
 
-With 3 documents activated, the table shows all fields as rows and each document as a column, so you can compare their values side by side.
+With 3 documents activated you can compare their values side by side at a glance:
 
-![Data Studio with 3 coating variants as columns — Coating A, B, and C side by side](images/ds-03-docs-as-columns.png)
+![Data Studio with 3 coating variants as columns — Coating A Baseline, Coating B Thinner, and Coating C Silicon Blend](images/ds-03-docs-as-columns.png)
 
 ---
 
 ## Step 4 — Edit inline if needed
 
-Double-click any cell to edit the value directly. Press Enter to save. The change saves back to the original document immediately.
+Double-click any cell to edit the value directly. Press Enter to save. The change saves back to the original document immediately — this is not a temporary view.
 
 ---
 
 ## Step 5 — The canvas picks this up automatically
 
-Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** — the canvas will re-run automatically using the documents you just selected. Swap a document out, it recalculates.
+Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** — the canvas will re-run automatically with the new inputs. Swap a document out and it recalculates again.
+
+---
+
+## Next step
+
+→ [Tutorial: Building Your First Canvas](Tutorial-Simulation-Studio) — now that your data is set up, build the calculation that runs on it.
 
 ---
 

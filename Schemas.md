@@ -4,6 +4,8 @@
 
 Schemas define the **structure of your engineering data** in Protos. Rather than storing artifacts in disconnected spreadsheets or files, schemas give every data type a consistent, queryable shape — reusable across projects and connectable to external tools and integrations.
 
+> **You don't have to build schemas manually.** The Co-engineer can create them for you — describe what you're working on and it will propose field names, types, and units. See [Tutorial: Working with the Co-engineer](Tutorial-Co-engineer).
+
 ---
 
 ## On This Page
