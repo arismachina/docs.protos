@@ -2,108 +2,47 @@
 
 [← Home](Home) · [← Knowledge Library](Knowledge-Library)
 
-This tutorial walks you through uploading your reference material and understanding how the Co-engineer uses it. It takes about 5 minutes.
+> For full details on adding documents, folder uploads, and traceability, see [Knowledge Library](Knowledge-Library).
+
+This tutorial explains why to set up the Knowledge Library early and what makes it useful. Takes about 5 minutes.
 
 ---
 
-## What you'll do
+## Do this before you start designing
 
-Upload a document into the Knowledge Library and understand how it becomes available to the Co-engineer when it creates schemas, data documents, and answers questions.
-
----
-
-## Why do this early
-
-The Co-engineer is only as good as the knowledge you give it. If you upload your reference papers, test reports, and specs before you start designing, the Co-engineer can draw on them when creating schemas and filling in data documents — and it will cite exactly which document and passage it used.
-
-If you skip this step, the Co-engineer still works but it will rely on general knowledge rather than your specific project context.
+The Co-engineer draws on the Knowledge Library when creating schemas and data documents. If you populate it first, it will cite real sources from your project context. If you skip it, it falls back to general knowledge.
 
 ---
 
-## Step 1 — Open the Knowledge Library
+## Step 1 — Upload your reference material
 
-Click **Knowledge Library** in the left sidebar.
+Click **Knowledge Library** in the sidebar → **Add**.
 
-You'll see a list of existing documents (empty if this is a new project) and an **Add** button.
+Upload the documents that inform your project — papers, test reports, spec documents, datasheets. See [Knowledge Library → Adding to the Library](Knowledge-Library#adding-to-the-library) for the three upload methods (file, text note, folder).
 
----
-
-## Step 2 — Upload a document
-
-Click **Add** and choose one of three options:
-
-**Upload a file** — the most common option. Supports PDF, TXT, and JSON. Good for:
-- Academic papers
-- Internal test reports
-- Spec documents and datasheets
-- Design review summaries
-
-Click **Add → File**, select your file, give it a name and optional description, add relevant tags (e.g. `electrode`, `electrolyte`, `NMC811`), and click **Upload**.
-
-Protos splits the document into chunks and embeds them — this is what makes the content searchable and usable by the Co-engineer.
-
-**Type a note directly** — for capturing decisions, rationale, or anything that doesn't exist as a file:
-
-> *"Chose 1.2 mol/L concentration based on the Q1 conductivity study — peak conductivity at this value under our temperature range."*
-
-Click **Add → Text**, type your note, tag it, and save. It's stored exactly like an uploaded file — searchable and available to the Co-engineer.
-
-**Upload a folder** — for bulk ingestion of many files at once. Protos processes them in the background and shows a progress indicator.
+**One thing the reference page doesn't emphasise enough:** capture decisions as text notes *as you make them*, not retrospectively. The rationale is clearest in the moment. A note like *"Chose 1.2 mol/L — Q1 study showed peak conductivity at this concentration under our temperature range"* is far more useful than a note written six months later.
 
 ---
 
-## Step 3 — Use tags
+## Step 2 — Tag consistently
 
-Tags are how you filter and find documents later. Agree on a simple taxonomy with your team before you start — for example:
-
+Pick a tag taxonomy before you start and stick to it. Examples:
 - By material: `graphite`, `nmc811`, `lfp`
-- By type: `paper`, `internal-report`, `spec`, `decision`
-- By property: `conductivity`, `capacity`, `thermal`
+- By type: `paper`, `decision`, `spec`
 
-Inconsistent tags make search unreliable later.
-
----
-
-## Step 4 — Search to confirm it's working
-
-Type a keyword in the search bar — something you know is in the document you just uploaded. If the document appears in the results, the library is ready.
+Inconsistent tags make search unreliable as the library grows.
 
 ---
 
-## Step 5 — See how the Co-engineer uses it
+## Step 3 — Verify it's working
 
-Now open the Co-engineer (the chat panel on the right side of the screen) and ask something that requires knowledge from your uploaded document:
-
-> *"Based on the documents in the Knowledge Library, what concentration should I use for the electrolyte?"*
-
-The Co-engineer will search the library, find the relevant passage, and answer — citing the specific document and chunk it drew from. You can click the citation to read the original source.
-
-This is the traceability chain: Co-engineer answer → Knowledge Library chunk → your uploaded document.
+Search for a keyword you know is in a document you just uploaded. If it appears, the library is ready for the Co-engineer to use.
 
 ---
 
-## What makes a good Knowledge Library
+## How the traceability works
 
-- **Upload before you start designing** — not after. The Co-engineer uses the library when creating schemas and documents, so populate it first.
-- **Capture decisions as text notes as you make them** — the rationale is clearest in the moment and the hardest to reconstruct later.
-- **Tag everything** — untagged documents get lost in a large project.
-- **Link papers to specific claims** — a paper that says "see Johnson et al. 2022" is less useful than a note that says "Johnson et al. 2022 shows peak conductivity at 1.2 mol/L under our conditions (Table 3)."
-
----
-
-## What you've learned
-
-- The Knowledge Library stores your reference material — papers, reports, decisions, notes
-- Documents are chunked and embedded, making them searchable and usable by the Co-engineer
-- The Co-engineer cites its sources — you can always trace a value back to the document it came from
-- Populating the library early makes the Co-engineer dramatically more useful
-
----
-
-## Next steps
-
-- **Use Co-engineer with this context:** Ask it to create a schema or populate a data document — it will now draw on your uploaded knowledge.
-- **Keep adding as you work:** Every decision worth remembering should be captured as a text note. Don't wait until the project is over.
+When the Co-engineer creates a data document using a value from the library, it records exactly which chunk of which document that value came from. You can click through from any field value to the original source. See [Knowledge Library → Traceability](Knowledge-Library#traceability).
 
 ---
 

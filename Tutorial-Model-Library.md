@@ -2,29 +2,15 @@
 
 [← Home](Home) · [← Model Library](Model-Library)
 
-This tutorial walks you through registering an external model so it can be used in your canvases. It takes about 10 minutes.
+> For source types, versioning rules, and best practices, see [Model Library](Model-Library).
+
+This tutorial walks you through registering a Python script and verifying it works in a canvas. Takes about 10 minutes.
 
 ---
 
-## What you'll do
+## What you need
 
-Register a Python script as a model in the Model Library, then verify it's ready to use in a canvas.
-
----
-
-## Why register a model
-
-A model block in a canvas calls out to external code — a Python script, a MATLAB simulation, a COMSOL file, or an API. Before you can use it in a canvas, you need to register it: tell Protos what the model is called, what inputs it expects, and what outputs it returns.
-
-Once registered, any canvas in any project can call it. You register once and reuse everywhere.
-
----
-
-## Before you start
-
-Have your model file ready — a Python script is the simplest case. The script just needs a function named `run` (or `main`, `execute`, `predict`, or `simulate`) that takes your inputs as arguments and returns a dict.
-
-A minimal example:
+A Python script with a function named `run`, `main`, `execute`, `predict`, or `simulate` that takes inputs as arguments and returns a dict. A minimal example:
 
 ```python
 def run(coating_thickness: float, porosity: float, temperature: float):
@@ -34,94 +20,33 @@ def run(coating_thickness: float, porosity: float, temperature: float):
 
 ---
 
-## Step 1 — Open the Model Library
+## Step 1 — Register it
 
-Click **Models Library** in the left sidebar. You'll see a list of registered models and a **Register Model** button.
+Click **Models Library** in the sidebar → **Register Model** → **Upload file**.
 
----
+Upload your script. Protos reads it and infers the input/output schema automatically from your function signature. Review what it found — add units to every numeric field and a description to anything non-obvious. This documentation is what makes the model usable by your team later.
 
-## Step 2 — Upload your script and let Protos infer the schema
-
-Click **Register Model** and select **Upload file**.
-
-Upload your Python script. Protos reads the file and automatically infers:
-- The input fields (from your function's argument names and type hints)
-- The output fields (from what the function returns)
-- Suggested units where it can infer them
-
-Review the inferred schema. If it looks right, you can proceed. If anything is wrong — missing units, wrong type, an input it missed — edit it before saving.
-
-> **This is the most important step.** Clear input/output documentation is what makes a model usable by others (and by you, six months from now). Add units for every numeric field and a description for anything non-obvious.
+Fill in the name, description, and domain, then click **Save**.
 
 ---
 
-## Step 3 — Fill in the model details
+## Step 2 — Test it in a canvas
 
-Complete the registration form:
+Go to **Simulation Studio**, create a canvas, and add a **Model** block. Search for the model you just registered — the input fields appear as connection points.
 
-- **Name:** Something searchable. `Electrode Capacity Model` is better than `model_v2`.
-- **Description:** What the model does, when to use it, and any known limitations. Be honest about edge cases — this prevents misuse.
-- **Domain:** e.g. `electrochemistry`, `thermal`, `mechanical`. Used for filtering.
-- **Version tag:** Start with `v1.0.0`. Use semantic versioning — `v1.1.0` for non-breaking updates, `v2.0.0` if you change the inputs or outputs.
-
-Click **Save**. The model is now registered and available in Simulation Studio.
+Wire a Parameter block to each input, click **Start sequence**, and check the result. If it fails, the error message in the model block's detail panel will tell you what went wrong.
 
 ---
 
-## Step 4 — Test it in a canvas
+## Step 3 — Version it when the code changes
 
-Go to **Simulation Studio**, open or create a canvas, and add a **Model** block.
-
-In the model block, search for the model you just registered. Select it — the input fields you defined will appear as connection points. Wire them up to parameter blocks or input blocks on the canvas.
-
-Run the canvas. If the model executes and returns results, registration was successful.
-
-If it fails, open the model block's detail panel — the error message will tell you what went wrong (wrong input type, missing required field, runtime error in the script, etc.).
+When you update the model: open it in the Model Library → **New Version** → upload the updated script → add a changelog note. Old canvases keep running on the previous version — their results stay reproducible. See [Model Library → Model Versioning](Model-Library#model-versioning).
 
 ---
 
-## Registering from GitHub
+## Registering from GitHub instead
 
-If your model lives in a GitHub repo:
-
-1. Click **Register Model → GitHub**.
-2. Paste the repo URL.
-3. Protos clones the repo, detects the entry point, and drafts a wrapper.
-4. Review the inferred input/output schema and the wrapper code.
-5. Confirm to containerise and register.
-
-This works for public repos. The repo needs a function named `run`, `main`, `execute`, `predict`, or `simulate` at the top level, or a `protos.toml` file that declares the model's interface.
-
----
-
-## Updating a model
-
-When your model code changes:
-
-1. Open the model in the Model Library.
-2. Click **New Version**.
-3. Upload the updated script and add a changelog note.
-4. Save.
-
-Old canvases continue to reference the old version — their results stay reproducible. New canvases will pick up the latest version by default.
-
-> **Never delete old versions.** If you delete a version that an existing canvas references, that canvas can no longer reproduce its results.
-
----
-
-## What you've learned
-
-- Register a model once and use it in any canvas across any project
-- Protos infers inputs and outputs from your code — review and add units before saving
-- Good documentation (name, description, units, limitations) is what makes a model reusable
-- Versioning keeps old results reproducible when your model evolves
-
----
-
-## Next steps
-
-- **Use it in a canvas:** Go to [Simulation Studio](Simulation-Studio) and add this model as a block in a canvas.
-- **Ask Co-engineer:** You can ask the Co-engineer to register a model for you — upload the file in the chat and say "register this as a model called X."
+If your model is in a public GitHub repo, use **Register Model → GitHub** instead of uploading a file. Protos clones the repo, detects the entry point, and generates a wrapper. The repo needs a `run`/`main`/`execute` function or a `protos.toml` file declaring the interface.
 
 ---
 
