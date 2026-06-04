@@ -4,41 +4,53 @@
 
 > For a full reference on field types, naming conventions, and best practices, see [Schemas](Schemas).
 
-This tutorial walks you through building a schema and explains the decisions you make along the way. Takes about 5 minutes.
+This tutorial walks you through building a schema from scratch. Takes about 5 minutes.
 
 ---
 
-## Step 1 — Create the schema
+## Step 1 — Open the Schema Editor
 
-Click **Schemas** in the sidebar → **New Schema**.
+Click **Schemas** in the sidebar. You'll see any existing schemas as cards.
 
-Name it using the domain + artifact convention: `Battery — Electrode Coating` or `Pharma — Tablet Formulation`. This makes it findable as your project grows.
+![The Schemas page showing existing schema cards and the New Schema button](images/sch-01-empty-library.png)
 
-![Schema library showing the Electrode Coating schema with tags and field count](images/schema-search-electrode.png)
-
----
-
-## Step 2 — Add fields and make the key decisions
-
-For each field, you choose a type and whether it's required. The types are listed in [Schemas → Field Types](Schemas#field-types) — but here's what matters in practice:
-
-**Use `enum` over `string` whenever the value comes from a fixed set.** If you use a plain string for material type, you'll end up with `"NMC811"`, `"nmc 811"`, and `"NMC-811"` as three separate values. An enum forces everyone to pick from the same list — filtering and comparison work reliably.
-
-**Use `ref` instead of duplicating values.** If your Test Result schema needs to reference which electrode formulation was tested, add a `ref` field pointing to the Electrode Coating schema instead of copying the formulation values into every test result. This is what makes traceability work. See [Schemas → Using Reference Fields](Schemas#using-reference-fields).
-
-**Mark a field required only if the document is meaningless without it.** A missing `coating_thickness` on an electrode coating document makes it unusable. Missing `batch_notes` doesn't.
+Click **+ New Schema** in the top right.
 
 ---
 
-## Step 3 — Save and test it
+## Step 2 — Fill in the name and fields
 
-Click **Save**. Now go to [Data Studio](Data-Studio) and try creating a document from this schema. If a required field is blocking you that shouldn't be required, go back and change it — it's easier to adjust now than after documents exist.
+The schema editor opens. Give it a name — use the domain + artifact convention: `Battery — Electrode Coating`, `Pharma — Tablet Formulation`.
+
+![The Create New Schema form — name field, tags, description, and field editor](images/sch-03-create-form.png)
+
+Type the name and add fields one by one using the field editor. For each field you set a name, choose a type, and mark it required or optional.
+
+**Choosing the right type:**
+- `Number` — any measured value. Always set a unit (µm, %, mg/cm²).
+- `Enum` — a fixed list of options. Use this instead of string whenever values come from a known set — it prevents typos and makes filtering work.
+- `String` — free text for notes, IDs, anything open-ended.
+- `Boolean` — yes/no.
+- `Date` — when something happened.
+- `Ref` — a link to another data document. See [Schemas → Using Reference Fields](Schemas#using-reference-fields).
+
+---
+
+## Step 3 — Save and review
+
+Click **Save**. The schema appears in the library as a card showing its name, tags, and field count.
+
+![Electrode Coating schema card in the library with battery and electrode tags](images/sch-05-schema-card.png)
+
+You can open it any time to see the full field structure, with the live preview on the right showing how documents following this schema will look.
+
+![The schema editor showing all fields — active_material (enum), batch_id (string), coating_thickness (number), and more](images/sch-06-schema-fields.png)
 
 ---
 
 ## What to avoid
 
-- Don't add fields you won't consistently fill in. Empty fields in half your documents break comparisons.
+- Don't add fields you won't consistently fill in — empty fields break comparisons.
 - Don't rename or remove fields once data documents exist against this schema — it can corrupt those documents.
 
 ---

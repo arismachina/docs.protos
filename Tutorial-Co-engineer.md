@@ -4,73 +4,69 @@
 
 > For a full list of capabilities and how it gets smarter over time, see [Co-engineer](Co-engineer).
 
-This tutorial shows you what the Co-engineer actually does when you use it — not just what it can do, but what the interaction looks like. Takes about 10 minutes.
+This tutorial shows you what the Co-engineer does when you use it — what to ask, what happens, and how to verify the results. Takes about 10 minutes.
 
 ---
 
 ## Before you start
 
-The Co-engineer works best when you have:
-- At least one document in the **Knowledge Library** — so it has project context to draw on
-- At least one **Schema** — so it knows what structure to fill when creating documents
-
-If you haven't done those yet: [Tutorial: Creating Your First Schema](Tutorial-Schemas) → [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
+The Co-engineer works best when you have at least one document in the **Knowledge Library** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
 
 ---
-
-![Battery / Anode / Wiki Example project showing canvases, data documents, and schemas](images/project-overview.png)
 
 ## Step 1 — Ask it to create a schema
 
-Open the Co-engineer panel (chat icon, right side of the screen) and try:
+Open the Co-engineer panel (chat icon on the right side of the screen) and type:
 
 > *"Create a schema for electrode coating experiments with fields for coating thickness, porosity, active material type, and mass loading."*
 
-It will search for existing schemas first, then propose field names, types, and units. **It asks for your confirmation before creating anything.** Review the proposal — if a type or unit is wrong, say so before confirming.
-
-Once confirmed, check the Schema Editor. Edit anything that doesn't look right before creating documents against it.
+It will search for existing schemas first, then propose the schema with field names, types, and units. **It asks for your confirmation before creating anything.** Review the proposal — if a type or unit is wrong, say so before confirming.
 
 ---
 
-## Step 2 — Ask it to create a document from a file
+## Step 2 — Ask it to create data documents from a file
 
-Upload a file in the chat (a test report, datasheet, or any document with values), then ask:
+Upload a test report, datasheet, or any file with values in the chat, then ask:
 
 > *"Create an Electrode Coating document from this file."*
 
-It reads the file, searches the Knowledge Library for supporting context, maps values to your schema fields, and shows you what it found. If a required field is missing, it tells you rather than guessing. Fill in the gaps manually and confirm.
+It reads the file, maps the values to your schema fields, and shows you what it found. Missing required fields are flagged — you fill in the gaps and confirm.
 
 ---
 
-## Step 3 — Check the provenance
-
-Open the document that was just created. Fields populated from the Knowledge Library have a provenance marker showing the exact chunk they came from. Click it to read the original source. This is the traceability the [Knowledge Library](Knowledge-Library#traceability) page describes — here's where you actually see it.
-
----
-
-## Step 4 — Ask a question
+## Step 3 — Ask it a question grounded in your library
 
 > *"What does the Knowledge Library say about optimal porosity for NMC811 electrodes?"*
 
-The answer will include citations. Click any citation to verify the source. If the library doesn't have relevant information, it will say so rather than making something up.
+The answer includes citations. Click any citation to verify the original source. If the library doesn't have relevant information, it says so rather than guessing.
 
 ---
 
-## Step 5 — Ask it to set up the Data Studio
+## Step 4 — Ask it to set up the Data Studio
 
 > *"Activate the three most recent electrode coating documents in the Data Studio."*
 
-Go to the Data Studio — the documents should now be active and visible as columns in the table.
+Go to the Data Studio to confirm the documents are now active and visible as columns.
 
 ---
 
-## Step 6 — Ask it to build a canvas
+## Step 5 — Ask it to build a canvas
 
 > *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."*
 
-It creates the canvas in Simulation Studio, adds an Input block, writes the calculation code, and wires everything together. **The calculation block will need your approval before it runs** — read the code, confirm it looks right, then approve it.
+It creates the canvas, adds an Input block, writes the calculation code, and wires everything together.
 
-![Canvas with Coating Data input, temperature parameter, and Capacity Calculator calculation block connected](images/canvas-with-blocks.png)
+![Canvas built by the Co-engineer — Coating Data input, temperature parameter, and Capacity Calculator connected](images/canvas-with-blocks.png)
+
+**The calculation block needs your approval before it runs.** Read the code, confirm it looks right, then approve it.
+
+---
+
+## What a project looks like after working with the Co-engineer
+
+After following these steps, your project will have schemas, data documents, a canvas, and knowledge sources all linked together.
+
+![Battery / Anode / Wiki Example project showing 1 canvas, 3 data documents, and 1 schema all populated](images/ce-01-project-overview.png)
 
 ---
 

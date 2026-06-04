@@ -4,82 +4,73 @@
 
 > For a full explanation of block types, sweeps, and how the canvas connects to the Data Studio, see [Simulation Studio](Simulation-Studio).
 
-This tutorial walks you through building a canvas from scratch and running it. Takes about 10 minutes.
+This tutorial walks you through building a canvas from an empty state. Takes about 10 minutes.
 
 ---
 
 ## What you need
 
-A schema with at least one data document. If you don't have these yet, start with [Tutorial: Creating Your First Schema](Tutorial-Schemas).
+At least one schema with one data document. If you don't have these yet, start with [Tutorial: Creating Your First Schema](Tutorial-Schemas).
 
 ---
 
-## Step 1 — Create a canvas
+## Step 1 — Open Simulation Studio
 
-Click **Simulation Studio** in the sidebar → **New Canvas**. Give it a name and open it.
+Click **Simulation Studio** in the sidebar. A new project starts with no canvases.
 
-![Canvas with connected blocks: Coating Data input, temperature parameter, and Capacity Calculator](images/canvas-with-blocks.png)
+![Simulation Studio empty state — "No simulations yet" with New and Create with Co-Engineer buttons](images/sim-01-empty.png)
+
+Click **+ New** → **New Canvas**. Give it a name and a short description of what it calculates.
 
 ---
 
 ## Step 2 — Add an Input block
 
-Click **Add block** → **Input**. Select your schema and the data document you want to use. Choose which fields to expose as outputs — these become the values downstream blocks can use.
+Click **+ Add Component** → **Data Input**. Select your schema and the data documents you want to pull in. Choose which fields to expose — these become the values downstream blocks can use.
 
-> You're not hardcoding values here — you're pointing at a live document. Change the active document in the Data Studio and the canvas picks it up automatically.
+> You're not hardcoding values here — you're pointing at live documents from the Data Studio. Change the active documents there and the canvas picks up the new values automatically.
 
 ---
 
 ## Step 3 — Add a Parameter block
 
-Click **Add block** → **Parameter** → **Number**. Give it a name (e.g. `temperature`), a value (e.g. `25`), and a unit (`°C`).
+Click **+ Add Component** → **Parameter** → **Number**. Name it (e.g. `temperature`), set a value and unit.
+
+A parameter is a value you control directly on the canvas — not from a document. You can change it any time and the canvas recalculates.
 
 ---
 
 ## Step 4 — Add a Calculation block and connect it
 
-Click **Add block** → **Calculation**. Write Python code that uses the inputs from the blocks you'll connect. The variable names match the field names from the Input block and the parameter name you set:
-
-```python
-porosity = inputs["porosity"]
-temperature = inputs["temperature"]
-
-return {"adjusted_porosity": porosity * (1 + 0.002 * temperature)}
-```
-
-Draw arrows from the Input block and the Parameter block to the Calculation block.
+Click **+ Add Component** → **Calculation**. Write Python code that uses the upstream values. Then draw arrows connecting the Input and Parameter blocks to the Calculation block.
 
 ---
 
 ## Step 5 — Approve the calculation
 
-Calculation blocks need your approval before they run automatically — this is a safety check confirming the code is safe to execute.
+Calculation blocks need your approval before they run. This is a safety check — you're confirming the code is safe to execute. Click **Approve** on the block.
 
-Click **Approve** on the calculation block. After this it will run automatically whenever its inputs change.
-
-> If you edit the code later, it goes back to needing approval.
+After approval it runs automatically whenever its inputs change. If you edit the code, it goes back to needing approval.
 
 ---
 
 ## Step 6 — Run it
 
-Change the parameter value — the calculation runs automatically.
+The canvas runs automatically when Data Studio inputs change. To force a full run from scratch, click **Start sequence**.
 
-Or click **Start sequence** to force a full run from scratch. If you have unapproved blocks, Protos will warn you and ask you to confirm before proceeding.
+![Start sequence button on the canvas toolbar](images/sim-04-start-sequence.png)
 
-Click the Calculation block to see the results, execution status, and any errors.
-
----
-
-## Step 7 — Try swapping the data
-
-Go to the **Data Studio**, activate a different document from the same schema, and come back. The canvas re-runs automatically with the new values. This is how you test variants — swap data, compare results, without touching the canvas.
+If any calculation blocks are unapproved, Protos will warn you and ask you to confirm before running them.
 
 ---
 
-## Adding a sweep
+## What a finished canvas looks like
 
-To run across a range of values instead of one: add an **array parameter** block instead of a regular parameter, set min, max, and number of points, then run. You get a full output surface instead of a single result. See [Simulation Studio → Design Space Exploration](Simulation-Studio#design-space-exploration-sweep).
+Here's a completed canvas with three connected blocks: a data input (green), a parameter (blue), and a calculation (orange). The arrows show the data flow.
+
+![Canvas showing Coating Data input connected to Capacity Calculator, with temperature parameter also feeding in](images/sim-06-canvas-graph-zoom.png)
+
+Click any block to open its detail panel and see inputs, outputs, and execution status.
 
 ---
 

@@ -4,49 +4,47 @@
 
 > For a full explanation of how the Data Studio connects to the canvas, see [Data Studio](Data-Studio).
 
-This tutorial walks you through the Data Studio with a concrete example. Takes about 5 minutes.
+This tutorial shows you how to get your data documents loaded and ready for a simulation. Takes about 5 minutes.
 
 ---
 
-## What you need
+## Step 1 — Open the Data Studio
 
-At least 2–3 data documents of the same schema. If you only have one, the comparison isn't useful — go to the Co-engineer and ask it to create a few variants first.
+Click **Data Studio** in the sidebar. When you first open it, it asks you to pick a schema.
 
----
-
-## Step 1 — Activate documents
-
-Click **Data Studio** in the sidebar. Select your schema from the picker — all documents of that type appear on the left.
-
-![Schema picker dropdown showing available schemas](images/data-studio-schema-list.png)
-
-Click 2–3 documents to activate them. Each one becomes a column in the table on the right, with all fields as rows. You're now comparing them side by side.
+![Data Studio empty state — "Select a schema to view documents"](images/ds-01-select-schema-prompt.png)
 
 ---
 
-## Step 2 — Pin a requirement
+## Step 2 — Pick a schema
 
-If your project has a requirements document (a target spec), select it from the **Requirements** section in the left panel. It appears as a column alongside your design documents — every field now sits next to its target, making gaps visible at a glance.
+Click the **Select a schema…** dropdown. All schemas in your project appear.
 
----
+![Schema picker open showing Electrode Coating at the top of the list](images/ds-02-schema-picker-open.png)
 
-## Step 3 — Edit inline
-
-Double-click any cell to edit the value directly. Press Enter to save, Escape to cancel. The change saves back to the original document immediately — this isn't a temporary view.
+Click the schema you want to work with — for example **Electrode Coating**.
 
 ---
 
-## Step 4 — Swap to test a different variant
+## Step 3 — Activate documents
 
-Deselect one document, select a different one. The column updates immediately. Go to Simulation Studio — the canvas will re-run automatically with the new inputs. This is the fastest way to compare how different designs perform.
+All data documents following that schema appear in a list on the left. Click the ones you want to compare — each one becomes a **column** in the table.
+
+With 3 documents activated, the table shows all fields as rows and each document as a column, so you can compare their values side by side.
+
+![Data Studio with 3 coating variants as columns — Coating A, B, and C side by side](images/ds-03-docs-as-columns.png)
 
 ---
 
-## Step 5 — Use the analysis panel
+## Step 4 — Edit inline if needed
 
-Click **Add chart** in the analysis panel on the right. Choose a bar chart to compare one field across all active documents, or a scatter plot to plot one field against another.
+Double-click any cell to edit the value directly. Press Enter to save. The change saves back to the original document immediately.
 
-This is useful for spotting outliers before running a full simulation.
+---
+
+## Step 5 — The canvas picks this up automatically
+
+Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** — the canvas will re-run automatically using the documents you just selected. Swap a document out, it recalculates.
 
 ---
 
