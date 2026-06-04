@@ -14,11 +14,11 @@ The Co-engineer draws on the Knowledge Library when creating schemas and data do
 
 ---
 
-![Knowledge Library with Add button](images/04-knowledge-library.png)
-
 ## Step 1 — Upload your reference material
 
 Click **Knowledge Library** in the sidebar → **Add**.
+
+![Add dropdown showing Upload Document, Upload Folder, and Add Knowledge options](images/knowledge-add-dropdown.png)
 
 Upload the documents that inform your project — papers, test reports, spec documents, datasheets. See [Knowledge Library → Adding to the Library](Knowledge-Library#adding-to-the-library) for the three upload methods (file, text note, folder).
 

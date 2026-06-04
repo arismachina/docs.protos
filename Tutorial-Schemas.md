@@ -8,13 +8,15 @@ This tutorial walks you through building a schema and explains the decisions you
 
 ---
 
-![Schemas page showing a list of schemas](images/02-schema-library.png)
-
 ## Step 1 — Create the schema
 
 Click **Schemas** in the sidebar → **New Schema**.
 
+![New Schema button in the Schemas page header](images/schema-page-header.png)
+
 Name it using the domain + artifact convention: `Battery — Electrode Coating` or `Pharma — Tablet Formulation`. This makes it findable as your project grows.
+
+![Example schema card showing name, tags, and node count](images/schema-card-example.png)
 
 ---
 

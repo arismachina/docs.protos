@@ -20,11 +20,11 @@ def run(coating_thickness: float, porosity: float, temperature: float):
 
 ---
 
-![Models Library showing registered models](images/06-models-library.png)
-
 ## Step 1 — Register it
 
 Click **Models Library** in the sidebar → **Register Model** → **Upload file**.
+
+![Register model button in the Models Library](images/models-page-header.png)
 
 Upload your script. Protos reads it and infers the input/output schema automatically from your function signature. Review what it found — add units to every numeric field and a description to anything non-obvious. This documentation is what makes the model usable by your team later.
 
