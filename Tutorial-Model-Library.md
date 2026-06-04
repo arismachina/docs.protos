@@ -20,6 +20,8 @@ def run(coating_thickness: float, porosity: float, temperature: float):
 
 ---
 
+![Models Library showing registered models](images/06-models-library.png)
+
 ## Step 1 — Register it
 
 Click **Models Library** in the sidebar → **Register Model** → **Upload file**.

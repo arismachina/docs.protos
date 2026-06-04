@@ -18,6 +18,8 @@ If you haven't done those yet: [Tutorial: Creating Your First Schema](Tutorial-S
 
 ---
 
+![Project Overview showing Co-engineer session in the Copilot Sessions panel](images/01-project-overview.png)
+
 ## Step 1 — Ask it to create a schema
 
 Open the Co-engineer panel (chat icon, right side of the screen) and try:

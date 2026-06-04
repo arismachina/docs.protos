@@ -8,6 +8,8 @@ This tutorial walks you through building a schema and explains the decisions you
 
 ---
 
+![Schemas page showing a list of schemas](images/02-schema-library.png)
+
 ## Step 1 — Create the schema
 
 Click **Schemas** in the sidebar → **New Schema**.

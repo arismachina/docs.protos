@@ -14,6 +14,8 @@ A schema with at least one data document. If you don't have these yet, start wit
 
 ---
 
+![Simulation Studio home showing canvas list](images/07-simulation-studio.png)
+
 ## Step 1 — Create a canvas
 
 Click **Simulation Studio** in the sidebar → **New Canvas**. Give it a name and open it.

@@ -14,6 +14,8 @@ The Co-engineer draws on the Knowledge Library when creating schemas and data do
 
 ---
 
+![Knowledge Library with Add button](images/04-knowledge-library.png)
+
 ## Step 1 — Upload your reference material
 
 Click **Knowledge Library** in the sidebar → **Add**.

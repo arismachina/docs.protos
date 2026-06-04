@@ -14,6 +14,8 @@ At least 2–3 data documents of the same schema. If you only have one, the comp
 
 ---
 
+![Data Studio schema selector showing available schemas](images/05-data-studio.png)
+
 ## Step 1 — Activate documents
 
 Click **Data Studio** in the sidebar. Select your schema from the picker — all documents of that type appear on the left.
