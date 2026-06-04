@@ -29,6 +29,7 @@
 
 **Tutorials**
 - [Building Your First Canvas](Tutorial-Simulation-Studio)
+- [Using the Data Studio](Tutorial-Data-Studio)
 
 ---
 
