@@ -29,21 +29,14 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 
 ## Creating a Schema
 
-1. Navigate to **Schemas** in the left sidebar.
-2. Click **New Schema**.
-3. Name it: `[Domain] — [Artifact type]`
-   - Example: `Battery — Electrolyte Formulation`
-   - Example: `Thermal — Operating Conditions`
-4. Add fields using the field editor:
+For a full step-by-step walkthrough with screenshots, see the **[Tutorial: Creating Your First Schema](Tutorial-Schemas)**.
 
-| Field property | Options |
-|---------------|---------|
-| **Type** | `number`, `string`, `enum`, `boolean`, `date`, `ref` |
-| **Required** | yes / no |
-| **Unit** | e.g. `°C`, `mol/L`, `MPa` |
-| **Description** | Short help text shown to users filling the field |
+Quick reference:
 
-5. Click **Save**. The schema is now available across your project.
+1. Navigate to **Schemas** in the left sidebar → **New Schema**.
+2. Name it: `[Domain] — [Artifact type]` (e.g. `Battery — Electrolyte Formulation`).
+3. Add fields — set type, unit, and whether required.
+4. Click **Save**.
 
 > **Tip:** Keep schemas lean — only add fields that will actually be populated. A sparse schema with consistent data is far more useful than a dense schema half the team ignores.
 

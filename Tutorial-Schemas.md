@@ -2,15 +2,13 @@
 
 [← Home](Home) · [← Schemas](Schemas)
 
-> For a full reference on field types, naming conventions, and best practices, see [Schemas](Schemas).
-
-This tutorial walks you through building a schema from scratch. Takes about 5 minutes.
+This tutorial walks you through building a schema from scratch, explains the decisions you'll make along the way, and shows you what to watch out for. Takes about 5 minutes.
 
 ---
 
 ## Step 1 — Open the Schema Editor
 
-Click **Schemas** in the sidebar. You'll see any existing schemas as cards.
+Click **Schemas** in the sidebar. You'll see any existing schemas as cards. Each card shows the schema name, tags, and how many fields it has.
 
 ![The Schemas page showing existing schema cards and the New Schema button](images/sch-01-empty-library.png)
 
@@ -18,40 +16,66 @@ Click **+ New Schema** in the top right.
 
 ---
 
-## Step 2 — Fill in the name and fields
+## Step 2 — Give it a name
 
-The schema editor opens. Give it a name — use the domain + artifact convention: `Battery — Electrode Coating`, `Pharma — Tablet Formulation`.
+The schema editor opens. Name it using the domain + artifact convention: `Battery — Electrode Coating`, `Pharma — Tablet Formulation`, `Thermal — Operating Conditions`.
 
-![The Create New Schema form — name field, tags, description, and field editor](images/sch-03-create-form.png)
+This naming makes schemas easy to find as your project grows — anyone can search by domain or type.
 
-Type the name and add fields one by one using the field editor. For each field you set a name, choose a type, and mark it required or optional.
+![The Create New Schema form with name field, tags, description, and an empty field editor on the left with live preview on the right](images/sch-03-create-form.png)
 
-**Choosing the right type:**
-- `Number` — any measured value. Always set a unit (µm, %, mg/cm²).
-- `Enum` — a fixed list of options. Use this instead of string whenever values come from a known set — it prevents typos and makes filtering work.
-- `String` — free text for notes, IDs, anything open-ended.
-- `Boolean` — yes/no.
-- `Date` — when something happened.
-- `Ref` — a link to another data document. See [Schemas → Using Reference Fields](Schemas#using-reference-fields).
+> **Keep it lean.** Only add fields that will actually be populated. A schema with 5 well-filled fields is far more useful than one with 20 fields that half the team leaves empty. Empty fields break comparisons and make documents harder to read.
 
 ---
 
-## Step 3 — Save and review
+## Step 3 — Add your fields
 
-Click **Save**. The schema appears in the library as a card showing its name, tags, and field count.
+Type a field name in the bottom input and click **+ Add**. The field appears in the list and you set its type.
 
-![Electrode Coating schema card in the library with battery and electrode tags](images/sch-05-schema-card.png)
+Click the **Type** dropdown on any field to change it:
 
-You can open it any time to see the full field structure, with the live preview on the right showing how documents following this schema will look.
+![Field type picker showing String, Number, Boolean, Enum, and Date options](images/sch-field-type-picker.png)
 
-![The schema editor showing all fields — active_material (enum), batch_id (string), coating_thickness (number), and more](images/sch-06-schema-fields.png)
+**How to choose the right type:**
+
+| Type | When to use it |
+|------|---------------|
+| `Number` | Any measured value — coating thickness, porosity, temperature. Always set a unit. |
+| `Enum` | A fixed list of options — material type, process step, phase. Use this instead of string whenever the values come from a known set. It prevents typos and makes filtering reliable. |
+| `String` | Free text — batch IDs, notes, anything open-ended. |
+| `Boolean` | Yes / no. |
+| `Date` | When something happened — experiment date, batch date. |
+| `Ref` | A link to another data document. Use this instead of copying values across schemas. See [Schemas → Using Reference Fields](Schemas#using-reference-fields). |
+
+Mark a field **Required** only if the document is meaningless without it. A missing `coating_thickness` on an electrode coating record makes it useless for comparison. A missing `batch_notes` doesn't.
+
+The **Live Preview** on the right updates as you add fields, showing exactly how documents following this schema will look:
+
+![Schema editor showing fields on the left with the live preview panel on the right — active_material, coating_thickness, porosity, and mass_loading all visible](images/sch-editor-split-view.png)
+
+---
+
+## Step 4 — Save
+
+Click **Save**. The schema appears in the library as a card.
+
+![Electrode Coating schema card in the library showing name, tags (battery, electrode, coating), and field count](images/sch-05-schema-card.png)
+
+The schema is now available across your project. Go to the [Data Studio](Data-Studio) to create your first data document from it.
 
 ---
 
 ## What to avoid
 
-- Don't add fields you won't consistently fill in — empty fields break comparisons.
-- Don't rename or remove fields once data documents exist against this schema — it can corrupt those documents.
+- **Don't add fields you won't fill consistently.** Sparse data breaks comparisons.
+- **Don't rename or remove fields once data documents exist against this schema.** This can corrupt existing documents. Add a new schema version instead.
+- **Standardise units before you create numeric fields.** Changing units later requires migrating all existing documents.
+
+---
+
+## Next step
+
+→ [Tutorial: Using the Data Studio](Tutorial-Data-Studio) — create documents from this schema and compare them side by side.
 
 ---
 
