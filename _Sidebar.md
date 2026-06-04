@@ -27,6 +27,11 @@
 
 ---
 
+**Tutorials**
+- [Building Your First Canvas](Tutorial-Simulation-Studio)
+
+---
+
 **Reference**
 - [Glossary](Glossary)
 - [Integrations](Home#integrations)
