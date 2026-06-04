@@ -18,7 +18,7 @@ A schema with at least one data document. If you don't have these yet, start wit
 
 Click **Simulation Studio** in the sidebar → **New Canvas**. Give it a name and open it.
 
-![Create with Co-Engineer and New canvas buttons in Simulation Studio](images/simulation-new-button.png)
+![Canvas with connected blocks: Coating Data input, temperature parameter, and Capacity Calculator](images/canvas-with-blocks.png)
 
 ---
 

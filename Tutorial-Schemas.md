@@ -12,11 +12,9 @@ This tutorial walks you through building a schema and explains the decisions you
 
 Click **Schemas** in the sidebar → **New Schema**.
 
-![New Schema button in the Schemas page header](images/schema-page-header.png)
-
 Name it using the domain + artifact convention: `Battery — Electrode Coating` or `Pharma — Tablet Formulation`. This makes it findable as your project grows.
 
-![Example schema card showing name, tags, and node count](images/schema-card-example.png)
+![Schema library showing the Electrode Coating schema with tags and field count](images/schema-search-electrode.png)
 
 ---
 

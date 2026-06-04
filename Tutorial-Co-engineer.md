@@ -18,6 +18,8 @@ If you haven't done those yet: [Tutorial: Creating Your First Schema](Tutorial-S
 
 ---
 
+![Battery / Anode / Wiki Example project showing canvases, data documents, and schemas](images/project-overview.png)
+
 ## Step 1 — Ask it to create a schema
 
 Open the Co-engineer panel (chat icon, right side of the screen) and try:
@@ -67,6 +69,8 @@ Go to the Data Studio — the documents should now be active and visible as colu
 > *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."*
 
 It creates the canvas in Simulation Studio, adds an Input block, writes the calculation code, and wires everything together. **The calculation block will need your approval before it runs** — read the code, confirm it looks right, then approve it.
+
+![Canvas with Coating Data input, temperature parameter, and Capacity Calculator calculation block connected](images/canvas-with-blocks.png)
 
 ---
 
