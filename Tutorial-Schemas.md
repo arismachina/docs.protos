@@ -38,16 +38,7 @@ Click the **Type** dropdown on any field to change it:
 
 ![Field type picker showing String, Number, Boolean, Enum, and Date options](images/sch-field-type-picker.png)
 
-**How to choose the right type:**
-
-| Type | When to use it |
-|------|---------------|
-| `Number` | Any measured value — coating thickness, porosity, temperature. Always set a unit (see [units best practice](Schemas#best-practices)). |
-| `Enum` | A fixed list of options — material type, process step, phase. Use this instead of string whenever the values come from a known set. It prevents typos and makes filtering reliable. |
-| `String` | Free text — batch IDs, notes, anything open-ended. |
-| `Boolean` | Yes / no. |
-| `Date` | When something happened — experiment date, batch date. |
-| `Ref` | A link to another data document. Use this instead of copying values across schemas. See [Schemas → Using Reference Fields](Schemas#using-reference-fields). |
+For a full description of each type and when to use it, see [Schemas → Field Types](Schemas#field-types). The key decision in practice: use `Enum` instead of `String` whenever values come from a fixed set — it prevents typos and makes filtering reliable.
 
 Mark a field **Required** only if the document is meaningless without it. A missing `coating_thickness` on an electrode coating record makes it useless for comparison. A missing `batch_notes` doesn't.
 
