@@ -75,7 +75,7 @@ To add a reference field:
 
 ## Bringing External Data into Schemas
 
-There is no automatic column-mapping import wizard. Instead, Protos uses the **Co-engineer** to extract data from your existing files and create structured data documents that follow your schema.
+Protos uses the **Co-engineer** to extract data from your existing files and create structured data documents that follow your schema.
 
 ### How it works
 

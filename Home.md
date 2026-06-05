@@ -16,7 +16,7 @@
 
 ## Getting Started
 
-> **You don't have to do everything manually.** The [Co-engineer](Co-engineer) is the primary way to work in Protos. Open it and describe what you want — it will create schemas, populate data documents, build canvases, and search the Knowledge Library for you. Most users start there rather than navigating the features directly.
+> **The [Co-engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
 1. Sign in at [protos.arismachina.com](https://protos.arismachina.com) with your Aris Machina account.
 2. Create or open a **Project**.

@@ -42,7 +42,7 @@ Click the **Type** dropdown on any field to change it:
 
 | Type | When to use it |
 |------|---------------|
-| `Number` | Any measured value — coating thickness, porosity, temperature. Always set a unit. |
+| `Number` | Any measured value — coating thickness, porosity, temperature. Always set a unit (see [units best practice](Schemas#best-practices)). |
 | `Enum` | A fixed list of options — material type, process step, phase. Use this instead of string whenever the values come from a known set. It prevents typos and makes filtering reliable. |
 | `String` | Free text — batch IDs, notes, anything open-ended. |
 | `Boolean` | Yes / no. |
