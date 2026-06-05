@@ -75,7 +75,7 @@ Data Studio (which data) → Canvas (what to do with it) → Results
 ## See Also
 
 - [Schemas](Schemas) — define the structure your data documents follow
-- [Simulation Studio](Simulation-Studio) — run individual physics models standalone
+- [Simulation Studio](Simulation-Studio) — build and run the calculations that use your activated documents
 - [Co-engineer](Co-engineer) — the Co-engineer can create data documents and activate them in the Data Studio on your behalf
 
 ---

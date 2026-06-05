@@ -65,7 +65,7 @@ Reference fields link schemas together, creating a **relational structure** acro
 
 To add a reference field:
 
-1. In the schema editor, add a new field and set type to `reference`.
+1. In the schema editor, add a new field and set type to `ref`.
 2. Select the **target schema**.
 3. Set whether one or many references are allowed.
 

@@ -82,9 +82,7 @@ Define the structure of your engineering data. Instead of disconnected spreadshe
 
 ### [Simulation Studio](Simulation-Studio)
 
-Run physics-based models and first-principles calculations directly inside your project. Every input and output links back to the canvas — results are always traceable to the design parameters that produced them.
-
-**Core capabilities:** deterministic physics-based models, design space exploration via sweeps, in-platform visualization, full output → input → source trace.
+Build and run calculation canvases — connect your data to models and calculations, and see results update automatically. Supports Python calculations, external models, parameter sweeps, and in-canvas visualization.
 
 [→ Simulation Studio guide](Simulation-Studio)
 
@@ -141,7 +139,7 @@ Share canvases with teammates (view-only for non-owners) or publish them as inte
 |------|-----------|
 | **Canvas** | The visual graph workspace connecting all project nodes |
 | **Design freeze** | The point at which a validated design is locked for handoff — achieved in Protos by publishing a canvas snapshot |
-| **Node** | Any artifact on the canvas (design, data, model, result, parameter) |
+| **Node** | A block on the canvas — parameter, input, calculation, model, or visualization |
 | **PSPP** | Process → Structure → Property → Performance |
 | **Schema** | A defined structure for a type of engineering data |
 | **Sweep** | A batch simulation run across a parameter space |

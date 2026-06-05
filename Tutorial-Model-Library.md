@@ -6,6 +6,8 @@
 
 This tutorial walks you through registering a Python script and verifying it works in a canvas. Takes about 10 minutes.
 
+> **The Co-engineer can register models for you.** Upload your script in the Co-engineer chat and say *"Register this as a model."* It will infer the input/output schema automatically and handle the registration. This tutorial is for when you want to do it manually or understand what's happening under the hood.
+
 ---
 
 ## What you need
@@ -49,6 +51,12 @@ When you update the model: open it in the Model Library → **New Version** → 
 ## Registering from GitHub instead
 
 If your model is in a public GitHub repo, use **Register Model → GitHub** instead of uploading a file. Protos clones the repo, detects the entry point, and generates a wrapper. The repo needs a `run`/`main`/`execute` function or a `protos.toml` file declaring the interface.
+
+---
+
+## Next step
+
+→ [Tutorial: Building Your First Canvas](Tutorial-Simulation-Studio) — add your registered model as a block in a canvas and run it.
 
 ---
 
