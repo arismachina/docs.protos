@@ -19,8 +19,6 @@ theme:
     - search.highlight
     - search.suggest
     - toc.follow
-  logo: images/aris-logo.png
-  favicon: images/aris-logo.png
 
 nav:
   - Home: index.md
