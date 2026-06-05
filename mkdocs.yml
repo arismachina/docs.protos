@@ -1,0 +1,58 @@
+site_name: Protos Docs
+site_url: https://docs.protos.arismachina.com
+site_description: Documentation for the Protos R&D platform by Aris Machina
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: black
+    accent: teal
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - toc.follow
+  logo: images/aris-logo.png
+  favicon: images/aris-logo.png
+
+nav:
+  - Home: index.md
+  - Design:
+    - Data Studio: Data-Studio.md
+    - Simulation Studio: Simulation-Studio.md
+  - Library:
+    - Schemas: Schemas.md
+    - Model Library: Model-Library.md
+    - Knowledge Library: Knowledge-Library.md
+  - Co-engineer: Co-engineer.md
+  - Collaboration & Sharing: Collaboration-and-Sharing.md
+  - Glossary: Glossary.md
+  - Tutorials:
+    - Creating Your First Schema: Tutorial-Schemas.md
+    - Setting Up Your Knowledge Library: Tutorial-Knowledge-Library.md
+    - Working with the Co-engineer: Tutorial-Co-engineer.md
+    - Using the Data Studio: Tutorial-Data-Studio.md
+    - Registering Your First Model: Tutorial-Model-Library.md
+    - Building Your First Canvas: Tutorial-Simulation-Studio.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arismachina
+
+copyright: Maintained by Aris Machina

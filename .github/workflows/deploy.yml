@@ -1,0 +1,96 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs
+        run: pip install mkdocs-material
+
+      - name: Prepare docs
+        run: |
+          # Copy wiki files into a docs/ build folder
+          mkdir -p build/docs build/docs/images
+
+          # Copy markdown files, renaming Home.md to index.md
+          for f in *.md; do
+            if [ "$f" = "Home.md" ]; then
+              cp "$f" build/docs/index.md
+            elif [ "$f" != "_Sidebar.md" ]; then
+              cp "$f" build/docs/
+            fi
+          done
+
+          # Copy images
+          cp -r images/* build/docs/images/ 2>/dev/null || true
+
+          # Fix internal links: add .md extension to bare page links
+          # e.g. (Home) -> (index.md), (Schemas) -> (Schemas.md)
+          python3 - <<'PYEOF'
+          import re, os
+          from pathlib import Path
+
+          docs = Path("build/docs")
+          page_names = {p.stem for p in docs.glob("*.md")}
+
+          def fix_links(text, filename):
+              def replace(m):
+                  label = m.group(1)
+                  target = m.group(2)
+                  # Skip external, image, and already-.md links
+                  if target.startswith(("http", "mailto", "images/", "user://", "collection://", "#")):
+                      return m.group(0)
+                  if target.endswith(".md"):
+                      return m.group(0)
+                  # Split page from anchor
+                  if "#" in target:
+                      page, anchor = target.split("#", 1)
+                  else:
+                      page, anchor = target, None
+                  # Map Home to index
+                  if page == "Home":
+                      page = "index"
+                  # Only fix if it's a known page
+                  if page and page not in page_names:
+                      return m.group(0)
+                  new_target = f"{page}.md" if page else ""
+                  if anchor:
+                      new_target += f"#{anchor}"
+                  return f"[{label}]({new_target})"
+
+              return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace, text)
+
+          for md in docs.glob("*.md"):
+              text = md.read_text()
+              fixed = fix_links(text, md.name)
+              # Also fix ← back links that say (Home)
+              md.write_text(fixed)
+
+          print("Links fixed.")
+          PYEOF
+
+          # Copy mkdocs.yml with docs_dir set to build/docs
+          cp mkdocs.yml build/mkdocs.yml
+          # Override docs_dir in the copy
+          echo "docs_dir: docs" >> build/mkdocs.yml
+
+      - name: Deploy
+        run: |
+          cp CNAME build/docs/CNAME
+          cd build
+          mkdocs gh-deploy --force --remote-branch gh-pages --config-file mkdocs.yml
