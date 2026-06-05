@@ -39,6 +39,10 @@ jobs:
           # Copy images
           cp -r images/* build/docs/images/ 2>/dev/null || true
 
+          # Copy stylesheets
+          mkdir -p build/docs/stylesheets
+          cp -r stylesheets/* build/docs/stylesheets/ 2>/dev/null || true
+
           # Fix internal links: add .md extension to bare page links
           # e.g. (Home) -> (index.md), (Schemas) -> (Schemas.md)
           python3 - <<'PYEOF'

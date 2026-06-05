@@ -1,0 +1,54 @@
+/* Aris Machina brand colours */
+:root {
+  --md-primary-fg-color:        #082E4A;
+  --md-primary-fg-color--light: #31434A;
+  --md-primary-fg-color--dark:  #082E4A;
+  --md-accent-fg-color:         #065056;
+  --md-accent-fg-color--transparent: #06505620;
+}
+
+/* Header */
+.md-header {
+  background-color: #082E4A;
+}
+
+/* Links use Deep Alloy Teal */
+.md-typeset a {
+  color: #065056;
+}
+.md-typeset a:hover {
+  color: #31434A;
+}
+
+/* Active nav item */
+.md-nav__link--active {
+  color: #065056 !important;
+  font-weight: 600;
+}
+
+/* Sidebar active item highlight */
+.md-nav__item--active > .md-nav__link {
+  color: #065056;
+}
+
+/* Search focus ring */
+.md-search__form:focus-within {
+  outline: 2px solid #80ADAD;
+}
+
+/* Admonition / tip accent */
+.md-typeset .admonition {
+  border-left-color: #065056;
+}
+
+/* Table header */
+.md-typeset table:not([class]) th {
+  background-color: #082E4A;
+  color: white;
+}
+
+/* Code blocks */
+.md-typeset code {
+  background-color: #F0EFEA;
+  color: #31434A;
+}
