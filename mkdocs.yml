@@ -5,9 +5,22 @@ site_description: Documentation for the Protos R&D platform by Aris Machina
 theme:
   name: material
   palette:
-    scheme: default
-    primary: custom
-    accent: custom
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   font:
     text: Inter
     code: JetBrains Mono
