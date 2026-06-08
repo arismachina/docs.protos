@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Lager_1" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.15 101.59">
   <style>
-    /* Dark logo (black) for light mode tabs */
-    rect, polygon { fill: #082E4A; }
+    /* Black logo for light mode tabs */
+    rect, polygon { fill: #000000; }
     /* White logo for dark mode tabs */
     @media (prefers-color-scheme: dark) {
       rect, polygon { fill: #ffffff; }
