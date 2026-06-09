@@ -64,14 +64,6 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 ## Features at a Glance
 
-### [Data Studio](Data-Studio)
-
-Your workbench for managing and comparing design data before running a simulation. Pick a schema, select which data documents to activate, and the canvas picks them up automatically. Includes side-by-side comparison, inline editing, and charting across document variants.
-
-[→ Data Studio guide](Data-Studio)
-
----
-
 ### [Schemas](Schemas)
 
 Define the structure of your engineering data. Instead of disconnected spreadsheets, schemas give every artifact a consistent, queryable shape — reusable across all projects and connectable to external tools.
@@ -79,6 +71,14 @@ Define the structure of your engineering data. Instead of disconnected spreadshe
 **What you can schema:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
 
 [→ Schemas guide](Schemas)
+
+---
+
+### [Data Studio](Data-Studio)
+
+Your workbench for managing and comparing design data before running a simulation. Pick a schema, select which data documents to activate, and the canvas picks them up automatically. Includes side-by-side comparison, inline editing, and charting across document variants.
+
+[→ Data Studio guide](Data-Studio)
 
 ---
 
