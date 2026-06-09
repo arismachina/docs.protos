@@ -10,7 +10,6 @@ MCP (Model Context Protocol) lets you connect external tools — like Notion, Li
 
 - [How It Works](#how-it-works)
 - [Setting Up a Connection](#setting-up-a-connection)
-- [Authentication Types](#authentication-types)
 - [Discovering and Enabling Tools](#discovering-and-enabling-tools)
 - [Connection Statuses](#connection-statuses)
 
@@ -24,25 +23,31 @@ Each MCP connection points to an MCP-compatible server. Once you connect and ena
 
 ## Setting Up a Connection
 
-1. Go to **Settings → MCP Connections**.
-2. Click **+ Add Connection**.
-3. Give it a name, enter the server URL, and choose your authentication type.
+1. Click your **profile** in the bottom-left corner.
+2. Go to **Connectors → MCP Servers**.
+3. Click **+ Add Connection** and fill in:
+   - **Name** — a label for this connection (e.g. "Notion", "Linear")
+   - **URL** — the MCP server URL
+   - **Authentication** — choose the method that matches your service (see below)
 4. Optionally click **Test** to verify the connection.
 5. Click **Run Discovery** to fetch the tools available on that server.
 6. Select which tools you want the Co-engineer to be able to use.
 
 The Co-engineer can now use those tools in chat.
 
----
+### Authentication options
 
-## Authentication Types
+**OAuth**
+For services like Notion, Linear, and Sentry. After saving, you'll be redirected to the service to authorise access. Protos handles token refresh automatically — if your token expires you'll be prompted to reconnect.
 
-| Type | When to use |
-|------|-------------|
-| **OAuth** | Services like Notion, Linear, Sentry — you'll be redirected to authorise |
-| **API key** | Services that issue a token — paste the key and set the header name |
-| **Custom headers** | When you need to pass specific HTTP headers for auth |
-| **None** | Public endpoints that require no authentication |
+**API key**
+For services that issue an API token. Paste your key and set the header name it should be sent under (defaults to `Authorization: Bearer`). You can also add a custom prefix if the service requires one.
+
+**Custom headers**
+For services that use non-standard authentication. Add as many key-value header pairs as needed — all values are encrypted at rest.
+
+**None**
+For public endpoints that require no authentication.
 
 ---
 
