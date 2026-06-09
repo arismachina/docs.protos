@@ -45,11 +45,9 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 ### Creating a Project
 
 1. Click **New Project** from the dashboard.
-2. Name it: `Domain / Product / Campaign`
-   - Example: `Battery / Anode / Q2 Optimization`
-   - Example: `Thermal / Cell Pack / Thermal Runaway Study`
-3. Add a description: goal, scope, key constraints.
-4. Invite collaborators and set their [access level](Collaboration-and-Sharing#canvas-access-levels).
+2. Add a name and description for your project.
+3. Answer questions about your project — goals, constraints, and any other relevant context.
+4. The [Co-engineer](Co-engineer) generates a kickoff plan. Review it, then run it to set up your workspace.
 
 ### Navigating the Canvas
 
