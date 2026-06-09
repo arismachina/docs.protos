@@ -114,6 +114,14 @@ An AI assistant available across all features. It accelerates work by structurin
 
 ---
 
+### [MCP Connections](MCP-Connections)
+
+Connect external tools — like Notion, Linear, or Sentry — to the Co-engineer. Once connected, the Co-engineer can use those tools directly in chat without you switching tabs.
+
+[→ MCP Connections guide](MCP-Connections)
+
+---
+
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
 Share canvases with teammates (view-only for non-owners) or publish them as interactive snapshots for external stakeholders — no Protos account required.

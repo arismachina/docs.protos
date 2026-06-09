@@ -17,6 +17,7 @@
 - [Model Library](Model-Library)
 - [Knowledge Library](Knowledge-Library)
 - [Co-engineer](Co-engineer)
+- [MCP Connections](MCP-Connections)
 
 ---
 
