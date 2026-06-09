@@ -23,7 +23,7 @@ The Protos **Co-engineer** is an AI assistant available across all features. It 
 |-----------|---------|
 | **Schema authoring** | Create or update a schema based on your description — e.g. *"Create a schema for tablet formulation experiments"* |
 | **Data document creation** | Extract structured data from an uploaded file and create a data document following your schema |
-| **Canvas building** | Build a simulation canvas — adds blocks, writes the code, and wires everything together |
+| **Canvas building** | Builds a simulation canvas — adds blocks, writes the code, and wires everything together |
 | **Knowledge surfacing** | Find relevant entries from the [Knowledge Library](Knowledge-Library) as you work |
 | **Requirements parsing** | Parse an uploaded spec document into structured targets and constraints |
 | **Design comparison** | Compare design variants against requirements and surface gaps |

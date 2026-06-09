@@ -10,7 +10,7 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 
 ## On This Page
 
-- [What You Can Schema](#what-you-can-schema)
+- [Use Schemas For](#use-schemas-for)
 - [Creating a Schema](#creating-a-schema)
 - [Field Types](#field-types)
 - [Using Reference Fields](#using-reference-fields)
@@ -19,7 +19,7 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 
 ---
 
-## What You Can Schema
+## Use Schemas For
 
 - Designs and design parameters
 - Test data and experimental conditions

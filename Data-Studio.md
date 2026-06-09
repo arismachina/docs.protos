@@ -50,7 +50,7 @@ Alongside the table there is an analysis panel where you can plot the data acros
 
 You configure each chart by picking which schema fields go on which axis. The chart updates as you change your document selection.
 
-> **Note:** A Gap Analysis tab is also present in the panel and is currently in development.
+> **Note:** Gap Analysis is coming soon.
 
 ---
 

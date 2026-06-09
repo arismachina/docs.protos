@@ -23,7 +23,7 @@ Sharing in Protos is at the **canvas level**, not the project level. Projects ha
 | **Owner** | View, edit, run, share, and publish the canvas |
 | **View only** | View the canvas and its results — cannot edit or run |
 
-Non-owners who have been shared a canvas get read-only access. To make changes, they would need to copy the canvas into their own project.
+Non-owners you share a canvas with get read-only access. To make changes, they would need to copy the canvas into their own project.
 
 ---
 

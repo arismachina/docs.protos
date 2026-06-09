@@ -20,10 +20,10 @@
 
 1. Sign in at [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} with your Aris Machina account.
 2. Upon first login, you will be prompted with an **onboarding tutorial**. Follow it to unlock all the protos features.
-3. Once the onboarding is finished, you can create or open a new **Project**. This will take you through a **Project Configuration** step that we recommend you follow for best performance of the **[Co-engineer](Co-engineer)**.
+3. Once the onboarding is finished, you can create or open a new **Project**. This will take you through a **Project Configuration** step that we recommend you follow so the **[Co-engineer](Co-engineer)** works best.
 4. You do not need to be overly detailed during the configuration step as you can always refine your project later.
 5. During configuration, upload your reference material to the **[Knowledge Library](Knowledge-Library)** — the Co-engineer draws on this for every task. You can always upload later.
-6. After the configuration, you can open the **[Co-engineer](Co-engineer)** on the right-hand side and and keep describing your project. It will set up schemas, create data documents, and guide you through the workflow.
+6. After the configuration, you can open the **[Co-engineer](Co-engineer)** on the right-hand side and keep describing your project. It will set up schemas, create data documents, and guide you through the workflow.
 7. Review and refine what it creates in the **[Data Studio](Data-Studio)** and **[Schemas](Schemas)** pages.
 8. Build or run simulations in **[Simulation Studio](Simulation-Studio)**.
 9. Register external models in the **[Model Library](Model-Library)** if you have your own simulation code.
@@ -66,7 +66,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 Define the structure of your engineering data. Instead of disconnected spreadsheets, schemas give every artifact a consistent, queryable shape — reusable across all projects and connectable to external tools.
 
-**Use schemas for:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
+Use schemas for: designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
 
 [→ Schemas guide](Schemas)
 

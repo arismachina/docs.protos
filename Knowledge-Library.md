@@ -84,7 +84,7 @@ This chain is preserved permanently — even if team members leave or projects a
 
 ## Best Practices
 
-- **Capture decisions as they're made**, not retrospectively. The rationale is clearest in the moment and grows harder to reconstruct over time.
+- **Capture decisions as they're made**, not retrospectively. The rationale is clearest in the moment and becomes harder to reconstruct over time.
 - **Link papers to specific claims**, not just to the paper itself. Trace is only useful if it points to the exact piece of evidence that informed a decision.
 - **Agree on a tag taxonomy with your team** before tagging — e.g. by domain, material, or property type. Inconsistent tags make search unreliable.
 - **Review the library at project kickoff**: search for prior experiments and decisions before starting new work. Don't repeat work that's already been done.
