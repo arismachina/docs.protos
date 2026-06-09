@@ -66,7 +66,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 Define the structure of your engineering data. Instead of disconnected spreadsheets, schemas give every artifact a consistent, queryable shape — reusable across all projects and connectable to external tools.
 
-**What you can schema:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
+**Use schemas for:** designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
 
 [→ Schemas guide](Schemas)
 
