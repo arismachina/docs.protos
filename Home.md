@@ -18,7 +18,7 @@
 
 > **The [Co-engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
-1. Sign in at [protos.arismachina.com](https://protos.arismachina.com) with your Aris Machina account.
+1. Sign in at [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} with your Aris Machina account.
 2. Upon first login, you will be prompted with an **onboarding tutorial**. Follow it to unlock all the protos features.
 3. Once the onboarding is finished, you can create or open a new **Project**. This will take you through a **Project Configuration** step that we recommend you follow for best performance of the **[Co-engineer](Co-engineer)**.
 4. You do not need to be overly detailed during the configuration step as you can always refine your project later.

@@ -55,6 +55,7 @@ nav:
 markdown_extensions:
   - tables
   - admonition
+  - attr_list
   - pymdownx.highlight
   - pymdownx.superfences
   - toc:
