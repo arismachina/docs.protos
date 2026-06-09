@@ -46,9 +46,9 @@ To pin a requirement, find the requirements document in the left-hand list and c
 
 ---
 
-## Step 5 — Edit inline if needed
+## Step 5 — Edit values directly in the table
 
-Double-click any cell to edit the value directly. Press Enter to save. The change saves back to the original document immediately — this is not a temporary view.
+Double-click any cell to change its value without leaving the Data Studio. Press Enter to save — the change updates the original document immediately.
 
 ---
 
