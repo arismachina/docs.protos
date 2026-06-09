@@ -43,6 +43,10 @@ jobs:
           mkdir -p build/docs/stylesheets
           cp -r stylesheets/* build/docs/stylesheets/ 2>/dev/null || true
 
+          # Copy template overrides
+          mkdir -p build/overrides
+          cp -r overrides/* build/overrides/ 2>/dev/null || true
+
           # Fix internal links: add .md extension to bare page links
           # e.g. (Home) -> (index.md), (Schemas) -> (Schemas.md)
           python3 - <<'PYEOF'
@@ -88,10 +92,11 @@ jobs:
           print("Links fixed.")
           PYEOF
 
-          # Copy mkdocs.yml with docs_dir set to build/docs
+          # Copy mkdocs.yml with docs_dir and custom_dir set for build layout
           cp mkdocs.yml build/mkdocs.yml
-          # Override docs_dir in the copy
           echo "docs_dir: docs" >> build/mkdocs.yml
+          # Point custom_dir at the overrides folder inside build/
+          sed -i 's|custom_dir: overrides|custom_dir: ../overrides|g' build/mkdocs.yml
 
       - name: Deploy
         run: |

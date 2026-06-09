@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <!-- Adaptive favicon: black in light mode, white in dark mode (matches Protos app) -->
+  <link rel="icon" href="{{ config.site_url }}images/aris-favicon-black.png" sizes="32x32" />
+  <link rel="icon" href="{{ config.site_url }}images/aris-favicon-black.png" sizes="32x32" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="{{ config.site_url }}images/aris-favicon-white.png" sizes="32x32" media="(prefers-color-scheme: dark)" />
+{% endblock %}

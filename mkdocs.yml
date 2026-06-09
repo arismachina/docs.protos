@@ -27,7 +27,8 @@ theme:
     - search.suggest
     - toc.follow
   logo: images/aris-logo.svg
-  favicon: images/aris-favicon-adaptive.svg
+  favicon: images/aris-favicon-black.png
+  custom_dir: overrides
 
 extra_css:
   - stylesheets/extra.css
