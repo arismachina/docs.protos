@@ -1,4 +1,4 @@
-# Knowledge Library
+# Knowledge Library <a href="https://protos.arismachina.com" class="try-protos">Try Protos</a>
 
 [← Home](Home) · **Knowledge Library**
 

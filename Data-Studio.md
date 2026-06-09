@@ -1,4 +1,4 @@
-# Data Studio
+# Data Studio <a href="https://protos.arismachina.com" class="try-protos">Try Protos</a>
 
 [← Home](Home) · **Data Studio**
 

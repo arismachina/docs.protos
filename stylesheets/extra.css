@@ -73,3 +73,23 @@
 .md-typeset details {
   border-left-color: #065056;
 }
+
+/* ── Try Protos badge in page titles ───────────────────────── */
+.md-typeset h1 a.try-protos {
+  font-size: 0.38em;
+  font-weight: 500;
+  vertical-align: middle;
+  margin-left: 0.8em;
+  padding: 4px 14px;
+  border: 1.5px solid currentColor;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.55;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.md-typeset h1 a.try-protos:hover {
+  opacity: 1;
+}
