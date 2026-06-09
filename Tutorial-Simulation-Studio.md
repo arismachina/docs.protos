@@ -18,17 +18,15 @@ At least one schema with one data document. If you don't have these yet, start w
 
 ## Step 1 — Open Simulation Studio
 
-Click **Simulation Studio** in the sidebar. A new project starts with no canvases.
+Click **Simulation Studio** in the sidebar. Create a new canvas from the **tabs bar** at the top of the editor. Give it a name and a short description of what it calculates.
 
-![Simulation Studio empty state — "No simulations yet" with Create with Co-Engineer and New buttons](images/sim-01-empty.png)
-
-Click **+ New** → **New Canvas**. Give it a name and a short description of what it calculates.
+Make sure you are in the **Build** tab before adding blocks.
 
 ---
 
 ## Step 2 — Add an Input block
 
-Click **+ Add Component** → **Data Input**. Select your schema and which data documents to pull in. Choose which fields to expose as outputs.
+In the **Components rail** on the side of the editor, select **Data Input**. Select your schema and which data documents to pull in. Choose which fields to expose as outputs.
 
 > You're not hardcoding values — you're pointing at live documents from the Data Studio. Change the active documents there and the canvas picks up the new values automatically.
 
@@ -36,7 +34,7 @@ Click **+ Add Component** → **Data Input**. Select your schema and which data 
 
 ## Step 3 — Add a Parameter block
 
-Click **+ Add Component** → **Parameter** → **Number**. Name it (e.g. `temperature`), set a value and unit.
+From the **Components rail**, select **Parameter → Number**. Name it (e.g. `temperature`), set a value and unit.
 
 A parameter is a value you control directly on the canvas. You can change it any time and the canvas recalculates.
 
@@ -44,7 +42,7 @@ A parameter is a value you control directly on the canvas. You can change it any
 
 ## Step 4 — Add a Calculation block and connect it
 
-Click **+ Add Component** → **Calculation**. Write Python code that uses the upstream values, then draw arrows from the Input and Parameter blocks to the Calculation block.
+From the **Components rail**, select **Calculation**. Write Python code that uses the upstream values, then draw arrows from the Input and Parameter blocks to the Calculation block.
 
 ---
 
@@ -58,11 +56,11 @@ After approval it runs automatically whenever its inputs change. If you edit the
 
 ## Step 6 — Run it
 
-The canvas runs automatically when Data Studio inputs change. To force a full run from scratch, click **Start sequence**.
-
-![Start sequence button on the canvas toolbar](images/sim-04-start-sequence.png)
+The canvas runs automatically when Data Studio inputs change. To force a full run from scratch, click **Start sequence** in the **Build** tab.
 
 If any calculation blocks are still unapproved, Protos warns you and asks you to confirm before running them.
+
+Switch to the **Results** tab to see your visualizations and outputs once the run completes.
 
 ---
 

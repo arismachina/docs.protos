@@ -2,7 +2,7 @@
 
 [← Home](Home) · **Co-engineer**
 
-The Protos **Co-engineer** is an AI assistant available across all features. It accelerates work by structuring data, configuring simulations, and surfacing connections that would take hours to find manually — always with traceable sources.
+The Protos **Co-engineer** is a multi-agent AI system available across all features. It accelerates work by structuring data, configuring simulations, and surfacing connections that would take hours to find manually — always with traceable sources. Depending on your task, the Co-engineer hands off to specialised sub-agents best suited to help.
 
 > **Important:** Co-engineer only surfaces information it can trace. It will not speculate or fill in gaps with assumptions. Every claim links back to a source you can inspect.
 
@@ -12,6 +12,7 @@ The Protos **Co-engineer** is an AI assistant available across all features. It 
 
 - [What Co-engineer Can Do](#what-co-engineer-can-do)
 - [How to Use It](#how-to-use-it)
+- [Multi-agent system](#multi-agent-system)
 - [Co-engineer and Your Data](#co-engineer-and-your-data)
 - [How Co-engineer Gets Smarter](#how-co-engineer-gets-smarter)
 
@@ -43,6 +44,26 @@ Type in plain language:
 
 Co-engineer responses always include **source traces** — click any claim to see where it came from.
 
+> **Pro features:** Some Co-engineer capabilities require a Pro plan. If you're on a free plan you'll see a prompt to upgrade when you reach a Pro-only feature.
+
+---
+
+## Multi-agent system
+
+The Co-engineer is built on a multi-agent architecture. Rather than a single assistant handling every task, it orchestrates specialised sub-agents and hands off to them mid-conversation depending on what you're doing.
+
+### Talking to indicator
+
+The chat panel shows a **"Talking to"** indicator with the current agent's identity icon and accent colour. This updates automatically when the Co-engineer hands off to a sub-agent.
+
+### Agent handoff
+
+When the Co-engineer delegates to a sub-agent, the chat shows a handoff message and the "Talking to" indicator updates. You don't need to do anything — the handoff happens automatically based on what you asked.
+
+### /agent command
+
+You can explicitly switch agents by typing `/agent` in the chat. This lets you invoke a specific agent by name if you know which one you want.
+
 ---
 
 ## Co-engineer and Your Data
@@ -71,6 +92,7 @@ Investing in these foundations makes Co-engineer progressively more useful over 
 - [Model Library](Model-Library) — Co-engineer uses this for simulation configuration recommendations
 - [Schemas](Schemas) — Co-engineer can create and update schemas based on your description
 - [Simulation Studio](Simulation-Studio) — Co-engineer can recommend model and input configurations
+- [MCP Connections](MCP-Connections) — connect external tools the Co-engineer can use in chat
 
 ---
 

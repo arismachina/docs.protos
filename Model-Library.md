@@ -58,8 +58,8 @@ Without a shared model library, teams rebuild the same models for each project �
 |-------------|----------------------|
 | **Python script** | Upload the script; Protos executes it in a managed environment |
 | **COMSOL / MATLAB file** | Upload the model file; Protos calls it with the specified input parameters |
-| **External API** | Provide the endpoint URL and auth config; Protos calls it on run |
-| **GitHub repo** | Point to a public GitHub repo; Protos clones it, generates a wrapper, and containerises it |
+| **External API** | Provide the endpoint URL and auth config; Protos calls it on run. You can supply a personal API key and choose whether to share it with your team or keep it private |
+| **GitHub repo** | Point to a public GitHub repo; Protos clones it, generates a wrapper, and containerises it. A live build progress indicator shows each step (queued → running → succeeded/failed) — the build may take a few minutes |
 
 ---
 

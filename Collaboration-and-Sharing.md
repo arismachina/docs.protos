@@ -8,9 +8,24 @@ Protos supports sharing canvases with teammates and publishing canvases for exte
 
 ## On This Page
 
+- [Organisations](#organisations)
 - [Canvas Access Levels](#canvas-access-levels)
 - [Sharing a Canvas](#sharing-a-canvas)
 - [Publishing for External Access](#publishing-for-external-access)
+
+---
+
+## Organisations
+
+An organisation is the top-level workspace in Protos. Projects, models, and team members all belong to an organisation. You can be a member of more than one organisation and switch between them at any time.
+
+### Joining an organisation
+
+Joining an organisation is an explicit action — you won't be added automatically. You'll receive an invitation or a join link from an existing member.
+
+### Switching organisations
+
+The **active-org switcher** is available in the navigation. Click it to see all organisations you belong to and switch between them. Everything you see in Protos — projects, the Model Library, team members — is scoped to your active organisation.
 
 ---
 

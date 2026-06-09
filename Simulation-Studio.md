@@ -11,6 +11,7 @@ Simulation Studio gives you a visual canvas to see your schema as a connected gr
 ## On This Page
 
 - [What It Is](#what-it-is)
+- [Navigating the Editor](#navigating-the-editor)
 - [Building a Canvas](#building-a-canvas)
 - [Running It](#running-it)
 - [Design Space Exploration (Sweep)](#design-space-exploration-sweep)
@@ -34,11 +35,47 @@ You connect them left to right. Data flows through the chain automatically — w
 
 ---
 
+## Navigating the Editor
+
+### Build and Results tabs
+
+The editor has two top-level tabs:
+
+- **Build** — where you add and connect blocks, write and approve calculations, and configure your canvas. This is where you set up how data flows.
+- **Results** — where visualizations and outputs appear after a run. Before a run, Results shows a prompt to run the sequence; after a run it shows expandable charts and calculation outputs.
+
+### Workspace tabs bar
+
+You can have multiple canvases open at the same time. The tabs bar at the top of the editor lets you:
+
+- Switch between open canvases
+- Pin tabs you want to keep open
+- Close tabs you're done with
+- Create a new canvas from the tab bar
+
+### Components rail
+
+Along the side of the Build view is the **Components rail** — a palette of block types you can add to the canvas. Click a block type to add it. Each type has a distinct icon so you can tell them apart at a glance.
+
+### Node-details panel
+
+Click any block on the canvas to open its detail panel on the right. The panel has three tabs:
+
+| Tab | What it shows |
+|-----|--------------|
+| **Details** | Block configuration — name, inputs, settings |
+| **Result** | Output values from the last run |
+| **Connections** | What this block is connected to upstream and downstream |
+
+---
+
 ## Building a Canvas
 
+Make sure you are in the **Build** tab.
+
 1. Open **Simulation Studio** from the sidebar.
-2. Create a new canvas or open an existing one.
-3. Add blocks and connect them — the Co-engineer can help build the canvas if you describe what you are modelling.
+2. Create a new canvas from the tabs bar or open an existing one.
+3. Add blocks from the **Components rail** and connect them — the Co-engineer can build the canvas for you if you describe what you are modelling.
 4. For any **Calculation** block, click **Approve** before it will execute (this is a trust gate — you confirm the code is safe to run).
 
 ---
@@ -47,7 +84,9 @@ You connect them left to right. Data flows through the chain automatically — w
 
 **Automatic:** When the data in the Data Studio changes (e.g. you activate a different document), the canvas detects the new inputs and recalculates automatically.
 
-**Manual:** Click **Start sequence** to force a full run from scratch. This finds all blocks with no upstream dependencies, runs those first, then cascades through everything downstream. Start sequence runs even unverified calculations, so it is the "run everything" button.
+**Manual:** In the Build tab, click **Start sequence** to force a full run from scratch. This finds all blocks with no upstream dependencies, runs those first, then cascades through everything downstream. Start sequence runs even unverified calculations, so it is the "run everything" button.
+
+Switch to the **Results** tab to see visualizations and outputs after the run completes.
 
 ---
 
@@ -69,7 +108,7 @@ To set up a sweep:
 ## Tips
 
 - **Connect inputs from the Data Studio** rather than typing values manually — this links your results back to the exact document that produced them.
-- **Name your canvases clearly** — you can have multiple canvases per project for different calculations.
+- **Name your canvases clearly** — you can have multiple canvases open as tabs for different calculations.
 - **Use the Co-engineer** to build calculations — describe what you want to compute and it will write the Python code and wire it up.
 
 ---
