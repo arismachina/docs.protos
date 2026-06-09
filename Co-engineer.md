@@ -2,7 +2,7 @@
 
 [← Home](Home) · **Co-engineer**
 
-The Protos **Co-engineer** is a multi-agent AI system available across all features. It accelerates work by structuring data, configuring simulations, and surfacing connections that would take hours to find manually — always with traceable sources. Depending on your task, the Co-engineer hands off to specialised sub-agents best suited to help.
+The Protos **Co-engineer** is a multi-agent AI system available across all features. It structures data, configures simulations, and surfaces connections — always with traceable sources. Depending on your task, the Co-engineer hands off to specialised sub-agents best suited to help.
 
 > **Important:** Co-engineer only surfaces information it can trace. It will not speculate or fill in gaps with assumptions. Every claim links back to a source you can inspect.
 
