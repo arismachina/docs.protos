@@ -38,13 +38,21 @@ With 3 documents activated you can compare their values side by side at a glance
 
 ---
 
-## Step 4 — Edit inline if needed
+## Step 4 — Pin a requirement (optional)
+
+If your project has a requirements document (your target spec), you can pin it as a column next to your designs. This makes the gap between your current designs and your target immediately visible.
+
+To pin a requirement, find the requirements document in the left-hand list and click the **pin** icon next to it. It will appear as a fixed column alongside your active documents.
+
+---
+
+## Step 5 — Edit inline if needed
 
 Double-click any cell to edit the value directly. Press Enter to save. The change saves back to the original document immediately — this is not a temporary view.
 
 ---
 
-## Step 5 — The canvas picks this up automatically
+## Step 6 — The canvas picks this up automatically
 
 Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** — the canvas will re-run automatically with the new inputs. Swap a document out and it recalculates again.
 
