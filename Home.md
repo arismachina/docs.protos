@@ -100,7 +100,7 @@ A registry of all computational models in your workspace — physics models, ML 
 
 Protos's institutional memory. Every decision, data point, and reference is captured and linked to the design artifacts that used it — so nothing is lost between projects or team members.
 
-**What lives here:** academic papers, internal reports, decisions and rationale, experimental results, AI-surfaced connections.
+What lives here: academic papers, internal reports, decisions and rationale, experimental results, AI-surfaced connections.
 
 [→ Knowledge Library guide](Knowledge-Library)
 
