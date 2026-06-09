@@ -2,7 +2,7 @@
 
 [← Home](Home) · **Simulation Studio**
 
-Simulation Studio is the canvas — a visual graph where you build calculations, connect models to your data, and run them. It is the same feature as the canvas, just accessed from the left sidebar.
+Simulation Studio gives you a visual canvas to see your schema as a connected graph — where you can build calculations, connect models to your data, and run simulations. Changes you make here, like adding or adjusting blocks, feed back into your schema automatically.
 
 > **The Co-engineer can build canvases for you.** Describe what you want to calculate and it will create the blocks, write the code, and wire everything together. You then review the code and approve it before it runs.
 
