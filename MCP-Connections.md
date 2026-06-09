@@ -23,15 +23,11 @@ Each MCP connection points to an MCP-compatible server. Once you connect and ena
 
 ## Setting Up a Connection
 
-1. Click your **profile** in the bottom-left corner.
-2. Go to **Connectors → MCP Servers**.
-3. Click **+ Add Connection** and fill in:
-   - **Name** — a label for this connection (e.g. "Notion", "Linear")
-   - **URL** — the MCP server URL
-   - **Authentication** — choose the method that matches your service (see below)
-4. Optionally click **Test** to verify the connection.
-5. Click **Run Discovery** to fetch the tools available on that server.
-6. Select which tools you want the Co-engineer to be able to use.
+1. Click your **profile** in the bottom-left corner and go to **Connectors → MCP Servers**.
+2. Click **+ Add Connection**, give it a name, enter the server URL, and choose your authentication method (see below).
+3. Optionally click **Test** to verify the connection.
+4. Click **Run Discovery** to fetch the tools available on that server.
+5. Select which tools you want the Co-engineer to be able to use.
 
 The Co-engineer can now use those tools in chat.
 
