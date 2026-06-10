@@ -2,7 +2,7 @@
 
 [← Home](Home) · **Simulation Studio**
 
-Simulation Studio gives you a visual canvas to see your schema as a connected graph — where you can build calculations, connect models to your data, and run simulations. Changes you make here, like adding or adjusting blocks, feed back into your schema automatically.
+Simulation Studio is where you build calculations, connect models to your data, and run simulations. You work on a visual canvas — a graph of connected blocks where data flows from inputs through to outputs.
 
 > **The Co-engineer can build canvases for you.** Describe what you want to calculate and it will create the blocks, write the code, and wire everything together. You then review the code and approve it before it runs.
 
@@ -21,7 +21,7 @@ Simulation Studio gives you a visual canvas to see your schema as a connected gr
 
 ## What It Is
 
-When you open Simulation Studio you are opening a canvas. A canvas is a graph of connected blocks:
+Simulation Studio shows a list of your canvases. Each canvas is a graph of connected blocks:
 
 | Block | What it does |
 |-------|-------------|
@@ -82,9 +82,9 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 ## Running It
 
-**Automatic:** When the data in the Data Studio changes (e.g. you activate a different document), the canvas detects the new inputs and recalculates automatically.
+In the Build tab, click **Start sequence** to run the canvas. Protos finds all blocks with no upstream dependencies, runs those first, then cascades through everything downstream.
 
-**Manual:** In the Build tab, click **Start sequence** to force a full run from scratch. This finds all blocks with no upstream dependencies, runs those first, then cascades through everything downstream. Start sequence runs even unverified calculations, so it is the "run everything" button.
+If any calculation or model blocks are unapproved, clicking Start sequence opens a confirmation dialog — you can approve all of them at once and continue, or cancel.
 
 Switch to the **Results** tab to see visualizations and outputs after the run completes.
 
