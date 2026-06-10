@@ -42,28 +42,27 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 ## Adding to the Library
 
-### Upload a file
+### Upload a document
 
-1. Click **Add** in the Knowledge Library.
-2. Upload a PDF, TXT, or JSON file — a paper, test report, spec document, or any reference material.
-3. Protos chunks and embeds the content, making it searchable and available as context for the Co-engineer.
-4. Add tags and a description to make it easier to find later.
+1. Click **Add → Upload Document**.
+2. Choose a file — PDF, DOCX, Excel, CSV, TXT, images, and more. Up to 100 MB.
+3. The title is auto-filled from the filename — edit it if needed.
+4. Click **Upload**. Protos parses and chunks the content, making it available to the Co-engineer.
 
-### Type a note directly
+### Add a knowledge note
 
-If you want to capture a decision or rationale without a file:
+To capture a decision, insight, or observation as text:
 
-1. Click **Add → Text**.
-2. Type the content — e.g. *"Chose 1.2 mol/L based on the conductivity data from the Q1 electrolyte study — peak conductivity at this concentration under our temperature range."*
-3. The note is stored, embedded, and searchable just like an uploaded file.
+1. Click **Add → Add Knowledge**.
+2. Enter a **Title** and the **Content**.
+3. Click **Save Knowledge**.
 
 ### Upload a folder
 
 For bulk ingestion of many files at once:
 
-1. Click **Add → Folder**.
-2. Upload a folder of files — Protos processes them in the background.
-3. A progress indicator tracks succeeded and failed files.
+1. Click **Add → Upload Folder**.
+2. Select a folder — Protos processes the files in the background.
 
 ---
 
