@@ -73,11 +73,9 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 ## Building a Canvas
 
-Make sure you are in the **Build** tab.
-
-1. Open **Simulation Studio** from the sidebar.
-2. Create a new canvas from the tabs bar or open an existing one.
-3. Add blocks from the **Components rail** and connect them — the Co-engineer can build the canvas for you if you describe what you are modelling.
+1. Open **Simulation Studio** from the sidebar — you land on the canvas list.
+2. Click an existing canvas to open it, or click **New** to create one.
+3. The canvas opens in the **Build** tab. Add blocks from the **Components rail** on the left and connect them — the Co-engineer can build the canvas for you if you describe what you are modelling.
 4. For any **Calculation** block, click **Approve** before it will execute (this is a trust gate — you confirm the code is safe to run).
 
 ---
