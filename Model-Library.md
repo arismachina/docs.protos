@@ -19,7 +19,7 @@ The **Model Library** is a registry of all computational models available in you
 
 ## Why It Exists
 
-Without a shared model library, teams rebuild the same models for each project — wasting time and introducing inconsistencies. Protos makes models **first-class reusable assets**:
+Without a shared model library, teams rebuild the same models for each project — wasting time and introducing inconsistencies. Protos solves this by registering models at the workspace level:
 
 > **The Co-engineer can register models for you.** Upload a Python script or point it at a GitHub repo and ask it to register the model — it will infer the input/output schema automatically.
 
