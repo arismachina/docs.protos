@@ -39,6 +39,8 @@ You connect them left to right. Data flows through the chain automatically — w
 
 ### Build and Results tabs
 
+Open a canvas first by clicking on any simulation in the list — the Build and Results tabs appear once a canvas is open.
+
 The editor has two top-level tabs:
 
 - **Build** — where you add and connect blocks, write and approve calculations, and configure your canvas. This is where you set up how data flows.
