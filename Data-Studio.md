@@ -27,15 +27,13 @@ It is the step between *"I have data"* and *"I want to run a calculation"*. You 
 
 ## How to Use It
 
-1. **Pick a schema** — choose which type of data you want to work with (e.g. "Tablet Formulation", "Electrode Coating"). All documents of that type appear in a list on the left.
+1. **Pick a schema** — use the schema picker at the top to choose which type of data you want to work with (e.g. "Electrode Coating"). Documents of that type become available.
 
-2. **Select documents to compare** — each document you activate becomes a column in the table. You can activate multiple variants side by side.
+2. **Select documents to compare** — use the document selector dropdown to choose which documents to show. Each selected document becomes a column in the table. You can show multiple variants side by side.
 
-3. **Pin a requirement** — if your project has a requirements document (your target spec), you can pin it as a column next to your designs. This makes the gap between your current designs and your target immediately visible.
+3. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately.
 
-4. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately.
-
-Once you have the right documents active, the canvas picks them up automatically and runs.
+Once you have the right documents selected, they are available as inputs to any canvas in Simulation Studio.
 
 ---
 
