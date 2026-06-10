@@ -33,6 +33,8 @@ It is the step between *"I have data"* and *"I want to run a calculation"*. You 
 
 3. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately.
 
+4. **Add a requirement** — when creating a new document, use the **Create type** toggle to switch from Design to Requirement. Requirement documents use the same schema fields but numeric inputs become min/max ranges instead of single values. The requirement appears as a column in the table alongside your designs, and the Gap Analysis panel uses its bounds to show which designs fall within spec.
+
 Once you have the right documents selected, they are available as inputs to any canvas in Simulation Studio.
 
 ---
@@ -48,7 +50,7 @@ Alongside the table there is an analysis panel where you can plot the data acros
 
 You configure each chart by picking which schema fields go on which axis. The chart updates as you change your document selection.
 
-> **Note:** Gap Analysis is coming soon.
+When a requirement document is selected, the Gap Analysis tab shows which of your design values fall inside or outside the requirement bounds.
 
 ---
 
