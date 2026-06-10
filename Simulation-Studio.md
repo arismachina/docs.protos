@@ -1,4 +1,4 @@
-# Simulation Studio <a href="https://protos.arismachina.com" class="try-protos">Try Protos</a>
+# Simulation Studio <a href="https://protos.arismachina.com" class="try-protos" target="_blank" rel="noopener noreferrer">Try Protos</a>
 
 [← Home](Home) · **Simulation Studio**
 

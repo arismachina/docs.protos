@@ -1,4 +1,4 @@
-# Schemas <a href="https://protos.arismachina.com" class="try-protos">Try Protos</a>
+# Schemas <a href="https://protos.arismachina.com" class="try-protos" target="_blank" rel="noopener noreferrer">Try Protos</a>
 
 [← Home](Home) · **Schemas**
 
