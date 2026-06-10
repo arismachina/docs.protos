@@ -76,8 +76,8 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 
 ### How to publish
 
-1. Go to **Simulation Studio** — the Publish button is on the canvas list page, not inside an open canvas.
-2. Click **Publish**.
+1. Open **Simulation Studio** from the sidebar. Click **Publish** in the top right of the canvas list.
+2. A dialog opens.
 3. Give the publication a **name**.
 4. Select which **canvases to include**.
 5. Optionally check **Include data tab** to expose the underlying data to viewers.
