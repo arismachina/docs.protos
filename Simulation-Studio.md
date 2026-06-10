@@ -25,7 +25,7 @@ When you open Simulation Studio you are opening a canvas. A canvas is a graph of
 
 | Block | What it does |
 |-------|-------------|
-| **Input** | Pulls in data documents from the Data Studio |
+| **Data input** | Pulls in data documents from the Data Studio |
 | **Parameter** | A value you can dial up or down (e.g. temperature, concentration) |
 | **Calculation** | Python code that transforms upstream data |
 | **Model** | Calls an external model registered in the Model Library |
@@ -59,13 +59,13 @@ Along the side of the Build view is the **Components rail** — a palette of blo
 
 ### Node-details panel
 
-Click any block on the canvas to open its detail panel on the right. The panel has three tabs:
+Click any block on the canvas to open its detail panel on the right. The panel has two to three sections:
 
-| Tab | What it shows |
-|-----|--------------|
-| **Details** | Block configuration — name, inputs, settings |
-| **Result** | Output values from the last run |
-| **Connections** | What this block is connected to upstream and downstream |
+| Section | What it shows |
+|---------|--------------|
+| **Details** | Block configuration — name, type, value, approval status |
+| **Result** | Output values from the last run — only appears for calculation and model blocks after the sequence has run |
+| **Connections** | Upstream and downstream blocks this node is wired to |
 
 ---
 
