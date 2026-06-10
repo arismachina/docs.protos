@@ -33,11 +33,10 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 ## Finding Knowledge
 
 1. Open **Knowledge Library** from the sidebar.
-2. **Search** by keyword, author, domain, or date.
-3. **Filter** by type: paper, internal doc, dataset, or decision.
-4. Click any result to see its full content and **all the places in Protos where it has been used**.
+2. **Filter** by type using the tabs: All, Custom Knowledge, Reference Knowledge, or Conversations.
+3. Click any item to see its full content and the Co-engineer sessions that have referenced it.
 
-> **Tip:** Before starting a new project or design iteration, search for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
+> **Tip:** Before starting a new project or design iteration, browse the library for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
 
 ---
 
