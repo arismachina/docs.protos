@@ -62,7 +62,7 @@ A canvas contains **Input components** that read from whichever documents are ac
 - Swapping which documents are active is enough to re-run the canvas on different data
 - You can test a new variant by activating it in the Data Studio without touching the canvas at all
 
-The canvas detects the change and recalculates automatically.
+Once you have the right documents active, go to Simulation Studio and click **Start sequence** to run the canvas against the new data.
 
 **The relationship in one line:**
 
