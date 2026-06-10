@@ -57,7 +57,7 @@ You can have multiple canvases open at the same time. The tabs bar at the top of
 
 ### Components rail
 
-Along the **left side** of the Build view is the **Components rail** — a palette of block types you can add to the canvas. Click a block type to add it. Each type has a distinct icon so you can tell them apart at a glance.
+Along the left side of the Build view is the **Components rail** — a palette of block types you can add to the canvas. Click a block type to add it. Each type has a distinct icon so you can tell them apart at a glance.
 
 ### Node-details panel
 
