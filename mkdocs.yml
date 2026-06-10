@@ -60,8 +60,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight
   - pymdownx.superfences
-  - toc:
-      permalink: true
+  - toc
 
 extra:
   social:
