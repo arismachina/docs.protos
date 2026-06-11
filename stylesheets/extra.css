@@ -1,0 +1,95 @@
+/* ── Light mode ────────────────────────────────────────────── */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:              #082E4A;
+  --md-primary-fg-color--light:       #31434A;
+  --md-primary-fg-color--dark:        #082E4A;
+  --md-accent-fg-color:               #065056;
+  --md-accent-fg-color--transparent:  #06505620;
+}
+
+/* ── Dark mode ─────────────────────────────────────────────── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:              #80ADAD;
+  --md-primary-fg-color--light:       #B2CBD8;
+  --md-primary-fg-color--dark:        #065056;
+  --md-accent-fg-color:               #80ADAD;
+  --md-accent-fg-color--transparent:  #80ADAD20;
+  --md-default-bg-color:              #0d1b2a;
+  --md-default-fg-color:              #e8edf0;
+  --md-default-fg-color--light:       #b2cbd8;
+  --md-code-bg-color:                 #162433;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+.md-header {
+  background-color: #000000;
+}
+
+/* Logo: white in header (always dark background) */
+.md-header__button.md-logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+[data-md-color-scheme="default"] .md-typeset a {
+  color: #065056;
+}
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #082E4A;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #80ADAD;
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #B2CBD8;
+}
+
+/* ── Active nav item ───────────────────────────────────────── */
+.md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 600;
+}
+
+/* ── Table headers ─────────────────────────────────────────── */
+.md-typeset table:not([class]) th {
+  background-color: #082E4A;
+  color: #ffffff;
+}
+
+/* ── Code inline ───────────────────────────────────────────── */
+[data-md-color-scheme="default"] .md-typeset code {
+  background-color: #F0EFEA;
+  color: #31434A;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: #162433;
+  color: #80ADAD;
+}
+
+/* ── Admonition accent ─────────────────────────────────────── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-color: #065056;
+}
+
+/* ── Try Protos badge in page titles ───────────────────────── */
+.md-typeset h1 a.try-protos {
+  font-size: 0.38em;
+  font-weight: 500;
+  vertical-align: middle;
+  margin-left: 0.8em;
+  padding: 4px 14px;
+  border: 1.5px solid currentColor;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.55;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.md-typeset h1 a.try-protos:hover {
+  opacity: 1;
+}
