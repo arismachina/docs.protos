@@ -65,6 +65,10 @@ Without a shared model library, teams rebuild the same models for each project â
 
 ## Finding a Model
 
+Protos includes a set of ready-to-use physics models you can add to any canvas straight away â€” no registration needed. These cover core battery cell workflows: computing cell performance KPIs (capacity, energy density, N/P ratio), running electrochemical simulations (SPMe with thermal), calendar and cyclic ageing predictions using the Doyle-Fuller-Newman model, DCIR calculations, power envelope sweeps, and drive cycle simulations. You'll find them in the model picker when building a canvas.
+
+Beyond the built-in models, you can search and add any model your team has registered:
+
 - **Search** by name, domain, or keyword.
 - **Filter** by domain, input type, or output type.
 - **Sort** by most recently used or most recently updated.
