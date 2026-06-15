@@ -1,8 +1,8 @@
-# Model Library <a href="https://protos.arismachina.com" class="try-protos" target="_blank" rel="noopener noreferrer">Try Protos</a>
+# Models Library <a href="https://protos.arismachina.com" class="try-protos" target="_blank" rel="noopener noreferrer">Try Protos</a>
 
-[← Home](Home) · **Model Library**
+[← Home](Home) · **Models Library**
 
-The **Model Library** is a registry of all computational models available in your workspace — physics models, ML models, kinetic models, domain-specific solvers, and custom scripts. Models are registered once, reusable across any project, fully versioned, and traceable.
+The **Models Library** is a registry of all computational models available in your workspace — physics models, ML models, kinetic models, domain-specific solvers, and custom scripts. Models are registered once, reusable across any project, fully versioned, and traceable.
 
 ---
 
@@ -32,7 +32,7 @@ Without a shared model library, teams rebuild the same models for each project �
 
 ## Registering a Model
 
-1. Go to **Model Library** in the sidebar.
+1. Go to **Models Library** in the sidebar.
 2. Click **Register Model**.
 3. Fill in the required fields:
 
@@ -65,7 +65,17 @@ Without a shared model library, teams rebuild the same models for each project �
 
 ## Finding a Model
 
-Protos includes a set of ready-to-use physics models you can add to any canvas straight away — no registration needed. These cover core battery cell workflows: computing cell performance KPIs (capacity, energy density, N/P ratio), running electrochemical simulations (SPMe with thermal), calendar and cyclic ageing predictions using the Doyle-Fuller-Newman model, DCIR calculations, power envelope sweeps, and drive cycle simulations. You'll find them in the model picker when building a canvas.
+Protos includes a set of ready-to-use physics models you can add to any canvas without registering anything:
+
+| Model | What it does |
+|-------|-------------|
+| [Cell Performance](Model-Cell-Performance) | Equilibrium KPIs (capacity, energy, N/P ratio, mass) from electrode design; optional SPMe electrochemical simulation for DCIR, power, and drive cycles |
+| [Cell Optimizer](Model-Cell-Optimizer) | Multi-objective optimisation (NSGA-II + PyBaMM) to find Pareto-optimal cell designs against up to 5 targets |
+| [DFN Calendar Ageing](Model-DFN-Calendar-Ageing) | Capacity fade and SoH prediction during storage over days to years using the Doyle-Fuller-Newman model |
+| [DFN Cyclic Ageing](Model-DFN-Cyclic-Ageing) | Cycle-life simulation with SEI growth, particle cracking, swelling, and loss of active material |
+| [SPMeT Power](Model-SPMeT-Power) | Maximum power envelope across SOC, temperature, and pulse duration |
+| [SPMeT DCIR](Model-SPMeT-DCIR) | Direct Current Internal Resistance at configurable time points across a SOC/temperature/C-rate sweep |
+| [SPMeT Dynamic Load](Model-SPMeT-Dynamic-Load) | Drive cycle simulation with full voltage, current, temperature, and energy timeseries |
 
 Beyond the built-in models, you can search and add any model your team has registered:
 
@@ -88,7 +98,7 @@ Every update to a model creates a new version. This is critical for reproducibil
 
 **To update a model:**
 
-1. Open the model in the Model Library.
+1. Open the model in the Models Library.
 2. Click **New Version**.
 3. Upload the updated source and revise the description.
 4. Add a changelog note describing what changed.

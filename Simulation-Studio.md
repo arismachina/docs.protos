@@ -28,7 +28,7 @@ Simulation Studio shows a list of your canvases. Each canvas is a graph of conne
 | **Data input** | Pulls in data documents from the Data Studio |
 | **Parameter** | A value you can dial up or down (e.g. temperature, concentration) |
 | **Calculation** | Python code that transforms upstream data |
-| **Model** | Calls an external model registered in the Model Library |
+| **Model** | Calls an external model registered in the Models Library |
 | **Visualization** | Plots the output as a chart |
 
 You connect them left to right. Data flows through the chain automatically — when an input changes, everything downstream recalculates.

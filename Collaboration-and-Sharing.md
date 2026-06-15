@@ -25,7 +25,7 @@ Joining an organisation is an explicit action — you won't be added automatical
 
 ### Switching organisations
 
-The **active-org switcher** is available in the navigation. Click it to see all organisations you belong to and switch between them. Everything you see in Protos — projects, the Model Library, team members — is scoped to your active organisation.
+The **active-org switcher** is available in the navigation. Click it to see all organisations you belong to and switch between them. Everything you see in Protos — projects, the Models Library, team members — is scoped to your active organisation.
 
 ---
 

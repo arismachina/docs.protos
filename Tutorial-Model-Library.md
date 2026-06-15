@@ -1,6 +1,6 @@
 # Tutorial: Registering Your First Model
 
-[← Home](Home) · [← Model Library](Model-Library)
+[← Home](Home) · [← Models Library](Model-Library)
 
 > For source types, versioning rules, and best practices, see [Model Library](Model-Library).
 

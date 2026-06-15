@@ -92,7 +92,7 @@ Build and run calculation canvases — connect your data to models and calculati
 
 A registry of all computational models in your workspace — physics models, ML models, kinetic models, and custom scripts. Register once, reuse across any project, with full version history.
 
-[→ Model Library guide](Model-Library)
+[→ Models Library guide](Model-Library)
 
 ---
 
@@ -135,7 +135,7 @@ Share canvases with teammates (view-only for non-owners) or publish them as inte
 | System | What Protos does |
 |--------|-----------------|
 | SharePoint / OneDrive | Browse and import files into the Co-engineer for data extraction |
-| GitHub | Register computational models (Python, scripts) from a repo into the Model Library |
+| GitHub | Register computational models (Python, scripts) from a repo into the Models Library |
 
 > **Note:** GitHub is for model registration only — not for importing data into schemas. See [Model Library](Model-Library) for details.
 
