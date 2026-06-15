@@ -39,7 +39,7 @@ nav:
   - Library:
     - Schemas: Schemas.md
     - Models Library:
-      - Model-Library.md
+      - Overview: Model-Library.md
       - Cell Performance: Model-Cell-Performance.md
       - Cell Optimizer: Model-Cell-Optimizer.md
       - DFN Calendar Ageing: Model-DFN-Calendar-Ageing.md
