@@ -26,6 +26,7 @@ theme:
     - search.highlight
     - search.suggest
     - toc.follow
+    - navigation.indexes
   logo: images/aris-logo.svg
   favicon: images/aris-favicon-black.png
   custom_dir: overrides
@@ -37,14 +38,15 @@ nav:
   - Home: index.md
   - Library:
     - Schemas: Schemas.md
-    - Models Library: Model-Library.md
-    - Cell Performance: Model-Cell-Performance.md
-    - Cell Optimizer: Model-Cell-Optimizer.md
-    - DFN Calendar Ageing: Model-DFN-Calendar-Ageing.md
-    - DFN Cyclic Ageing: Model-DFN-Cyclic-Ageing.md
-    - SPMeT Power: Model-SPMeT-Power.md
-    - SPMeT DCIR: Model-SPMeT-DCIR.md
-    - SPMeT Dynamic Load: Model-SPMeT-Dynamic-Load.md
+    - Models Library:
+      - Model-Library.md
+      - Cell Performance: Model-Cell-Performance.md
+      - Cell Optimizer: Model-Cell-Optimizer.md
+      - DFN Calendar Ageing: Model-DFN-Calendar-Ageing.md
+      - DFN Cyclic Ageing: Model-DFN-Cyclic-Ageing.md
+      - SPMeT Power: Model-SPMeT-Power.md
+      - SPMeT DCIR: Model-SPMeT-DCIR.md
+      - SPMeT Dynamic Load: Model-SPMeT-Dynamic-Load.md
     - Knowledge Library: Knowledge-Library.md
   - Design:
     - Data Studio: Data-Studio.md
