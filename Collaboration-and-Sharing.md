@@ -23,6 +23,8 @@ Protos supports sharing resources with teammates and publishing canvases for ext
 
 An organisation is the top-level workspace in Protos. Projects, models, canvases, and team members all belong to an organisation. You can be a member of more than one organisation and switch between them at any time.
 
+![The Organisations page showing your orgs, member count, and links to Members and Teams.](images/collab-organisations-page.png)
+
 ### Creating an organisation
 
 Go to **User menu → Manage organisations → Create organisation**. Enter a name and confirm. You become the owner of the new organisation.
