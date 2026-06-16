@@ -124,13 +124,15 @@ Connect external tools — like Notion, Linear, or Sentry — to the Co-engineer
 
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
-Share canvases with teammates (view-only for non-owners) or publish them as interactive snapshots for external stakeholders — no Protos account required.
+Share canvases, schemas, data documents, models, and co-engineer chats with teammates using a unified Share dialog. Three access roles: Owner, Editor (can co-edit in place), and Viewer (read-only). Organise teammates into teams, share with your whole organisation, or publish canvases as interactive snapshots for external stakeholders — no Protos account required.
 
 [→ Collaboration & Sharing guide](Collaboration-and-Sharing)
 
 ---
 
 ## Integrations
+
+Integrations are accessible from the **Integrations** section in the left sidebar, or via the user menu under Connectors.
 
 | System | What Protos does |
 |--------|-----------------|
