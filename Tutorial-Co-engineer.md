@@ -16,7 +16,7 @@ The Co-engineer works best when you have at least one document in the **Knowledg
 
 ## Step 1 — Ask it to create a schema
 
-Open the Co-engineer panel (chat icon on the right side of the screen) and type:
+The Co-engineer icon is always visible in the bottom-right corner of the screen — no matter where you are in the app, you can open it at any time. Click it to open the panel, then type:
 
 > *"Create a schema for electrode coating experiments with fields for coating thickness, porosity, active material type, and mass loading."*
 
@@ -39,34 +39,6 @@ It reads the file, maps the values to your schema fields, and shows you what it 
 > *"What does the Knowledge Library say about optimal porosity for NMC811 electrodes?"*
 
 The answer includes citations. Click any citation to verify the original source. If the library doesn't have relevant information, it says so rather than guessing.
-
----
-
-## Step 4 — Ask it to set up the Data Studio
-
-> *"Activate the three most recent electrode coating documents in the Data Studio."*
-
-Go to the Data Studio to confirm the documents are now active and visible as columns.
-
----
-
-## Step 5 — Ask it to build a canvas
-
-> *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."*
-
-It creates the canvas, adds an Input block, writes the calculation code, and wires everything together.
-
-![Canvas built by the Co-engineer — Coating Data input, temperature parameter, and Capacity Calculator connected](images/canvas-with-blocks.png)
-
-**The calculation block needs your approval before it runs.** Read the code, confirm it looks right, then approve it.
-
----
-
-## What a project looks like after working with the Co-engineer
-
-After following these steps, your project will have schemas, data documents, a canvas, and knowledge sources all linked together.
-
-![Battery / Anode / Wiki Example project showing 1 canvas, 3 data documents, and 1 schema all populated](images/ce-01-project-overview.png)
 
 ---
 
