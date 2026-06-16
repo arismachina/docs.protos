@@ -52,9 +52,9 @@ Double-click any cell to change its value without leaving the Data Studio. Press
 
 ---
 
-## Step 6 — The canvas picks this up automatically
+## Step 6 — The canvas uses whatever is activated here
 
-Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** — the canvas will re-run automatically with the new inputs. Swap a document out and it recalculates again.
+Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** and click **Start sequence** to run with the new inputs.
 
 ---
 
