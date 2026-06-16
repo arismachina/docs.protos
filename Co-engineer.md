@@ -52,6 +52,13 @@ Co-engineer responses always include **source traces** — click any claim to se
 
 The Co-engineer is built on a multi-agent architecture. Rather than a single assistant handling every task, it orchestrates specialised sub-agents and hands off to them mid-conversation depending on what you're doing.
 
+### Sub-agents
+
+- **Co-engineer** — the generalist; handles open-ended questions and coordinates with the other agents
+- **Knowledge** — searches the Knowledge Library and the web to surface relevant information and prior work
+- **Data** — creates, edits, and validates data documents against your schemas
+- **Simulation** — builds and edits canvases in the Simulation Studio
+
 ### Talking to indicator
 
 The chat panel shows a **"Talking to"** indicator with the current agent's identity icon and accent colour. This updates automatically when the Co-engineer hands off to a sub-agent.
@@ -60,9 +67,13 @@ The chat panel shows a **"Talking to"** indicator with the current agent's ident
 
 When the Co-engineer delegates to a sub-agent, the chat shows a handoff message and the "Talking to" indicator updates. You don't need to do anything — the handoff happens automatically based on what you asked.
 
-### /agent command
+### Slash commands
 
-You can explicitly switch agents by typing `/agent` in the chat. This lets you invoke a specific agent by name if you know which one you want.
+Typing `/` in the chat composer opens a command picker. Available commands:
+
+- `/agent` — switch to a specific sub-agent by name
+- `/help` — get context-aware help from the docs
+- `/feedback` — submit feedback about Co-engineer
 
 ---
 
