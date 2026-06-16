@@ -45,6 +45,8 @@ Type in plain language:
 
 Co-engineer responses always include **source traces** — click any claim to see where it came from.
 
+You can attach files to any message — PDFs, documents, images, and more. The maximum file size per attachment is **15 MB**.
+
 > **Pro features:** Some Co-engineer capabilities require a Pro plan. If you're on a free plan you'll see a prompt to upgrade when you reach a Pro-only feature.
 
 ---
