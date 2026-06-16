@@ -42,10 +42,6 @@ For a full description of each type and when to use it, see [Schemas → Field T
 
 Mark a field **Required** only if the document is meaningless without it. A missing `coating_thickness` on an electrode coating record makes it useless for comparison. A missing `batch_notes` doesn't.
 
-The **Live Preview** on the right updates as you add fields, showing exactly how documents following this schema will look:
-
-![Schema editor showing fields on the left with the live preview panel on the right — active_material, coating_thickness, porosity, and mass_loading all visible](images/sch-editor-split-view.png)
-
 ---
 
 ## Step 4 — Save
