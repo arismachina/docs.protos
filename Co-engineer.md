@@ -13,6 +13,7 @@ The Protos **Co-engineer** is a multi-agent AI system available across all featu
 - [What Co-engineer Can Do](#what-co-engineer-can-do)
 - [How to Use It](#how-to-use-it)
 - [Multi-agent system](#multi-agent-system)
+- [Sharing a chat session](#sharing-a-chat-session)
 - [Co-engineer and Your Data](#co-engineer-and-your-data)
 - [How Co-engineer Gets Smarter](#how-co-engineer-gets-smarter)
 
@@ -74,6 +75,16 @@ Typing `/` in the chat composer opens a command picker. Available commands:
 - `/agent` — switch to a specific sub-agent by name
 - `/help` — get context-aware help from the docs
 - `/feedback` — submit feedback about Co-engineer
+
+### MCP servers
+
+An **MCP** button in the lower-left of the chat composer lets you toggle individual MCP servers on or off for the current conversation. You can also check **Default in new conversations** per server so your preferred setup carries over automatically. If no servers are configured yet, the popover links you to [MCP Connections](MCP-Connections) to add one.
+
+---
+
+## Sharing a chat session
+
+Co-engineer sessions can be shared with org members. Open a chat session, click **Share**, and assign **Editor** or **Viewer** access to individuals, teams, or the whole org. Shared sessions appear under **Shared with me** in the chat session list. See [Collaboration & Sharing](Collaboration-and-Sharing) for details.
 
 ---
 
