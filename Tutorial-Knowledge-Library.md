@@ -14,8 +14,6 @@ This tutorial shows you how to upload your reference material so the Co-engineer
 
 Click **Knowledge Library** in the sidebar.
 
-![Knowledge Library showing a document already uploaded, with the Add and Create with Co-Engineer buttons at the top](images/kl-01-empty.png)
-
 ---
 
 ## Step 2 — Add your documents
