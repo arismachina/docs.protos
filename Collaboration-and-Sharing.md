@@ -31,7 +31,7 @@ Click **+ New organisation** on the Organisations page, enter a name, and confir
 
 ### Inviting members
 
-From the **Organisations** page, open your organisation and click **Invite member**. Enter the invitee's email address. They will receive an invitation to accept or decline.
+From the **Organisations** page, open your organisation and click **Members**. Enter the invitee's email address, select their role, then click **Invite**. They will receive an invitation to accept or decline.
 
 ### Accepting an invitation
 
