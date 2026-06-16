@@ -88,6 +88,10 @@ If any calculation or model blocks are unapproved, clicking Start sequence opens
 
 Switch to the **Results** tab to see visualizations and outputs after the run completes.
 
+### Run progress indicators
+
+While a run is in flight the toolbar shows **Running · X of Y done** with a spinner so you can see how far along it is. When all components settle it updates to **Completed X of Y**. If you're in the Build tab when results land, a dot appears on the **Results** tab — click it to see what's new.
+
 ---
 
 ## Design Space Exploration (Sweep)
