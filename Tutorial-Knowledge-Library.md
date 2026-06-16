@@ -24,7 +24,7 @@ Click **+ Add**. A dropdown appears with three options:
 
 ![Add dropdown showing Upload Document, Upload Folder, and Add Knowledge](images/kl-02-add-dropdown.png)
 
-- **Upload Document** — upload a PDF, TXT, or JSON file (a paper, test report, spec, datasheet). This is the most common option.
+- **Upload Document** — upload a file (PDF, DOCX, XLSX, CSV, TXT, MD, JSON, PNG, JPG, and more — up to 100 MB). This is the most common option.
 - **Upload Folder** — bulk upload many files at once. A progress indicator tracks succeeded and failed files.
 - **Add Knowledge** — type a note directly without a file. Use this for decisions and rationale captured in the moment.
 
