@@ -34,7 +34,7 @@ In the **Components rail** on the side of the editor, select **Data Input**. Sel
 
 ## Step 3 — Add a Parameter block
 
-From the **Components rail**, select **Parameter → Number**. Name it (e.g. `temperature`), set a value and unit.
+From the **Components rail**, select **Parameter**, then choose **Parameter: Numerical** in the dialog. Name it (e.g. `temperature`), set a value and unit.
 
 A parameter is a value you control directly on the canvas. You can change it any time and the canvas recalculates.
 
@@ -56,7 +56,7 @@ After approval it runs automatically whenever its inputs change. If you edit the
 
 ## Step 6 — Run it
 
-The canvas runs automatically when Data Studio inputs change. To force a full run from scratch, click **Start sequence** in the **Build** tab.
+Click **Start sequence** in the **Build** tab to run the canvas.
 
 If any calculation blocks are still unapproved, Protos warns you and asks you to confirm before running them.
 
