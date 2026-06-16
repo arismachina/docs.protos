@@ -30,7 +30,7 @@ Click **Models Library** in the sidebar, then click **+ Register model** in the 
 
 The registration dialog opens. Give your model a name and key, choose **Local runner** or **Cloud** for execution type, and select the runtime (Python, COMSOL, or MATLAB).
 
-![Register a model dialog showing name, key, execution type, and runtime options](images/ml-register-dialog.png)
+![Register a model dialog showing name, key, execution type, and runtime options](images/ml-register-dialog.png){ width="600" }
 
 Upload your script. Protos reads it and infers the input/output schema automatically from your function signature. Review what it found — add units to every numeric field and a description to anything non-obvious. This documentation is what makes the model usable by your team later.
 

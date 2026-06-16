@@ -22,7 +22,7 @@ Click **Data Studio** in the sidebar. When you first open it, it asks you to pic
 
 Click the **Select a schema…** dropdown. All schemas in your project appear.
 
-![Schema picker open showing Electrode Coating at the top of the list](images/ds-02-schema-picker-open.png)
+![Schema picker open showing Electrode Coating at the top of the list](images/ds-02-schema-picker-open.png){ width="500" }
 
 Click the schema you want to work with — for example **Electrode Coating**.
 
