@@ -11,6 +11,7 @@ MCP (Model Context Protocol) lets you connect external tools — like Notion, Li
 - [How It Works](#how-it-works)
 - [Setting Up a Connection](#setting-up-a-connection)
 - [Discovering and Enabling Tools](#discovering-and-enabling-tools)
+- [Using MCP servers in a conversation](#using-mcp-servers-in-a-conversation)
 - [Connection Statuses](#connection-statuses)
 
 ---
@@ -52,6 +53,12 @@ For public endpoints that require no authentication.
 After connecting, click **Run Discovery** to fetch the list of tools available on that server. You then choose which tools to enable — only enabled tools are available to the Co-engineer.
 
 If the tools on a server change, run discovery again to sync the list.
+
+---
+
+## Using MCP servers in a conversation
+
+Once servers are configured, you can control which ones are active per conversation directly from the chat. Click the **MCP** button in the lower-left of the Co-engineer composer to open a popover listing your connected servers. Toggle individual servers on or off for the current conversation. Check **Default in new conversations** per server to carry your preferred setup forward automatically.
 
 ---
 
