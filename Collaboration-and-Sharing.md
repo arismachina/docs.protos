@@ -27,7 +27,7 @@ An organisation is the top-level workspace in Protos. Projects, models, canvases
 
 ### Creating an organisation
 
-Go to **User menu → Manage organisations → Create organisation**. Enter a name and confirm. You become the owner of the new organisation.
+Click **+ New organisation** on the Organisations page, enter a name, and confirm. You become the owner of the new organisation.
 
 ### Inviting members
 
