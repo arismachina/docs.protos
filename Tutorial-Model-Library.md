@@ -24,9 +24,13 @@ def run(coating_thickness: float, porosity: float, temperature: float):
 
 ## Step 1 — Register it
 
-Click **Models Library** in the sidebar → **Register Model** → **Upload file**.
+Click **Models Library** in the sidebar, then click **+ Register model** in the top right.
 
-![Register model button in the Models Library](images/models-page-header.png)
+![Models Library page with the Register model button](images/models-page-header.png)
+
+The registration dialog opens. Give your model a name and key, choose **Local runner** or **Cloud** for execution type, and select the runtime (Python, COMSOL, or MATLAB).
+
+![Register a model dialog showing name, key, execution type, and runtime options](images/ml-register-dialog.png)
 
 Upload your script. Protos reads it and infers the input/output schema automatically from your function signature. Review what it found — add units to every numeric field and a description to anything non-obvious. This documentation is what makes the model usable by your team later.
 
