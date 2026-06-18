@@ -139,13 +139,13 @@ Soft locks prevent conflicting edits by showing you when a teammate is already e
 
 ### Canvas component locks
 
-When a team member opens a canvas component for editing, that component shows a **"[Name] is editing"** badge in amber with a coloured dot matching their presence colour. Other users can still view the component but should wait for the lock to release before editing.
+When a team member opens a canvas component for editing, that component shows a **"Someone is editing"** badge. Other users can still view the component but should wait for the lock to release before editing.
 
 The lock releases automatically when the editor closes the component panel, navigates away, or after roughly 60 seconds of inactivity.
 
 ### Schema, data document, and model locks
 
-The same lock badge appears on schemas, data documents, and models. When someone opens one of these resources for editing, all other users see the **"[Name] is editing"** indicator on that resource in the list. The lock releases the same way — on close, navigation, or timeout.
+The same lock badge appears on schemas, data documents, and models. When someone opens one of these resources for editing, all other users see the **"Someone is editing"** indicator on that resource in the list. The lock releases the same way — on close, navigation, or timeout.
 
 ---
 
