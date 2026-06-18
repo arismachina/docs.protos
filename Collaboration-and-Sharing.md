@@ -22,29 +22,50 @@ Protos supports sharing resources with teammates and publishing canvases for ext
 
 ## Organisations
 
-An organisation is the top-level workspace in Protos. Projects, models, canvases, and team members all belong to an organisation. You can be a member of more than one organisation and switch between them at any time.
+An organisation is the top-level workspace in Protos. Projects, models, canvases, and team members all belong to an organisation. You can be a member of more than one organisation at the same time.
+
+### Finding your organisations
+
+Click **Organizations** in the sidebar — it sits near the bottom, just above your profile. This opens the Organisations page, which shows a card for each organisation you belong to, along with any pending invitations.
 
 ### Creating an organisation
 
-Click **+ New organisation** on the Organisations page, enter a name, and confirm. You become the owner of the new organisation.
-
-### Inviting members
-
-From the **Organisations** page, open your organisation and click **Members**. Enter the invitee's email address, select their role, then click **Invite**. They will receive an invitation to accept or decline.
+Click **+ New organization** in the top right of the Organisations page, enter a name, and confirm. You become the owner of the new organisation.
 
 ### Accepting an invitation
 
-Pending invitations appear on the **Organisations** page. Click **Accept** to join or **Decline** to dismiss.
+Pending invitations appear on the Organisations page below your active organisations. Click **Accept** to join or **Decline** to dismiss.
+
+### Organisation detail page
+
+Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has three tabs:
+
+- **Org chart** — a visual map of the organisation's structure (see below)
+- **Members** — everyone in the organisation; owners and managers can invite new members here
+- **Shared assets** — all assets shared at the organisation level
+
+### Org chart
+
+The **Org chart** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
+
+> The shared assets panel within a node is only visible to owners and managers.
 
 ---
 
 ## Teams
 
-Organisations can have a tree of teams to reflect how your group is structured. Teams make it easier to share resources with a group of people at once.
+Teams sit inside an organisation and let you share resources with a group of people at once. The team structure is managed entirely from the **Org chart** tab.
 
 ### Managing teams
 
-From the **Organisations** page, open your organisation to see and manage the team tree. You can create sub-teams, add members to teams, and assign a **team manager** role to any member.
+Owners and managers can use the **⋯** menu on any node in the org chart to:
+
+- **Add sub-team** — create a child team under the selected node
+- **Rename** — rename the selected team
+- **Move** — reassign the team to a different parent (also available by dragging a node onto another)
+- **Delete** — remove the team (only possible if it has no sub-teams)
+
+To add or remove members from a specific team, click the team's node in the org chart and use the **Members** tab in the detail panel below.
 
 ---
 
