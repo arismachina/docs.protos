@@ -127,14 +127,9 @@ All resource lists (canvases, schemas, data documents, models) have scope tabs a
 
 When other members of your organisation are in the same project, a **facepile of coloured avatars** appears in the top-right of the header bar. Each avatar shows the person's initials in their assigned colour. The control only appears when at least one other person is present — it stays hidden when you're working alone.
 
-### Seeing what teammates are working on
+### Seeing who's in the project
 
-Click the facepile to open a dropdown listing everyone currently in the project. Each entry shows:
-
-- The person's name
-- What they're looking at — for example, *"On a simulation canvas"*, *"On a schema"*, or *"In this project"*
-
-Click any name to **jump directly to the asset they're viewing**.
+Click the facepile to open a dropdown listing everyone currently in the project.
 
 ---
 
