@@ -125,11 +125,11 @@ All resource lists (canvases, schemas, data documents, models) have scope tabs a
 
 ## Live Presence
 
-When other members of your organisation are in the same project, a **facepile of coloured avatars** appears in the top-right of the header bar. Each avatar shows the person's initials in their assigned colour. The control only appears when at least one other person is present — it stays hidden when you're working alone.
+When other members of your organisation are in the same project, a row of **overlapping coloured circles** showing each person's initials appears in the top-right of the header bar. It only appears when at least one other person is present — it stays hidden when you're working alone.
 
 ### Seeing who's in the project
 
-Click the facepile to open a dropdown listing everyone currently in the project.
+Click the circles to open a dropdown listing everyone currently in the project. Each entry shows the person's name and where they are — for example, *"On a simulation canvas"* or *"On a schema"*. Click any entry to jump directly to what that person is viewing.
 
 ---
 
@@ -139,13 +139,13 @@ Soft locks prevent conflicting edits by showing you when a teammate is already e
 
 ### Canvas component locks
 
-When a team member opens a canvas component for editing, that component shows a **"Someone is editing"** badge. Other users can still view the component but should wait for the lock to release before editing.
+When a team member opens a canvas component for editing, that component shows a **"[Name] is editing"** badge. If the Co-engineer is making the edit on their behalf, it shows **"[Name]'s copilot is editing"** instead. Other users can still view the component but should wait for the lock to release before editing.
 
 The lock releases automatically when the editor closes the component panel, navigates away, or after roughly 60 seconds of inactivity.
 
 ### Schema, data document, and model locks
 
-The same lock badge appears on schemas, data documents, and models. When someone opens one of these resources for editing, all other users see the **"Someone is editing"** indicator on that resource in the list. The lock releases the same way — on close, navigation, or timeout.
+The same lock badge appears on schemas, data documents, and models. When someone opens one of these resources for editing, all other users see the **"[Name] is editing"** indicator on that resource in the list. The lock releases the same way — on close, navigation, or timeout.
 
 ---
 
