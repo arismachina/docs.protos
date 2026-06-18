@@ -170,7 +170,7 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 
 - See the canvas parameters and outputs
 - Adjust parameter values and re-run the canvas interactively
-- View linked data documents
+- View and edit linked data documents (if the owner enabled the data tab when publishing)
 
 ### What they cannot see
 
