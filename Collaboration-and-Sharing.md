@@ -88,14 +88,19 @@ Sharing works across canvases, schemas, data documents, models, and co-engineer 
 ### How to share
 
 1. Open the resource you want to share (canvas, schema, data document, model, or co-engineer chat).
-2. Click the **Share** button.
-3. Choose who to share with:
-   - **Individual user** — search by name or email
-   - **Team** — share with an entire team in your organisation
-   - **Organisation** — share with everyone in the active org
-   - **Domain** — share with anyone who has the same email domain
-4. Select a role (**Editor** or **Viewer**).
-5. Click **Share**.
+2. Click the **⋯** menu and select **Share**.
+3. Select a role (**Editor** or **Viewer**) from the role dropdown.
+4. Choose who to add access for — pick one of the three tabs:
+
+| Tab | How it works |
+|-----|-------------|
+| **People** | Search org members by name or email and click to add |
+| **Team** | Pick a team from the tree — access flows down to all sub-teams |
+| **Domain** | Enter an email domain (e.g. `example.com`) — any org member with that domain gets access |
+
+To share with your entire organisation at once, click **Share with everyone** above the tabs. This gives every org member Viewer access; you can adjust the role afterwards from the "Who has access" list.
+
+Access is given immediately as you add people. Click **Close** when done.
 
 > **Editors** can reshare within the organisation. **Viewers** cannot reshare.
 
