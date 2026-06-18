@@ -76,7 +76,7 @@ When you share a resource, the person you share it with gets one of three roles:
 | Role | What they can do |
 |------|-----------------|
 | **Owner** | Full control — view, edit, run, share, and publish |
-| **Editor** | Can co-edit the resource directly — no need to copy it first. Sharing reach is limited to your organisation |
+| **Editor** | Can co-edit the resource directly — no need to copy it first |
 | **Viewer** | Read-only access — can view and run, but cannot edit or share |
 
 ---
@@ -102,7 +102,7 @@ To share with your entire organisation at once, click **Share with everyone** ab
 
 Access is given immediately as you add people. Click **Close** when done.
 
-> **Editors** can reshare within the organisation. **Viewers** cannot reshare.
+> Only the **owner** can manage sharing. Editors and viewers cannot reshare.
 
 ### Making a resource public
 
@@ -116,10 +116,10 @@ All resource lists (canvases, schemas, data documents, models) have scope tabs a
 
 | Tab | Shows |
 |-----|-------|
+| **All** | Everything you have access to |
 | **Mine** | Resources you own |
 | **Shared with me** | Resources others have shared directly with you |
-| **Organisation** | All resources visible to your active organisation |
-| **All** | Everything you have access to |
+| **Public** | Resources that have been made public across Protos |
 
 ---
 
