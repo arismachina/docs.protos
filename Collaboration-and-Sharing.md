@@ -13,7 +13,8 @@ Protos supports sharing resources with teammates and publishing canvases for ext
 - [Access Roles](#access-roles)
 - [Sharing Resources](#sharing-resources)
 - [Discovering Shared Resources](#discovering-shared-resources)
-- [Canvas Soft-Lock](#canvas-soft-lock)
+- [Live Presence](#live-presence)
+- [Soft Locks](#soft-locks)
 - [Shared Co-Engineer Chats](#shared-co-engineer-chats)
 - [Publishing for External Access](#publishing-for-external-access)
 
@@ -22,8 +23,6 @@ Protos supports sharing resources with teammates and publishing canvases for ext
 ## Organisations
 
 An organisation is the top-level workspace in Protos. Projects, models, canvases, and team members all belong to an organisation. You can be a member of more than one organisation and switch between them at any time.
-
-![The Organisations page showing your orgs, member count, and links to Members and Teams.](images/collab-organisations-page.png)
 
 ### Creating an organisation
 
@@ -36,10 +35,6 @@ From the **Organisations** page, open your organisation and click **Members**. E
 ### Accepting an invitation
 
 Pending invitations appear on the **Organisations** page. Click **Accept** to join or **Decline** to dismiss.
-
-### Switching organisations
-
-The **org switcher** is always visible in the navigation. Click it to see all organisations you belong to and switch between them. Everything in Protos — projects, the Models Library, team members — is scoped to your active organisation.
 
 ---
 
@@ -67,7 +62,7 @@ When you share a resource, the person you share it with gets one of three roles:
 
 ## Sharing Resources
 
-Sharing works across canvases, schemas, data documents, models, and co-engineer chats — all through the same **Share** dialog.
+Sharing works across canvases, schemas, data documents, models, and co-engineer chats — all through the same **Share** dialog. Sharing is currently in beta.
 
 ### How to share
 
@@ -77,10 +72,15 @@ Sharing works across canvases, schemas, data documents, models, and co-engineer 
    - **Individual user** — search by name or email
    - **Team** — share with an entire team in your organisation
    - **Organisation** — share with everyone in the active org
+   - **Domain** — share with anyone who has the same email domain
 4. Select a role (**Editor** or **Viewer**).
 5. Click **Share**.
 
 > **Editors** can reshare within the organisation. **Viewers** cannot reshare.
+
+### Making a resource public
+
+The Share dialog includes a **Public** toggle. Enabling it makes the resource visible to **every signed-in Protos user across all organisations** — not just your own. A confirmation prompt appears before it takes effect. Use **Make private** to revert.
 
 ---
 
@@ -97,11 +97,34 @@ All resource lists (canvases, schemas, data documents, models) have scope tabs a
 
 ---
 
-## Canvas Soft-Lock
+## Live Presence
 
-When a team member is actively editing a component on a canvas, that component appears **locked** to all other users. This prevents conflicting edits.
+When other members of your organisation are in the same project, a **facepile of coloured avatars** appears in the top-right of the header bar. Each avatar shows the person's initials in their assigned colour. The control only appears when at least one other person is present — it stays hidden when you're working alone.
 
-A locked component shows a lock indicator with the name of the person currently editing. The lock releases automatically when they stop.
+### Seeing what teammates are working on
+
+Click the facepile to open a dropdown listing everyone currently in the project. Each entry shows:
+
+- The person's name
+- What they're looking at — for example, *"On a simulation canvas"*, *"On a schema"*, or *"In this project"*
+
+Click any name to **jump directly to the asset they're viewing**.
+
+---
+
+## Soft Locks
+
+Soft locks prevent conflicting edits by showing you when a teammate is already editing something. They are advisory — Protos does not block writes, but makes the conflict visible.
+
+### Canvas component locks
+
+When a team member opens a canvas component for editing, that component shows a **"[Name] is editing"** badge in amber with a coloured dot matching their presence colour. Other users can still view the component but should wait for the lock to release before editing.
+
+The lock releases automatically when the editor closes the component panel, navigates away, or after roughly 60 seconds of inactivity.
+
+### Schema, data document, and model locks
+
+The same lock badge appears on schemas, data documents, and models. When someone opens one of these resources for editing, all other users see the **"[Name] is editing"** indicator on that resource in the list. The lock releases the same way — on close, navigation, or timeout.
 
 ---
 
