@@ -68,7 +68,7 @@ The chat panel shows a **"Talking to"** indicator with the current agent's ident
 
 ### Agent handoff
 
-When the Co-engineer delegates to a sub-agent, the chat shows a handoff message and the "Talking to" indicator updates. You don't need to do anything — the handoff happens automatically based on what you asked. The routing threshold is set aggressively: most requests that clearly fall within a specialist domain (data, knowledge, or simulation) go straight to that specialist rather than the Co-engineer handling them directly. The Co-engineer primarily acts as coordinator for conversational or cross-cutting tasks, so you may see the specialist badge switch more often than you'd expect.
+When the Co-engineer delegates to a sub-agent, the chat shows a handoff message and the "Talking to" indicator updates. You don't need to do anything — the handoff happens automatically based on what you asked.
 
 ### Slash commands
 
