@@ -40,13 +40,13 @@ Pending invitations appear on the Organisations page below your active organisat
 
 Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has three tabs:
 
-- **Structure** — a visual map of the organisation's structure (see below)
+- **Org chart** — a visual map of the organisation's structure (see below)
 - **Members** — everyone in the organisation; owners and managers can invite new members here
 - **Shared assets** — all assets shared at the organisation level
 
-### Structure
+### Org chart
 
-The **Structure** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
+The **Org chart** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
 
 > The shared assets panel within a node is only visible to owners and managers.
 
@@ -54,18 +54,18 @@ The **Structure** tab (the default view) shows the full team hierarchy as connec
 
 ## Teams
 
-Teams sit inside an organisation and let you share resources with a group of people at once. The team structure is managed entirely from the **Structure** tab.
+Teams sit inside an organisation and let you share resources with a group of people at once. The team structure is managed entirely from the **Org chart** tab.
 
 ### Managing teams
 
-Owners and managers can use the **⋯** menu on any node in the structure to:
+Owners and managers can use the **⋯** menu on any node in the org chart to:
 
 - **Add sub-team** — create a child team under the selected node
 - **Rename** — rename the selected team
 - **Move** — reassign the team to a different parent (also available by dragging a node onto another)
 - **Delete** — remove the team (only possible if it has no sub-teams)
 
-To add or remove members from a specific team, click the team's node in the structure and use the **Members** tab in the detail panel below.
+To add or remove members from a specific team, click the team's node in the org chart and use the **Members** tab in the detail panel below.
 
 ---
 
@@ -115,7 +115,7 @@ The share dialog shows a **Who has access** list that groups recipients by audie
 | **People** | Individual members with direct access |
 | **Domains** | Email-domain grants, showing the matched domain |
 
-Each entry uses an avatar appropriate to its audience type (org logo, team icon, person avatar, or domain icon). Cascade subtitles surface how access was inherited — for example, a person who received access through their team will show that context.
+Each entry uses an avatar appropriate to its audience type. A subtitle beneath each entry describes the scope of that grant — for example, **"Team — includes sub-teams"** for a team grant or **"Everyone in this organization"** for an org-wide grant.
 
 If you belong to more than one organisation, an **org-context picker** lets you share the resource into any of your orgs without switching workspaces.
 
@@ -173,7 +173,7 @@ Co-engineer sessions can be shared with org members.
 3. Shared sessions appear under **Shared with me** in the chat session list.
 4. **Viewers** see a read-only transcript. **Editors** can continue the conversation.
 
-When an editor sends a message in a shared session, other participants see it appear immediately — an incoming message bubble and a generating indicator show up in near-real-time, and the completed reply lands when the Co-engineer finishes. Participants do not need to refresh or wait for the reply before seeing that a message was sent.
+When an editor sends a message in a shared session, other participants see it appear immediately — the editor's message bubble appears along with a **"[Name]'s Co-Engineer is responding…"** indicator. The completed reply replaces the placeholder when the Co-engineer finishes. Participants do not need to refresh or wait for the reply before seeing that a message was sent.
 
 ---
 
