@@ -48,7 +48,7 @@ Click any organisation card to open its detail page. At the top you can see your
 
 The **Org chart** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
 
-> The shared assets panel within a node is only visible to owners and managers.
+> The shared assets within a node are visible to all org members; if you are not a member of that specific team, you will see an access error rather than the asset list.
 
 ---
 
@@ -98,15 +98,30 @@ Sharing works across canvases, schemas, data documents, models, and co-engineer 
 | **Team** | Pick a team from the tree — access flows down to all sub-teams |
 | **Domain** | Enter an email domain (e.g. `example.com`) — any org member with that domain gets access |
 
-To share with your entire organisation at once, click **Share with everyone** above the tabs. This gives every org member Viewer access; you can adjust the role afterwards from the "Who has access" list.
+To share with your entire organisation at once, click **Share with everyone** above the tabs. This gives every org member Viewer access; you can adjust the role afterwards from the **Who has access** list.
 
 Access is given immediately as you add people. Click **Close** when done.
 
-> Only the **owner** can manage sharing. Editors and viewers cannot reshare.
+> **Owners and editors** can manage sharing. Viewers cannot reshare.
+
+### Who has access
+
+The share dialog shows a **Who has access** list that groups recipients by audience type:
+
+| Group | What it shows |
+|-------|--------------|
+| **Organizations** | Orgs with access; a cascade subtitle explains the inherited role |
+| **Teams** | Teams granted access directly |
+| **People** | Individual members with direct access |
+| **Domains** | Email-domain grants, showing the matched domain |
+
+Each entry uses an avatar appropriate to its audience type. A subtitle beneath each entry describes the scope of that grant — for example, **"Team — includes sub-teams"** for a team grant or **"Everyone in this organization"** for an org-wide grant.
+
+If you belong to more than one organisation, an **org-context picker** lets you share the resource into any of your orgs without switching workspaces.
 
 ### Making a resource public
 
-The Share dialog includes a **Public** toggle. Enabling it makes the resource visible to **every signed-in Protos user across all organisations** — not just your own. A confirmation prompt appears before it takes effect. Use **Make private** to revert.
+The Share dialog includes **Make public** and **Make private** buttons. Clicking **Make public** shows an inline confirmation before taking effect. Click **Make private** to revert.
 
 ---
 
@@ -158,6 +173,8 @@ Co-engineer sessions can be shared with org members.
 3. Shared sessions appear under **Shared with me** in the chat session list.
 4. **Viewers** see a read-only transcript. **Editors** can continue the conversation.
 
+When an editor sends a message in a shared session, other participants see it appear immediately — the editor's message bubble appears along with a **"Co-Engineer is responding…"** indicator. The completed reply replaces the placeholder when the Co-engineer finishes. Participants do not need to refresh or wait for the reply before seeing that a message was sent.
+
 ---
 
 ## Publishing for External Access
@@ -180,7 +197,7 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 
 ### How to publish
 
-1. Open **Simulation Studio** from the sidebar. Click **Publish** in the top right of the canvas list.
+1. Open **Simulation Studio** from the sidebar. Scroll to the **Publications** section at the bottom of the canvas list and click **Publish**.
 2. Give the publication a **name**.
 3. Select which **canvases to include**.
 4. Optionally check **Include data tab** to expose the underlying data to viewers.

@@ -19,8 +19,8 @@
 > **The [Co-engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
 1. Sign in at [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} with your Aris Machina account.
-2. Upon first login, you will be prompted with an **onboarding tutorial**. Follow it to unlock all the protos features.
-3. Once the onboarding is finished, you can create or open a new **Project**. This will take you through a **Project Configuration** step that we recommend you follow so the **[Co-engineer](Co-engineer)** works best.
+2. Upon first login, you'll land on a Co-engineer start screen. Describe your project to get started — this creates your first project and begins the guided onboarding.
+3. Once the onboarding is finished, you can create or open a new **Project**. This will take you through a short setup wizard (name, goals, configuration) that we recommend you follow so the **[Co-engineer](Co-engineer)** works best.
 4. You do not need to be overly detailed during the configuration step as you can always refine your project later.
 5. During configuration, upload your reference material to the **[Knowledge Library](Knowledge-Library)** — the Co-engineer draws on this for every task. You can always upload later.
 6. After the configuration, you can open the **[Co-engineer](Co-engineer)** on the right-hand side and keep describing your project. It will set up schemas, create data documents, and guide you through the workflow.
@@ -44,10 +44,10 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 ### Creating a Project
 
-1. Click **New Project** from the dashboard.
+1. Click **Create new project**.
 2. Add a name and description for your project.
 3. Answer questions about your project — goals, constraints, and any other relevant context.
-4. The [Co-engineer](Co-engineer) generates a kickoff plan. Review it, then run it to set up your workspace.
+4. The [Co-engineer](Co-engineer) automatically generates and runs a kickoff plan to set up your workspace.
 
 ### Navigating the Canvas
 
@@ -55,7 +55,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 |--------|-----|
 | Zoom in/out | Scroll or pinch — inspect blocks or see the full picture |
 | Open a block | Click it to view its properties, inputs, and results |
-| Filter | Filter bar: parameter, input, calculation, model, or visualization |
+| Filter | Filter bar: parameter, Data input, calculation, model, or visualization |
 | Search | Search across all blocks by name |
 
 ---
@@ -124,7 +124,7 @@ Connect external tools — like Notion, Linear, or Sentry — to the Co-engineer
 
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
-Share canvases, schemas, data documents, models, and co-engineer chats with teammates using a unified Share dialog. Three access roles: Owner, Editor (can co-edit in place), and Viewer (read-only). Organise teammates into teams, share with your whole organisation, or publish canvases as interactive snapshots for external stakeholders — no Protos account required.
+Share canvases, schemas, data documents, models, and co-engineer chats with teammates using a unified Share dialog. Two sharing roles: **Editor** (can co-edit in place) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole organisation. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
 
 [→ Collaboration & Sharing guide](Collaboration-and-Sharing)
 
@@ -132,12 +132,14 @@ Share canvases, schemas, data documents, models, and co-engineer chats with team
 
 ## Integrations
 
-Integrations are accessible from the **Integrations** section in the left sidebar, or via the user menu under Connectors.
+Integrations are accessible from the **Integrations** section in the left sidebar.
 
 | System | What Protos does |
 |--------|-----------------|
 | SharePoint / OneDrive | Browse and import files into the Co-engineer for data extraction |
 | GitHub | Register computational models (Python, scripts) from a repo into the Models Library |
+| MCP servers | Connect external tools to the Co-engineer so it can use them directly in chat |
+| Register a Model | Register external computational models into the Model Library |
 
 > **Note:** GitHub is for model registration only — not for importing data into schemas. See [Model Library](Model-Library) for details.
 

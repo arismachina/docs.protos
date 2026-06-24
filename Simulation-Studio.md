@@ -28,7 +28,7 @@ Simulation Studio shows a list of your canvases. Each canvas is a graph of conne
 | **Data input** | Pulls in data documents from the Data Studio |
 | **Parameter** | A value you can dial up or down (e.g. temperature, concentration) |
 | **Calculation** | Python code that transforms upstream data |
-| **Model** | Calls an external model registered in the Models Library |
+| **Model** | Calls an external model registered in Models |
 | **Visualization** | Plots the output as a chart |
 
 You connect them left to right. Data flows through the chain automatically — when an input changes, everything downstream recalculates.
@@ -57,7 +57,7 @@ You can have multiple canvases open at the same time. The tabs bar at the top of
 
 ### Components rail
 
-Along the left side of the Build view is the **Components rail** — a palette of block types you can add to the canvas. Click a block type to add it. Each type has a distinct icon so you can tell them apart at a glance.
+Along the left side of the Build view is the **Components rail** — a palette of block types you can add to the canvas. Click or drag a block type onto the canvas to add it. Each type has a distinct icon so you can tell them apart at a glance.
 
 ### Node-details panel
 
@@ -65,16 +65,18 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 | Section | What it shows |
 |---------|--------------|
-| **Details** | Block configuration — name, type, value, approval status |
+| **Details** | Content varies by type: calculation/model → approval status; parameter → type and value; data-input → linked schema and documents |
 | **Result** | Output values from the last run — only appears for calculation and model blocks after the sequence has run |
 | **Connections** | Upstream and downstream blocks this node is wired to |
+
+> **Visualization blocks:** instead of a Details section, visualization block panels show a **Preview** section with an inline chart of the block's output.
 
 ---
 
 ## Building a Canvas
 
 1. Open **Simulation Studio** from the sidebar — you land on the canvas list.
-2. Click an existing canvas to open it, or click **New** to create one.
+2. Click an existing canvas to open it, or click **New** (a dropdown with **New Canvas** and **Import Canvas** options) to create one.
 3. The canvas opens in the **Build** tab. Add blocks from the **Components rail** on the left and connect them — the Co-engineer can build the canvas for you if you describe what you are modelling.
 4. For any **Calculation** block, click **Approve** before it will execute (this is a trust gate — you confirm the code is safe to run).
 
@@ -82,7 +84,7 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 ## Running It
 
-In the Build tab, click **Start sequence** to run the canvas. Protos finds all blocks with no upstream dependencies, runs those first, then cascades through everything downstream.
+Click **Start sequence** to run the canvas. Protos finds all **calculation and model** blocks that have no upstream calculation or model dependencies, runs those first, then cascades through downstream executables.
 
 If any calculation or model blocks are unapproved, clicking Start sequence opens a confirmation dialog — you can approve all of them at once and continue, or cancel.
 
@@ -120,7 +122,7 @@ To set up a sweep:
 ## See Also
 
 - [Data Studio](Data-Studio) — manage which data documents feed into the canvas
-- [Model Library](Model-Library) — register models you want to call from a canvas
+- [Models](Model-Library) — register models you want to call from a canvas
 - [Glossary → Sweep](Glossary), [Glossary → Canvas](Glossary)
 
 ---

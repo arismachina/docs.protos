@@ -22,7 +22,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 | Type | Examples |
 |------|---------|
-| **Academic literature** | Papers, standards, patents — uploaded as PDF or TXT files |
+| **Academic literature** | Papers, standards, patents — uploaded as PDF, DOCX, XLSX, CSV, TXT, Markdown, JSON, and common image formats up to 100 MB |
 | **Internal reports** | Experimental summaries, design reviews, test reports |
 | **Decisions** | Why a parameter value was chosen; why an approach was rejected |
 | **Experimental results** | Test reports and datasets uploaded as files or captured as text notes |
@@ -34,7 +34,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 1. Open **Knowledge Library** from the sidebar.
 2. **Filter** by type using the tabs: All, Custom Knowledge, Reference Knowledge, or Conversations.
-3. Click any item to see its full content and the Co-engineer sessions that have referenced it.
+3. Click any item to see its full content and the source documents that informed it.
 
 > **Tip:** Before starting a new project or design iteration, browse the library for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
 
@@ -62,7 +62,7 @@ To capture a decision, insight, or observation as text:
 For bulk ingestion of many files at once:
 
 1. Click **Add → Upload Folder**.
-2. Select a folder — Protos processes the files in the background.
+2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum.
 
 ---
 
@@ -84,7 +84,7 @@ This chain is preserved permanently — even if team members leave or projects a
 
 - **Capture decisions as they're made**, not retrospectively. The rationale is clearest in the moment and becomes harder to reconstruct over time.
 - **Link papers to specific claims**, not just to the paper itself. Trace is only useful if it points to the exact piece of evidence that informed a decision.
-- **Agree on a tag taxonomy with your team** before tagging — e.g. by domain, material, or property type. Inconsistent tags make search unreliable.
+- **Use descriptive titles** so documents are easy to find via search — the Knowledge Library does not have a tagging feature, so the title is the primary handle for discovery.
 - **Review the library at project kickoff**: search for prior experiments and decisions before starting new work. Don't repeat work that's already been done.
 
 ---

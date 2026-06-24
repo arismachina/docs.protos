@@ -26,7 +26,7 @@ Make sure you are in the **Build** tab before adding blocks.
 
 ## Step 2 — Add an Input block
 
-In the **Components rail** on the side of the editor, select **Data Input**. Select your schema and which data documents to pull in. Choose which fields to expose as outputs.
+In the **Components rail** on the side of the editor, select **Data input**. Select your schema and which data documents to pull in. Choose which fields to expose as outputs.
 
 > You're not hardcoding values — you're pointing at live documents from the Data Studio. Change the active documents there and the canvas picks up the new values automatically.
 
@@ -34,7 +34,7 @@ In the **Components rail** on the side of the editor, select **Data Input**. Sel
 
 ## Step 3 — Add a Parameter block
 
-From the **Components rail**, select **Parameter**, then choose **Parameter: Numerical** in the dialog. Name it (e.g. `temperature`), set a value and unit.
+From the **Components rail**, select **Parameter**, then choose **Parameter: Numerical** in the dialog. Name it (e.g. `temperature`), set a value.
 
 A parameter is a value you control directly on the canvas. You can change it any time and the canvas recalculates.
 
@@ -42,13 +42,13 @@ A parameter is a value you control directly on the canvas. You can change it any
 
 ## Step 4 — Add a Calculation block and connect it
 
-From the **Components rail**, select **Calculation**. Write Python code that uses the upstream values, then draw arrows from the Input and Parameter blocks to the Calculation block.
+From the **Components rail**, select **Calculation**. Write Python code that uses the upstream values, then open the Calculation block and, in the **Upstream Components** field, select the Input and Parameter blocks that feed into it.
 
 ---
 
 ## Step 5 — Approve the calculation
 
-Calculation blocks need your approval before they run. This is a safety check — you're confirming the code is safe to execute. Click **Approve** on the block.
+Calculation blocks need your approval before they run. This is a safety check — you're confirming the code is safe to execute. Click **Approve & Run** on the block.
 
 After approval it runs automatically whenever its inputs change. If you edit the code, it goes back to needing approval.
 

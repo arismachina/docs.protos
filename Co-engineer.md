@@ -34,7 +34,7 @@ The Protos **Co-engineer** is a multi-agent AI system available across all featu
 
 ## How to Use It
 
-The Co-engineer panel is available from any screen via the **chat icon** in the bottom-right corner.
+The Co-engineer panel is available from any screen via the **chat icon** in the top-right corner of the header bar.
 
 Type in plain language:
 
@@ -64,7 +64,7 @@ The Co-engineer is built on a multi-agent architecture. Rather than a single ass
 
 ### Talking to indicator
 
-The chat panel shows a **"Talking to"** indicator with the current agent's identity icon and accent colour. This updates automatically when the Co-engineer hands off to a sub-agent.
+The chat panel shows an **agent badge** with the current agent's identity icon and accent colour. Hover the badge to see a "Talking to" label. This updates automatically when the Co-engineer hands off to a sub-agent.
 
 ### Agent handoff
 
@@ -102,7 +102,7 @@ You can review all Co-engineer sessions for a project by opening the Co-engineer
 
 Co-engineer's quality depends on the richness of your workspace:
 
-- **[Model Library](Model-Library):** The more models registered and documented, the better Co-engineer's simulation configuration suggestions.
+- **[Models](Model-Library):** The more models registered and documented, the better Co-engineer's simulation configuration suggestions.
 - **[Knowledge Library](Knowledge-Library):** The richer the library, the more relevant connections Co-engineer can surface as you design.
 - **Schema quality:** Well-defined schemas with units and descriptions give Co-engineer more signal when extracting data from files and creating documents.
 
@@ -113,7 +113,7 @@ Investing in these foundations makes Co-engineer progressively more useful over 
 ## See Also
 
 - [Knowledge Library](Knowledge-Library) — Co-engineer draws on this to surface relevant prior work
-- [Model Library](Model-Library) — Co-engineer uses this for simulation configuration recommendations
+- [Models](Model-Library) — Co-engineer uses this for simulation configuration recommendations
 - [Schemas](Schemas) — Co-engineer can create and update schemas based on your description
 - [Simulation Studio](Simulation-Studio) — Co-engineer can recommend model and input configurations
 - [MCP Connections](MCP-Connections) — connect external tools the Co-engineer can use in chat

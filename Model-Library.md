@@ -40,13 +40,10 @@ Without a shared model library, teams rebuild the same models for each project �
 |-------|-------------|
 | **Name** | Clear, searchable name (e.g. `Doyle-Fuller-Newman Electrochemical Model`) |
 | **Description** | What the model does, when to use it, known limitations |
-| **Domain** | e.g. `electrochemistry`, `thermal`, `mechanical`, `materials` |
-| **Inputs** | Each input: name, type, unit, required or optional |
-| **Outputs** | Each output: name, type, unit |
-| **Source** | Python script, COMSOL file, external API endpoint, etc. |
-| **Version tag** | e.g. `v1.0.0` — use semantic versioning |
 
-4. Click **Save**. The model is now available in [Simulation Studio](Simulation-Studio).
+Define the **Input schema** and **Output schema** — the JSON schema builders let you specify each parameter's name, type, and whether it's required.
+
+4. Click **Register model**. After registering, a launcher token download step appears for local-runner models.
 
 > **Tip:** Document inputs and outputs fully — include units, valid ranges, and edge case notes. Future users (including you, six months from now) will thank you.
 
@@ -54,12 +51,16 @@ Without a shared model library, teams rebuild the same models for each project �
 
 ## Model Source Types
 
+The first step is to choose an **Execution type**: **Local runner** (your model runs on your own machine; the platform dispatches inputs) or **Cloud** (upload Python code; the platform containerises and runs it).
+
+The dialog opens with three intake options — **Local code** (upload or paste code), **Endpoint** (point to an existing API endpoint), and **GitHub/GitLab/etc.** (build from a repo).
+
 | Source type | How it works in Protos |
 |-------------|----------------------|
 | **Python script** | Upload the script; Protos executes it in a managed environment |
-| **COMSOL / MATLAB file** | Upload the model file; Protos calls it with the specified input parameters |
+| **COMSOL / MATLAB** | Select as the runtime under Local runner. Protos dispatches inputs to a launcher script that runs on your machine. |
 | **External API** | Provide the endpoint URL and auth config; Protos calls it on run. You can supply a personal API key and choose whether to share it with your team or keep it private |
-| **GitHub repo** | Point to a public GitHub repo; Protos clones it, generates a wrapper, and containerises it. A live build progress indicator shows each step (queued → running → succeeded/failed) — the build may take a few minutes |
+| **Public repo** | Paste a public repo URL (GitHub, GitLab, Bitbucket, or Codeberg). Protos builds a container from it; you can optionally auto-draft the wrapper with AI. A live build progress indicator shows three steps: **Preparing build context → Building image → Finalising** — the build may take a few minutes |
 
 ---
 
@@ -80,8 +81,8 @@ Protos includes a set of ready-to-use physics models you can add to any canvas w
 Beyond the built-in models, you can search and add any model your team has registered:
 
 - **Search** by name, domain, or keyword.
-- **Filter** by domain, input type, or output type.
-- **Sort** by most recently used or most recently updated.
+- **Filter** by tags or scope (mine, shared with me, public).
+- **Sort** by Last updated, Name A-Z, or Newest first.
 - Click any model to see its full documentation, input/output schema, and version history.
 
 ---
@@ -96,12 +97,7 @@ Every update to a model creates a new version. This is critical for reproducibil
 | **Comparison** | Old canvas runs always reference the exact model version they used, so you can see how results changed between versions |
 | **Audit trail** | Full history of who changed what and when |
 
-**To update a model:**
-
-1. Open the model in the Models Library.
-2. Click **New Version**.
-3. Upload the updated source and revise the description.
-4. Add a changelog note describing what changed.
+**To update a model:** Open the model and click **Edit** to update its name, description, or tags. To update the model's code, you must re-register it.
 
 > **Warning:** Do not delete old model versions. Even if a model is superseded, old versions are needed to reproduce past simulation runs.
 
