@@ -24,7 +24,7 @@ def run(coating_thickness: float, porosity: float, temperature: float):
 
 ## Step 1 — Register it
 
-Click **Models Library** in the sidebar, then click **+ Register model** in the top right.
+Click **Models** in the sidebar, then click **+ Register model** in the top right.
 
 ![Models Library page with the Register model button](images/models-page-header.png)
 
@@ -34,7 +34,7 @@ The registration dialog opens. Give your model a name and key, choose **Local ru
 
 Upload your script. Protos reads it and infers the input/output schema automatically from your function signature. Review what it found — add units to every numeric field and a description to anything non-obvious. This documentation is what makes the model usable by your team later.
 
-Fill in the name, description, and domain, then click **Save**.
+Fill in the name, key, description, and tags, then click **Register model**.
 
 ---
 
@@ -48,13 +48,15 @@ Wire a Parameter block to each input, click **Start sequence**, and check the re
 
 ## Step 3 — Version it when the code changes
 
-When you update the model: open it in the Model Library → **New Version** → upload the updated script → add a changelog note. Old canvases keep running on the previous version — their results stay reproducible. See [Model Library → Model Versioning](Model-Library#model-versioning).
+To update a model's code, re-register it. To update its name, description, or tags, open the model and click **Edit**.
 
 ---
 
 ## Registering from GitHub instead
 
-If your model is in a public GitHub repo, use **Register Model → GitHub** instead of uploading a file. Protos clones the repo, detects the entry point, and generates a wrapper. The repo needs a `run`/`main`/`execute` function or a `protos.toml` file declaring the interface.
+If your model is in a public repo (GitHub, GitLab, Bitbucket, or Codeberg), use the **GitHub** tab. Protos builds a container from the repo. You can optionally click **Auto-draft wrapper** to have AI generate a starter wrapper from your function signatures. The repo needs a `run`/`main`/`execute` function or a `protos.toml` file declaring the interface.
+
+If your model is already accessible via an HTTP endpoint, use the **Endpoint** tab to register it by URL.
 
 ---
 

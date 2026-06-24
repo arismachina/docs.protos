@@ -46,14 +46,19 @@ Quick reference:
 
 ## Field Types
 
+Each field in a schema is a **node** with a **kind** and, for leaf fields, a **value type**.
+
+**Value types** (set on a Value node):
+
 | Type | Use for |
 |------|---------|
-| `number` | Measurable values — always set a unit |
 | `string` | Free-form text — labels, notes, identifiers |
-| `enum` | A fixed list of options (e.g. material grade, phase) |
+| `number` | Measurable values — always set a unit |
 | `boolean` | Yes / no flags |
+| `enum` | A fixed list of options (e.g. material grade, phase) |
 | `date` | Timestamps for experiments, decisions, imports |
-| `ref` | Link to another data document (e.g. test result → electrode formulation) |
+
+**Node kinds** determine the structure of the field, not its leaf value. The available kinds are **Value**, **Object** (a group of named fields), **Array** (a list of items of a given kind), **Union** (a field that can be one of several types), and **Ref** (a link to another data document). Value types above apply only to Value nodes; `ref` is a node kind, not a value type.
 
 ---
 
@@ -65,9 +70,8 @@ Reference fields link schemas together, creating a **relational structure** acro
 
 To add a reference field:
 
-1. In the schema editor, add a new field and set type to `ref`.
+1. In the schema editor, add a new field and set the node kind to **Ref**.
 2. Select the **target schema**.
-3. Set whether one or many references are allowed.
 
 > **Note:** Use reference fields instead of duplicating data across schemas. Duplication breaks traceability and leads to inconsistencies as designs evolve.
 

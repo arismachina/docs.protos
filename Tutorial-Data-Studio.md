@@ -30,7 +30,7 @@ Click the schema you want to work with — for example **Electrode Coating**.
 
 ## Step 3 — Activate documents
 
-All data documents following that schema appear in a list on the left. Click the ones you want to compare — each one becomes a **column** in the table, with all fields as rows.
+Click **Select documents…** in the toolbar above the table and choose the documents you want to compare — each selected document becomes a column.
 
 With 3 documents activated you can compare their values side by side at a glance:
 
@@ -42,17 +42,23 @@ With 3 documents activated you can compare their values side by side at a glance
 
 If your project has a requirements document (your target spec), you can pin it as a column next to your designs. This makes the gap between your current designs and your target immediately visible.
 
-To pin a requirement, find the requirements document in the left-hand list and click the **pin** icon next to it. It will appear as a fixed column alongside your active documents.
+To add a requirements document, click **Select documents…** and choose it from the Requirements section of the popover — it appears as a fixed column alongside your design documents.
 
 ---
 
 ## Step 5 — Edit values directly in the table
 
-Double-click any cell to change its value without leaving the Data Studio. Press Enter to save — the change updates the original document immediately.
+Double-click any cell to change its value without leaving the Data Studio. Press **Enter** or click away to save — the change updates the original document immediately.
 
 ---
 
-## Step 6 — The canvas uses whatever is activated here
+## Step 6 — Analysis Panel
+
+**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that contains chart tabs (bar chart, scatter plot) and a Gap Analysis tab (coming soon) for comparing values against requirement bounds.
+
+---
+
+## Step 7 — The canvas uses whatever is activated here
 
 Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** and click **Start sequence** to run with the new inputs.
 

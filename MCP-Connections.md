@@ -24,11 +24,12 @@ Each MCP connection points to an MCP-compatible server. Once you connect and ena
 
 ## Setting Up a Connection
 
-1. Click your **profile** in the bottom-left corner and go to **Connectors → MCP Servers**.
-2. Click **+ Add Connection**, give it a name, enter the server URL, and choose your authentication method (see below).
-3. Optionally click **Test** to verify the connection.
-4. Click **Run Discovery** to fetch the tools available on that server.
-5. Select which tools you want the Co-engineer to be able to use.
+1. Open the **Integrations** section in the left sidebar (near the bottom) and click **MCP servers**.
+2. Click **Add connection**, give it a name, enter the server URL, and choose your authentication method (see below).
+3. Select which tools you want the Co-engineer to be able to use.
+4. Tool discovery runs automatically after you save.
+
+After saving, use the **⋯** menu on the connection card and choose **Test connection** to verify it.
 
 The Co-engineer can now use those tools in chat.
 
@@ -50,15 +51,15 @@ For public endpoints that require no authentication.
 
 ## Discovering and Enabling Tools
 
-After connecting, click **Run Discovery** to fetch the list of tools available on that server. You then choose which tools to enable — only enabled tools are available to the Co-engineer.
+After connecting, tool discovery runs automatically. You then choose which tools to enable — only enabled tools are available to the Co-engineer.
 
-If the tools on a server change, run discovery again to sync the list.
+If the tools on a server change, open the **⋯** menu on the connection card and choose **Run tools discovery** to sync the list.
 
 ---
 
 ## Using MCP servers in a conversation
 
-Once servers are configured, you can control which ones are active per conversation directly from the chat. Click the **MCP** button in the lower-left of the Co-engineer composer to open a popover listing your connected servers. Toggle individual servers on or off for the current conversation. Check **Default in new conversations** per server to carry your preferred setup forward automatically.
+Once servers are configured, you can control which ones are active per conversation directly from the chat. Click the **MCP** button in the lower-left of the Co-engineer composer to open a popover listing your connected servers. Toggle individual servers on or off for the current conversation. The popover also includes **Enable all** and **Disable all** buttons to apply to every server at once. Check **Default in new conversations** per server to carry your preferred setup forward automatically.
 
 ---
 
@@ -67,9 +68,9 @@ Once servers are configured, you can control which ones are active per conversat
 | Status | Meaning |
 |--------|---------|
 | **Pending** | Connection added but discovery hasn't run yet |
-| **Active** | Discovery succeeded and at least one tool is enabled |
+| **Active** | Discovery completed successfully (tools may still be empty) |
 | **Error** | Last discovery attempt failed — check the URL and credentials |
-| **Needs reconnect** | OAuth token expired — click reconnect to re-authorise |
+| **Reconnect needed** | OAuth token expired — click reconnect to re-authorise |
 
 ---
 

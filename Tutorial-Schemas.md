@@ -10,7 +10,7 @@ This tutorial walks you through building a schema from scratch, explains the dec
 
 ## Step 1 — Open the Schema Editor
 
-Click **Schemas** in the sidebar. You'll see any existing schemas as cards. Each card shows the schema name, tags, and how many fields it has.
+Click **Schemas** in the sidebar. You'll see any existing schemas as cards. Each card shows the schema name, tags, field count, description, and last-updated date.
 
 ![The Schemas page showing existing schema cards and the New Schema button](images/sch-01-empty-library.png)
 
@@ -34,17 +34,23 @@ This naming makes schemas easy to find as your project grows — anyone can sear
 
 Type a field name in the bottom input and click **+ Add**. The field appears in the list and you set its type.
 
-Click the **Type** dropdown on any field to change it:
+Each field has a **Kind** selector (Object, Array, Union, Value, or Ref). For **Value** nodes, a **Type** picker then lets you choose string, number, boolean, enum, or date.
 
 ![Field type picker showing String, Number, Boolean, Enum, and Date options](images/sch-field-type-picker.png)
 
 For a full description of each type and when to use it, see [Schemas → Field Types](Schemas#field-types). The key decision in practice: use `Enum` instead of `String` whenever values come from a fixed set — it prevents typos and makes filtering reliable.
 
-Mark a field **Required** only if the document is meaningless without it. A missing `coating_thickness` on an electrode coating record makes it useless for comparison. A missing `batch_notes` doesn't.
+Field names must be **snake_case** (lowercase letters, numbers, and underscores — e.g. `field_name`, `value_1`). The editor will show a validation error for invalid names.
+
+Click the **Req** toggle on a field to mark it required only if the document is meaningless without it. A missing `coating_thickness` on an electrode coating record makes it useless for comparison. A missing `batch_notes` doesn't.
 
 ---
 
 ## Step 4 — Save
+
+The schema editor has a **JSON** tab that lets you edit the raw schema definition directly, alongside the visual **Editor** tab.
+
+When editing an existing schema, the name, tags, and description panel is collapsed by default — click **Edit** in the header to reveal it.
 
 Click **Save**. The schema appears in the library as a card.
 

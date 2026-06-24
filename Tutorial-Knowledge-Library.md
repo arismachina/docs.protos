@@ -12,7 +12,7 @@ This tutorial shows you how to upload your reference material so the Co-engineer
 
 ## Step 1 — Open the Knowledge Library
 
-Click **Knowledge Library** in the sidebar.
+Click **Knowledge** in the sidebar.
 
 ---
 
@@ -22,17 +22,17 @@ Click **+ Add**. A dropdown appears with three options:
 
 ![Add dropdown showing Upload Document, Upload Folder, and Add Knowledge](images/kl-02-add-dropdown.png)
 
-- **Upload Document** — upload a file (PDF, DOCX, XLSX, CSV, TXT, MD, JSON, PNG, JPG, and more — up to 100 MB). This is the most common option.
+- **Upload Document** — upload a file (PDF, DOCX, XLSX, XLS, CSV, TXT, MD, JSON, PNG, JPG, JPEG, WEBP, GIF, TIFF, and more — up to 100 MB). This is the most common option.
 - **Upload Folder** — bulk upload many files at once. A progress indicator tracks succeeded and failed files.
 - **Add Knowledge** — type a note directly without a file. Use this for decisions and rationale captured in the moment.
 
-Choose **Upload Document**, select your file, give it a name and tags, and click Upload. Protos splits it into chunks and embeds them so the Co-engineer can search across the content.
+Choose **Upload Document**, select your file, give it a name, and click Upload. Protos splits it into chunks and embeds them so the Co-engineer can search across the content.
 
 ---
 
 ## Step 3 — Or let the Co-engineer create knowledge from a conversation
 
-Notice the **Create with Co-Engineer** button at the top. After a Co-engineer session, it can save key findings, decisions, or summaries directly into the Knowledge Library. Any future session can then draw on what was captured.
+Notice the **Create with Co-Engineer** button at the top. Click **Create with Co-Engineer** to open a Co-engineer session pre-loaded with a prompt to help you add knowledge — describe what you want to capture and the Co-engineer will guide you through creating entries.
 
 ---
 

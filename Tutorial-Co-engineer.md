@@ -10,13 +10,13 @@ This tutorial shows you what the Co-engineer does when you use it — what to as
 
 ## Before you start
 
-The Co-engineer works best when you have at least one document in the **Knowledge Library** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
+The Co-engineer works best when you have at least one document in the **Knowledge** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
 
 ---
 
 ## Step 1 — Ask it to create a schema
 
-The Co-engineer icon is always visible in the bottom-right corner of the screen — no matter where you are in the app, you can open it at any time. Click it to open the panel, then type:
+The Co-engineer icon is in the top-right corner of the header. The icon is not shown on the home screen or when the chat panel is already open. Click it to open the panel, then type:
 
 > *"Create a schema for electrode coating experiments with fields for coating thickness, porosity, active material type, and mass loading."*
 
@@ -36,7 +36,7 @@ It reads the file, maps the values to your schema fields, and shows you what it 
 
 ## Step 3 — Ask it a question grounded in your library
 
-> *"What does the Knowledge Library say about optimal porosity for NMC811 electrodes?"*
+> *"What does the Knowledge say about optimal porosity for NMC811 electrodes?"*
 
 The answer includes citations. Click any citation to verify the original source. If the library doesn't have relevant information, it says so rather than guessing.
 
