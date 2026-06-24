@@ -40,13 +40,13 @@ Pending invitations appear on the Organisations page below your active organisat
 
 Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has three tabs:
 
-- **Org chart** — a visual map of the organisation's structure (see below)
+- **Structure** — a visual map of the organisation's structure (see below)
 - **Members** — everyone in the organisation; owners and managers can invite new members here
 - **Shared assets** — all assets shared at the organisation level
 
-### Org chart
+### Structure
 
-The **Org chart** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
+The **Structure** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
 
 > The shared assets panel within a node is only visible to owners and managers.
 
@@ -54,18 +54,18 @@ The **Org chart** tab (the default view) shows the full team hierarchy as connec
 
 ## Teams
 
-Teams sit inside an organisation and let you share resources with a group of people at once. The team structure is managed entirely from the **Org chart** tab.
+Teams sit inside an organisation and let you share resources with a group of people at once. The team structure is managed entirely from the **Structure** tab.
 
 ### Managing teams
 
-Owners and managers can use the **⋯** menu on any node in the org chart to:
+Owners and managers can use the **⋯** menu on any node in the structure to:
 
 - **Add sub-team** — create a child team under the selected node
 - **Rename** — rename the selected team
 - **Move** — reassign the team to a different parent (also available by dragging a node onto another)
 - **Delete** — remove the team (only possible if it has no sub-teams)
 
-To add or remove members from a specific team, click the team's node in the org chart and use the **Members** tab in the detail panel below.
+To add or remove members from a specific team, click the team's node in the structure and use the **Members** tab in the detail panel below.
 
 ---
 
@@ -98,11 +98,26 @@ Sharing works across canvases, schemas, data documents, models, and co-engineer 
 | **Team** | Pick a team from the tree — access flows down to all sub-teams |
 | **Domain** | Enter an email domain (e.g. `example.com`) — any org member with that domain gets access |
 
-To share with your entire organisation at once, click **Share with everyone** above the tabs. This gives every org member Viewer access; you can adjust the role afterwards from the "Who has access" list.
+To share with your entire organisation at once, click **Share with everyone** above the tabs. This gives every org member Viewer access; you can adjust the role afterwards from the **Who has access** list.
 
 Access is given immediately as you add people. Click **Close** when done.
 
 > Only the **owner** can manage sharing. Editors and viewers cannot reshare.
+
+### Who has access
+
+The share dialog shows a **Who has access** list that groups recipients by audience type:
+
+| Group | What it shows |
+|-------|--------------|
+| **Organizations** | Orgs with access; a cascade subtitle explains the inherited role |
+| **Teams** | Teams granted access directly |
+| **People** | Individual members with direct access |
+| **Domains** | Email-domain grants, showing the matched domain |
+
+Each entry uses an avatar appropriate to its audience type (org logo, team icon, person avatar, or domain icon). Cascade subtitles surface how access was inherited — for example, a person who received access through their team will show that context.
+
+If you belong to more than one organisation, an **org-context picker** lets you share the resource into any of your orgs without switching workspaces.
 
 ### Making a resource public
 
@@ -157,6 +172,8 @@ Co-engineer sessions can be shared with org members.
 2. Assign **Editor** or **Viewer** access to individuals, teams, or the whole org.
 3. Shared sessions appear under **Shared with me** in the chat session list.
 4. **Viewers** see a read-only transcript. **Editors** can continue the conversation.
+
+When an editor sends a message in a shared session, other participants see it appear immediately — an incoming message bubble and a generating indicator show up in near-real-time, and the completed reply lands when the Co-engineer finishes. Participants do not need to refresh or wait for the reply before seeing that a message was sent.
 
 ---
 
