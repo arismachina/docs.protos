@@ -38,11 +38,12 @@ Pending invitations appear on the Organisations page below your active organisat
 
 ### Organisation detail page
 
-Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has three tabs:
+Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has four tabs:
 
 - **Org chart** — a visual map of the organisation's structure (see below)
 - **Members** — everyone in the organisation; owners and managers can invite new members here
-- **Shared assets** — all assets shared at the organisation level
+- **Shared assets** — all assets shared at the organisation level, including projects, schemas, data documents, and models
+- **Shared projects** — projects shared with a team, shown as cards; use the team selector to filter by team. Any schemas and data documents shared within each project appear nested under the project card. Inherited access (via a parent team) is indicated with an **Inherited** badge
 
 ### Org chart
 
@@ -83,11 +84,11 @@ When you share a resource, the person you share it with gets one of three roles:
 
 ## Sharing Resources
 
-Sharing works across canvases, schemas, data documents, models, and co-engineer chats — all through the same **Share** dialog. Sharing is currently in beta.
+Sharing works across projects, canvases, schemas, data documents, models, and co-engineer chats — all through the same **Share** dialog. Sharing is currently in beta.
 
 ### How to share
 
-1. Open the resource you want to share (canvas, schema, data document, model, or co-engineer chat).
+1. Open the resource you want to share (project, canvas, schema, data document, model, or co-engineer chat).
 2. Click the **⋯** menu and select **Share**.
 3. Select a role (**Editor** or **Viewer**) from the role dropdown.
 4. Choose who to add access for — pick one of the three tabs:
