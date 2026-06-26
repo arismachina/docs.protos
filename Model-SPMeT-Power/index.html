@@ -1,0 +1,2064 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Protos R&D platform by Aris Machina">
+      
+      
+      
+        <link rel="canonical" href="https://docs.protos.arismachina.com/Model-SPMeT-Power/">
+      
+      
+        <link rel="prev" href="../Model-DFN-Cyclic-Ageing/">
+      
+      
+        <link rel="next" href="../Model-SPMeT-DCIR/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/aris-favicon-black.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>SPMeT Power - Protos Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <!-- Adaptive favicon: black in light mode, white in dark mode (matches Protos app) -->
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-white.png" sizes="32x32" media="(prefers-color-scheme: dark)" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spmet-power-envelope-model-try-protos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Protos Docs" class="md-header__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Protos Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SPMeT Power
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Protos Docs" class="md-nav__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    Protos Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Models Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Models Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Optimizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Optimizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Calendar-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Calendar Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Cyclic-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Cyclic Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Power
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-parameters-cellparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Parameters (CellParameters)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cell Parameters (CellParameters)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electrode-dimensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Dimensions (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separator-dimensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separator Dimensions (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sweep-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sweep Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-terminations-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Terminations (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-performance-test-rpt-parameters-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Performance Test (RPT) Parameters (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powerresultpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerResultPoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spmepoweroutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SpmePowerOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-DCIR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT DCIR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Dynamic-Load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Dynamic Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP-Connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Connections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Collaboration-and-Sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration & Sharing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Your First Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up Your Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with the Co-engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registering Your First Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Your First Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cell-parameters-cellparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Parameters (CellParameters)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cell Parameters (CellParameters)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electrode-dimensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Dimensions (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separator-dimensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separator Dimensions (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sweep-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sweep Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-terminations-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Terminations (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-performance-test-rpt-parameters-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Performance Test (RPT) Parameters (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powerresultpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerResultPoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spmepoweroutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SpmePowerOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="spmet-power-envelope-model-try-protos">SPMeT Power Envelope Model <a href="https://protos.arismachina.com" class="try-protos" target="_blank" rel="noopener noreferrer">Try Protos</a></h1>
+<p><a href="../Model-Library/">← Models Library</a> · <strong>SPMeT Power</strong></p>
+<p>Finds the maximum feasible power at each SOC, temperature, and pulse duration combination.</p>
+<hr />
+<p>Physics-based maximum power determination using the Single Particle Model
+with Electrolyte (SPMe) with lumped thermal. Sweeps power levels across
+SOC, temperature, and pulse duration to find the maximum feasible power.</p>
+<h2 id="overview">Overview</h2>
+<p>Runs constant-power pulses at various conditions and determines the highest
+power that completes without hitting voltage, anode potential, or temperature
+limits. Uses binary search refinement for precision.</p>
+<h3 id="protocol">Protocol</h3>
+<div class="highlight"><pre><span></span><code>For each (SOC, temperature, pulse_duration, direction):
+  For each power_level (ascending):
+    1. Set initial conditions (SOC, temperature) — each level is independent
+    2. Apply constant power pulse for pulse_duration
+    3. Check termination: if solution.termination == &quot;final time&quot; → pass
+       (voltage cutoff, anode potential, or temperature limit hit → fail)
+    4. If pass: record as valid (success=True), try next power level
+    5. If fail: binary search between last valid (or 0W) and this level
+       → record best found (success=False, power_achieved_W=&lt;max found&gt;)
+       → stop testing further levels for this condition
+</code></pre></div>
+<h2 id="input-schema">Input Schema</h2>
+<h3 id="cell-parameters-cellparameters">Cell Parameters (<code>CellParameters</code>)</h3>
+<p>Flat structure with all electrode, current collector, and separator parameters.
+All fields use underscore-separated names as defined in the <code>CellParameters</code> schema (e.g., <code>positive_electrode_coating_density_g_cm_3</code>).</p>
+<p>Key fields:
+- <code>cell_nominal_capacity_Ah</code>, <code>cell_volume_L</code>
+- <code>cell_upper_voltage_cutoff_V</code>, <code>cell_lower_voltage_cutoff_V</code>
+- <code>positive_electrode_active_material_name</code> (for auto chemistry detection)
+- Electrode geometry: height, width, count, jelly roll count (integer)
+- Coating: thickness, porosity, active material fraction, density
+- Current collectors: thickness, conductivity, density, specific heat
+- Separator: thickness, porosity, density, specific heat, optional sheet dimensions</p>
+<h4 id="electrode-dimensions-optional">Electrode Dimensions (Optional)</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positive_electrode_width_mm</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Positive electrode width [mm]. If provided, used directly for area calculation instead of deriving from cell dimensions. Also used for negative electrode if negative-specific dimensions not provided.</td>
+</tr>
+<tr>
+<td><code>positive_electrode_height_mm</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Positive electrode height [mm]. If provided, used directly for area calculation instead of deriving from cell dimensions. Also used for negative electrode if negative-specific dimensions not provided.</td>
+</tr>
+<tr>
+<td><code>negative_electrode_width_mm</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Negative electrode width [mm]. If provided, used directly for area calculation. If not provided, positive electrode width is used.</td>
+</tr>
+<tr>
+<td><code>negative_electrode_height_mm</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Negative electrode height [mm]. If provided, used directly for area calculation. If not provided, positive electrode height is used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="separator-dimensions-optional">Separator Dimensions (Optional)</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>separator_sheet_count</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Separator sheet count. If not provided, calculated as <code>pos_count + neg_count + 1</code></td>
+</tr>
+<tr>
+<td><code>separator_sheet_width_mm</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Separator sheet width [mm]. If not provided, uses positive electrode width + overhang</td>
+</tr>
+<tr>
+<td><code>separator_sheet_height_mm</code></td>
+<td><code>float</code> or <code>None</code></td>
+<td>Separator sheet height [mm]. If not provided, uses positive electrode height + overhang</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Separator dimension derivation logic:</strong>
+- If both <code>separator_sheet_width_mm</code> and <code>separator_sheet_height_mm</code> are provided, they are used directly.
+- Otherwise, separator dimensions are derived from positive electrode dimensions plus overhang (4 × <code>electrode_overhang_mm</code> total, accounting for 2 × overhang per side).
+- For cylindrical cells, separator area approximates positive electrode area.</p>
+<h3 id="simulation-parameters">Simulation Parameters</h3>
+<h4 id="sweep-conditions">Sweep Conditions</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>power_soc_pct</code></td>
+<td>SOC value(s) to test [0-100]</td>
+</tr>
+<tr>
+<td><code>power_temperature_K</code></td>
+<td>Temperature(s) to test [K]</td>
+</tr>
+<tr>
+<td><code>power_pulse_duration_s</code></td>
+<td>Pulse duration(s) [s] (default: [1, 10, 30])</td>
+</tr>
+<tr>
+<td><code>power_levels_W</code></td>
+<td>Power levels to sweep [W] (discharge: +ve, charge: -ve)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="operating-conditions">Operating Conditions</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>upper_voltage_cutoff_V</code>, <code>lower_voltage_cutoff_V</code></td>
+<td>Voltage limits [V]</td>
+</tr>
+<tr>
+<td><code>reference_cell_temperature_K</code></td>
+<td>Reference temperature [K]</td>
+</tr>
+<tr>
+<td><code>ambient_temperature_K</code></td>
+<td>Ambient temperature [K] (optional, defaults to reference)</td>
+</tr>
+<tr>
+<td><code>initial_cell_temperature_K</code></td>
+<td>Initial cell temperature [K] (optional, defaults to ambient)</td>
+</tr>
+<tr>
+<td><code>cell_contact_resistance_Ohm</code></td>
+<td>Cell contact resistance [Ohm]</td>
+</tr>
+<tr>
+<td><code>cell_heat_transfer_coefficient_W_m2_K</code></td>
+<td>Cell heat transfer coefficient [W/(m²·K)]</td>
+</tr>
+<tr>
+<td><code>cell_cooling_surface_area_m2</code></td>
+<td>Cell cooling surface area [m²]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="solver">Solver</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>solver_atol</code></td>
+<td>Absolute tolerance</td>
+</tr>
+<tr>
+<td><code>solver_rtol</code></td>
+<td>Relative tolerance</td>
+</tr>
+<tr>
+<td><code>use_pybamm_params</code></td>
+<td>"ORegan2022", "Prada2013", "Chen2020", or "" (build from scratch)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="safety-terminations-optional">Safety Terminations (Optional)</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anode_potential_safety_threshold_V</code></td>
+<td>None</td>
+<td>Anode potential limit [V]</td>
+</tr>
+<tr>
+<td><code>temperature_safety_threshold_K</code></td>
+<td>None</td>
+<td>Max temperature [K]</td>
+</tr>
+</tbody>
+</table>
+<p>When provided, these add custom terminations using <code>pybamm.step.CustomTermination</code>.
+When None, only voltage cutoffs are used.</p>
+<h4 id="reference-performance-test-rpt-parameters-optional">Reference Performance Test (RPT) Parameters (Optional)</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rpt_power.power_level_W</code></td>
+<td>2000.0</td>
+<td>Power pulse level [W]</td>
+</tr>
+<tr>
+<td><code>rpt_power.power_duration_s</code></td>
+<td>300.0</td>
+<td>Power pulse duration [s]</td>
+</tr>
+<tr>
+<td><code>rpt_power.power_direction</code></td>
+<td>"discharge"</td>
+<td>Power pulse direction ("charge" or "discharge")</td>
+</tr>
+<tr>
+<td><code>rpt_power.power_soc_pct</code></td>
+<td>50.0</td>
+<td>Power pulse SOC [%]</td>
+</tr>
+<tr>
+<td><code>rpt_power.power_temperature_K</code></td>
+<td>298.15</td>
+<td>Power pulse temperature [K]</td>
+</tr>
+</tbody>
+</table>
+<p>RPT parameters are used for reference performance testing and are separate from the main power sweep simulation.</p>
+<h2 id="output-schema">Output Schema</h2>
+<h3 id="powerresultpoint">PowerResultPoint</h3>
+<p>Each sweep point records:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>true</code> if the demanded power was sustained for the full pulse without early termination</td>
+</tr>
+<tr>
+<td><code>soc_pct</code></td>
+<td>SOC tested [0-100]</td>
+</tr>
+<tr>
+<td><code>temperature_K</code></td>
+<td>Temperature tested [K]</td>
+</tr>
+<tr>
+<td><code>duration_s</code></td>
+<td>Pulse duration [s]</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td><code>"Discharge"</code> or <code>"Charge"</code></td>
+</tr>
+<tr>
+<td><code>power_demand_W</code></td>
+<td>Power level originally demanded [W]</td>
+</tr>
+<tr>
+<td><code>power_achieved_W</code></td>
+<td>Max power actually achieved [W] (= demand if success, &lt; demand if binary search result)</td>
+</tr>
+<tr>
+<td><code>current_max_A</code></td>
+<td>Maximum absolute current [A] during the achieved power pulse (null if not available)</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Error message if nothing achievable (null otherwise)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spmepoweroutput">SpmePowerOutput</h3>
+<ul>
+<li><code>success</code> -- overall success</li>
+<li><code>results</code> -- list of <code>PowerResultPoint</code></li>
+<li><code>conditions</code> -- <code>SimulationParameters</code> (power_soc_pct [0-100], power_temperature_K, power_pulse_duration_s, power_levels_W, voltage cutoffs, etc.)</li>
+<li><code>error</code> -- error message if failed</li>
+</ul>
+<hr />
+<p><em><a href="../Model-Library/">← Back to Models Library</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Model-DFN-Cyclic-Ageing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DFN Cyclic Ageing">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                DFN Cyclic Ageing
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Model-SPMeT-DCIR/" class="md-footer__link md-footer__link--next" aria-label="Next: SPMeT DCIR">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SPMeT DCIR
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Maintained by Aris Machina
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/arismachina" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3948 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Protos R&D platform by Aris Machina">
+      
+      
+      
+        <link rel="canonical" href="https://docs.protos.arismachina.com/Model-Cell-Performance/">
+      
+      
+        <link rel="prev" href="../Model-Library/">
+      
+      
+        <link rel="next" href="../Model-Cell-Optimizer/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/aris-favicon-black.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Cell Performance - Protos Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <!-- Adaptive favicon: black in light mode, white in dark mode (matches Protos app) -->
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-white.png" sizes="32x32" media="(prefers-color-scheme: dark)" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cell-performance-model-try-protos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Protos Docs" class="md-header__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Protos Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cell Performance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Protos Docs" class="md-nav__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    Protos Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Models Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Models Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Performance
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cell_parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="cell_parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-electrode-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Electrode Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activematerial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ActiveMaterial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#particlesizedistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ParticleSizeDistribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binder-conductiveagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binder / ConductiveAgent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Dimensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrode-dimensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Dimensions (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foils-separator-electrolyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foils, Separator, Electrolyte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrolyte-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrolyte (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrode-tortuosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Tortuosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-level-ocv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell-Level OCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        simulation_parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="simulation_parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Solver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpt-reference-performance-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RPT (Reference Performance Test)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimentconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimenttermination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentTermination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivestepconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DriveStepConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eisstepconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EISStepConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-layer-capacitance-c_dl-lic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double-Layer Capacitance (C_dl / LIC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#half-cell-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Half-Cell Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-structure-cellperformancekpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Structure (CellPerformanceKPIs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Structure (CellPerformanceKPIs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equilibrium-outputs-always-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equilibrium Outputs (always present)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pybamm-scalar-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PyBaMM Scalar Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeseries-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timeseries Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeseriesoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TimeseriesOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentcyclesummary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentCycleSummary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eisoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EISOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billofmaterials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BillOfMaterials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pybamm-parameter-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PyBaMM Parameter Overrides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Sets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Optimizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Optimizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Calendar-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Calendar Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Cyclic-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Cyclic Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-DCIR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT DCIR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Dynamic-Load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Dynamic Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP-Connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Connections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Collaboration-and-Sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration & Sharing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Your First Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up Your Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with the Co-engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registering Your First Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Your First Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cell_parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="cell_parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-electrode-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Electrode Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activematerial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ActiveMaterial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#particlesizedistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ParticleSizeDistribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binder-conductiveagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binder / ConductiveAgent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell Dimensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrode-dimensions-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Dimensions (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foils-separator-electrolyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foils, Separator, Electrolyte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrolyte-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrolyte (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrode-tortuosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Tortuosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-level-ocv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell-Level OCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        simulation_parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="simulation_parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Solver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpt-reference-performance-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RPT (Reference Performance Test)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Experiments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimentconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimenttermination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentTermination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drivestepconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DriveStepConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eisstepconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EISStepConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-layer-capacitance-c_dl-lic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double-Layer Capacitance (C_dl / LIC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#half-cell-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Half-Cell Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-structure-cellperformancekpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Structure (CellPerformanceKPIs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Structure (CellPerformanceKPIs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equilibrium-outputs-always-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equilibrium Outputs (always present)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pybamm-scalar-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PyBaMM Scalar Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeseries-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timeseries Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeseriesoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TimeseriesOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimentcyclesummary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExperimentCycleSummary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eisoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EISOutput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billofmaterials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BillOfMaterials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pybamm-parameter-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PyBaMM Parameter Overrides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Sets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cell-performance-model-try-protos">Cell Performance Model <a href="https://protos.arismachina.com" class="try-protos" target="_blank" rel="noopener noreferrer">Try Protos</a></h1>
+<p><a href="../Model-Library/">← Models Library</a> · <strong>Cell Performance</strong></p>
+<p>Computes cell KPIs from electrode design inputs, with optional electrochemical simulation.</p>
+<hr />
+<hr />
+<h2 id="overview">Overview</h2>
+<p>The Cell Performance Model computes equilibrium KPIs (capacity, energy, N/P ratio, mass, energy density) from cell design inputs: electrode formulation (active materials, binders, conductive agents), geometry (mass loading, thickness, sheet count), and cell dimensions (Pouch, Cylindrical, Prismatic, or Coin). It derives porosity, volume fractions, and mass breakdown from the formulation without requiring electrochemical simulation.</p>
+<p>When electrode area &gt; 0 (and PyBaMM is installed), the model runs a PyBaMM SPMe simulation pipeline producing nominal capacity, DCIR, maximum 300 s power, and arbitrary multi-step/multi-cycle experiments (including drive cycles and EIS). The model supports extensive PyBaMM parameter overrides: electrolyte transport properties, active material diffusivity/particle size/kinetics/thermodynamics (MSMR), electrode tortuosity, double-layer capacitance (for LIC/hybrid cells), and half-cell mode with configurable counter electrode.</p>
+<hr />
+<h2 id="input-structure">Input Structure</h2>
+<p><code>CellPerformanceInput</code> has two top-level sections:</p>
+<ul>
+<li><strong><code>cell_parameters</code></strong> (<code>CellParametersInput</code>): Electrode design, formulation, dimensions, foils, separator</li>
+<li><strong><code>simulation_parameters</code></strong> (<code>SimulationParameters</code>): Solver, mesh, RPT, experiments, half-cell, C_dl</li>
+</ul>
+<hr />
+<h2 id="cell_parameters"><code>cell_parameters</code></h2>
+<h3 id="required-electrode-fields">Required Electrode Fields</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positive_electrode_mass_loading_mg_cm2</code></td>
+<td>float</td>
+<td>Positive electrode mass loading [mg/cm²]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_mass_loading_mg_cm2</code></td>
+<td>float</td>
+<td>Negative electrode mass loading [mg/cm²]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_sheet_count</code></td>
+<td>int</td>
+<td>Number of positive electrode sheets</td>
+</tr>
+<tr>
+<td><code>negative_electrode_sheet_count</code></td>
+<td>int</td>
+<td>Number of negative electrode sheets</td>
+</tr>
+<tr>
+<td><code>jelly_roll_count</code></td>
+<td>int</td>
+<td>Number of jelly rolls in the cell</td>
+</tr>
+<tr>
+<td><code>electrode_coating_side_count</code></td>
+<td>int</td>
+<td>Number of coating sides per electrode (1 or 2)</td>
+</tr>
+<tr>
+<td><code>positive_coating_thickness_um</code></td>
+<td>float</td>
+<td>Positive coating thickness [µm]</td>
+</tr>
+<tr>
+<td><code>negative_coating_thickness_um</code></td>
+<td>float</td>
+<td>Negative coating thickness [µm]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_specific_heat_capacity_J_kg_K</code></td>
+<td>float</td>
+<td>Positive electrode specific heat [J/kg/K]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_specific_heat_capacity_J_kg_K</code></td>
+<td>float</td>
+<td>Negative electrode specific heat [J/kg/K]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_thermal_conductivity_W_m_K</code></td>
+<td>float</td>
+<td>Positive electrode thermal conductivity [W/m/K]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_thermal_conductivity_W_m_K</code></td>
+<td>float</td>
+<td>Negative electrode thermal conductivity [W/m/K]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_electronic_conductivity_S_m</code></td>
+<td>float</td>
+<td>Positive electrode electronic conductivity [S/m]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_electronic_conductivity_S_m</code></td>
+<td>float</td>
+<td>Negative electrode electronic conductivity [S/m]</td>
+</tr>
+<tr>
+<td><code>upper_voltage_cutoff_V</code></td>
+<td>float</td>
+<td>Upper voltage cutoff [V]</td>
+</tr>
+<tr>
+<td><code>lower_voltage_cutoff_V</code></td>
+<td>float</td>
+<td>Lower voltage cutoff [V]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="formulation">Formulation</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positive_electrode_active_materials</code></td>
+<td>list[ActiveMaterial]</td>
+<td>Positive active material list (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>negative_electrode_active_materials</code></td>
+<td>list[ActiveMaterial]</td>
+<td>Negative active material list (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>positive_electrode_binders</code></td>
+<td>list[Binder]</td>
+<td>Positive binders (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>negative_electrode_binders</code></td>
+<td>list[Binder]</td>
+<td>Negative binders (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>positive_electrode_conductive_agents</code></td>
+<td>list[ConductiveAgent]</td>
+<td>Positive conductive agents (<strong>required</strong>, pass <code>[]</code> if none)</td>
+</tr>
+<tr>
+<td><code>negative_electrode_conductive_agents</code></td>
+<td>list[ConductiveAgent]</td>
+<td>Negative conductive agents (<strong>required</strong>, pass <code>[]</code> if none)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="activematerial">ActiveMaterial</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>str</td>
+<td>Yes</td>
+<td>Material name (e.g. NMC811, Graphite, LFP)</td>
+</tr>
+<tr>
+<td><code>mass_fraction</code></td>
+<td>float</td>
+<td>Yes</td>
+<td>Mass fraction in electrode (0–1)</td>
+</tr>
+<tr>
+<td><code>density_g_cm3</code></td>
+<td>float</td>
+<td>Yes</td>
+<td>Density [g/cm³]</td>
+</tr>
+<tr>
+<td><code>specific_capacity_mAh_g</code></td>
+<td>float</td>
+<td>Yes</td>
+<td>Specific capacity [mAh/g]</td>
+</tr>
+<tr>
+<td><code>nominal_voltage_V</code></td>
+<td>float</td>
+<td>Yes</td>
+<td>Nominal voltage [V]</td>
+</tr>
+<tr>
+<td><code>soc_pct</code></td>
+<td>list[float] | null</td>
+<td>No</td>
+<td>SOC [0–100%] for OCV</td>
+</tr>
+<tr>
+<td><code>ch_ocv_V</code></td>
+<td>list[float] | null</td>
+<td>No</td>
+<td>OCV charge curve [V]</td>
+</tr>
+<tr>
+<td><code>dch_ocv_V</code></td>
+<td>list[float] | null</td>
+<td>No</td>
+<td>OCV discharge curve [V]</td>
+</tr>
+<tr>
+<td><code>ocv_specific_capacity_mAh_g</code></td>
+<td>list[float] | null</td>
+<td>No</td>
+<td>Specific capacity at each OCV point [mAh/g]</td>
+</tr>
+<tr>
+<td><code>max_lithium_conc_mol_m3</code></td>
+<td>float | null</td>
+<td>No</td>
+<td>Max Li concentration [mol/m³] for PyBaMM</td>
+</tr>
+<tr>
+<td><code>diffusivity_m2_s</code></td>
+<td>float | IonicPropertyTable | null</td>
+<td>No</td>
+<td>Particle diffusivity [m²/s]; scalar or tabulated</td>
+</tr>
+<tr>
+<td><code>particle_size_distribution</code></td>
+<td>ParticleSizeDistribution | null</td>
+<td>No</td>
+<td>PSD; d50 used for PyBaMM radius = d50/2</td>
+</tr>
+<tr>
+<td><code>exchange_current_density_A_m2</code></td>
+<td>float | null</td>
+<td>No</td>
+<td>Exchange current density [A/m²]</td>
+</tr>
+<tr>
+<td><code>double_layer_capacitance_F_m2</code></td>
+<td>float | null</td>
+<td>No</td>
+<td>Per-material double-layer capacitance [F/m²]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="particlesizedistribution">ParticleSizeDistribution</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d50_um</code></td>
+<td>float</td>
+<td>Median diameter [µm]; PyBaMM radius = d50/2</td>
+</tr>
+<tr>
+<td><code>d10_um</code></td>
+<td>float | null</td>
+<td>10th percentile [µm]</td>
+</tr>
+<tr>
+<td><code>d90_um</code></td>
+<td>float | null</td>
+<td>90th percentile [µm]</td>
+</tr>
+<tr>
+<td><code>dmin_um</code></td>
+<td>float | null</td>
+<td>Min diameter [µm]</td>
+</tr>
+<tr>
+<td><code>dmax_um</code></td>
+<td>float | null</td>
+<td>Max diameter [µm]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="binder-conductiveagent">Binder / ConductiveAgent</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>str</td>
+<td>Component name</td>
+</tr>
+<tr>
+<td><code>mass_fraction</code></td>
+<td>float</td>
+<td>Mass fraction (0–1)</td>
+</tr>
+<tr>
+<td><code>density_g_cm3</code></td>
+<td>float</td>
+<td>Density [g/cm³]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cell-dimensions">Cell Dimensions</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>form_factor</code></td>
+<td>str</td>
+<td><strong>required</strong> — <code>"Pouch"</code>, <code>"Prismatic"</code>, <code>"Cylindrical"</code>, or <code>"Coin"</code></td>
+</tr>
+<tr>
+<td><code>cell_width_mm</code></td>
+<td>float | null</td>
+<td>Cell width [mm] (Pouch/Prismatic); default null</td>
+</tr>
+<tr>
+<td><code>cell_height_mm</code></td>
+<td>float | null</td>
+<td>Cell height [mm] (Pouch/Prismatic), cylinder height, or coin thickness; default null</td>
+</tr>
+<tr>
+<td><code>cell_thickness_mm</code></td>
+<td>float | null</td>
+<td>Cell thickness [mm] (Pouch/Prismatic); default null</td>
+</tr>
+<tr>
+<td><code>cell_diameter_mm</code></td>
+<td>float | null</td>
+<td>Cell diameter [mm] (Cylindrical/Coin); default null</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Volume validation</strong> (enforced when <code>perform_rpt=True</code> or at least one experiment is configured): Pouch/Prismatic require all three of width/height/thickness; Cylindrical/Coin require both diameter and height. Equilibrium-only runs (no PyBaMM) skip this check.</p>
+<h3 id="electrode-dimensions-optional">Electrode Dimensions (Optional)</h3>
+<p>If provided, used directly for area calculation; otherwise derived from cell dimensions via <code>volume_packing_ratio</code> and <code>electrode_overhang_mm</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positive_electrode_width_mm</code></td>
+<td>float | null</td>
+<td>Positive electrode width [mm]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_height_mm</code></td>
+<td>float | null</td>
+<td>Positive electrode height [mm]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_width_mm</code></td>
+<td>float | null</td>
+<td>Negative electrode width [mm]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_height_mm</code></td>
+<td>float | null</td>
+<td>Negative electrode height [mm]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="foils-separator-electrolyte">Foils, Separator, Electrolyte</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positive_electrode_foil_thickness_um</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Positive foil [µm] (Al)</td>
+</tr>
+<tr>
+<td><code>negative_electrode_foil_thickness_um</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Negative foil [µm] (Cu)</td>
+</tr>
+<tr>
+<td><code>positive_electrode_foil_density_g_cm3</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Al foil density [g/cm³]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_foil_density_g_cm3</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Cu foil density [g/cm³]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_foil_electronic_conductivity_S_m</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Al foil electronic conductivity [S/m]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_foil_electronic_conductivity_S_m</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Cu foil electronic conductivity [S/m]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_foil_specific_heat_capacity_J_kg_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Al foil specific heat [J/kg/K]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_foil_specific_heat_capacity_J_kg_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Cu foil specific heat [J/kg/K]</td>
+</tr>
+<tr>
+<td><code>positive_electrode_foil_thermal_conductivity_W_m_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Al foil thermal conductivity [W/m/K]</td>
+</tr>
+<tr>
+<td><code>negative_electrode_foil_thermal_conductivity_W_m_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Cu foil thermal conductivity [W/m/K]</td>
+</tr>
+<tr>
+<td><code>separator_thickness_um</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator thickness [µm]</td>
+</tr>
+<tr>
+<td><code>separator_porosity</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator porosity</td>
+</tr>
+<tr>
+<td><code>separator_density_g_cm3</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator density [g/cm³]</td>
+</tr>
+<tr>
+<td><code>separator_specific_heat_capacity_J_kg_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator specific heat [J/kg/K]</td>
+</tr>
+<tr>
+<td><code>separator_thermal_conductivity_W_m_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator thermal conductivity [W/m/K]</td>
+</tr>
+<tr>
+<td><code>separator_sheet_count</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Number of separator sheets</td>
+</tr>
+<tr>
+<td><code>separator_sheet_width_mm</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator sheet width [mm]</td>
+</tr>
+<tr>
+<td><code>separator_sheet_height_mm</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Separator sheet height [mm]</td>
+</tr>
+<tr>
+<td><code>electrolyte_density_g_cm3</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Electrolyte density [g/cm³] (fallback when no <code>electrolyte</code> object)</td>
+</tr>
+<tr>
+<td><code>electrolyte_fill_ratio</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Pore volume fill fraction</td>
+</tr>
+<tr>
+<td><code>electrolyte</code></td>
+<td>Electrolyte | null</td>
+<td>null</td>
+<td>Optional electrolyte with composition + transport properties</td>
+</tr>
+<tr>
+<td><code>casing_thickness_mm</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Casing thickness [mm]</td>
+</tr>
+<tr>
+<td><code>casing_density_g_cm3</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Casing density [g/cm³]</td>
+</tr>
+<tr>
+<td><code>electrode_overhang_mm</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Electrode overhang [mm]</td>
+</tr>
+<tr>
+<td><code>jelly_roll_inner_diameter_mm</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Jelly roll inner diameter [mm] (cylindrical only)</td>
+</tr>
+<tr>
+<td><code>volume_packing_ratio</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Volume packing ratio for jelly roll in cell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="electrolyte-optional">Electrolyte (Optional)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>str</td>
+<td>Electrolyte name</td>
+</tr>
+<tr>
+<td><code>composition</code></td>
+<td>ElectrolyteComposition</td>
+<td>Solvents, salts, additives</td>
+</tr>
+<tr>
+<td><code>ionic_conductivity_S_m</code></td>
+<td>float | IonicPropertyTable | null</td>
+<td>Ionic conductivity [S/m]</td>
+</tr>
+<tr>
+<td><code>ionic_diffusivity_m2_s</code></td>
+<td>float | IonicPropertyTable | null</td>
+<td>Ionic diffusivity [m²/s]</td>
+</tr>
+<tr>
+<td><code>transference_number</code></td>
+<td>float | IonicPropertyTable | null</td>
+<td>Cation transference number</td>
+</tr>
+<tr>
+<td><code>activity_coefficient</code></td>
+<td>float | IonicPropertyTable | null</td>
+<td>Activity coefficient → Thermodynamic factor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="electrode-tortuosity">Electrode Tortuosity</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positive_electrode_pore_tortuosity</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Positive electrode electrolyte tortuosity</td>
+</tr>
+<tr>
+<td><code>negative_electrode_pore_tortuosity</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Negative electrode electrolyte tortuosity</td>
+</tr>
+<tr>
+<td><code>separator_tortuosity</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Separator electrolyte tortuosity</td>
+</tr>
+<tr>
+<td><code>positive_electrode_solid_tortuosity</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Positive solid-phase tortuosity (defaults to pore if unset)</td>
+</tr>
+<tr>
+<td><code>negative_electrode_solid_tortuosity</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Negative solid-phase tortuosity (defaults to pore if unset)</td>
+</tr>
+</tbody>
+</table>
+<p>When any tortuosity is set, PyBaMM uses <code>transport efficiency: tortuosity factor</code>, overriding Bruggeman.</p>
+<h3 id="cell-level-ocv">Cell-Level OCV</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cell_ocv</code></td>
+<td>CellOCVData | null</td>
+<td>Cell-level OCV (soc_pct, specific_capacity_mAh_g, ch_ocv_V, dch_ocv_V)</td>
+</tr>
+</tbody>
+</table>
+<p>Used for OCV100/OCV0 extraction when <code>use_pybamm_params</code> is empty.</p>
+<hr />
+<h2 id="simulation_parameters"><code>simulation_parameters</code></h2>
+<h3 id="core-solver">Core Solver</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>solver_atol</code></td>
+<td>float</td>
+<td>1e-3</td>
+<td>Solver absolute tolerance</td>
+</tr>
+<tr>
+<td><code>solver_rtol</code></td>
+<td>float</td>
+<td>1e-3</td>
+<td>Solver relative tolerance</td>
+</tr>
+<tr>
+<td><code>calibration_rate_C</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Capacity calibration C-rate</td>
+</tr>
+<tr>
+<td><code>mesh_resolution</code></td>
+<td>dict</td>
+<td>x_n/x_s/x_p/r_n/r_p=10</td>
+<td>Mesh resolution (x = electrode/separator, r = particles)</td>
+</tr>
+<tr>
+<td><code>data_sampling_period_s</code></td>
+<td>float</td>
+<td>0.1</td>
+<td>Data sampling period [s]</td>
+</tr>
+<tr>
+<td><code>use_pybamm_params</code></td>
+<td>str</td>
+<td><code>""</code></td>
+<td>Base parameter set (e.g. <code>"Chen2020"</code>). Empty = use defaults/custom</td>
+</tr>
+<tr>
+<td><code>upper_voltage_cutoff_V</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Upper voltage cutoff [V]</td>
+</tr>
+<tr>
+<td><code>lower_voltage_cutoff_V</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Lower voltage cutoff [V]</td>
+</tr>
+<tr>
+<td><code>cell_contact_resistance_Ohm</code></td>
+<td>float | null</td>
+<td><strong>required</strong></td>
+<td>Contact resistance [Ω] (pass <code>null</code> to use PyBaMM default)</td>
+</tr>
+<tr>
+<td><code>cell_cooling_surface_area_m2</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Cooling surface area [m²]</td>
+</tr>
+<tr>
+<td><code>cell_heat_transfer_coefficient_W_m2_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Heat transfer coefficient [W/(m²·K)]</td>
+</tr>
+<tr>
+<td><code>temperature_safety_threshold_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Max power temperature limit [K]</td>
+</tr>
+<tr>
+<td><code>anode_potential_safety_threshold_V</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Max power anode potential limit [V]</td>
+</tr>
+<tr>
+<td><code>first_cycle_coulombic_loss_pct</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>First-cycle coulombic loss [%] for initial electrode balancing</td>
+</tr>
+<tr>
+<td><code>ambient_temperature_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Ambient temperature [K]</td>
+</tr>
+<tr>
+<td><code>reference_cell_temperature_K</code></td>
+<td>float</td>
+<td><strong>required</strong></td>
+<td>Reference temperature for performance test [K]</td>
+</tr>
+<tr>
+<td><code>start_soc_pct</code></td>
+<td>float | null</td>
+<td><strong>required</strong></td>
+<td>Starting SOC for load cycle simulation [%] (pass <code>null</code> to skip)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rpt-reference-performance-test">RPT (Reference Performance Test)</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>perform_rpt</code></td>
+<td>bool</td>
+<td>false</td>
+<td>Run DCIR and max power tests</td>
+</tr>
+<tr>
+<td><code>rpt_dcir</code></td>
+<td>DCIRParameters | null</td>
+<td><strong>required</strong></td>
+<td>DCIR pulse parameters (must be non-null when <code>perform_rpt=true</code>)</td>
+</tr>
+<tr>
+<td><code>rpt_power</code></td>
+<td>PowerPulseParameters | null</td>
+<td><strong>required</strong></td>
+<td>Max power pulse parameters (must be non-null when <code>perform_rpt=true</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DCIRParameters</strong> (<code>rpt_dcir</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcir_c_rate</code></td>
+<td>float</td>
+<td>Pulse C-rate (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>dcir_direction</code></td>
+<td>str</td>
+<td><code>"charge"</code> or <code>"discharge"</code> (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>dcir_soc_pct</code></td>
+<td>float</td>
+<td>SOC for pulse [%] (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>dcir_temperature_K</code></td>
+<td>float</td>
+<td>Temperature [K] (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>dcir_pulse_duration_s</code></td>
+<td>float</td>
+<td>Pulse duration [s] (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>dcir_rest_s</code></td>
+<td>float</td>
+<td>Rest time before pulse [s] (<strong>required</strong>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PowerPulseParameters</strong> (<code>rpt_power</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>power_level_W</code></td>
+<td>float</td>
+<td>Initial power for bisection search [W] (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>power_duration_s</code></td>
+<td>float</td>
+<td>Pulse duration [s] (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>power_direction</code></td>
+<td>str</td>
+<td><code>"charge"</code> or <code>"discharge"</code> (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>power_soc_pct</code></td>
+<td>float</td>
+<td>SOC for pulse [%] (<strong>required</strong>)</td>
+</tr>
+<tr>
+<td><code>power_temperature_K</code></td>
+<td>float</td>
+<td>Temperature [K] (<strong>required</strong>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="experiments">Experiments</h3>
+<p><code>experiments: list[ExperimentConfig] | None = None</code></p>
+<p>Arbitrary multi-step, multi-cycle PyBaMM experiments. Independent of <code>perform_rpt</code>. Results in <code>experiment_results[label]</code> as <code>ExperimentOutput</code>.</p>
+<h4 id="experimentconfig">ExperimentConfig</h4>
+<p>All fields are <strong>required</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>label</code></td>
+<td>str</td>
+<td>Key in <code>experiment_results</code></td>
+</tr>
+<tr>
+<td><code>steps</code></td>
+<td>list[str | DriveStepConfig | EISStepConfig]</td>
+<td>Ordered steps for one cycle (min 1)</td>
+</tr>
+<tr>
+<td><code>n_cycles</code></td>
+<td>int</td>
+<td>Number of times to repeat the step sequence (≥1)</td>
+</tr>
+<tr>
+<td><code>terminations</code></td>
+<td>list[ExperimentTermination] | null</td>
+<td>Custom per-step termination conditions (pass <code>null</code> if none)</td>
+</tr>
+<tr>
+<td><code>period_s</code></td>
+<td>float</td>
+<td>Solver output sampling period [s]</td>
+</tr>
+<tr>
+<td><code>temperature_K</code></td>
+<td>float</td>
+<td>Ambient temperature [K]</td>
+</tr>
+<tr>
+<td><code>initial_soc_pct</code></td>
+<td>float</td>
+<td>Initial SOC [%] before experiment begins</td>
+</tr>
+</tbody>
+</table>
+<p>String steps are PyBaMM step expressions:
+<div class="highlight"><pre><span></span><code>&quot;Discharge at 1C until 3.0 V&quot;
+&quot;Charge at 1C until 4.2 V&quot;
+&quot;Hold at 4.2 V until C/20&quot;
+&quot;Rest for 10 minutes&quot;
+&quot;Discharge at 500 mA until 3.0 V&quot;
+</code></pre></div></p>
+<p>Example — 3-cycle charge/discharge aging:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cycle_aging&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Discharge at 1C until 3.0 V&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Rest for 10 minutes&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Charge at 1C until 4.2 V&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Hold at 4.2 V until C/20&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;n_cycles&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;terminations&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;period_s&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">60.0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;temperature_K&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">298.15</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;initial_soc_pct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="experimenttermination">ExperimentTermination</h4>
+<p>Custom termination evaluated at every solver step. Triggers end-of-step only; experiment continues with subsequent steps.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>variable</code></td>
+<td>str</td>
+<td>—</td>
+<td>PyBaMM variable name, e.g. <code>"Anode potential [V]"</code></td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td>float</td>
+<td>—</td>
+<td>Threshold value</td>
+</tr>
+<tr>
+<td><code>comparison</code></td>
+<td>str</td>
+<td><code>"less_than"</code></td>
+<td><code>"less_than"</code> (variable &lt; threshold) or <code>"greater_than"</code> (variable &gt; threshold)</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>str | null</td>
+<td>null</td>
+<td>Human-readable name for logging</td>
+</tr>
+</tbody>
+</table>
+<p>Example — protect anode from lithium plating:
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;variable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Anode potential [V]&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;threshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;comparison&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;less_than&quot;</span><span class="p">}</span>
+</code></pre></div></p>
+<h4 id="drivestepconfig">DriveStepConfig</h4>
+<p>Time-varying drive cycle step. Exactly one of <code>current_A</code>, <code>power_W</code>, or <code>c_rate</code> must be supplied. Profile length must match <code>time_s</code> length.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kind</code></td>
+<td><code>"drive_cycle"</code></td>
+<td>Fixed discriminator</td>
+</tr>
+<tr>
+<td><code>time_s</code></td>
+<td>list[float]</td>
+<td>Strictly increasing time points [s] (≥ 2 points)</td>
+</tr>
+<tr>
+<td><code>current_A</code></td>
+<td>list[float] | null</td>
+<td>Current profile [A]. Positive = discharge</td>
+</tr>
+<tr>
+<td><code>power_W</code></td>
+<td>list[float] | null</td>
+<td>Power profile [W]. Positive = discharge</td>
+</tr>
+<tr>
+<td><code>c_rate</code></td>
+<td>list[float] | null</td>
+<td>C-rate profile. Positive = discharge</td>
+</tr>
+</tbody>
+</table>
+<p>Example — 30 s power pulse:
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drive_cycle&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;time_s&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mf">30.01</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;power_W&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]}</span>
+</code></pre></div></p>
+<h4 id="eisstepconfig">EISStepConfig</h4>
+<p>Frequency-domain impedance sweep at the current battery state (does not advance simulation time). Requires <code>pybammeis</code> (<code>pip install pybammeis</code>). If absent, the step is skipped and a warning is added to <code>ExperimentOutput.warnings</code>. If an experiment contains <strong>only</strong> EIS steps and <code>pybammeis</code> is unavailable, an empty <code>ExperimentOutput</code> is returned immediately with a warning.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kind</code></td>
+<td><code>"eis"</code></td>
+<td>—</td>
+<td>Fixed discriminator</td>
+</tr>
+<tr>
+<td><code>freq_min_hz</code></td>
+<td>float</td>
+<td>1e-4</td>
+<td>Minimum frequency [Hz]</td>
+</tr>
+<tr>
+<td><code>freq_max_hz</code></td>
+<td>float</td>
+<td>1e4</td>
+<td>Maximum frequency [Hz]</td>
+</tr>
+<tr>
+<td><code>n_frequencies</code></td>
+<td>int</td>
+<td>30</td>
+<td>Log-spaced frequency points (≥ 2)</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td>str</td>
+<td><code>"direct"</code></td>
+<td>Linear solver: <code>"direct"</code>, <code>"prebicgstab"</code>, or <code>"bicgstab"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example — EIS after rest:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Rest for 30 minutes&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eis&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;freq_min_hz&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;freq_max_hz&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;n_frequencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>EIS steps require the calibration pipeline to have run (need <code>sto_windows</code>). They are excluded from the PyBaMM fast-path and do not count toward <code>n_steps_per_cycle</code>. On cycle failure, EIS snapshots from the failed cycle are rolled back alongside timeseries data.</p>
+<hr />
+<h3 id="double-layer-capacitance-c_dl-lic">Double-Layer Capacitance (C_dl / LIC)</h3>
+<p>Adds a non-Faradaic capacitive current term: <code>j_total = j_BV + C_dl · d(φ_s − φ_e)/dt</code>. Required for hybrid lithium-ion capacitor (LIC) simulations (e.g. activated-carbon EDLC positive + hard-carbon intercalation negative).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_double_layer_capacitance</code></td>
+<td>bool</td>
+<td>false</td>
+<td>Enable C_dl in the SPMe model</td>
+</tr>
+<tr>
+<td><code>positive_electrode_double_layer_capacitance_F_m2</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Positive electrode C_dl [F/m²]. PyBaMM default ~0.2 F/m² when enabled</td>
+</tr>
+<tr>
+<td><code>negative_electrode_double_layer_capacitance_F_m2</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Negative electrode C_dl [F/m²]. PyBaMM default ~0.2 F/m² when enabled</td>
+</tr>
+</tbody>
+</table>
+<p>Typical values: activated carbon EDLC ~0.1–0.4 F/m²; hard carbon / intercalation electrode ~0.01–0.05 F/m².</p>
+<p>C_dl can also be set <strong>per active material</strong> via <code>ActiveMaterial.double_layer_capacitance_F_m2</code>; the per-material value takes precedence when <code>enable_double_layer_capacitance=True</code>.</p>
+<hr />
+<h3 id="half-cell-mode">Half-Cell Mode</h3>
+<p>Simulates a single electrode against a configurable counter electrode. To simulate a negative electrode half-cell (e.g. graphite vs Li metal), load the negative electrode parameters into the positive electrode slots.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>working_electrode</code></td>
+<td><code>"positive"</code> | null</td>
+<td>null</td>
+<td><code>"positive"</code> = half-cell mode; null = full-cell</td>
+</tr>
+<tr>
+<td><code>reference_electrode_exchange_current_density_A_m2</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Counter electrode j₀ [A/m²]. Default: Xu2019 Li-metal function</td>
+</tr>
+<tr>
+<td><code>reference_electrode_ocp_V</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Counter electrode OCP [V]. Default: 0.0 V (Li metal)</td>
+</tr>
+<tr>
+<td><code>reference_electrode_charge_transfer_coefficient</code></td>
+<td>float | null</td>
+<td>null</td>
+<td>Butler-Volmer α (0–1). Default: 0.5 (symmetric kinetics)</td>
+</tr>
+</tbody>
+</table>
+<p>Constraints:
+- <code>working_electrode="positive"</code> is incompatible with <code>perform_rpt=True</code>
+- <code>reference_electrode_*</code> fields raise a validation error if set with <code>working_electrode=None</code>
+- Set <code>reference_electrode_ocp_V</code> for non-Li-metal counters (Na metal: ~0.3 V vs Li/Li+)
+- When <code>working_electrode="positive"</code>, the negative-electrode OCP/material overrides from <code>negative_electrode_active_materials</code> are skipped; the counter-electrode OCP injected via <code>reference_electrode_ocp_V</code> (or the Xu2019 Li-metal default) is preserved unchanged</p>
+<hr />
+<h2 id="output-structure-cellperformancekpis">Output Structure (<code>CellPerformanceKPIs</code>)</h2>
+<h3 id="equilibrium-outputs-always-present">Equilibrium Outputs (always present)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cell_theoretical_capacity_Ah</code></td>
+<td>float</td>
+<td>Equilibrium-derived capacity [Ah]</td>
+</tr>
+<tr>
+<td><code>cell_theoretical_energy_Wh</code></td>
+<td>float</td>
+<td>Equilibrium-derived energy [Wh]</td>
+</tr>
+<tr>
+<td><code>cell_capacity_weighted_voltage_V</code></td>
+<td>float</td>
+<td>Capacity-weighted average voltage [V]</td>
+</tr>
+<tr>
+<td><code>cell_n_p_ratio</code></td>
+<td>float</td>
+<td>N/P capacity ratio</td>
+</tr>
+<tr>
+<td><code>cell_mass_g</code></td>
+<td>float</td>
+<td>Total cell mass [g]</td>
+</tr>
+<tr>
+<td><code>cell_volume_L</code></td>
+<td>float</td>
+<td>Cell volume [L]</td>
+</tr>
+<tr>
+<td><code>cell_theoretical_gravimetric_energy_density_Wh_kg</code></td>
+<td>float</td>
+<td>[Wh/kg]</td>
+</tr>
+<tr>
+<td><code>cell_theoretical_volumetric_energy_density_Wh_L</code></td>
+<td>float</td>
+<td>[Wh/L]</td>
+</tr>
+<tr>
+<td><code>stoichiometry_windows</code></td>
+<td>StoichiometryWindows</td>
+<td>Electrode stoichiometry windows (sto_ca0/100, sto_an0/100)</td>
+</tr>
+<tr>
+<td><code>positive_electrode_porosity</code></td>
+<td>float</td>
+<td>Positive electrode porosity</td>
+</tr>
+<tr>
+<td><code>negative_electrode_porosity</code></td>
+<td>float</td>
+<td>Negative electrode porosity</td>
+</tr>
+<tr>
+<td><code>positive_electrode_volume_fraction</code></td>
+<td>float</td>
+<td>Positive active material volume fraction</td>
+</tr>
+<tr>
+<td><code>negative_electrode_volume_fraction</code></td>
+<td>float</td>
+<td>Negative active material volume fraction</td>
+</tr>
+<tr>
+<td><code>electrolyte_mass_g</code></td>
+<td>float</td>
+<td>Electrolyte mass [g]</td>
+</tr>
+<tr>
+<td><code>electrolyte_mass_fraction</code></td>
+<td>float</td>
+<td>Electrolyte mass fraction</td>
+</tr>
+<tr>
+<td><code>jelly_roll_mass_g</code></td>
+<td>float</td>
+<td>Jelly roll mass [g]</td>
+</tr>
+<tr>
+<td><code>jelly_roll_mass_fraction</code></td>
+<td>float</td>
+<td>Jelly roll mass fraction</td>
+</tr>
+<tr>
+<td><code>casing_mass_g</code></td>
+<td>float</td>
+<td>Casing mass [g]</td>
+</tr>
+<tr>
+<td><code>casing_mass_fraction</code></td>
+<td>float</td>
+<td>Casing mass fraction</td>
+</tr>
+<tr>
+<td><code>bill_of_materials</code></td>
+<td>BillOfMaterials</td>
+<td>Full BOM breakdown (AM, binders, conductive, separator, foils, electrolyte, casing)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pybamm-scalar-outputs">PyBaMM Scalar Outputs</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cell_nominal_capacity_Ah</code></td>
+<td>float | null</td>
+<td>Nominal capacity from C/3 discharge [Ah]</td>
+</tr>
+<tr>
+<td><code>cell_nominal_energy_Wh</code></td>
+<td>float | null</td>
+<td>Nominal energy from C/3 discharge [Wh]</td>
+</tr>
+<tr>
+<td><code>cell_nominal_gravimetric_energy_density_Wh_kg</code></td>
+<td>float | null</td>
+<td>[Wh/kg]</td>
+</tr>
+<tr>
+<td><code>cell_nominal_volumetric_energy_density_Wh_L</code></td>
+<td>float | null</td>
+<td>[Wh/L]</td>
+</tr>
+<tr>
+<td><code>cell_nominal_max_discharge_power_300s_W</code></td>
+<td>float | null</td>
+<td>Max 300 s power [W] (absolute value; direction via <code>power_direction</code>)</td>
+</tr>
+<tr>
+<td><code>cell_nominal_gravimetric_power_density_W_kg</code></td>
+<td>float | null</td>
+<td>[W/kg]</td>
+</tr>
+<tr>
+<td><code>cell_nominal_volumetric_power_density_W_L</code></td>
+<td>float | null</td>
+<td>[W/L]</td>
+</tr>
+<tr>
+<td><code>cell_dcir_10s_mohm</code></td>
+<td>float | null</td>
+<td>DCIR at configured pulse duration [mΩ]</td>
+</tr>
+<tr>
+<td><code>ocv100_V</code></td>
+<td>float | null</td>
+<td>Open-circuit voltage at ~100% SOC [V] (measured at SOC=99.9%). <code>null</code> if estimation failed</td>
+</tr>
+<tr>
+<td><code>ocv0_V</code></td>
+<td>float | null</td>
+<td>Open-circuit voltage at 0% SOC [V]. <code>null</code> if estimation failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeseries-outputs">Timeseries Outputs</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c3_discharge_timeseries</code></td>
+<td>TimeseriesOutput | null</td>
+<td>C/3 discharge (RDP-subsampled); excluded from copilot summary</td>
+</tr>
+<tr>
+<td><code>experiment_results</code></td>
+<td>dict[str, ExperimentOutput] | null</td>
+<td>Multi-cycle experiment results keyed by label</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeseriesoutput">TimeseriesOutput</h3>
+<p>Used by <code>c3_discharge_timeseries</code> and <code>ExperimentOutput.timeseries</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time_s</code></td>
+<td>list[float]</td>
+<td>Time from step start [s]</td>
+</tr>
+<tr>
+<td><code>voltage_V</code></td>
+<td>list[float]</td>
+<td>Terminal voltage [V]</td>
+</tr>
+<tr>
+<td><code>current_A</code></td>
+<td>list[float]</td>
+<td>Current [A] (positive = discharge)</td>
+</tr>
+<tr>
+<td><code>temperature_K</code></td>
+<td>list[float]</td>
+<td>Spatially-averaged cell temperature [K]</td>
+</tr>
+<tr>
+<td><code>capacity_Ah</code></td>
+<td>list[float]</td>
+<td>Cumulative capacity from step start [Ah]</td>
+</tr>
+<tr>
+<td><code>energy_Wh</code></td>
+<td>list[float]</td>
+<td>Cumulative energy from step start [Wh]</td>
+</tr>
+<tr>
+<td><code>power_W</code></td>
+<td>list[float]</td>
+<td>Instantaneous power [W]</td>
+</tr>
+<tr>
+<td><code>anode_potential_V</code></td>
+<td>list[float]</td>
+<td>Negative electrode surface potential at separator [V]</td>
+</tr>
+<tr>
+<td><code>cc_capacity_Ah</code></td>
+<td>float | null</td>
+<td>CC-phase capacity [Ah] (CCCV tests only)</td>
+</tr>
+<tr>
+<td><code>total_capacity_Ah</code></td>
+<td>float | null</td>
+<td>Total CC+CV capacity [Ah] (CCCV tests only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="experimentoutput">ExperimentOutput</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timeseries</code></td>
+<td>TimeseriesOutput</td>
+<td>Concatenated timeseries across all cycles and steps (RDP-subsampled)</td>
+</tr>
+<tr>
+<td><code>cycle_summaries</code></td>
+<td>list[ExperimentCycleSummary]</td>
+<td>Per-cycle capacity and efficiency summaries</td>
+</tr>
+<tr>
+<td><code>n_cycles_completed</code></td>
+<td>int</td>
+<td>Number of full cycles completed before any termination or solver failure</td>
+</tr>
+<tr>
+<td><code>total_capacity_throughput_Ah</code></td>
+<td>float | null</td>
+<td>Total capacity throughput across all cycles [Ah]</td>
+</tr>
+<tr>
+<td><code>total_energy_throughput_Wh</code></td>
+<td>float | null</td>
+<td>Total energy throughput across all cycles [Wh]</td>
+</tr>
+<tr>
+<td><code>eis_measurements</code></td>
+<td>list[EISOutput]</td>
+<td>EIS snapshots in execution order. Rolled back on cycle failure</td>
+</tr>
+<tr>
+<td><code>warnings</code></td>
+<td>list[str]</td>
+<td>Non-fatal warnings (e.g. EIS skipped, solver failure on a cycle)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="experimentcyclesummary">ExperimentCycleSummary</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cycle_number</code></td>
+<td>int</td>
+<td>1-indexed cycle number</td>
+</tr>
+<tr>
+<td><code>discharge_capacity_Ah</code></td>
+<td>float | null</td>
+<td>Discharge throughput [Ah]</td>
+</tr>
+<tr>
+<td><code>charge_capacity_Ah</code></td>
+<td>float | null</td>
+<td>Charge throughput [Ah]</td>
+</tr>
+<tr>
+<td><code>coulombic_efficiency_pct</code></td>
+<td>float | null</td>
+<td>100 × discharge / charge [%]</td>
+</tr>
+<tr>
+<td><code>total_capacity_throughput_Ah</code></td>
+<td>float | null</td>
+<td>Sum of |Ah| across all steps [Ah]</td>
+</tr>
+<tr>
+<td><code>total_energy_throughput_Wh</code></td>
+<td>float | null</td>
+<td>Sum of |Wh| across all steps [Wh]</td>
+</tr>
+<tr>
+<td><code>min_voltage_V</code></td>
+<td>float | null</td>
+<td>Minimum terminal voltage in this cycle [V]</td>
+</tr>
+<tr>
+<td><code>max_voltage_V</code></td>
+<td>float | null</td>
+<td>Maximum terminal voltage in this cycle [V]</td>
+</tr>
+<tr>
+<td><code>max_temperature_K</code></td>
+<td>float | null</td>
+<td>Maximum cell temperature in this cycle [K]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eisoutput">EISOutput</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>frequencies_hz</code></td>
+<td>list[float]</td>
+<td>Frequency points [Hz]</td>
+</tr>
+<tr>
+<td><code>z_real_ohm</code></td>
+<td>list[float]</td>
+<td>Real part of impedance [Ω]</td>
+</tr>
+<tr>
+<td><code>z_imag_ohm</code></td>
+<td>list[float]</td>
+<td>Imaginary part [Ω] (negative = capacitive)</td>
+</tr>
+<tr>
+<td><code>z_magnitude_ohm</code></td>
+<td>list[float]</td>
+<td>|Z| magnitude [Ω]</td>
+</tr>
+<tr>
+<td><code>z_phase_deg</code></td>
+<td>list[float]</td>
+<td>Phase angle [°]</td>
+</tr>
+<tr>
+<td><code>cycle_number</code></td>
+<td>int</td>
+<td>1-indexed cycle in which this was taken</td>
+</tr>
+<tr>
+<td><code>step_index</code></td>
+<td>int</td>
+<td>0-indexed position of this EIS step in the full step list</td>
+</tr>
+<tr>
+<td><code>soc_pct</code></td>
+<td>float | null</td>
+<td>Estimated SOC at measurement time [%]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="billofmaterials">BillOfMaterials</h3>
+<p>Each <code>BillOfMaterialsItem</code> has: <code>name</code>, <code>electrode</code> (<code>"positive"</code>, <code>"negative"</code>, or null), <code>mass_g</code>, <code>mass_fraction</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active_materials</code></td>
+<td>Active materials per electrode</td>
+</tr>
+<tr>
+<td><code>binders</code></td>
+<td>Binders per electrode</td>
+</tr>
+<tr>
+<td><code>conductive_agents</code></td>
+<td>Conductive additives per electrode</td>
+</tr>
+<tr>
+<td><code>separator</code></td>
+<td>Separator</td>
+</tr>
+<tr>
+<td><code>foils</code></td>
+<td>Current collectors (Al, Cu)</td>
+</tr>
+<tr>
+<td><code>electrolyte</code></td>
+<td>Electrolyte</td>
+</tr>
+<tr>
+<td><code>casing</code></td>
+<td>Casing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pybamm-parameter-overrides">PyBaMM Parameter Overrides</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What it overrides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>electrolyte.*</code></td>
+<td>Ionic conductivity, diffusivity, transference number, activity coefficient</td>
+</tr>
+<tr>
+<td><code>ActiveMaterial.diffusivity_m2_s</code></td>
+<td>Solid-phase diffusivity</td>
+</tr>
+<tr>
+<td><code>ActiveMaterial.particle_size_distribution.d50_um</code></td>
+<td>Particle radius (d50/2)</td>
+</tr>
+<tr>
+<td><code>ActiveMaterial.exchange_current_density_A_m2</code></td>
+<td>Exchange current density</td>
+</tr>
+<tr>
+<td><code>ActiveMaterial.double_layer_capacitance_F_m2</code></td>
+<td>Per-electrode C_dl (when <code>enable_double_layer_capacitance=True</code>)</td>
+</tr>
+<tr>
+<td><code>*_electrode_pore_tortuosity</code></td>
+<td>Electrolyte-phase tortuosity (overrides Bruggeman)</td>
+</tr>
+<tr>
+<td><code>*_electrode_solid_tortuosity</code></td>
+<td>Solid-phase tortuosity</td>
+</tr>
+<tr>
+<td><code>ActiveMaterial.{ch,dch}_ocv_V</code></td>
+<td>OCP function (MSMR fit or interpolant)</td>
+</tr>
+<tr>
+<td><code>working_electrode + reference_electrode_*</code></td>
+<td>Half-cell counter electrode parameters</td>
+</tr>
+<tr>
+<td><code>enable_double_layer_capacitance + *_F_m2</code></td>
+<td>C_dl capacitive current term</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="model-configuration">Model Configuration</h2>
+<h3 id="parameter-sets">Parameter Sets</h3>
+<ul>
+<li><strong>Chen2020</strong>: Default for NMC/graphite full-cells</li>
+<li><strong>Prada2013</strong>: Auto-selected for LFP when <code>use_pybamm_params</code> is not specified</li>
+<li><strong>Custom</strong>: Set <code>use_pybamm_params=""</code> and provide electrode/electrolyte data</li>
+</ul>
+<h3 id="solver">Solver</h3>
+<ul>
+<li><strong>IDAKLUSolver</strong> (SUNDIALS-based DAE solver)</li>
+<li>Mesh configurable via <code>simulation_parameters.mesh_resolution</code></li>
+</ul>
+<hr />
+<hr />
+<p><em><a href="../Model-Library/">← Back to Models Library</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Model-Library/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Model-Cell-Optimizer/" class="md-footer__link md-footer__link--next" aria-label="Next: Cell Optimizer">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cell Optimizer
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Maintained by Aris Machina
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/arismachina" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
