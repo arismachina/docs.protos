@@ -32,9 +32,10 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 ## Finding Knowledge
 
-1. Open **Knowledge Library** from the sidebar.
+1. Open **Knowledge** from the sidebar.
 2. **Filter** by type using the tabs: All, Custom Knowledge, Reference Knowledge, or Conversations.
-3. Click any item to see its full content and the source documents that informed it.
+3. Use the search box to find items by **title or folder name** — it doesn't search document content or notes.
+4. Click any item to see its full content and the source documents that informed it. From here you can also **download** the original file (or the extracted text, for conversation-sourced entries) and, for entries created from a Co-engineer conversation, jump back to that conversation.
 
 > **Tip:** Before starting a new project or design iteration, browse the library for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
 
@@ -63,6 +64,10 @@ For bulk ingestion of many files at once:
 
 1. Click **Add → Upload Folder**.
 2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum.
+
+### Managing documents and folders
+
+Use the **⋯** menu on any document or folder row to **Rename** or **Delete** it. From a document's detail page you can also edit its title inline, and edit the content directly for knowledge notes.
 
 ---
 

@@ -32,6 +32,7 @@
 - [Collaboration & Sharing](Collaboration-and-Sharing)
 - [Canvas Sharing](Collaboration-and-Sharing#canvas-access-levels)
 - [Publishing Externally](Collaboration-and-Sharing#publishing-for-external-access)
+- [Versioning](Versioning)
 
 ---
 

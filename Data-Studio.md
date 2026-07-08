@@ -31,7 +31,7 @@ It is the step between *"I have data"* and *"I want to run a calculation"*. You 
 
 2. **Select documents to compare** — use the document selector to choose which documents to show. Each selected document becomes a column in the table. You can show multiple variants side by side.
 
-3. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately. Inline editing is only available if you created the document — other users must open the document to edit it.
+3. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately. Inline editing is only available if you own the document.
 
 4. **Add a requirement** — when creating a new document, use the **Create type** toggle to switch from Design to Requirement. Requirement documents use the same schema fields but numeric inputs become min/max ranges instead of single values. The requirement appears as a column in the table alongside your designs, and the Gap Analysis panel uses its bounds to show which designs fall within spec.
 
@@ -41,18 +41,18 @@ Once you have the right documents selected, they are available as inputs to any 
 
 ## The Analysis Panel
 
-Alongside the table there is an analysis panel where you can plot the data across your selected documents:
+Below the table there is an analysis panel where you can plot the data across your selected documents. The panel opens with a **Gap Analysis** tab (always available; pass/fail comparison of design values against requirement bounds is coming soon) plus one chart tab:
 
 | Chart type | Use for |
 |-----------|---------|
 | **Bar chart** | Compare a single field across all your variants — e.g. porosity across 5 formulations |
 | **Scatter plot** | Plot one field against another — e.g. particle size vs. dissolution rate |
 
-Histogram and spider chart tabs are also available in the panel (marked as coming soon).
+Histogram and spider chart tabs are also available (marked as coming soon).
 
 You configure each chart by picking which schema fields go on which axis. The chart updates as you change your document selection.
 
-When a requirement document is selected, the **Gap Analysis** tab *(coming soon)* — pass/fail comparison of design values against requirement bounds will appear here.
+Click **+ New Graph** to add as many chart tabs as you need — each is independently configured. Double-click a tab to rename it, or hover it and click the **×** to remove it. You can also pin the current set of tabs as the default layout for new projects.
 
 ---
 

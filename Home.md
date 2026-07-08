@@ -18,15 +18,9 @@
 
 > **The [Co-engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
-1. Sign in at [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} with your Aris Machina account.
-2. Upon first login, you'll land on a Co-engineer start screen. Describe your project to get started — this creates your first project and begins the guided onboarding.
-3. Once the onboarding is finished, you can create or open a new **Project**. This will take you through a short setup wizard (name, goals, configuration) that we recommend you follow so the **[Co-engineer](Co-engineer)** works best.
-4. You do not need to be overly detailed during the configuration step as you can always refine your project later.
-5. During configuration, upload your reference material to the **[Knowledge Library](Knowledge-Library)** — the Co-engineer draws on this for every task. You can always upload later.
-6. After the configuration, you can open the **[Co-engineer](Co-engineer)** on the right-hand side and keep describing your project. It will set up schemas, create data documents, and guide you through the workflow.
-7. Review and refine what it creates in the **[Data Studio](Data-Studio)** and **[Schemas](Schemas)** pages.
-8. Build or run simulations in **[Simulation Studio](Simulation-Studio)**.
-9. Register external models in the **[Model Library](Model-Library)** if you have your own simulation code.
+1. Go to [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} and tell Protos what you want to create — this creates your first project and kicks off guided onboarding.
+2. From that description, the Co-engineer creates one artifact at a time — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, and a starter **canvas** in Simulation Studio.
+3. After each one it tells you what it made and pauses, so send another message to move on to the next step. Once all four exist, onboarding hands off to the general-purpose Co-engineer so you can keep building or adjust anything it set up.
 
 ---
 
@@ -48,6 +42,16 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 2. Add a name and description for your project.
 3. Answer questions about your project — goals, constraints, and any other relevant context.
 4. The [Co-engineer](Co-engineer) automatically generates and runs a kickoff plan to set up your workspace.
+
+### Finding an Existing Project
+
+The project switcher in the header — click your current project's name — is available from every page. At the bottom of it, click **Browse all projects** (only shown while its search box is empty) to open the full project library, where you can:
+
+- Filter by **Mine**, **Shared with me**, **Public**, or **All**, with live counts on each tab
+- Search by name, description, tags, or domain
+- See which project is currently active (marked **Active** with a highlighted border) and **set another one active**
+- **Open** a project, or as its owner, upload a cover image or **Delete** it
+- On the **Public** tab, clone an Aris-published example project as a starting point
 
 ### Navigating the Canvas
 
@@ -116,7 +120,7 @@ An AI assistant available across all features. It accelerates work by structurin
 
 ### [MCP Connections](MCP-Connections)
 
-Connect external tools — like Notion, Linear, or Sentry — to the Co-engineer. Once connected, the Co-engineer can use those tools directly in chat without you switching tabs.
+Connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer. Once connected, the Co-engineer can use those tools directly in chat without you switching tabs. Found under **Integrations** in the sidebar, not as a top-level page.
 
 [→ MCP Connections guide](MCP-Connections)
 
@@ -124,9 +128,17 @@ Connect external tools — like Notion, Linear, or Sentry — to the Co-engineer
 
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
-Share canvases, schemas, data documents, models, and co-engineer chats with teammates using a unified Share dialog. Two sharing roles: **Editor** (can co-edit in place) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole organisation. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
+A cross-cutting capability, not a page of its own — share canvases, schemas, data documents, models, and co-engineer chats from each resource's own Share dialog. Two sharing roles: **Editor** (can co-edit in place, on some resource types) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole organisation. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
 
 [→ Collaboration & Sharing guide](Collaboration-and-Sharing)
+
+---
+
+### [Versioning](Versioning)
+
+Schemas, canvases, models, data documents, and knowledge documents all keep a version history — view past versions and restore one if a change turns out to be wrong.
+
+[→ Versioning guide](Versioning)
 
 ---
 

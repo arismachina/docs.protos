@@ -12,7 +12,7 @@ Computes cell KPIs from electrode design inputs, with optional electrochemical s
 
 The Cell Performance Model computes equilibrium KPIs (capacity, energy, N/P ratio, mass, energy density) from cell design inputs: electrode formulation (active materials, binders, conductive agents), geometry (mass loading, thickness, sheet count), and cell dimensions (Pouch, Cylindrical, Prismatic, or Coin). It derives porosity, volume fractions, and mass breakdown from the formulation without requiring electrochemical simulation.
 
-When electrode area > 0 (and PyBaMM is installed), the model runs a PyBaMM SPMe simulation pipeline producing nominal capacity, DCIR, maximum 300 s power, and arbitrary multi-step/multi-cycle experiments (including drive cycles and EIS). The model supports extensive PyBaMM parameter overrides: electrolyte transport properties, active material diffusivity/particle size/kinetics/thermodynamics (MSMR), electrode tortuosity, double-layer capacitance (for LIC/hybrid cells), and half-cell mode with configurable counter electrode.
+When both electrode areas and the cell volume are > 0, the model runs a PyBaMM SPMe simulation pipeline producing nominal capacity, DCIR, maximum 300 s power, and arbitrary multi-step/multi-cycle experiments (including drive cycles and EIS); otherwise the simulation is skipped and only the equilibrium KPIs are returned. The model supports extensive PyBaMM parameter overrides: electrolyte transport properties, active material diffusivity/particle size/kinetics/thermodynamics (MSMR), electrode tortuosity, double-layer capacitance (for LIC/hybrid cells), and half-cell mode with configurable counter electrode.
 
 ---
 
@@ -194,18 +194,25 @@ Used for OCV100/OCV0 extraction when `use_pybamm_params` is empty.
 | `calibration_rate_C` | float | **required** | Capacity calibration C-rate |
 | `mesh_resolution` | dict | x_n/x_s/x_p/r_n/r_p=10 | Mesh resolution (x = electrode/separator, r = particles) |
 | `data_sampling_period_s` | float | 0.1 | Data sampling period [s] |
-| `use_pybamm_params` | str | `""` | Base parameter set (e.g. `"Chen2020"`). Empty = use defaults/custom |
+| `use_pybamm_params` | str \| null | `""` | Base parameter set (e.g. `"Chen2020"`). Empty or `"custom"` = load a base set and override with user-provided material properties |
 | `upper_voltage_cutoff_V` | float | **required** | Upper voltage cutoff [V] |
 | `lower_voltage_cutoff_V` | float | **required** | Lower voltage cutoff [V] |
-| `cell_contact_resistance_Ohm` | float \| null | **required** | Contact resistance [Ω] (pass `null` to use PyBaMM default) |
+| `cell_contact_resistance_Ohm` | float \| null | **required** | Contact resistance [Ω] (pass `null` to fall back to `cell_parameters.cell_contact_resistance_Ohm`, or 1e-4 Ω if that is also unset) |
 | `cell_cooling_surface_area_m2` | float | **required** | Cooling surface area [m²] |
 | `cell_heat_transfer_coefficient_W_m2_K` | float | **required** | Heat transfer coefficient [W/(m²·K)] |
 | `temperature_safety_threshold_K` | float | **required** | Max power temperature limit [K] |
 | `anode_potential_safety_threshold_V` | float | **required** | Max power anode potential limit [V] |
 | `first_cycle_coulombic_loss_pct` | float | **required** | First-cycle coulombic loss [%] for initial electrode balancing |
 | `ambient_temperature_K` | float | **required** | Ambient temperature [K] |
+| `initial_cell_temperature_K` | float \| null | null | Initial cell temperature for simulation [K]; falls back to `ambient_temperature_K` when unset |
 | `reference_cell_temperature_K` | float | **required** | Reference temperature for performance test [K] |
 | `start_soc_pct` | float \| null | **required** | Starting SOC for load cycle simulation [%] (pass `null` to skip) |
+| `positive_electrode_ocv_model` | `"msmr"` \| `"polynomial"` \| `"interpolant"` \| null | `"polynomial"` | OCV model for positive electrode in PyBaMM |
+| `negative_electrode_ocv_model` | `"msmr"` \| `"polynomial"` \| `"interpolant"` \| null | `"polynomial"` | OCV model for negative electrode in PyBaMM |
+| `particle_diffusion_model` | `"Fickian diffusion"` \| `"uniform profile"` \| `"quadratic profile"` \| `"quartic profile"` | `"Fickian diffusion"` | Particle diffusion model used by PyBaMM |
+| `negative_electrode_phases` | 1 \| 2 | 1 | Number of particle phases in the negative electrode (2 = composite, e.g. graphite-silicon blend) |
+| `positive_electrode_phases` | 1 \| 2 | 1 | Number of particle phases in the positive electrode (2 = composite) |
+| `timeseries_rdp_epsilon` | float | 1e-3 | RDP algorithm tolerance for timeseries subsampling |
 
 ### RPT (Reference Performance Test)
 
@@ -385,7 +392,6 @@ Constraints:
 |-------|------|-------------|
 | `cell_theoretical_capacity_Ah` | float | Equilibrium-derived capacity [Ah] |
 | `cell_theoretical_energy_Wh` | float | Equilibrium-derived energy [Wh] |
-| `cell_capacity_weighted_voltage_V` | float | Capacity-weighted average voltage [V] |
 | `cell_n_p_ratio` | float | N/P capacity ratio |
 | `cell_mass_g` | float | Total cell mass [g] |
 | `cell_volume_L` | float | Cell volume [L] |
@@ -394,6 +400,8 @@ Constraints:
 | `stoichiometry_windows` | StoichiometryWindows | Electrode stoichiometry windows (sto_ca0/100, sto_an0/100) |
 | `positive_electrode_porosity` | float | Positive electrode porosity |
 | `negative_electrode_porosity` | float | Negative electrode porosity |
+| `positive_electrode_density_g_cm3` | float | Positive electrode coating density [g/cm³] |
+| `negative_electrode_density_g_cm3` | float | Negative electrode coating density [g/cm³] |
 | `positive_electrode_volume_fraction` | float | Positive active material volume fraction |
 | `negative_electrode_volume_fraction` | float | Negative active material volume fraction |
 | `electrolyte_mass_g` | float | Electrolyte mass [g] |
@@ -519,9 +527,10 @@ Each `BillOfMaterialsItem` has: `name`, `electrode` (`"positive"`, `"negative"`,
 
 ### Parameter Sets
 
-- **Chen2020**: Default for NMC/graphite full-cells
-- **Prada2013**: Auto-selected for LFP when `use_pybamm_params` is not specified
-- **Custom**: Set `use_pybamm_params=""` and provide electrode/electrolyte data
+- **Prada2013**: Always used as the base set when any positive-electrode active material name contains "LFP" — even if `use_pybamm_params` explicitly requests a different set (a warning is logged and the request is overridden)
+- **Chen2020**: Default base set for non-LFP chemistries when `use_pybamm_params` is empty or `"custom"`
+- **Custom**: Leave `use_pybamm_params` empty (or set it to `"custom"`) and provide electrode/electrolyte data — the base set (Chen2020, or Prada2013 for LFP) is loaded and then overridden with user-provided material properties
+- Any other value of `use_pybamm_params` (e.g. `"Chen2020"`, `"Marquis2019"`) is used as-is, unless LFP chemistry forces Prada2013
 
 ### Solver
 

@@ -33,6 +33,8 @@ Simulation Studio shows a list of your canvases. Each canvas is a graph of conne
 
 You connect them left to right. Data flows through the chain automatically — when an input changes, everything downstream recalculates.
 
+> **Model blocks work differently.** You can't add a Model block by hand — it's set up by the Co-engineer, and using models currently requires a paid plan.
+
 ---
 
 ## Navigating the Editor
@@ -54,6 +56,18 @@ You can have multiple canvases open at the same time. The tabs bar at the top of
 - Pin tabs you want to keep open
 - Close tabs you're done with
 - Create a new canvas from the tab bar
+
+### Graph and List views
+
+Next to the Build/Results switch is a small toggle between **Graph view** and **List view**. Graph view is the node-and-arrow canvas described above; List view replaces it with the same blocks laid out as sections grouped by type (Parameters, Data Input, Model, Calculation, Visualization, Action) — useful when you want to scan everything at once instead of following the wiring.
+
+### Exporting and sharing
+
+The **⋯** (more actions) button in the Build toolbar opens a menu with **Share…**, plus export options for the canvas graph and any visualization as a PNG, and a PDF export of the canvas.
+
+### Version History
+
+Every meaningful change to a canvas's components or metadata creates a new version. Open the version button in the header to browse past versions, compare any two, label one for later, or restore it — restoring creates a new version rather than erasing anything. If a schema, model, or data document this canvas depends on gets a newer version, an **"Update available"** banner appears; click **Update** to re-pin all outdated dependencies at once. Ask the Co-engineer to check for you too — see [Versioning](Versioning) for the full picture.
 
 ### Components rail
 
@@ -123,6 +137,7 @@ To set up a sweep:
 
 - [Data Studio](Data-Studio) — manage which data documents feed into the canvas
 - [Models](Model-Library) — register models you want to call from a canvas
+- [Versioning](Versioning) — canvas version history, update-available banners, and restoring
 - [Glossary → Sweep](Glossary), [Glossary → Canvas](Glossary)
 
 ---

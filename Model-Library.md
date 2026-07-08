@@ -39,6 +39,7 @@ Without a shared model library, teams rebuild the same models for each project �
 | Field | Description |
 |-------|-------------|
 | **Name** | Clear, searchable name (e.g. `Doyle-Fuller-Newman Electrochemical Model`) |
+| **Key** | A unique identifier for the model, required when registering via the **Local code** intake option |
 | **Description** | What the model does, when to use it, known limitations |
 
 Define the **Input schema** and **Output schema** — the JSON schema builders let you specify each parameter's name, type, and whether it's required.
@@ -80,7 +81,7 @@ Protos includes a set of ready-to-use physics models you can add to any canvas w
 
 Beyond the built-in models, you can search and add any model your team has registered:
 
-- **Search** by name, domain, or keyword.
+- **Search** by name or tag.
 - **Filter** by tags or scope (mine, shared with me, public).
 - **Sort** by Last updated, Name A-Z, or Newest first.
 - Click any model to see its full documentation, input/output schema, and version history.
@@ -97,9 +98,9 @@ Every update to a model creates a new version. This is critical for reproducibil
 | **Comparison** | Old canvas runs always reference the exact model version they used, so you can see how results changed between versions |
 | **Audit trail** | Full history of who changed what and when |
 
-**To update a model:** Open the model and click **Edit** to update its name, description, or tags. To update the model's code, you must re-register it.
+**To update a model:** Open the model and click **Edit** to update its name, description, or tags — this mints a new version automatically. There's no way to update a model's code in place — you have to register a new model instead. If the old one isn't referenced by any canvas, delete it first to free up its key; if it is in use, register the new code under a different key so existing canvases keep working.
 
-> **Warning:** Do not delete old model versions. Even if a model is superseded, old versions are needed to reproduce past simulation runs.
+> **Note:** Deleting a model is possible from its management page (with a confirmation step). If a canvas already references it, Protos deprecates it instead of fully deleting it, so existing canvases keep working — only a model with no references is removed outright. Even so, avoid deleting old versions you might still need to reproduce past simulation runs.
 
 ---
 

@@ -29,6 +29,7 @@ The Protos **Co-engineer** is a multi-agent AI system available across all featu
 | **Knowledge surfacing** | Find relevant entries from the [Knowledge Library](Knowledge-Library) as you work |
 | **Requirements parsing** | Parse an uploaded spec document into structured targets and constraints |
 | **Design comparison** | Compare design variants against requirements and surface gaps |
+| **Version history** | *"What changed between v2 and v3 of this schema?"* — browse and diff version history, check whether a canvas's dependencies are outdated, and restore a schema, canvas, or data document to a past version |
 
 ---
 
@@ -45,7 +46,7 @@ Type in plain language:
 
 Co-engineer responses always include **source traces** — click any claim to see where it came from.
 
-You can attach files to any message — PDFs, documents, images, and more. The maximum file size per attachment is **15 MB**.
+You can attach files to any message — PDFs, documents, images, and more. The maximum file size per attachment is **100 MB**.
 
 > **Pro features:** Some Co-engineer capabilities require a Pro plan. If you're on a free plan you'll see a prompt to upgrade when you reach a Pro-only feature.
 
@@ -77,6 +78,10 @@ Typing `/` in the chat composer opens a command picker. Available commands:
 - `/agent` — switch to a specific sub-agent by name
 - `/help` — get context-aware help from the docs
 - `/feedback` — submit feedback about Co-engineer
+
+### Versioning skill
+
+Ask about version history, whether a canvas's dependencies are current, or to restore something to an earlier state, and the Co-engineer loads its versioning tools automatically — there's nothing to turn on. See [Versioning](Versioning) for what it can and can't do (model and knowledge-document versions can only be browsed, not restored, this way).
 
 ### MCP servers
 
@@ -117,6 +122,7 @@ Investing in these foundations makes Co-engineer progressively more useful over 
 - [Schemas](Schemas) — Co-engineer can create and update schemas based on your description
 - [Simulation Studio](Simulation-Studio) — Co-engineer can recommend model and input configurations
 - [MCP Connections](MCP-Connections) — connect external tools the Co-engineer can use in chat
+- [Versioning](Versioning) — what the Co-engineer's version tools can browse, diff, and restore
 
 ---
 

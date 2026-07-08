@@ -20,7 +20,7 @@ The Co-engineer icon is in the top-right corner of the header. The icon is not s
 
 > *"Create a schema for electrode coating experiments with fields for coating thickness, porosity, active material type, and mass loading."*
 
-It will search for existing schemas first, then propose the schema with field names, types, and units. **It asks for your confirmation before creating anything.** Review the proposal — if a type or unit is wrong, say so before confirming.
+It will search for existing schemas first, then propose the schema with field names, types, and units. **For anything beyond a single, clearly-requested asset it checks with you before creating it** — a single schema you explicitly asked for, like this one, may be created directly. Review what it creates — if a type or unit is wrong, say so and it will adjust.
 
 ---
 

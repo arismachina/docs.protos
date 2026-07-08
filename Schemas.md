@@ -14,6 +14,7 @@ Schemas define the **structure of your engineering data** in Protos. Rather than
 - [Creating a Schema](#creating-a-schema)
 - [Field Types](#field-types)
 - [Using Reference Fields](#using-reference-fields)
+- [Version History](#version-history)
 - [Bringing External Data into Schemas](#bringing-external-data-into-schemas)
 - [Best Practices](#best-practices)
 
@@ -38,7 +39,10 @@ Quick reference:
 1. Navigate to **Schemas** in the left sidebar → **New Schema**.
 2. Name it: `[Domain] — [Artifact type]` (e.g. `Battery — Electrolyte Formulation`).
 3. Add fields — set type, unit, and whether required.
-4. Click **Save**.
+4. Optionally toggle **Public** to make the schema visible to everyone, not just people you share it with directly.
+5. Click **Save**.
+
+Need a variant of an existing schema? Use **Clone** from a schema's card or row menu in the library instead of starting from scratch.
 
 > **Tip:** Keep schemas lean — only add fields that will actually be populated. A sparse schema with consistent data is far more useful than a dense schema half the team ignores.
 
@@ -77,6 +81,20 @@ To add a reference field:
 
 ---
 
+## Version History
+
+Every save creates a new, immutable version — open the version-history dropdown in the schema editor header to see the full list, newest first. Open any version to see a summary of what changed from the one before it. From there you can:
+
+- **Compare** any two versions field-by-field to see exactly what was added, removed, or changed
+- **Label** a version with a short name (e.g. "pre-review baseline") so you can find it again later
+- **Restore** a past version — this creates a new version with the old content rather than deleting anything in between, so the full history stays intact
+
+If this schema references another schema via a Ref field and that schema gets a newer version, an **"Update available"** banner appears in the editor — click **Update** to re-pin the reference to the latest version in one step.
+
+See [Versioning](Versioning) for the full picture, including how this works across other asset types.
+
+---
+
 ## Bringing External Data into Schemas
 
 Protos uses the **Co-engineer** to extract data from your existing files and create structured data documents that follow your schema.
@@ -109,7 +127,7 @@ This approach works well when you have existing reports, datasheets, or spreadsh
 
 - **Standardize units before creating numeric fields** — changing units later requires a data migration.
 - **Name schemas by domain + artifact type** for discoverability across the workspace.
-- **Version your schemas** — create a new schema version for significant structural changes rather than editing in place. Editing in place can corrupt existing data linked to that schema.
+- **Use [version history](#version-history) for structural changes** — compare, label, or restore a past version if a change breaks existing data.
 - **Agree on a reference field convention** with your team before building out multiple related schemas.
 
 ---

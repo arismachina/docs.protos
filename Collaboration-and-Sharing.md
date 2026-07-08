@@ -28,6 +28,10 @@ An organisation is the top-level workspace in Protos. Projects, models, canvases
 
 Click **Organizations** in the sidebar — it sits near the bottom, just above your profile. This opens the Organisations page, which shows a card for each organisation you belong to, along with any pending invitations.
 
+### Setting an active organisation
+
+Mark one organisation **Active** from its card on the Organisations page (the button reads **Set as active** until you click it). Once set, the **Shared with me** tab on Schemas, Models, and Data Studio automatically scopes to that organisation — there's no separate per-page org filter to manage. The sidebar shows the active org's name as a subtitle under the Organizations link, and hovering the link shows "filtering by {org}"; click it to go back and change or clear it.
+
 ### Creating an organisation
 
 Click **+ New organization** in the top right of the Organisations page, enter a name, and confirm. You become the owner of the new organisation.
@@ -38,12 +42,13 @@ Pending invitations appear on the Organisations page below your active organisat
 
 ### Organisation detail page
 
-Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has four tabs:
+Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has these tabs:
 
 - **Org chart** — a visual map of the organisation's structure (see below)
 - **Members** — everyone in the organisation; owners and managers can invite new members here
 - **Shared assets** — all assets shared at the organisation level, including projects, schemas, data documents, and models
 - **Shared projects** — projects shared with a team, shown as cards; use the team selector to filter by team. Any schemas and data documents shared within each project appear nested under the project card. Inherited access (via a parent team) is indicated with an **Inherited** badge
+- **Changelog** — a history of changes made within the organisation
 
 ### Org chart
 
@@ -103,7 +108,7 @@ To share with your entire organisation at once, click **Share with everyone** ab
 
 Access is given immediately as you add people. Click **Close** when done.
 
-> **Owners and editors** can manage sharing. Viewers cannot reshare.
+> For projects and co-engineer chats, **owners and editors** can manage sharing. For canvases, schemas, data documents, and models, only the **owner** can manage sharing — editors cannot reshare.
 
 ### Who has access
 
@@ -128,7 +133,7 @@ The Share dialog includes **Make public** and **Make private** buttons. Clicking
 
 ## Discovering Shared Resources
 
-All resource lists (canvases, schemas, data documents, models) have scope tabs at the top:
+Resource lists for schemas, data documents, and models have scope tabs at the top:
 
 | Tab | Shows |
 |-----|-------|
@@ -136,6 +141,10 @@ All resource lists (canvases, schemas, data documents, models) have scope tabs a
 | **Mine** | Resources you own |
 | **Shared with me** | Resources others have shared directly with you |
 | **Public** | Resources that have been made public across Protos |
+
+If you've [set an active organisation](#organisations), **Shared with me** on these three pages automatically narrows to that org — see [Setting an active organisation](#organisations).
+
+Canvases don't use these scope tabs — to browse shared or public canvases, click **New → Import Canvas**, which has its own Shared / Organization / Public tabs.
 
 ---
 
@@ -174,7 +183,7 @@ Co-engineer sessions can be shared with org members.
 3. Shared sessions appear under **Shared with me** in the chat session list.
 4. **Viewers** see a read-only transcript. **Editors** can continue the conversation.
 
-When an editor sends a message in a shared session, other participants see it appear immediately — the editor's message bubble appears along with a **"Co-Engineer is responding…"** indicator. The completed reply replaces the placeholder when the Co-engineer finishes. Participants do not need to refresh or wait for the reply before seeing that a message was sent.
+When an editor sends a message in a shared session, other **editors** who have that session open see the message bubble and a **"Co-Engineer is responding…"** indicator appear right away. **Viewers**, who see the session through the read-only shared-session viewer, see the message and the completed reply appear together only once the Co-engineer finishes the turn.
 
 ---
 

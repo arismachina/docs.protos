@@ -54,52 +54,73 @@ At each diagnostic check-point:
 
 ## Simulation Parameters
 
+Input is split across two top-level objects: `cell_parameters` (`CellParametersInput`) and `simulation_parameters` (`CycleSimulationParameters`). **Every field in both objects is required at the schema level** — the Pydantic models carry no field-level defaults (Ruff/Pydantic `Field(...)` everywhere, including nullable fields like `soh_threshold_pct`, which must still be sent explicitly, e.g. as `null`, to disable them). All "Default" values below are the platform's seeded defaults (the `dfn_cyclic_ageing` entry in `model_definitions`, currently sourced from `migration_071_add_dfn_cyclic_ageing_cycle_seq.py`) used to prefill new jobs — not schema defaults.
+
+### Cell Parameters (fields relevant to cycling)
+
+`upper_voltage_cutoff_V`, `lower_voltage_cutoff_V`, and `cell_contact_resistance_Ohm` live on `cell_parameters` (`CellParametersInput`), **not** on `simulation_parameters`. See [Model-Cell-Performance](Model-Cell-Performance) for the full `CellParametersInput` schema (mass loading, geometry, formulation, foils, separator, etc.).
+
+| Parameter | Seed default | Description |
+|---|---|---|
+| `upper_voltage_cutoff_V` | 3.65 | Upper voltage cutoff for simulations [V] |
+| `lower_voltage_cutoff_V` | 2.5 | Lower voltage cutoff for simulations [V] |
+| `cell_contact_resistance_Ohm` | 1e-4 | Cell contact resistance [Ohm] |
+
 ### Simulation Parameters (Canonical, Alias-Free)
 
 #### Cycling Protocol
 
-| Parameter | Default | Description |
+| Parameter | Seed default | Description |
 |---|---|---|
 | `num_cycles` | 1000 | Total ageing cycles |
-| `diagnostic_cycle_frequency` | 500 | Diagnostic check-point frequency (every N cycles) |
-| `discharge_c_rate` | 1.0 | Ageing discharge C-rate |
-| `charge_c_rate` | 1.0 | Ageing charge C-rate |
+| `diagnostic_cycle_frequency` | 100 | Diagnostic check-point frequency (every N cycles) |
+| `discharge_c_rate` | 1.0 | Ageing discharge C-rate (synced into default `cycle_seq` when unchanged) |
+| `charge_c_rate` | 0.5 | Ageing charge C-rate (synced into default `cycle_seq` when unchanged) |
+| `cycle_seq` | `{"steps": ["Discharge at 1P until {vmin} V", "Charge at 0.5P until {vmax} V"], "period_s": 3600.0}` | Ageing cycle protocol (`ExperimentSequence`); xC/xP tokens expanded at runtime. **Required** — no schema default. |
+| `diagnostic_seq` | 3-segment CCCV → 2C pulse → CCCV protocol | Multi-segment diagnostic protocol (`DiagnosticSequence`). **Required** — no schema default. |
+| `scale_nominal` | False | When `False`, xC/xP scaling always uses the BoL (diagnostic 0) reference capacity/energy; when `True`, each ageing block rescales off the most recent diagnostic. **Required** — no schema default. |
 | `initial_soc_pct` | 100.0 | Initial state of charge [%] |
 | `ambient_temperature_K` | 298.15 | Ambient temperature [K] |
-| `upper_voltage_cutoff_V` | 3.65 | Upper voltage cutoff [V] |
-| `lower_voltage_cutoff_V` | 2.5 | Lower voltage cutoff [V] |
-| `contact_resistance_Ohm` | 1e-4 | Contact resistance [Ohm] |
-| `soh_threshold_pct` | 80.0 | Stop at SoH [%]; None = no stop |
+| `initial_cell_temperature_K` | 298.15 | Initial cell temperature [K]; nullable, falls back to `ambient_temperature_K` when `null`. **Required field** (must be sent, even as `null`). |
+| `reference_cell_temperature_K` | 298.15 | Reference temperature for PyBaMM's thermal model [K]; nullable, falls back to `ambient_temperature_K` when `null`. **Required field.** |
+| `soh_threshold_pct` | `null` | Stop at SoH [%]; `null` = no stop. **Required field** (must be sent, even as `null`). |
+| `enable_thermal` | True | Enable lumped thermal model (True = lumped, False = isothermal) |
+| `anode_potential_safety_threshold_V` | `null` | Anode potential safety limit [V]; `null` = disabled |
+| `temperature_safety_threshold_K` | `null` | Temperature safety limit [K]; `null` = disabled |
+
+#### Solver, Calibration & Timeseries Capture
+
+| Parameter | Seed default | Description |
+|---|---|---|
 | `solver_atol` | 1e-4 | Solver absolute tolerance |
 | `solver_rtol` | 1e-4 | Solver relative tolerance |
 | `skip_capacity_calibration` | False | Skip calibration |
+| `capture_ageing_block_first_cycle_timeseries` | False | When `True`, store V/I/T/P/Q/E vs time for the first cycle of each ageing block (cycles 1, N+1, 2N+1, ...) |
+| `ageing_block_timeseries_period_s` | 60.0 | Output sampling period [s] for captured ageing-block timeseries |
 | `use_pybamm_parameters` | "Prada2013" | PyBaMM parameter set |
-| `mesh_resolution` | {"x_n":10, ...} | Mesh resolution for simulation |
-| `cooling_surface_area_m2` | 0.02 | Cell cooling surface area [m²] |
+| `mesh_resolution` | {"x_n":10, "x_s":10, "x_p":10, "r_n":10, "r_p":10} | Mesh resolution for simulation |
+| `cooling_surface_area_m2` | ~0.0139 | Cell cooling surface area [m²] |
 | `total_heat_transfer_coefficient_W_m2_K` | 10.0 | Heat transfer coefficient [W/(m2.K)] |
 | `cell_thermal_expansion_coefficient_m_K` | 1.1e-6 | Cell thermal expansion coefficient [m/K] |
-| `anode_potential_safety_threshold_V` | None | Anode potential safety limit [V]; None = disabled |
-| `temperature_safety_threshold_K` | None | Temperature safety limit [K]; None = disabled |
-| `enable_thermal` | True | Enable lumped thermal model (True = lumped, False = isothermal) |
 
 #### Ageing Mechanism Toggles
 
-| Parameter | Default | Description |
+| Parameter | Seed default | Description |
 |---|---|---|
 | `enable_sei` | True | Enable SEI (solid electrolyte interphase) growth degradation |
-| `enable_lam` | True | Enable loss of active material (LAM) degradation |
-| `enable_particle_cracking` | True | Enable particle cracking (Paris' law) degradation |
-| `enable_swelling` | True | Enable particle swelling (mechanics) degradation |
+| `enable_lam` | True | Enable loss of active material (LAM). Uses stress-driven mode when `enable_swelling` or `enable_particle_cracking` is also on; otherwise reaction-driven. |
+| `enable_particle_cracking` | False | Enable particle cracking (Paris' law) degradation |
+| `enable_swelling` | False | Enable particle swelling (mechanics). Enables stress-driven LAM and is required for particle cracking; LAM can still run in reaction-driven mode without swelling. |
 
 #### SEI Degradation
 
-| Parameter | Default |
+| Parameter | Seed default |
 |---|---|
 | `initial_sei_thickness_m` | 1e-9 |
 | `sei_partial_molar_volume_m3_mol` | 5e-5 |
 | `sei_resistivity_Ohm_m` | 1000.0 |
 | `sei_growth_activation_energy_J_mol` | 5e4 |
-| `sei_solvent_diffusivity_m2_s` | 2.5e-26 |
+| `sei_solvent_diffusivity_m2_s` | 1e-20 |
 | `bulk_solvent_concentration_mol_m3` | 2000.0 |
 | `sei_reaction_exchange_current_density_A_m2` | 1.5e-11 |
 | `sei_open_circuit_potential_V` | 0.4 |
@@ -110,7 +131,7 @@ At each diagnostic check-point:
 
 #### Particle Mechanics (Swelling)
 
-| Parameter | Default |
+| Parameter | Seed default |
 |---|---|
 | `negative_electrode_youngs_modulus_Pa` | 15e9 |
 | `positive_electrode_youngs_modulus_Pa` | 375e9 |
@@ -120,10 +141,14 @@ At each diagnostic check-point:
 | `positive_electrode_partial_molar_volume_m3_mol` | -7.28e-7 |
 | `negative_electrode_reference_concentration_for_free_of_deformation` | 0.0 |
 | `positive_electrode_reference_concentration_for_free_of_deformation` | 0.0 |
+| `negative_electrode_volume_change` | 10-coefficient polynomial (Ai2020/Rieger2016) |
+| `positive_electrode_volume_change` | `[-4.966e-5, 3e-4]` |
+
+Both are volume-change polynomial coefficients `[sto^0..sto^N]` (ascending powers), used when swelling or cracking is enabled; calibrate per chemistry.
 
 #### Particle Cracking (Paris' Law)
 
-| Parameter | Default |
+| Parameter | Seed default |
 |---|---|
 | `negative_electrode_initial_crack_length_m` | 1e-9 |
 | `positive_electrode_initial_crack_length_m` | 1e-9 |
@@ -140,7 +165,7 @@ At each diagnostic check-point:
 
 #### Loss of Active Material (LAM)
 
-| Parameter | Default |
+| Parameter | Seed default |
 |---|---|
 | `negative_electrode_lam_constant_proportional_1_s` | 3e-8 |
 | `positive_electrode_lam_constant_proportional_1_s` | 3e-8 |
@@ -148,12 +173,30 @@ At each diagnostic check-point:
 | `positive_electrode_lam_constant_exponential` | 2.0 |
 | `negative_electrode_critical_stress_Pa` | 60e6 |
 | `positive_electrode_critical_stress_Pa` | 60e6 |
+| `negative_electrode_reaction_driven_lam_factor_m3_mol` | 0.0 |
+| `positive_electrode_reaction_driven_lam_factor_m3_mol` | 0.0 |
+
+Reaction-driven LAM factors are only used by the reaction-driven LAM submodel (`enable_lam` on, `enable_swelling` and `enable_particle_cracking` both off); 0.0 disables reaction-driven LAM. As a guide, ~2e-4 gives roughly 2% SoH loss at 100 cycles on LFP (Prada2013).
 
 ## Output Schema
 
-### Summary (`CycleSummaryData`)
+The route calls `calculate_dfn_cyclic_ageing()`, which returns the **Full Result** below. Copilot-facing surfaces instead call `summarize_for_copilot(full_result)`, which returns a much smaller **Copilot Summary**.
 
-- `num_cycles_completed`, `num_diagnostics`
+### Full Result (`DfnCyclicAgeingOutput`)
+
+| Field | Description |
+|---|---|
+| `success` | `bool` — whether the simulation completed |
+| `stop_reason` | `str` — one of `num_cycles`, `soh_threshold`, `ageing_solver_failure`, `error` |
+| `summary` | `CycleSummaryData \| null` — scalar summary (see below) |
+| `data` | `CycleDataOutput \| null` — `diagnostics[]` and, when captured, `ageing_block_first_cycle_timeseries[]` |
+| `config` | `CycleSimulationParameters \| null` — the resolved simulation config used |
+| `error` | `str \| null` — error message, present when `success` is `false` |
+| `traceback` | `str \| null` — present only on unexpected failures |
+
+#### Summary (`CycleSummaryData`)
+
+- `num_cycles_completed`, `diagnostic_cycle_count`
 - `nominal_capacity_Ah`, `nominal_energy_Wh`
 - `initial/final_capacity_Ah`, `initial/final_energy_Wh`
 - `capacity_fade_Ah`, `capacity_fade_pct`
@@ -161,7 +204,7 @@ At each diagnostic check-point:
 - `final_fce_capacity`, `final_fce_energy`
 - `final_lli_pct`, `final_lam_neg_pct`, `final_lam_pos_pct`
 
-### Diagnostic Series (`DiagnosticDataPoint`)
+#### Diagnostic Series (`DiagnosticDataPoint`)
 
 Each point in `data.diagnostics[]`:
 
@@ -172,8 +215,41 @@ Each point in `data.diagnostics[]`:
 - `dcir[]` - list of `{time_s, dcir_mohm}` at 0.1, 1, 10, 18, 30s
 - `temperature_K`, `sei_thickness_m`
 - `lli_pct`, `lam_neg_pct`, `lam_pos_pct`
+- `eis_measurements[]`, `reference_discharge_curve` (V-Q curve from the diagnostic's reference discharge)
 
-## Example Results (Default Parameters)
+### Copilot Summary (`summarize_for_copilot`)
+
+`summarize_for_copilot(full_result)` keeps only `success`, `stop_reason`, `summary`, and `error` — it drops `config`, `data` (diagnostics/timeseries), and `traceback` entirely, and omits any key whose value is `None`/absent. This is the shape Copilot sees, **not** the full result above.
+
+```json
+{
+  "success": true,
+  "stop_reason": "num_cycles",
+  "summary": {
+    "num_cycles_completed": 1000,
+    "diagnostic_cycle_count": 11,
+    "nominal_capacity_Ah": 130.8,
+    "nominal_energy_Wh": 425.1,
+    "initial_capacity_Ah": 130.8,
+    "final_capacity_Ah": 123.4,
+    "capacity_fade_Ah": 7.4,
+    "capacity_fade_pct": 5.7,
+    "initial_soh_pct": 100.0,
+    "final_soh_pct": 94.3,
+    "final_fce_capacity": 1000.0,
+    "final_fce_energy": 1000.0,
+    "final_lli_pct": 5.9,
+    "final_lam_neg_pct": 0.0,
+    "final_lam_pos_pct": 0.0
+  }
+}
+```
+
+On failure, only `success`, `stop_reason` (`"error"`), and `error` are present.
+
+## Example Results (Illustrative)
+
+The run below is illustrative of the kind of degradation trend the model produces over an extended ageing schedule; it does not correspond to a literal run of the current seeded defaults (1000 cycles, 1C discharge / 0.5C charge, lumped thermal, diagnostic every 100 cycles — see [Simulation Parameters](#simulation-parameters) above).
 
 ```
 2000 cycles, 1C/1C, 25C, isothermal, diagnostic every 500

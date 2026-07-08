@@ -36,15 +36,15 @@ Notice the **Create with Co-Engineer** button at the top. Click **Create with Co
 
 ---
 
-## Step 4 — Tag consistently
+## Step 4 — Name things so you can find them later
 
-Pick a tag taxonomy with your team before you start — for example by material (`graphite`, `nmc811`) or type (`paper`, `decision`, `spec`). Inconsistent tags make search unreliable later.
+The Knowledge Library doesn't have a tagging feature — the title is your primary handle for discovery. Use clear, consistent titles (e.g. by material or document type) rather than relying on a tag taxonomy.
 
 ---
 
 ## Step 5 — Verify it's working
 
-Search for a keyword you know is in a document you just uploaded. If it appears, the library is ready.
+Search for a keyword from the **title or folder name** of a document you just uploaded — the search box matches title/folder only, not document content. If it appears, the library is ready.
 
 **One thing that matters most:** capture decisions as text notes *as you make them*. A note like *"Chose 1.2 mol/L — Q1 study showed peak conductivity at this concentration"* written in the moment is far more useful than trying to reconstruct it six months later.
 
