@@ -55,7 +55,8 @@ The following simulation parameters correspond to the `SimulationParameters` sch
 | `cooling_surface_area_m2` | float | Cooling surface area [m²] (optional; defaults to 0.1 m² if omitted) |
 | `solver_atol` | float | Absolute tolerance for solver |
 | `solver_rtol` | float | Relative tolerance for solver |
-| `soh_threshold` | float | Optional SoH threshold [%] (0-100) used to determine the `stop_reason` (e.g. degradation-driven stop); the simulation always runs to `calendar_time_days`; defaults to 0 (threshold effectively disabled) if omitted |
+| `calendar_time_days` | float (> 0) | Calendar aging duration to simulate [days]; required |
+| `soh_threshold` | float | Optional SoH threshold [%] (0-100); the simulation stops early once SoH drops to or below this value at the end of a storage batch (`stop_reason: "soh_threshold"`); defaults to 0 (threshold effectively disabled) if omitted |
 | `skip_capacity_calibration` | boolean | Optional flag to skip the capacity calibration step; if omitted, the schema default is used |
 | `use_model_parameters` | string | Optional; one of `""`, `"OKane2022"`, `"Prada2013"`, `"ORegan2022"`. If omitted or set to `""`, the model defaults to the `OKane2022` parameter set |
 
@@ -120,6 +121,7 @@ Default `var_pts` structure:
       },
       "summary": {
         "calendar_time_days": 365.0,
+        "requested_calendar_time_days": 365.0,
         "initial_capacity_Ah": 50.0,
         "final_capacity_Ah": 48.5,
         "capacity_fade_Ah": 1.5,
@@ -137,7 +139,23 @@ Default `var_pts` structure:
         "sei_thickness_initial_m": 2e-9,
         "sei_thickness_final_m": 3.2e-9
       },
-      "config": {}
+      "config": {
+        "calendar_time_days": 365.0,
+        "initial_soc": 0.8,
+        "upper_voltage_cutoff_V": 4.2,
+        "lower_voltage_cutoff_V": 2.8,
+        "reference_temperature_K": 298.15,
+        "ambient_temperature_K": 298.15,
+        "initial_temperature_K": 298.15,
+        "contact_resistance_Ohm": 1e-5,
+        "total_heat_transfer_coefficient_W.m2.K-1": 0.01,
+        "cooling_surface_area_m2": 0.1,
+        "solver_atol": 1e-4,
+        "solver_rtol": 1e-4,
+        "soh_threshold": 80.0,
+        "skip_capacity_calibration": false,
+        "use_model_parameters": "OKane2022"
+      }
     }
 ```
 
@@ -150,12 +168,11 @@ Indicates if the simulation completed successfully.
 Reason indicating why the simulation stopped:
 - `"completed"`: Simulation ran for the full requested duration
 - `"soh_threshold"`: Simulation terminated early because SoH dropped below `soh_threshold` during simulation
-- `"batch_failed"`: Simulation stopped due to a failed storage batch (solver error, convergence issues)
-- `"error"`: Simulation failed with an error
+- `"solver_failure"`: Simulation stopped early because a storage batch failed to solve after retries (solver error, convergence issues); partial results up to that point are still returned
 
 > **Note**: The summary field `calendar_time_days` reflects the **actual simulated duration**, which may be less than the requested duration if the simulation terminates early. Compare `calendar_time_days` (actual) with `requested_calendar_time_days` (requested) to determine if the simulation completed fully.
 #### `data` (object | null)
-Minimal timeseries data with **10 evenly spaced points** over the simulation period:
+Minimal timeseries data with **one BOL point (t=0) plus one point per storage batch** (up to 10 batches, so up to 11 points total — fewer for shorter `calendar_time_days`):
 
 - `time_days` (array): Time points [days]
 - `capacity_Ah` (array): Capacity calculated from LLI [A·h]
@@ -167,7 +184,7 @@ Minimal timeseries data with **10 evenly spaced points** over the simulation per
 - `dcir_18s_Ohm` (array): DCIR at 18 s [Ω]
 - `dcir_30s_Ohm` (array): DCIR at 30 s [Ω]
 
-**Note**: Timeseries is sampled at 10 evenly spaced times over `calendar_time_days`. DCIR values are computed per point via a 2C discharge pulse simulation.
+**Note**: Storage time is split into batches (1 year each by default, scaled up so at most 10 batches cover the full `calendar_time_days`); each batch's end state becomes one timeseries point, preceded by a BOL point at t=0. DCIR values are computed per point via a 2C discharge pulse simulation.
 
 #### `summary` (object)
 Scalar summary values:
@@ -195,13 +212,16 @@ Scalar summary values:
 
 ### Error Response
 
+Unexpected errors (invalid parameters, solver setup failures, calibration exceptions, etc.) are not returned as a `{"success": false, ...}` payload from the model itself — the model function raises, and the job layer catches the exception and marks the job as failed:
+
 ```json
 {
-  "success": false,
-  "stop_reason": "error",
+  "status": "failed",
   "error": "Error message describing what went wrong"
 }
 ```
+
+Note that `"solver_failure"` (a storage batch failing mid-run) is handled differently: it is *not* an exception, so the simulation still returns a normal `"success": true` payload with `stop_reason: "solver_failure"` and whatever partial `data`/`summary` were collected before the failing batch.
 
 ## Model Configuration
 
@@ -209,13 +229,17 @@ Scalar summary values:
 
 The model uses the following PyBaMM model options:
 
+- `"calculate discharge energy": "true"`: Track discharge energy
+- `"cell geometry": "arbitrary"`: Arbitrary cell geometry
+- `"thermal": "lumped"`: Lumped thermal model
+- `"contact resistance": "true"`: Include contact resistance
 - `"SEI": "solvent-diffusion limited"`: SEI growth mechanism
 - `"SEI porosity change": "true"`: Track porosity changes due to SEI
 - `"SEI on cracks": "false"`: No SEI growth on cracks
+- `"lithium plating": "none"`: No lithium plating
+- `"lithium plating porosity change": "false"`: No porosity change from lithium plating
 - `"particle mechanics": "none"`: No particle mechanics
 - `"loss of active material": "none"`: No LAM mechanism
-- `"thermal": "lumped"`: Lumped thermal model
-- `"contact resistance": "true"`: Include contact resistance
 
 ### Solver
 
@@ -305,11 +329,11 @@ soh_pct = 100 - LLI_pct
 
 ### Timeseries Sampling
 
-The output timeseries uses **10 evenly spaced points** over the simulation period:
-1. Target times are generated via `linspace(0, max_time_days, 10)`
-2. For each target time, the closest actual simulation time point is selected
-3. The last data point is always included
-4. All timeseries arrays are sampled using the same indices
+The simulation runs as a sequence of storage batches rather than one continuous solve, to avoid holding a multi-year timeseries in memory:
+1. Total storage time is split into batches of 1 year (365 days) each by default
+2. If that would produce more than 10 batches (i.e. `calendar_time_days` > ~10 years), the batch size is scaled up so exactly 10 equally-spaced batches cover the full duration
+3. After each batch, the degradation state (LLI, SEI thickness, porosity) is extracted and a DCIR pulse is run at that state, then the batch's PyBaMM solution is freed before the next batch begins
+4. A BOL diagnostic point (t=0) is always prepended, so the output has 1 + number-of-batches points (up to 11 for long durations; fewer for shorter ones — e.g. a 30-day simulation produces only 2 points)
 5. Per point, DCIR values are computed via a 2C discharge pulse simulation at 50% SOC
 
 ### Capacity Calibration
@@ -325,7 +349,7 @@ This ensures the simulated capacity matches the specified `nominal_capacity_Ah`.
 
 The simulation may terminate early in the following cases:
 - **SoH threshold**: If `soh_threshold` > 0 and SoH drops below the threshold during simulation
-- **Failed batch**: If a storage batch fails (solver error, convergence issues), the simulation stops with partial results
+- **Failed batch**: If a storage batch fails to solve after retrying with looser solver tolerances, the simulation stops with partial results
 
 When the simulation completes (either normally or early):
 - `calendar_time_days` in the summary reflects the **actual simulated duration** (matches `cumulative_time_days` in logs)
@@ -333,7 +357,7 @@ When the simulation completes (either normally or early):
 - `stop_reason` indicates why the simulation stopped:
   - `"completed"`: Simulation ran for the full requested duration
   - `"soh_threshold"`: Simulation terminated early because SoH dropped below threshold
-  - `"batch_failed"`: Simulation stopped due to a failed batch
+  - `"solver_failure"`: Simulation stopped early because a storage batch failed after retries
 
 ## Limitations
 
@@ -343,7 +367,7 @@ When the simulation completes (either normally or early):
 
 3. **Lumped Thermal Model**: Uses a simplified lumped thermal model. Spatial temperature gradients are not captured.
 
-4. **Timeseries Sampling**: Output timeseries uses 10 evenly spaced points. Full-resolution data is not available in the output.
+4. **Timeseries Sampling**: Output timeseries has one point per storage batch (plus a BOL point), up to 11 points total for long durations, fewer for short ones. Full-resolution data is not available in the output.
 
 ---
 

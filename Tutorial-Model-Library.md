@@ -46,9 +46,9 @@ Wire a Parameter block to each input, click **Start sequence**, and check the re
 
 ---
 
-## Step 3 — Version it when the code changes
+## Step 3 — Updating name, description, or tags
 
-To update a model's code, re-register it. To update its name, description, or tags, open the model and click **Edit**.
+Open the model and click **Edit** to update its name, description, or tags — this mints a new version automatically. Code can't be updated in place: if you need to change it, register a new model. Delete the old one first if nothing depends on it, or give the new one a different key if canvases are still using the old one.
 
 ---
 

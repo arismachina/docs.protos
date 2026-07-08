@@ -2,7 +2,7 @@
 
 [← Home](Home) · **MCP Connections**
 
-MCP (Model Context Protocol) lets you connect external tools — like Notion, Linear, or Sentry — to the Co-engineer. Once connected, the Co-engineer can use those tools directly in chat, pulling in data and taking actions across your other systems without you switching tabs.
+MCP (Model Context Protocol) lets you connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer. Any MCP-compatible server works; there's no fixed list of supported integrations. Once connected, the Co-engineer can use those tools directly in chat, pulling in data and taking actions across your other systems without you switching tabs.
 
 ---
 

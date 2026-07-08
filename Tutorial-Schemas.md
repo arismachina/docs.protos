@@ -10,7 +10,7 @@ This tutorial walks you through building a schema from scratch, explains the dec
 
 ## Step 1 — Open the Schema Editor
 
-Click **Schemas** in the sidebar. You'll see any existing schemas as cards. Each card shows the schema name, tags, field count, description, and last-updated date.
+Click **Schemas** in the sidebar. You'll see any existing schemas as cards (switch to list view with the toggle on the left, next to the scope tabs, if you prefer rows). Each card shows the schema name, tags, field count, description, and last-updated date.
 
 ![The Schemas page showing existing schema cards and the New Schema button](images/sch-01-empty-library.png)
 
@@ -52,7 +52,7 @@ The schema editor has a **JSON** tab that lets you edit the raw schema definitio
 
 When editing an existing schema, the name, tags, and description panel is collapsed by default — click **Edit** in the header to reveal it.
 
-Click **Save**. The schema appears in the library as a card.
+Click **Save**. You stay in the editor — the metadata panel collapses, but the schema is saved. Click the back arrow to return to the library and see it as a card.
 
 ![Electrode Coating schema card in the library showing name, tags (battery, electrode, coating), and field count](images/sch-05-schema-card.png)
 
@@ -63,7 +63,7 @@ The schema is now available across your project. Go to the [Data Studio](Data-St
 ## What to avoid
 
 - **Don't add fields you won't fill consistently.** Sparse data breaks comparisons.
-- **Don't rename or remove fields once data documents exist against this schema.** This can corrupt existing documents. Add a new schema version instead.
+- **Be careful renaming or removing fields once data documents exist against this schema** — this can affect existing documents. Use the version-history dropdown to restore a previous version if something breaks.
 - **Standardise units before you create numeric fields.** Changing units later requires migrating all existing documents.
 
 ---

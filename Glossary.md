@@ -19,7 +19,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 | **Sweep** | A batch simulation run that varies one or more parameters across a range and returns an output surface. See [Simulation Studio → Design Space Exploration](Simulation-Studio#design-space-exploration-sweep). |
 | **TRL** | Technology Readiness Level. Protos is optimized for TRL 0–3 — the early R&D phase where first-principles reasoning and traceability are most critical. |
 | **Trace** | The ability to follow any value in Protos back through its chain of sources to the original reference, experiment, or decision. See [Knowledge Library → Traceability](Knowledge-Library#traceability). |
-| **Version** | A named snapshot of a model at a point in time, managed in [Models](Models). Models can be updated (name, description, tags) via the **Edit** action. To change a model's code, re-register it. |
+| **Version** | A snapshot of a schema, canvas, model, data document, or knowledge document at a point in time. See [Versioning](Versioning). |
 
 ---
 

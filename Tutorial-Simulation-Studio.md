@@ -18,7 +18,7 @@ At least one schema with one data document. If you don't have these yet, start w
 
 ## Step 1 — Open Simulation Studio
 
-Click **Simulation Studio** in the sidebar. Create a new canvas from the **tabs bar** at the top of the editor. Give it a name and a short description of what it calculates.
+Click **Simulation Studio** in the sidebar — you land on the canvas list. Click **New** and choose **New Canvas** to create one. Give it a name and a short description of what it calculates.
 
 Make sure you are in the **Build** tab before adding blocks.
 
@@ -42,7 +42,7 @@ A parameter is a value you control directly on the canvas. You can change it any
 
 ## Step 4 — Add a Calculation block and connect it
 
-From the **Components rail**, select **Calculation**. Write Python code that uses the upstream values, then open the Calculation block and, in the **Upstream Components** field, select the Input and Parameter blocks that feed into it.
+From the **Components rail**, select **Calculation**. Write Python code that uses the upstream values and provide an **Output Schema** describing the shape of what the code returns — the block won't save until the schema is valid JSON. Then open the Calculation block and, in the **Upstream Components** field, select the Input and Parameter blocks that feed into it.
 
 ---
 

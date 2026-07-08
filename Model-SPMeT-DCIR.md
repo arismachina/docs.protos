@@ -47,6 +47,17 @@ Nested under `cell_parameters` in the top-level input.
 | `jelly_roll_count` | `int` | Number of jelly rolls (default: 1) |
 | `electrode_coating_side_count` | `int` | Number of coating sides (default: 2) |
 
+#### Thermal & Electronic Properties (required)
+
+| Field | Type | Description |
+|---|---|---|
+| `positive_electrode_specific_heat_capacity_J_kg_K` | `float` | Positive electrode specific heat capacity [J/(kg·K)] |
+| `negative_electrode_specific_heat_capacity_J_kg_K` | `float` | Negative electrode specific heat capacity [J/(kg·K)] |
+| `positive_electrode_thermal_conductivity_W_m_K` | `float` | Positive electrode thermal conductivity [W/(m·K)] |
+| `negative_electrode_thermal_conductivity_W_m_K` | `float` | Negative electrode thermal conductivity [W/(m·K)] |
+| `positive_electrode_electronic_conductivity_S_m` | `float` | Positive electrode electronic conductivity [S/m] |
+| `negative_electrode_electronic_conductivity_S_m` | `float` | Negative electrode electronic conductivity [S/m] |
+
 #### Dimensions
 
 | Field | Type | Description |
@@ -150,7 +161,7 @@ Nested under `simulation_parameters.dcir_conditions`. All fields are lists to su
 | `dcir_pulse_duration_s` | `list[float]` | Pulse duration [s] |
 | `dcir_time_points_s` | `list[float]` | Time points [s] at which to extract DCIR (default: [0.1, 1.0, 10.0, 18.0, 30.0]) |
 
-The model performs a full parametric sweep across all combinations of SOC, temperature, and C-rate.
+The model performs a full parametric sweep (5-way Cartesian product) across all combinations of `dcir_direction` × `dcir_c_rate` × `dcir_pulse_duration_s` × `dcir_temperature_K` × `dcir_soc_pct`. Every list field contributes to the total simulation count, not just SOC/temperature/C-rate.
 
 #### Operating Conditions
 
@@ -178,13 +189,19 @@ The model performs a full parametric sweep across all combinations of SOC, tempe
 | `solver_rtol` | 1e-3 | Solver relative tolerance |
 | `data_sampling_period_s` | 0.1 | Output data sampling period [s] |
 | `use_pybamm_params` | "" | PyBaMM parameter set name (e.g. `"Chen2020"`, `"Prada2013"`, `"ORegan2022"`); empty string uses Chen2020 as base with custom overrides |
+| `mesh_resolution` | `{"x_n": 10, "x_s": 10, "x_p": 10, "r_n": 10, "r_p": 10}` | PyBaMM spatial mesh points per domain (negative/separator/positive electrode thickness, negative/positive particle radius) |
+| `timeseries_rdp_epsilon` | 1e-3 | Ramer-Douglas-Peucker tolerance used to subsample returned time-series output |
+| `positive_electrode_ocv_model` | "polynomial" | OCV model for positive electrode in PyBaMM: `"msmr"`, `"polynomial"`, or `"interpolant"` |
+| `negative_electrode_ocv_model` | "polynomial" | OCV model for negative electrode in PyBaMM: `"msmr"`, `"polynomial"`, or `"interpolant"` |
+| `first_cycle_coulombic_loss_pct` | 5.0 | First-cycle coulombic loss used for initial electrode stoichiometry balancing [%] |
+| `start_soc_pct` | 100.0 | Starting SOC for load-cycle simulation [%]. Accepted by the schema but not currently read by the DCIR sweep path in this model. |
 
 #### Safety Terminations
 
 | Parameter | Default | Description |
 |---|---|---|
-| `anode_potential_safety_threshold_V` | None | Anode potential safety limit [V]; terminates if anode potential drops below this; set to `null` to disable |
-| `temperature_safety_threshold_K` | None | Temperature safety limit [K]; terminates if cell temperature exceeds this; set to `null` to disable |
+| `anode_potential_safety_threshold_V` | 0.01 | Anode potential safety limit [V]. Required, non-nullable float (no `null`/disable option). Only enforced as a PyBaMM termination event during the RPT max-power pulse (`perform_rpt: true`); not applied during the main DCIR sweep. |
+| `temperature_safety_threshold_K` | 363.15 | Temperature safety limit [K] (must be `> 0`). Required, non-nullable float (no `null`/disable option). Only enforced during the RPT max-power pulse (`perform_rpt: true`); not applied during the main DCIR sweep. |
 
 #### Capacity Calibration
 
@@ -265,6 +282,12 @@ Example structure:
     "cell_width_mm": 503.546,
     "cell_height_mm": 88.971,
     "cell_thickness_mm": 9.012,
+    "positive_electrode_specific_heat_capacity_J_kg_K": 700.0,
+    "negative_electrode_specific_heat_capacity_J_kg_K": 700.0,
+    "positive_electrode_thermal_conductivity_W_m_K": 2.1,
+    "negative_electrode_thermal_conductivity_W_m_K": 1.7,
+    "positive_electrode_electronic_conductivity_S_m": 0.18,
+    "negative_electrode_electronic_conductivity_S_m": 215.0,
     "positive_coating_thickness_um": 87.3,
     "negative_coating_thickness_um": 115.3,
     "positive_electrode_active_materials": [
@@ -307,7 +330,32 @@ Example structure:
 **Voltage Range:** 2.5V - 4.2V (configurable)  
 **Form Factor:** Pouch (88.97mm x 503.5mm electrodes)
 
-### DCIR Conditions: Default Sweep
+**Note:** the request body also requires a top-level `simulation_parameters` key alongside `cell_parameters` (both are required by `SpmetDCIRInput`). Every field inside `simulation_parameters` has a default, so `"simulation_parameters": {}` alone is a valid (if minimal) value — see the sweep examples below for a more realistic value.
+
+### DCIR Conditions: Actual Default Sweep
+
+If `simulation_parameters.dcir_conditions` is omitted entirely, `SimulationParameters` falls back to this default:
+
+```json
+{
+  "simulation_parameters": {
+    "dcir_conditions": {
+      "dcir_soc_pct": [50, 100],
+      "dcir_temperature_K": [298.15, 323.15],
+      "dcir_c_rate": [2.0],
+      "dcir_direction": ["discharge", "charge"],
+      "dcir_pulse_duration_s": [10.0],
+      "dcir_time_points_s": [0.1, 1.0, 10.0, 18.0, 30.0]
+    }
+  }
+}
+```
+
+The sweep is a full 5-way Cartesian product across `dcir_direction` × `dcir_c_rate` × `dcir_pulse_duration_s` × `dcir_temperature_K` × `dcir_soc_pct`. With this default (2 directions × 1 C-rate × 1 duration × 2 temperatures × 2 SOC values), that is **8 simulations**, not 4.
+
+### DCIR Conditions: Custom Sweep Example
+
+A smaller, single-direction sweep (used for the results below):
 
 ```json
 {
@@ -329,7 +377,7 @@ This performs 4 simulations (2 SOC × 2 temperature) with 1 C-rate and 1 directi
 ## Example Results
 
 ```
-Pouch 80Ah NMC811, SOC 50-80%, Temperature 25-45°C, 1C discharge
+Pouch 80Ah NMC811, SOC 50-80%, Temperature 25-45°C, 1C discharge (custom sweep example above)
 
 Results: 4 simulations
 - SOC 50%, 25°C: DCIR = {0.1s: 0.85 mΩ, 1.0s: 0.92 mΩ, 10.0s: 1.05 mΩ, 18.0s: 1.12 mΩ, 30.0s: 1.18 mΩ}

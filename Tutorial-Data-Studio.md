@@ -54,7 +54,7 @@ Double-click any cell to change its value without leaving the Data Studio. Press
 
 ## Step 6 — Analysis Panel
 
-**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that contains chart tabs (bar chart, scatter plot) and a Gap Analysis tab (coming soon) for comparing values against requirement bounds.
+**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab (comparison against requirement bounds is coming soon) plus chart tabs (bar chart, scatter plot). Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects.
 
 ---
 

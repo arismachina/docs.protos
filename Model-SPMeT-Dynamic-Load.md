@@ -61,6 +61,17 @@ Nested under `cell_parameters` in the top-level input.
 | `positive_coating_thickness_um` | `float` | Positive electrode coating thickness [μm] |
 | `negative_coating_thickness_um` | `float` | Negative electrode coating thickness [μm] |
 
+#### Thermal & Electronic Properties (required)
+
+| Field | Type | Description |
+|---|---|---|
+| `positive_electrode_specific_heat_capacity_J_kg_K` | `float` | Positive electrode specific heat capacity [J/kg/K] |
+| `negative_electrode_specific_heat_capacity_J_kg_K` | `float` | Negative electrode specific heat capacity [J/kg/K] |
+| `positive_electrode_thermal_conductivity_W_m_K` | `float` | Positive electrode thermal conductivity [W/m/K] |
+| `negative_electrode_thermal_conductivity_W_m_K` | `float` | Negative electrode thermal conductivity [W/m/K] |
+| `positive_electrode_electronic_conductivity_S_m` | `float` | Positive electrode electronic conductivity [S/m] |
+| `negative_electrode_electronic_conductivity_S_m` | `float` | Negative electrode electronic conductivity [S/m] |
+
 #### Formulation (required)
 
 Each formulation is a list of structured objects with properties:
@@ -96,6 +107,14 @@ Each formulation is a list of structured objects with properties:
 | `negative_electrode_foil_thickness_um` | `float` | 6.0 | Negative foil thickness [μm] |
 | `positive_electrode_foil_density_g_cm3` | `float` | 2.7 | Positive foil density [g/cm³] |
 | `negative_electrode_foil_density_g_cm3` | `float` | 8.96 | Negative foil density [g/cm³] |
+| `positive_electrode_foil_electronic_conductivity_S_m` | `float` | 3.5e7 | Positive foil electronic conductivity [S/m] |
+| `negative_electrode_foil_electronic_conductivity_S_m` | `float` | 3.5e7 | Negative foil electronic conductivity [S/m] |
+| `positive_electrode_foil_specific_heat_capacity_J_kg_K` | `float` | 900.0 | Positive foil specific heat capacity [J/kg/K] |
+| `negative_electrode_foil_specific_heat_capacity_J_kg_K` | `float` | 385.0 | Negative foil specific heat capacity [J/kg/K] |
+| `positive_electrode_foil_thermal_conductivity_W_m_K` | `float` | 237.0 | Positive foil thermal conductivity [W/m/K] |
+| `negative_electrode_foil_thermal_conductivity_W_m_K` | `float` | 401.0 | Negative foil thermal conductivity [W/m/K] |
+| `separator_specific_heat_capacity_J_kg_K` | `float` | 1000.0 | Separator specific heat capacity [J/kg/K] |
+| `separator_thermal_conductivity_W_m_K` | `float` | 0.334 | Separator thermal conductivity [W/m/K] |
 | `volume_packing_ratio` | `float` | 0.95 | Volume packing ratio |
 | `electrode_overhang_mm` | `float` | 1.0 | Electrode overhang [mm] |
 | `jelly_roll_inner_diameter_mm` | `float` | 4.0 | Inner JR diameter [mm] |
@@ -110,6 +129,8 @@ Each formulation is a list of structured objects with properties:
 | `separator_tortuosity` | `float` or None | Separator tortuosity (optional) |
 
 **Note:** `nominal_capacity_Ah` is computed internally from electrode design parameters (mass loading, sheet count, active material specific capacity) and is not required as input.
+
+**Note:** `CellParametersInput` also accepts `upper_voltage_cutoff_V` (default 4.2) and `lower_voltage_cutoff_V` (default 3.0), mirroring the fields on `SimulationParameters`. Only the copies nested under `simulation_parameters` are read by the solver (calibration, drive-cycle termination events, and voltage bounds all reference `sim_params.upper_voltage_cutoff_V` / `sim_params.lower_voltage_cutoff_V`); the `cell_parameters` copies are accepted but currently unused at runtime. Set the cutoffs under `simulation_parameters` to affect the simulation.
 
 ### Load Cycle (`LoadCycleInput`)
 
@@ -168,6 +189,38 @@ Nested under `simulation_parameters` in the top-level input.
 | `anode_potential_safety_threshold_V` | 0.01 | Anode potential safety limit [V]; terminates if anode potential drops below this; set to `null` to disable |
 | `temperature_safety_threshold_K` | 363.15 | Temperature safety limit [K]; terminates if cell temperature exceeds this; set to `null` to disable |
 
+#### OCV Model
+
+| Parameter | Default | Description |
+|---|---|---|
+| `positive_electrode_ocv_model` | `"polynomial"` | OCV model for positive electrode in PyBaMM; one of `"msmr"`, `"polynomial"`, `"constant"`, `"table"` |
+| `negative_electrode_ocv_model` | `"polynomial"` | OCV model for negative electrode in PyBaMM; one of `"msmr"`, `"polynomial"`, `"interpolant"`, `"table"` |
+
+#### Timeseries Subsampling
+
+| Parameter | Default | Description |
+|---|---|---|
+| `timeseries_rdp_epsilon` | 1e-3 | Ramer-Douglas-Peucker tolerance used to subsample the returned timeseries; higher values return fewer points |
+
+#### Reference Performance Test (RPT)
+
+Optional sub-protocol that layers a DCIR pulse and a sustained power pulse on
+top of the drive cycle simulation.
+
+| Parameter | Default | Description |
+|---|---|---|
+| `perform_rpt` | `false` | Whether to perform the reference performance test (DCIR + power pulse) |
+| `rpt_dcir.dcir_c_rate` | 2.0 | DCIR pulse C-rate |
+| `rpt_dcir.dcir_direction` | `"discharge"` | DCIR pulse direction (`"charge"` or `"discharge"`) |
+| `rpt_dcir.dcir_soc_pct` | 50.0 | DCIR pulse SOC [%] |
+| `rpt_dcir.dcir_temperature_K` | 298.15 | DCIR pulse temperature [K] |
+| `rpt_dcir.dcir_pulse_duration_s` | 10.0 | DCIR pulse duration [s] |
+| `rpt_dcir.dcir_rest_s` | 1.0 | Rest time after the DCIR pulse [s] |
+| `rpt_power.power_level_W` | 2000.0 | Power pulse level [W] |
+| `rpt_power.power_duration_s` | 300.0 | Power pulse duration [s] |
+| `rpt_power.power_direction` | `"discharge"` | Power pulse direction (`"charge"` or `"discharge"`) |
+| `rpt_power.power_soc_pct` | 50.0 | Power pulse SOC [%] |
+
 ### Load Cycle (`LoadCycleInput`)
 
 | Field | Type | Description |
@@ -225,7 +278,7 @@ All arrays have the same length (one value per `data_sampling_period_s`):
 - `summary` -- `SummaryOutput`
 - `energy_analysis` -- `EnergyAnalysisOutput`
 - `config` -- echo of simulation parameters
-- `error`, `traceback` -- on failure
+- `error` -- error message on failure (there is no `traceback` field in the output)
 
 ## Default Configuration
 
@@ -247,6 +300,12 @@ Example structure:
     "cell_thickness_mm": 9.012,
     "positive_coating_thickness_um": 87.3,
     "negative_coating_thickness_um": 115.3,
+    "positive_electrode_specific_heat_capacity_J_kg_K": 900.0,
+    "negative_electrode_specific_heat_capacity_J_kg_K": 1100.0,
+    "positive_electrode_thermal_conductivity_W_m_K": 1.58,
+    "negative_electrode_thermal_conductivity_W_m_K": 1.04,
+    "positive_electrode_electronic_conductivity_S_m": 0.18,
+    "negative_electrode_electronic_conductivity_S_m": 215.0,
     "positive_electrode_active_materials": [
       {
         "name": "NMC811_Generic_v1",
@@ -278,6 +337,15 @@ Example structure:
     "separator_thickness_um": 18.0,
     "separator_porosity": 0.4,
     "separator_density_g_cm3": 0.95
+  },
+  "simulation_parameters": {
+    "start_soc_pct": 80.0,
+    "ambient_temperature_K": 298.15,
+    "load_cycle": {
+      "label": "aero_quad_drone",
+      "time_s": [0, 150, 300, 450, 599],
+      "power_W": [24.0, 84.0, 60.0, 84.0, 24.0]
+    }
   }
 }
 ```
