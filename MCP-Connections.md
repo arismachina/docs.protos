@@ -5,13 +5,13 @@
 MCP (Model Context Protocol) connects Protos and external tools. It works in **two directions**:
 
 - **Protos → external tools (outbound):** connect tools like Notion, Linear, or Sentry *into* the Co-engineer, so it can use them during a conversation. This is the bulk of this page.
-- **An MCP client → Protos (inbound):** Protos is itself a standard MCP server, so an MCP-compatible client can connect *to* Protos and drive your Co-engineer from outside the app. Claude (desktop or web) is the worked example, with in-app setup steps. See [Use Protos in Claude](#use-protos-in-claude).
+- **An MCP client → Protos (inbound):** Protos is itself a standard MCP server, so an MCP-compatible client can connect *to* Protos and drive your Co-engineer from outside the app. Claude (desktop or web) is the worked example, with in-app setup steps. See [Use Protos from an MCP client](#use-protos-from-an-mcp-client).
 
 ---
 
 ## On This Page
 
-- [Use Protos in Claude](#use-protos-in-claude)
+- [Use Protos from an MCP client](#use-protos-from-an-mcp-client)
 - [Connecting external tools to the Co-engineer](#connecting-external-tools-to-the-co-engineer)
 - [How It Works](#how-it-works)
 - [Setting Up a Connection](#setting-up-a-connection)
@@ -21,7 +21,7 @@ MCP (Model Context Protocol) connects Protos and external tools. It works in **t
 
 ---
 
-## Use Protos in Claude
+## Use Protos from an MCP client
 
 *This is the **inbound** direction: an MCP client connecting to Protos.*
 
