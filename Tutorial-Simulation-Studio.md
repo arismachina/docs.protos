@@ -6,7 +6,7 @@
 
 This tutorial walks you through building a canvas from an empty state. Takes about 10 minutes.
 
-> **The Co-engineer can build this for you.** Say: *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."* It will create the canvas, add the blocks, write the Python code, and wire everything together. You then review and approve the calculation before it runs. This tutorial is for when you want to understand how to build one yourself.
+> **The Co-Engineer can build this for you.** Say: *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."* It will create the canvas, add the blocks, write the Python code, and wire everything together. You then review and approve the calculation before it runs. This tutorial is for when you want to understand how to build one yourself.
 
 ---
 

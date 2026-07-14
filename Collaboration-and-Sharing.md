@@ -89,11 +89,11 @@ When you share a resource, the person you share it with gets one of three roles:
 
 ## Sharing Resources
 
-Sharing works across projects, canvases, schemas, data documents, models, and co-engineer chats — all through the same **Share** dialog. Sharing is currently in beta.
+Sharing works across projects, canvases, schemas, data documents, models, and Co-Engineer chats — all through the same **Share** dialog. Sharing is currently in beta.
 
 ### How to share
 
-1. Open the resource you want to share (project, canvas, schema, data document, model, or co-engineer chat).
+1. Open the resource you want to share (project, canvas, schema, data document, model, or Co-Engineer chat).
 2. Click the **⋯** menu and select **Share**.
 3. Select a role (**Editor** or **Viewer**) from the role dropdown.
 4. Choose who to add access for — pick one of the three tabs:
@@ -108,7 +108,7 @@ To share with your entire community at once, click **Share with everyone** above
 
 Access is given immediately as you add people. Click **Close** when done.
 
-> For projects and co-engineer chats, **owners and editors** can manage sharing. For canvases, schemas, data documents, and models, only the **owner** can manage sharing — editors cannot reshare.
+> For projects and Co-Engineer chats, **owners and editors** can manage sharing. For canvases, schemas, data documents, and models, only the **owner** can manage sharing — editors cannot reshare.
 
 ### Who has access
 
@@ -168,7 +168,7 @@ Soft locks prevent conflicting edits by showing you when a teammate is already e
 
 ### Canvas component locks
 
-When a team member opens a canvas component for editing, that component shows a **"[Name] is editing"** badge. If the Co-engineer is making the edit on their behalf, it shows **"[Name]'s copilot is editing"** instead. Other users can still view the component but should wait for the lock to release before editing.
+When a team member opens a canvas component for editing, that component shows a **"[Name] is editing"** badge. If the Co-Engineer is making the edit on their behalf, it shows **"[Name]'s copilot is editing"** instead. Other users can still view the component but should wait for the lock to release before editing.
 
 The lock releases automatically when the editor closes the component panel, navigates away, or after roughly 60 seconds of inactivity.
 
@@ -180,14 +180,14 @@ The same lock badge appears on schemas, data documents, and models. When someone
 
 ## Shared Co-Engineer Chats
 
-Co-engineer sessions can be shared with community members.
+Co-Engineer sessions can be shared with community members.
 
 1. Open a chat session and click **Share**.
 2. Assign **Editor** or **Viewer** access to individuals, teams, or the whole community.
 3. Shared sessions appear under **Shared with me** in the chat session list.
 4. **Viewers** see a read-only transcript. **Editors** can continue the conversation.
 
-When an editor sends a message in a shared session, other **editors** who have that session open see the message bubble and a **"Co-Engineer is responding…"** indicator appear right away. **Viewers**, who see the session through the read-only shared-session viewer, see the message and the completed reply appear together only once the Co-engineer finishes the turn.
+When an editor sends a message in a shared session, other **editors** who have that session open see the message bubble and a **"Co-Engineer is responding…"** indicator appear right away. **Viewers**, who see the session through the read-only shared-session viewer, see the message and the completed reply appear together only once the Co-Engineer finishes the turn.
 
 ---
 

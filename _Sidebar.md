@@ -23,7 +23,7 @@
   - [SPMeT DCIR](Model-SPMeT-DCIR)
   - [SPMeT Dynamic Load](Model-SPMeT-Dynamic-Load)
 - [Knowledge Library](Knowledge-Library)
-- [Co-engineer](Co-engineer)
+- [Co-Engineer](Co-engineer)
 - [MCP Connections](MCP-Connections)
 
 ---
@@ -39,7 +39,7 @@
 **Tutorials**
 - [Creating Your First Schema](Tutorial-Schemas)
 - [Setting Up Your Knowledge Library](Tutorial-Knowledge-Library)
-- [Working with the Co-engineer](Tutorial-Co-engineer)
+- [Working with the Co-Engineer](Tutorial-Co-engineer)
 - [Using the Data Studio](Tutorial-Data-Studio)
 - [Registering Your First Model](Tutorial-Model-Library)
 - [Building Your First Canvas](Tutorial-Simulation-Studio)

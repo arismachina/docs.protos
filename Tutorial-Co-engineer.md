@@ -1,22 +1,22 @@
-# Tutorial: Working with the Co-engineer
+# Tutorial: Working with the Co-Engineer
 
-[← Home](Home) · [← Co-engineer](Co-engineer)
+[← Home](Home) · [← Co-Engineer](Co-engineer)
 
-> For a full list of capabilities and how it gets smarter over time, see [Co-engineer](Co-engineer).
+> For a full list of capabilities and how it gets smarter over time, see [Co-Engineer](Co-engineer).
 
-This tutorial shows you what the Co-engineer does when you use it — what to ask, what happens, and how to verify the results. Takes about 10 minutes.
+This tutorial shows you what the Co-Engineer does when you use it — what to ask, what happens, and how to verify the results. Takes about 10 minutes.
 
 ---
 
 ## Before you start
 
-The Co-engineer works best when you have at least one document in the **Knowledge** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
+The Co-Engineer works best when you have at least one document in the **Knowledge** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
 
 ---
 
 ## Step 1 — Ask it to create a schema
 
-The Co-engineer icon is in the top-right corner of the header. The icon is not shown on the home screen or when the chat panel is already open. Click it to open the panel, then type:
+The Co-Engineer icon is in the top-right corner of the header. The icon is not shown on the home screen or when the chat panel is already open. Click it to open the panel, then type:
 
 > *"Create a schema for electrode coating experiments with fields for coating thickness, porosity, active material type, and mass loading."*
 

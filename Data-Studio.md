@@ -4,7 +4,7 @@
 
 The Data Studio is where you manage your design data and decide what goes into your simulations.
 
-> **The Co-engineer can manage this for you.** Ask it to activate specific documents, create new documents from a file, or set up the Data Studio for a particular schema. You come here directly when you want to compare values visually or edit inline.
+> **The Co-Engineer can manage this for you.** Ask it to activate specific documents, create new documents from a file, or set up the Data Studio for a particular schema. You come here directly when you want to compare values visually or edit inline.
 
 ---
 
@@ -78,7 +78,7 @@ Data Studio (which data) → Canvas (what to do with it) → Results
 
 - [Schemas](Schemas) — define the structure your data documents follow
 - [Simulation Studio](Simulation-Studio) — build and run the calculations that use your activated documents
-- [Co-engineer](Co-engineer) — the Co-engineer can create data documents and activate them in the Data Studio on your behalf
+- [Co-Engineer](Co-engineer) — the Co-Engineer can create data documents and activate them in the Data Studio on your behalf
 
 ---
 

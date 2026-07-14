@@ -51,14 +51,14 @@ nav:
   - Design:
     - Data Studio: Data-Studio.md
     - Simulation Studio: Simulation-Studio.md
-  - Co-engineer: Co-engineer.md
+  - Co-Engineer: Co-engineer.md
   - MCP Connections: MCP-Connections.md
   - Collaboration & Sharing: Collaboration-and-Sharing.md
   - Glossary: Glossary.md
   - Tutorials:
     - Creating Your First Schema: Tutorial-Schemas.md
     - Setting Up Your Knowledge Library: Tutorial-Knowledge-Library.md
-    - Working with the Co-engineer: Tutorial-Co-engineer.md
+    - Working with the Co-Engineer: Tutorial-Co-engineer.md
     - Using the Data Studio: Tutorial-Data-Studio.md
     - Registering Your First Model: Tutorial-Model-Library.md
     - Building Your First Canvas: Tutorial-Simulation-Studio.md

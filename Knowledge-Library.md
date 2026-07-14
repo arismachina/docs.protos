@@ -4,7 +4,7 @@
 
 The **Knowledge Library** is Protos's institutional memory. Every decision, data point, and reference is captured here and linked to the design artifacts that used it — so nothing is ever lost between projects, teams, or people.
 
-> **Set this up before using the Co-engineer.** The Co-engineer draws on the Knowledge Library when creating schemas, filling data documents, and answering questions. The richer the library, the more grounded and traceable its output.
+> **Set this up before using the Co-Engineer.** The Co-Engineer draws on the Knowledge Library when creating schemas, filling data documents, and answering questions. The richer the library, the more grounded and traceable its output.
 
 ---
 
@@ -29,7 +29,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 | **Internal reports** | Experimental summaries, design reviews, test reports |
 | **Decisions** | Why a parameter value was chosen; why an approach was rejected |
 | **Experimental results** | Test reports and datasets uploaded as files or captured as text notes |
-| **AI-surfaced connections** | [Co-engineer](Co-engineer) surfaces relevant prior work as you design |
+| **AI-surfaced connections** | [Co-Engineer](Co-engineer) surfaces relevant prior work as you design |
 
 ---
 
@@ -45,9 +45,9 @@ Every document is automatically classified by where it came from, so you can tel
 | **Forum** | Forum and discussion threads |
 | **Datasheet** | Manufacturer datasheets and spec tables |
 | **Uploaded** | Files you uploaded directly |
-| **Memory** | Knowledge notes you (or the Co-engineer) captured as text |
+| **Memory** | Knowledge notes you (or the Co-Engineer) captured as text |
 | **Model Run** | Content generated from a model run |
-| **Conversation** | Knowledge captured from a Co-engineer conversation |
+| **Conversation** | Knowledge captured from a Co-Engineer conversation |
 | **Reference Knowledge** | Reference material surfaced for grounding |
 
 Protos assigns a category on ingestion, and the owner can change it at any time: open the **⋯** row actions and use **Set category** (or select several rows to set the category in bulk).
@@ -61,9 +61,9 @@ Protos assigns a category on ingestion, and the owner can change it at any time:
 3. In the table, narrow the list with the **category filter chips** (Research, Article, Web, …), each showing a count. Combine them with the **tag filter** and the search box.
 4. If documents have been shared with you, **Mine** and **Shared** chips also appear so you can switch between your own documents and ones others shared. A marker on each shared row shows it came from someone else.
 5. Use the search box to find items by **title, folder name, or tag** — it doesn't search document content or notes.
-6. Click any item to see its full content, its [source categories and tags](#tags), the sources that informed it, and what it is [used by](#traceability-and-connections). From here you can also **download** the original file (or the extracted text, for conversation-sourced entries) and, for entries created from a Co-engineer conversation, jump back to that conversation.
+6. Click any item to see its full content, its [source categories and tags](#tags), the sources that informed it, and what it is [used by](#traceability-and-connections). From here you can also **download** the original file (or the extracted text, for conversation-sourced entries) and, for entries created from a Co-Engineer conversation, jump back to that conversation.
 
-> **Tip:** Before starting a new project or design iteration, browse the library for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
+> **Tip:** Before starting a new project or design iteration, browse the library for prior experiments and decisions in the same domain. [Co-Engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
 
 ---
 
@@ -74,7 +74,7 @@ Protos assigns a category on ingestion, and the owner can change it at any time:
 1. Click **Add → Upload Document**.
 2. Choose a file — PDF, DOCX, Excel, CSV, TXT, images, and more. Up to 100 MB.
 3. The title is auto-filled from the filename — edit it if needed.
-4. Click **Upload**. Protos parses and chunks the content, making it available to the Co-engineer.
+4. Click **Upload**. Protos parses and chunks the content, making it available to the Co-Engineer.
 
 ### Add a knowledge note
 
@@ -105,7 +105,7 @@ Documents can be organized with your own **tags**. Add or remove tags inline fro
 
 ## Traceability and Connections
 
-When the Co-engineer creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Co-engineer said so" but the specific source passage, with a citation that links straight back to it.
+When the Co-Engineer creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Co-Engineer said so" but the specific source passage, with a citation that links straight back to it.
 
 ```
 Field value in data document
@@ -115,7 +115,7 @@ Field value in data document
 
 ### Used by
 
-Each document's detail page has a **Used by** panel — the reverse of a citation. It lists the schemas, data documents, models, and canvases that were built from that document, so you can see the downstream impact of a source before you change or remove it. For a document that came from a Co-engineer conversation, this panel is instead titled **"Modified in this conversation"** and lists what was created or edited during that chat.
+Each document's detail page has a **Used by** panel — the reverse of a citation. It lists the schemas, data documents, models, and canvases that were built from that document, so you can see the downstream impact of a source before you change or remove it. For a document that came from a Co-Engineer conversation, this panel is instead titled **"Modified in this conversation"** and lists what was created or edited during that chat.
 
 ### Graph views
 
@@ -151,7 +151,7 @@ Shared documents appear in the recipient's library under the **Shared** filter, 
 
 ## See Also
 
-- [Co-engineer](Co-engineer) — surfaces Knowledge Library entries automatically as you work
+- [Co-Engineer](Co-engineer) — surfaces Knowledge Library entries automatically as you work
 - [Schemas](Schemas) — data documents created from knowledge sources link back to their chunks
 - [Simulation Studio](Simulation-Studio) — link simulation results back to knowledge sources
 - [Collaboration & Sharing](Collaboration-and-Sharing#sharing-resources) — how read-only sharing propagates to sources

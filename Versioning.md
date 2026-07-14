@@ -15,7 +15,7 @@ Protos keeps a version history for your key assets — so you can see what chang
 - [Restoring a Previous Version](#restoring-a-previous-version)
 - [Keeping Dependencies Up to Date](#keeping-dependencies-up-to-date)
 - [Data Documents Version Differently](#data-documents-version-differently)
-- [Co-engineer and Versioning](#co-engineer-and-versioning)
+- [Co-Engineer and Versioning](#co-engineer-and-versioning)
 - [Community Changelog](#community-changelog)
 - [How This Relates to Publications](#how-this-relates-to-publications)
 
@@ -78,9 +78,9 @@ Unlike schemas, canvases, and models, a data document doesn't get a new version 
 
 ---
 
-## Co-engineer and Versioning
+## Co-Engineer and Versioning
 
-Ask the Co-engineer about version history directly — things like *"What changed between v2 and v3 of this schema?"*, *"Show me this canvas's version history,"* or *"Is this canvas up to date with its dependencies?"* It can list a resource's versions, show a diff between any two, check whether a canvas's pinned dependencies are outdated, and — with your confirmation — restore a **schema**, **canvas**, or **data document** to a past version, or re-pin a canvas to the latest dependency versions. Model and knowledge-document versions can only be browsed, not restored, through the Co-engineer; restore those from their own version-history UI instead.
+Ask the Co-Engineer about version history directly — things like *"What changed between v2 and v3 of this schema?"*, *"Show me this canvas's version history,"* or *"Is this canvas up to date with its dependencies?"* It can list a resource's versions, show a diff between any two, check whether a canvas's pinned dependencies are outdated, and — with your confirmation — restore a **schema**, **canvas**, or **data document** to a past version, or re-pin a canvas to the latest dependency versions. Model and knowledge-document versions can only be browsed, not restored, through the Co-Engineer; restore those from their own version-history UI instead.
 
 ---
 

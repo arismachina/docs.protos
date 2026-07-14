@@ -6,7 +6,7 @@
 
 This tutorial walks you through registering a Python script and verifying it works in a canvas. Takes about 10 minutes.
 
-> **The Co-engineer can register models for you.** Upload your script in the Co-engineer chat and say *"Register this as a model."* It will infer the input/output schema automatically and handle the registration. This tutorial is for when you want to do it manually or understand what's happening under the hood.
+> **The Co-Engineer can register models for you.** Upload your script in the Co-Engineer chat and say *"Register this as a model."* It will infer the input/output schema automatically and handle the registration. This tutorial is for when you want to do it manually or understand what's happening under the hood.
 
 ---
 

@@ -4,9 +4,9 @@
 
 > For full details on adding documents, folder uploads, and traceability, see [Knowledge Library](Knowledge-Library).
 
-This tutorial shows you how to upload your reference material so the Co-engineer can use it. Takes about 5 minutes.
+This tutorial shows you how to upload your reference material so the Co-Engineer can use it. Takes about 5 minutes.
 
-> **Do this first, before anything else.** The Co-engineer draws on the Knowledge Library for every task — creating schemas, filling in data documents, answering questions. The richer the library, the better and more traceable its output. An empty library means generic answers; a populated library means answers grounded in your actual project data.
+> **Do this first, before anything else.** The Co-Engineer draws on the Knowledge Library for every task — creating schemas, filling in data documents, answering questions. The richer the library, the better and more traceable its output. An empty library means generic answers; a populated library means answers grounded in your actual project data.
 
 ---
 
@@ -26,13 +26,13 @@ Click **+ Add**. A dropdown appears with three options:
 - **Upload Folder** — bulk upload many files at once. A progress indicator tracks succeeded and failed files.
 - **Add Knowledge** — type a note directly without a file. Use this for decisions and rationale captured in the moment.
 
-Choose **Upload Document**, select your file, give it a name, and click Upload. Protos splits it into chunks and embeds them so the Co-engineer can search across the content.
+Choose **Upload Document**, select your file, give it a name, and click Upload. Protos splits it into chunks and embeds them so the Co-Engineer can search across the content.
 
 ---
 
-## Step 3 — Or let the Co-engineer create knowledge from a conversation
+## Step 3 — Or let the Co-Engineer create knowledge from a conversation
 
-Notice the **Create with Co-Engineer** button at the top. Click **Create with Co-Engineer** to open a Co-engineer session pre-loaded with a prompt to help you add knowledge — describe what you want to capture and the Co-engineer will guide you through creating entries.
+Notice the **Create with Co-Engineer** button at the top. Click **Create with Co-Engineer** to open a Co-Engineer session pre-loaded with a prompt to help you add knowledge — describe what you want to capture and the Co-Engineer will guide you through creating entries.
 
 ---
 
@@ -52,7 +52,7 @@ Search for a keyword from the **title, folder name, or a tag** of a document you
 
 ## Next step
 
-→ [Tutorial: Working with the Co-engineer](Tutorial-Co-engineer) — now that the library is populated, use the Co-engineer to build your first schema from it.
+→ [Tutorial: Working with the Co-Engineer](Tutorial-Co-engineer) — now that the library is populated, use the Co-Engineer to build your first schema from it.
 
 ---
 

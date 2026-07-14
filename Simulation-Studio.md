@@ -4,7 +4,7 @@
 
 Simulation Studio is where you build calculations, connect models to your data, and run simulations. You work on a visual canvas — a graph of connected blocks where data flows from inputs through to outputs.
 
-> **The Co-engineer can build canvases for you.** Describe what you want to calculate and it will create the blocks, write the code, and wire everything together. You then review the code and approve it before it runs.
+> **The Co-Engineer can build canvases for you.** Describe what you want to calculate and it will create the blocks, write the code, and wire everything together. You then review the code and approve it before it runs.
 
 ---
 
@@ -33,7 +33,7 @@ Simulation Studio shows a list of your canvases. Each canvas is a graph of conne
 
 You connect them left to right. Data flows through the chain automatically — when an input changes, everything downstream recalculates.
 
-> **Model blocks work differently.** You can't add a Model block by hand — it's set up by the Co-engineer, and using models currently requires a paid plan.
+> **Model blocks work differently.** You can't add a Model block by hand — it's set up by the Co-Engineer, and using models currently requires a paid plan.
 
 ---
 
@@ -67,7 +67,7 @@ The **⋯** (more actions) button in the Build toolbar opens a menu with **Share
 
 ### Version History
 
-Every meaningful change to a canvas's components or metadata creates a new version. Open the version button in the header to browse past versions, compare any two, label one for later, or restore it — restoring creates a new version rather than erasing anything. If a schema, model, or data document this canvas depends on gets a newer version, an **"Update available"** banner appears; click **Update** to re-pin all outdated dependencies at once. Ask the Co-engineer to check for you too — see [Versioning](Versioning) for the full picture.
+Every meaningful change to a canvas's components or metadata creates a new version. Open the version button in the header to browse past versions, compare any two, label one for later, or restore it — restoring creates a new version rather than erasing anything. If a schema, model, or data document this canvas depends on gets a newer version, an **"Update available"** banner appears; click **Update** to re-pin all outdated dependencies at once. Ask the Co-Engineer to check for you too — see [Versioning](Versioning) for the full picture.
 
 ### Components rail
 
@@ -91,7 +91,7 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 1. Open **Simulation Studio** from the sidebar — you land on the canvas list.
 2. Click an existing canvas to open it, or click **New** (a dropdown with **New Canvas** and **Import Canvas** options) to create one.
-3. The canvas opens in the **Build** tab. Add blocks from the **Components rail** on the left and connect them — the Co-engineer can build the canvas for you if you describe what you are modelling.
+3. The canvas opens in the **Build** tab. Add blocks from the **Components rail** on the left and connect them — the Co-Engineer can build the canvas for you if you describe what you are modelling.
 4. For any **Calculation** block, click **Approve** before it will execute (this is a trust gate — you confirm the code is safe to run).
 
 ---
@@ -129,7 +129,7 @@ To set up a sweep:
 
 - **Connect inputs from the Data Studio** rather than typing values manually — this links your results back to the exact document that produced them.
 - **Name your canvases clearly** — you can have multiple canvases open as tabs for different calculations.
-- **Use the Co-engineer** to build calculations — describe what you want to compute and it will write the Python code and wire it up.
+- **Use the Co-Engineer** to build calculations — describe what you want to compute and it will write the Python code and wire it up.
 
 ---
 
