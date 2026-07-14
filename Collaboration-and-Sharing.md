@@ -202,7 +202,7 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 - See the canvas parameters and outputs
 - Adjust parameter values and re-run the canvas interactively
 - **Choose which data documents feed the canvas.** When a canvas has input or data-input components and the owner enabled the data tab at publish time, the Visualization tab shows a checkbox for each data document. Viewers pick which documents to feed in and re-run against their own selection, rather than being locked to the snapshot's defaults.
-- **Re-run the canvas's external models** — *if the owner allows it.* When the owner opts in per canvas at publish time, viewers can re-run model components that call external providers, executed on the owner's API key. If the owner leaves this off, those models stay view-only.
+- **Re-run the canvas's external models** — *if the owner allows it.* When the owner has enabled it for a canvas, viewers can re-run model components that call external providers. Otherwise those models stay view-only.
 - **Star the publication as helpful.** A star toggle in the sidebar (tooltip: *"Did you find this helpful?"*) lets a viewer mark the canvas helpful, and the running total is shown next to it — compact once past 999 (e.g. `2K`, `1.2M`). On a password-protected publication, viewers enter the password before they can star.
 
 ### What they cannot see
