@@ -38,13 +38,13 @@ Notice the **Create with Co-Engineer** button at the top. Click **Create with Co
 
 ## Step 4 — Name and tag things so you can find them later
 
-Give each document a clear, consistent title (e.g. by material or document type) — the title is your primary handle for search, which matches title and folder name only. You can also add **tags** to a document (inline on its row or detail page) and later filter the library by tag, and Protos auto-classifies each document into a **source category** (Research, Datasheet, Web, …) you can filter by too. See [Knowledge Library → Tags](Knowledge-Library#tags) for more.
+Give each document a clear, consistent title (e.g. by material or document type). You can also add **tags** to a document (inline on its row or detail page), and Protos auto-classifies each document into a **source category** (Research, Datasheet, Web, …). Search matches titles, folder names, and tags (not document content), and you can filter the library by tag or category. See [Knowledge Library → Tags](Knowledge-Library#tags) for more.
 
 ---
 
 ## Step 5 — Verify it's working
 
-Search for a keyword from the **title or folder name** of a document you just uploaded — the search box matches title/folder only, not document content. If it appears, the library is ready.
+Search for a keyword from the **title, folder name, or a tag** of a document you just uploaded — the search box matches those, not document content. If it appears, the library is ready.
 
 **One thing that matters most:** capture decisions as text notes *as you make them*. A note like *"Chose 1.2 mol/L — Q1 study showed peak conductivity at this concentration"* written in the moment is far more useful than trying to reconstruct it six months later.
 
