@@ -58,7 +58,7 @@ Protos assigns a category on ingestion, and the owner can change it at any time:
 
 1. Open **Knowledge** from the sidebar.
 2. Switch between views with the tabs at the top: **List** (the default flat, paginated view), **Knowledge Graph**, and **Project Graph** — see [Traceability and Connections](#traceability-and-connections).
-3. In the table, narrow the list with the **category filter chips** (Research, Article, Web, …), each showing a count. Combine them with the **tag filter** and the search box.
+3. In the **List** view, narrow things down with the **category filter chips** (Research, Article, Web, …), each showing a count. Combine them with the **tag filter** and the search box.
 4. If documents have been shared with you, **Mine** and **Shared** chips also appear so you can switch between your own documents and ones others shared. A marker on each shared row shows it came from someone else.
 5. Use the search box to find items by **title, folder name, or tag** — it doesn't search document content or notes.
 6. Click any item to see its full content, its [source categories and tags](#tags), the sources that informed it, and what it is [used by](#traceability-and-connections). From here you can also **download** the original file (or the extracted text, for conversation-sourced entries) and, for entries created from a Co-Engineer conversation, jump back to that conversation.

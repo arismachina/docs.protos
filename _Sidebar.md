@@ -30,7 +30,7 @@
 
 **Working Together**
 - [Collaboration & Sharing](Collaboration-and-Sharing)
-- [Canvas Sharing](Collaboration-and-Sharing#canvas-access-levels)
+- [Canvas Sharing](Collaboration-and-Sharing#sharing-resources)
 - [Publishing Externally](Collaboration-and-Sharing#publishing-for-external-access)
 - [Versioning](Versioning)
 
