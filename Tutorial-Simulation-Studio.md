@@ -72,6 +72,8 @@ Here's a completed canvas with three connected blocks: a data input (green), a p
 
 Click any block to open its detail panel and see inputs, outputs, and execution status.
 
+![A calculation block's detail panel — approval status, a preview of its code, its sources, and its upstream and downstream connections](images/sim-07-node-detail-panel.png)
+
 ---
 
 ## Next step
