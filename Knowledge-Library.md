@@ -115,7 +115,7 @@ Field value in data document
 
 ### Used by
 
-Each document's detail page has a **Used by** panel — the reverse of a citation. It lists the schemas, data documents, models, and canvases that were built from that document, so you can see the downstream impact of a source before you change or remove it.
+Each document's detail page has a **Used by** panel — the reverse of a citation. It lists the schemas, data documents, models, and canvases that were built from that document, so you can see the downstream impact of a source before you change or remove it. For a document that came from a Co-engineer conversation, this panel is instead titled **"Modified in this conversation"** and lists what was created or edited during that chat.
 
 ### Graph views
 
