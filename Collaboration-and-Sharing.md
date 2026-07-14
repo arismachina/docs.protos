@@ -201,9 +201,9 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 
 - See the canvas parameters and outputs
 - Adjust parameter values and re-run the canvas interactively
-- **Choose which data documents feed the canvas.** If the canvas has input or data-input components, each one shows a multi-select document picker (limited to the documents matching that component's schema). Viewers tick which documents to feed in and re-run against their own selection, instead of being locked to the snapshot's defaults. This is available whenever the canvas has input components — it does *not* require the data tab.
-- **View and edit the underlying data** — only when the owner enabled the **data tab** at publish. A separate **Data** tab then exposes the linked documents' field values, which viewers can adjust and re-run against.
-- **Star the publication as helpful.** A star toggle in the sidebar (tooltip: *"Did you find this helpful?"*) lets a viewer mark the canvas helpful, and the running total is shown next to it — compact once past 999 (e.g. `2K`, `1.2M`). On a password-protected publication, viewers enter the password before they can star.
+- **Choose which data documents feed the canvas.** If the canvas has input or data-input components, each one shows a multi-select document picker (limited to the documents matching that component's schema). Viewers tick which documents to feed in and re-run against their own selection.
+- **View and edit the underlying data** when the owner has enabled the **Data tab**. It exposes the linked documents' field values, which viewers can adjust and re-run against.
+- **Star the publication as helpful.** A star toggle in the sidebar (tooltip: *"Did you find this helpful?"*) lets a viewer mark the canvas helpful, with the total shown next to it.
 
 > **External models can make a canvas view-only.** The re-run abilities above apply to any canvas the owner left runnable. If a canvas includes a model that calls an external provider, the owner chooses at publish time whether viewers may run it; if they don't opt in, that entire canvas is **view-only** — parameter changes and data-document selections can't be re-run either. Canvases with no external models are always runnable.
 
@@ -218,7 +218,7 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 1. Open **Simulation Studio** from the sidebar. Scroll to the **Publications** section at the bottom of the canvas list and click **Publish**.
 2. Give the publication a **name**.
 3. Select which **canvases to include**.
-4. Optionally check **Include data tab**. This adds a separate **Data** tab to the publication that exposes the linked documents' field values, which viewers can view, edit, and re-run against. (This is independent of the per-input document picker: if a canvas has input components, viewers can already choose which documents feed it and re-run — whether or not the data tab is on.)
+4. Optionally check **Include data tab**. This adds a separate **Data** tab to the publication that exposes the linked documents' field values, which viewers can view, edit, and re-run against. (This is separate from the per-input document picker: viewers can choose which documents feed a canvas and re-run whether or not the data tab is on.)
 5. For any canvas that contains an external model, a per-canvas consent toggle appears: *"Let viewers run this canvas's external model on your API key. Turn off to make it view-only."* It defaults **on**. Leave it on to let external viewers re-run the canvas — its external models run on your key, billed to you. Turn it off to make **that whole canvas view-only** (viewers can't re-run it at all).
 6. Optionally set a **password** for access control.
 7. Click **Publish** — a shareable URL is generated.

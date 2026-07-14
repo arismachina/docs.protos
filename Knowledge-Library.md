@@ -130,7 +130,7 @@ This chain is preserved permanently — even if team members leave or projects a
 
 ## Sharing
 
-Knowledge documents are private to you by default, and can now be **shared read-only** with other people — no one you share with can edit or delete them. There are two ways a document gets shared:
+Knowledge documents are private to you by default, and can be **shared read-only** with other people — no one you share with can edit or delete them. There are two ways a document gets shared:
 
 - **Directly** — open a document and use its **Share** dialog to grant read access to specific people, teams, or an email domain (the same audiences as everywhere else in Protos).
 - **Automatically, with the work built on it** — when you share a project or an asset (schema, data document, model, or canvas), Protos additively shares the Knowledge Library documents that asset cites, so your collaborator can open and reason over the same sources.
