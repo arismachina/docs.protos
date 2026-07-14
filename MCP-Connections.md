@@ -5,7 +5,7 @@
 MCP (Model Context Protocol) connects Protos and external tools. It works in **two directions**:
 
 - **Protos → external tools (outbound):** connect tools like Notion, Linear, or Sentry *into* the Co-engineer, so it can use them during a conversation. This is the bulk of this page.
-- **Claude → Protos (inbound):** Protos is itself an MCP server, so Claude (desktop or web) can connect *to* Protos and drive your Co-engineer from outside the app. See [Use Protos in Claude](#use-protos-in-claude).
+- **An MCP client → Protos (inbound):** Protos is itself a standard MCP server, so an MCP-compatible client can connect *to* Protos and drive your Co-engineer from outside the app. Claude (desktop or web) is the worked example, with in-app setup steps. See [Use Protos in Claude](#use-protos-in-claude).
 
 ---
 
@@ -23,11 +23,11 @@ MCP (Model Context Protocol) connects Protos and external tools. It works in **t
 
 ## Use Protos in Claude
 
-*This is the **inbound** direction: Claude connecting to Protos.*
+*This is the **inbound** direction: an MCP client connecting to Protos.*
 
-Protos exposes a **remote MCP server** so Claude can talk to your Co-engineer directly — list and create projects, browse conversations, and send messages — without opening Protos.
+Protos exposes a **standard remote MCP server** so an MCP-compatible client can talk to your Co-engineer directly — list and create projects, browse conversations, and send messages — without opening Protos. The server URL is `https://<your-protos-domain>/mcp` (for example `https://protos.arismachina.com/mcp`); any client that supports remote MCP servers with OAuth can point at it. The steps below use **Claude**, which has a built-in setup path in Protos.
 
-At the top of the **MCP servers** page (Integrations → MCP servers) you'll see a **"Use your Co-Engineer in Claude"** card. It shows your Protos MCP server URL — `https://<your-protos-domain>/mcp` (for example `https://protos.arismachina.com/mcp`) — with a copy button, and the steps to add it as a custom connector in Claude:
+At the top of the **MCP servers** page (Integrations → MCP servers) you'll see a **"Use your Co-Engineer in Claude"** card. It shows the MCP server URL with a copy button and the steps to add it as a custom connector in Claude:
 
 1. In Claude, open **Settings → Connectors**.
 2. Click **Add custom connector**.
