@@ -50,7 +50,7 @@ Every document is automatically classified by where it came from, so you can tel
 | **Conversation** | Knowledge captured from a Co-engineer conversation |
 | **Reference Knowledge** | Reference material surfaced for grounding |
 
-Protos assigns a category on ingestion. If it gets one wrong, the owner can change it: open the **⋯** row actions and use **Set category** (or select several rows and set the category in bulk).
+Protos assigns a category on ingestion, and the owner can change it at any time: open the **⋯** row actions and use **Set category** (or select several rows to set the category in bulk).
 
 ---
 
@@ -144,7 +144,7 @@ Shared documents appear in the recipient's library under the **Shared** filter, 
 - **Capture decisions as they're made**, not retrospectively. The rationale is clearest in the moment and becomes harder to reconstruct over time.
 - **Link papers to specific claims**, not just to the paper itself. Trace is only useful if it points to the exact piece of evidence that informed a decision.
 - **Use descriptive titles and tags** so documents are easy to find — the title is the primary handle for search (which matches title/folder only), and tags let you group documents across categories.
-- **Fix miscategorized sources**: if a document lands in the wrong source category, correct it with **Set category** so filters and the graph stay accurate.
+- **Keep categories aligned with how you work**: adjust a document's category with **Set category** whenever a different one fits your workflow better, so filters and the graph stay meaningful.
 - **Review the library at project kickoff**: search for prior experiments and decisions before starting new work. Don't repeat work that's already been done.
 
 ---
