@@ -11,9 +11,12 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 ## On This Page
 
 - [What Lives Here](#what-lives-here)
+- [Source Categories](#source-categories)
 - [Finding Knowledge](#finding-knowledge)
 - [Adding to the Library](#adding-to-the-library)
-- [Traceability](#traceability)
+- [Tags](#tags)
+- [Traceability and Connections](#traceability-and-connections)
+- [Sharing](#sharing)
 - [Best Practices](#best-practices)
 
 ---
@@ -30,12 +33,35 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 ---
 
+## Source Categories
+
+Every document is automatically classified by where it came from, so you can tell a peer-reviewed paper apart from a forum thread at a glance. Each category has its own icon in the library table:
+
+| Category | What it means |
+|----------|---------------|
+| **Research** | Peer-reviewed papers, standards, patents |
+| **Article** | Articles and other published web writing |
+| **Web** | General web pages |
+| **Forum** | Forum and discussion threads |
+| **Datasheet** | Manufacturer datasheets and spec tables |
+| **Uploaded** | Files you uploaded directly |
+| **Memory** | Knowledge notes you (or the Co-engineer) captured as text |
+| **Model Run** | Content generated from a model run |
+| **Conversation** | Knowledge captured from a Co-engineer conversation |
+| **Reference Knowledge** | Reference material surfaced for grounding |
+
+Protos assigns a category on ingestion. If it gets one wrong, the owner can change it: open the **⋯** row actions and use **Set category** (or select several rows and set the category in bulk).
+
+---
+
 ## Finding Knowledge
 
 1. Open **Knowledge** from the sidebar.
-2. **Filter** by type using the tabs: All, Custom Knowledge, Reference Knowledge, or Conversations.
-3. Use the search box to find items by **title or folder name** — it doesn't search document content or notes.
-4. Click any item to see its full content and the source documents that informed it. From here you can also **download** the original file (or the extracted text, for conversation-sourced entries) and, for entries created from a Co-engineer conversation, jump back to that conversation.
+2. Switch between views with the tabs at the top: **Table** (the default flat, paginated list), **Knowledge Graph**, and **Project Graph** — see [Traceability and Connections](#traceability-and-connections).
+3. In the table, narrow the list with the **category filter chips** (Research, Article, Web, …), each showing a count. Combine them with the **tag filter** and the search box.
+4. If documents have been shared with you, **Mine** and **Shared** chips also appear so you can switch between your own documents and ones others shared. A marker on each shared row shows it came from someone else.
+5. Use the search box to find items by **title or folder name** — it doesn't search document content or notes.
+6. Click any item to see its full content, its [source categories and tags](#tags), the sources that informed it, and what it is [used by](#traceability-and-connections). From here you can also **download** the original file (or the extracted text, for conversation-sourced entries) and, for entries created from a Co-engineer conversation, jump back to that conversation.
 
 > **Tip:** Before starting a new project or design iteration, browse the library for prior experiments and decisions in the same domain. [Co-engineer](Co-engineer) can also surface relevant entries automatically as you work on the canvas.
 
@@ -67,13 +93,19 @@ For bulk ingestion of many files at once:
 
 ### Managing documents and folders
 
-Use the **⋯** menu on any document or folder row to **Rename** or **Delete** it. From a document's detail page you can also edit its title inline, and edit the content directly for knowledge notes.
+Use the **⋯** menu on any document or folder row to **Rename**, **Set category**, or **Delete** it. From a document's detail page you can also edit its title inline, edit the content directly for knowledge notes, and manage its [tags](#tags).
 
 ---
 
-## Traceability
+## Tags
 
-When the Co-engineer creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Co-engineer said so" but the specific source passage.
+Documents can be organized with your own **tags**. Add or remove tags inline from a document row or its detail page, click a tag to filter the library down to matching documents, and combine the tag filter with the category chips and search. Tags are the flexible, cross-cutting complement to the fixed source categories — use them for your own groupings (a project code, a material, a review status).
+
+---
+
+## Traceability and Connections
+
+When the Co-engineer creates or updates a data document using information from the Knowledge Library, it records which specific chunks of which documents it drew on. This means you can see exactly where a field value came from — not just "the Co-engineer said so" but the specific source passage, with a citation that links straight back to it.
 
 ```
 Field value in data document
@@ -81,7 +113,29 @@ Field value in data document
         └── Original uploaded document (paper, report, note)
 ```
 
+### Used by
+
+Each document's detail page has a **Used by** panel — the reverse of a citation. It lists the schemas, data documents, models, and canvases that were built from that document, so you can see the downstream impact of a source before you change or remove it.
+
+### Graph views
+
+Two graph views let you explore these relationships visually:
+
+- **Knowledge Graph** — how your documents and the assets that cite them connect across the library.
+- **Project Graph** — the same connections scoped to a single project.
+
 This chain is preserved permanently — even if team members leave or projects are archived.
+
+---
+
+## Sharing
+
+Knowledge documents are private to you by default, and can now be **shared read-only** with other people — no one you share with can edit or delete them. There are two ways a document gets shared:
+
+- **Directly** — open a document and use its **Share** dialog to grant read access to specific people, teams, or an email domain (the same audiences as everywhere else in Protos).
+- **Automatically, with the work built on it** — when you share a project or an asset (schema, data document, model, or canvas), Protos additively shares the Knowledge Library documents that asset cites, so your collaborator can open and reason over the same sources.
+
+Shared documents appear in the recipient's library under the **Shared** filter, marked with a "shared with you" indicator. Access is always evaluated live, so revoking a share takes effect immediately. See [Collaboration & Sharing](Collaboration-and-Sharing#sharing-resources) for how sharing works across Protos.
 
 ---
 
@@ -89,7 +143,8 @@ This chain is preserved permanently — even if team members leave or projects a
 
 - **Capture decisions as they're made**, not retrospectively. The rationale is clearest in the moment and becomes harder to reconstruct over time.
 - **Link papers to specific claims**, not just to the paper itself. Trace is only useful if it points to the exact piece of evidence that informed a decision.
-- **Use descriptive titles** so documents are easy to find via search — the Knowledge Library does not have a tagging feature, so the title is the primary handle for discovery.
+- **Use descriptive titles and tags** so documents are easy to find — the title is the primary handle for search (which matches title/folder only), and tags let you group documents across categories.
+- **Fix miscategorized sources**: if a document lands in the wrong source category, correct it with **Set category** so filters and the graph stay accurate.
 - **Review the library at project kickoff**: search for prior experiments and decisions before starting new work. Don't repeat work that's already been done.
 
 ---
@@ -99,6 +154,7 @@ This chain is preserved permanently — even if team members leave or projects a
 - [Co-engineer](Co-engineer) — surfaces Knowledge Library entries automatically as you work
 - [Schemas](Schemas) — data documents created from knowledge sources link back to their chunks
 - [Simulation Studio](Simulation-Studio) — link simulation results back to knowledge sources
+- [Collaboration & Sharing](Collaboration-and-Sharing#sharing-resources) — how read-only sharing propagates to sources
 - [Glossary → Trace](Glossary)
 
 ---

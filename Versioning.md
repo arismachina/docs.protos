@@ -16,7 +16,7 @@ Protos keeps a version history for your key assets — so you can see what chang
 - [Keeping Dependencies Up to Date](#keeping-dependencies-up-to-date)
 - [Data Documents Version Differently](#data-documents-version-differently)
 - [Co-engineer and Versioning](#co-engineer-and-versioning)
-- [Organisation Changelog](#organisation-changelog)
+- [Community Changelog](#community-changelog)
 - [How This Relates to Publications](#how-this-relates-to-publications)
 
 ---
@@ -84,9 +84,9 @@ Ask the Co-engineer about version history directly — things like *"What change
 
 ---
 
-## Organisation Changelog
+## Community Changelog
 
-The **Changelog** tab on an organisation's detail page (see [Collaboration & Sharing](Collaboration-and-Sharing)) shows a read-only feed of version events across schemas, data documents, models, and canvases shared with that organisation. Filter by asset type or by how significant a change was. Knowledge documents and publications don't appear in this feed.
+The **Changelog** tab on a community's detail page (see [Collaboration & Sharing](Collaboration-and-Sharing)) shows a read-only feed of version events across schemas, data documents, models, and canvases shared with that community. Filter by asset type or by how significant a change was. Knowledge documents and publications don't appear in this feed.
 
 ---
 
@@ -100,7 +100,7 @@ The **Changelog** tab on an organisation's detail page (see [Collaboration & Sha
 
 - [Schemas](Schemas) — version history lives in the schema editor header
 - [Model Library](Model-Library) — model versioning and the Edit action
-- [Collaboration & Sharing](Collaboration-and-Sharing) — the organisation Changelog and Publications
+- [Collaboration & Sharing](Collaboration-and-Sharing) — the community Changelog and Publications
 - [Glossary → Version](Glossary)
 
 ---

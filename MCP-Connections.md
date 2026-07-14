@@ -2,12 +2,17 @@
 
 [← Home](Home) · **MCP Connections**
 
-MCP (Model Context Protocol) lets you connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer. Any MCP-compatible server works; there's no fixed list of supported integrations. Once connected, the Co-engineer can use those tools directly in chat, pulling in data and taking actions across your other systems without you switching tabs.
+MCP (Model Context Protocol) connects Protos and external tools. It works in **two directions**:
+
+- **Protos → external tools (outbound):** connect tools like Notion, Linear, or Sentry *into* the Co-engineer, so it can use them during a conversation. This is the bulk of this page.
+- **Claude → Protos (inbound):** Protos is itself an MCP server, so Claude (desktop or web) can connect *to* Protos and drive your Co-engineer from outside the app. See [Use Protos in Claude](#use-protos-in-claude).
 
 ---
 
 ## On This Page
 
+- [Use Protos in Claude](#use-protos-in-claude)
+- [Connecting external tools to the Co-engineer](#connecting-external-tools-to-the-co-engineer)
 - [How It Works](#how-it-works)
 - [Setting Up a Connection](#setting-up-a-connection)
 - [Discovering and Enabling Tools](#discovering-and-enabling-tools)
@@ -15,6 +20,33 @@ MCP (Model Context Protocol) lets you connect external tools — e.g. Notion, Li
 - [Connection Statuses](#connection-statuses)
 
 ---
+
+## Use Protos in Claude
+
+*This is the **inbound** direction: Claude connecting to Protos.*
+
+Protos exposes a **remote MCP server** so Claude can talk to your Co-engineer directly — list and create projects, browse conversations, and send messages — without opening Protos.
+
+At the top of the **MCP servers** page (Integrations → MCP servers) you'll see a **"Use your Co-Engineer in Claude"** card. It shows your Protos MCP server URL — `https://<your-protos-domain>/mcp` (for example `https://protos.arismachina.com/mcp`) — with a copy button, and the steps to add it as a custom connector in Claude:
+
+1. In Claude, open **Settings → Connectors**.
+2. Click **Add custom connector**.
+3. Paste the URL above and continue.
+4. Approve the connection when Protos asks you to.
+
+### Signing in (OAuth)
+
+Connecting starts a standard **OAuth 2.1** consent flow. Claude redirects you to a Protos consent screen where you **Allow** or **Deny** access; on approval, Claude receives scoped, revocable access tokens. No API keys are exchanged, and you can revoke access at any time.
+
+> **A Pro plan is required** to use Protos as an MCP server — the same gate as the in-app Co-engineer.
+
+---
+
+## Connecting external tools to the Co-engineer
+
+*This is the **outbound** direction: external servers plugged into your Co-engineer. Everything below covers this direction.*
+
+Any MCP-compatible server works — e.g. Notion, Linear, or Sentry — with no fixed list of supported integrations. Once connected, the Co-engineer can use those tools directly in chat, pulling in data and taking actions across your other systems without you switching tabs.
 
 ## How It Works
 

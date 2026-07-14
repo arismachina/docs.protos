@@ -91,7 +91,7 @@ An **MCP** button in the lower-left of the chat composer lets you toggle individ
 
 ## Sharing a chat session
 
-Co-engineer sessions can be shared with org members. Open a chat session, click **Share**, and assign **Editor** or **Viewer** access to individuals, teams, or the whole org. Shared sessions appear under **Shared with me** in the chat session list. See [Collaboration & Sharing](Collaboration-and-Sharing) for details.
+Co-engineer sessions can be shared with community members. Open a chat session, click **Share**, and assign **Editor** or **Viewer** access to individuals, teams, or the whole community. Shared sessions appear under **Shared with me** in the chat session list. See [Collaboration & Sharing](Collaboration-and-Sharing) for details.
 
 ---
 

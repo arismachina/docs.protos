@@ -128,7 +128,7 @@ Connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer
 
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
-A cross-cutting capability, not a page of its own — share canvases, schemas, data documents, models, and co-engineer chats from each resource's own Share dialog. Two sharing roles: **Editor** (can co-edit in place, on some resource types) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole organisation. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
+A cross-cutting capability, not a page of its own — share canvases, schemas, data documents, models, and co-engineer chats from each resource's own Share dialog. Two sharing roles: **Editor** (can co-edit in place, on some resource types) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole community. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
 
 [→ Collaboration & Sharing guide](Collaboration-and-Sharing)
 

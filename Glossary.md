@@ -10,6 +10,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 |------|-----------|
 | **Canvas** | The visual graph workspace in a Protos project, where all nodes are connected and displayed. See [Home → Project Overview](Home#project-overview). |
 | **Co-engineer** | The AI assistant embedded across all Protos features — authors schemas and data documents, surfaces knowledge, and recommends model configurations. Always traces its sources. See [Co-engineer](Co-engineer). |
+| **Community** | The top-level workspace in Protos — projects, models, canvases, and members all belong to one. You can belong to several at once. See [Collaboration & Sharing](Collaboration-and-Sharing#communities). |
 | **Design freeze** | A concept in the PSPP framework referring to the point at which a validated design is locked for manufacturing handoff. In Protos, this is achieved by publishing a canvas snapshot. |
 | **Design space** | The range of possible parameter combinations for a design, explored via sweeps in [Simulation Studio](Simulation-Studio). |
 | **Node** | A block on the canvas. Node types are: parameter, data input, calculation, model, visualization, and Action (Coming Soon). They are connected by arrows that define the data flow. |

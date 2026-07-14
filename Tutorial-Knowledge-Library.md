@@ -36,9 +36,9 @@ Notice the **Create with Co-Engineer** button at the top. Click **Create with Co
 
 ---
 
-## Step 4 — Name things so you can find them later
+## Step 4 — Name and tag things so you can find them later
 
-The Knowledge Library doesn't have a tagging feature — the title is your primary handle for discovery. Use clear, consistent titles (e.g. by material or document type) rather than relying on a tag taxonomy.
+Give each document a clear, consistent title (e.g. by material or document type) — the title is your primary handle for search, which matches title and folder name only. You can also add **tags** to a document (inline on its row or detail page) and later filter the library by tag, and Protos auto-classifies each document into a **source category** (Research, Datasheet, Web, …) you can filter by too. See [Knowledge Library → Tags](Knowledge-Library#tags) for more.
 
 ---
 

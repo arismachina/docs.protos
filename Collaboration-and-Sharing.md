@@ -8,7 +8,7 @@ Protos supports sharing resources with teammates and publishing canvases for ext
 
 ## On This Page
 
-- [Organisations](#organisations)
+- [Communities](#communities)
 - [Teams](#teams)
 - [Access Roles](#access-roles)
 - [Sharing Resources](#sharing-resources)
@@ -20,58 +20,58 @@ Protos supports sharing resources with teammates and publishing canvases for ext
 
 ---
 
-## Organisations
+## Communities
 
-An organisation is the top-level workspace in Protos. Projects, models, canvases, and team members all belong to an organisation. You can be a member of more than one organisation at the same time.
+A community is the top-level workspace in Protos. Projects, models, canvases, and team members all belong to a community. You can be a member of more than one community at the same time.
 
-### Finding your organisations
+### Finding your communities
 
-Click **Organizations** in the sidebar — it sits near the bottom, just above your profile. This opens the Organisations page, which shows a card for each organisation you belong to, along with any pending invitations.
+Click **Communities** in the sidebar — it sits near the bottom, just above your profile. This opens the Communities page, which shows a card for each community you belong to, along with any pending invitations.
 
-### Setting an active organisation
+### Setting an active community
 
-Mark one organisation **Active** from its card on the Organisations page (the button reads **Set as active** until you click it). Once set, the **Shared with me** tab on Schemas, Models, and Data Studio automatically scopes to that organisation — there's no separate per-page org filter to manage. The sidebar shows the active org's name as a subtitle under the Organizations link, and hovering the link shows "filtering by {org}"; click it to go back and change or clear it.
+Mark one community **Active** from its card on the Communities page (the button reads **Set as active** until you click it). Once set, the **Shared with me** tab on Schemas, Models, and Data Studio automatically scopes to that community — there's no separate per-page community filter to manage. The sidebar shows the active community's name as a subtitle under the Communities link, and hovering the link shows "filtering by {community}"; click it to go back and change or clear it.
 
-### Creating an organisation
+### Creating a community
 
-Click **+ New organization** in the top right of the Organisations page, enter a name, and confirm. You become the owner of the new organisation.
+Click **+ New community** in the top right of the Communities page, enter a name, and confirm. You become the owner of the new community.
 
 ### Accepting an invitation
 
-Pending invitations appear on the Organisations page below your active organisations. Click **Accept** to join or **Decline** to dismiss.
+Pending invitations appear on the Communities page below your active communities. Click **Accept** to join or **Decline** to dismiss.
 
-### Organisation detail page
+### Community detail page
 
-Click any organisation card to open its detail page. At the top you can see your role in that org, the total number of members, and the number of teams. The page has these tabs:
+Click any community card to open its detail page. At the top you can see your role in that community, the total number of members, and the number of teams. The page has these tabs:
 
-- **Org chart** — a visual map of the organisation's structure (see below)
-- **Members** — everyone in the organisation; owners and managers can invite new members here
-- **Shared assets** — all assets shared at the organisation level, including projects, schemas, data documents, and models
+- **Community chart** — a visual map of the community's structure (see below)
+- **Members** — everyone in the community; owners and managers can invite new members here
+- **Shared assets** — all assets shared at the community level, including projects, schemas, data documents, and models
 - **Shared projects** — projects shared with a team, shown as cards; use the team selector to filter by team. Any schemas and data documents shared within each project appear nested under the project card. Inherited access (via a parent team) is indicated with an **Inherited** badge
-- **Changelog** — a history of changes made within the organisation
+- **Changelog** — a history of changes made within the community
 
-### Org chart
+### Community chart
 
-The **Org chart** tab (the default view) shows the full team hierarchy as connected node cards, with the organisation at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
+The **Community chart** tab (the default view) shows the full team hierarchy as connected node cards, with the community at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the **Members** and **Shared assets** for that specific team.
 
-> The shared assets within a node are visible to all org members; if you are not a member of that specific team, you will see an access error rather than the asset list.
+> The shared assets within a node are visible to all community members; if you are not a member of that specific team, you will see an access error rather than the asset list.
 
 ---
 
 ## Teams
 
-Teams sit inside an organisation and let you share resources with a group of people at once. The team structure is managed entirely from the **Org chart** tab.
+Teams sit inside a community and let you share resources with a group of people at once. The team structure is managed entirely from the **Community chart** tab.
 
 ### Managing teams
 
-Owners and managers can use the **⋯** menu on any node in the org chart to:
+Owners and managers can use the **⋯** menu on any node in the community chart to:
 
 - **Add sub-team** — create a child team under the selected node
 - **Rename** — rename the selected team
 - **Move** — reassign the team to a different parent (also available by dragging a node onto another)
 - **Delete** — remove the team (only possible if it has no sub-teams)
 
-To add or remove members from a specific team, click the team's node in the org chart and use the **Members** tab in the detail panel below.
+To add or remove members from a specific team, click the team's node in the community chart and use the **Members** tab in the detail panel below.
 
 ---
 
@@ -100,11 +100,11 @@ Sharing works across projects, canvases, schemas, data documents, models, and co
 
 | Tab | How it works |
 |-----|-------------|
-| **People** | Search org members by name or email and click to add |
+| **People** | Search community members by name or email and click to add |
 | **Team** | Pick a team from the tree — access flows down to all sub-teams |
-| **Domain** | Enter an email domain (e.g. `example.com`) — any org member with that domain gets access |
+| **Domain** | Enter an email domain (e.g. `example.com`) — any community member with that domain gets access |
 
-To share with your entire organisation at once, click **Share with everyone** above the tabs. This gives every org member Viewer access; you can adjust the role afterwards from the **Who has access** list.
+To share with your entire community at once, click **Share with everyone** above the tabs. This gives every community member Viewer access; you can adjust the role afterwards from the **Who has access** list.
 
 Access is given immediately as you add people. Click **Close** when done.
 
@@ -116,14 +116,18 @@ The share dialog shows a **Who has access** list that groups recipients by audie
 
 | Group | What it shows |
 |-------|--------------|
-| **Organizations** | Orgs with access; a cascade subtitle explains the inherited role |
+| **Communities** | Communities with access; a cascade subtitle explains the inherited role |
 | **Teams** | Teams granted access directly |
 | **People** | Individual members with direct access |
 | **Domains** | Email-domain grants, showing the matched domain |
 
-Each entry uses an avatar appropriate to its audience type. A subtitle beneath each entry describes the scope of that grant — for example, **"Team — includes sub-teams"** for a team grant or **"Everyone in this organization"** for an org-wide grant.
+Each entry uses an avatar appropriate to its audience type. A subtitle beneath each entry describes the scope of that grant — for example, **"Team — includes sub-teams"** for a team grant or **"Everyone in this community"** for a community-wide grant.
 
-If you belong to more than one organisation, an **org-context picker** lets you share the resource into any of your orgs without switching workspaces.
+If you belong to more than one community, a **community-context picker** lets you share the resource into any of your communities without switching workspaces.
+
+### Sharing also shares the sources behind your work
+
+When you share a project or an asset (schema, data document, model, or canvas), Protos additively shares the **Knowledge Library documents that asset was built from**, read-only, with the same people. This lets a collaborator open and reason over the sources behind your work without you sharing your whole library. See [Knowledge Library → Sharing](Knowledge-Library#sharing) for details.
 
 ### Making a resource public
 
@@ -142,15 +146,15 @@ Resource lists for schemas, data documents, and models have scope tabs at the to
 | **Shared with me** | Resources others have shared directly with you |
 | **Public** | Resources that have been made public across Protos |
 
-If you've [set an active organisation](#organisations), **Shared with me** on these three pages automatically narrows to that org — see [Setting an active organisation](#organisations).
+If you've [set an active community](#communities), **Shared with me** on these three pages automatically narrows to that community — see [Setting an active community](#communities).
 
-Canvases don't use these scope tabs — to browse shared or public canvases, click **New → Import Canvas**, which has its own Shared / Organization / Public tabs.
+Canvases don't use these scope tabs — to browse shared or public canvases, click **New → Import Canvas**, which has its own Shared / Community / Public tabs.
 
 ---
 
 ## Live Presence
 
-When other members of your organisation are in the same project, a row of **overlapping coloured circles** showing each person's initials appears in the top-right of the header bar. It only appears when at least one other person is present — it stays hidden when you're working alone.
+When other members of your community are in the same project, a row of **overlapping coloured circles** showing each person's initials appears in the top-right of the header bar. It only appears when at least one other person is present — it stays hidden when you're working alone.
 
 ### Seeing who's in the project
 
@@ -176,10 +180,10 @@ The same lock badge appears on schemas, data documents, and models. When someone
 
 ## Shared Co-Engineer Chats
 
-Co-engineer sessions can be shared with org members.
+Co-engineer sessions can be shared with community members.
 
 1. Open a chat session and click **Share**.
-2. Assign **Editor** or **Viewer** access to individuals, teams, or the whole org.
+2. Assign **Editor** or **Viewer** access to individuals, teams, or the whole community.
 3. Shared sessions appear under **Shared with me** in the chat session list.
 4. **Viewers** see a read-only transcript. **Editors** can continue the conversation.
 
@@ -197,7 +201,9 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 
 - See the canvas parameters and outputs
 - Adjust parameter values and re-run the canvas interactively
-- View and edit linked data documents (if the owner enabled the data tab when publishing)
+- **Choose which data documents feed the canvas.** When a canvas has input or data-input components and the owner enabled the data tab at publish time, the Visualization tab shows a checkbox for each data document. Viewers pick which documents to feed in and re-run against their own selection, rather than being locked to the snapshot's defaults.
+- **Re-run the canvas's external models** — *if the owner allows it.* When the owner opts in per canvas at publish time, viewers can re-run model components that call external providers, executed on the owner's API key. If the owner leaves this off, those models stay view-only.
+- **Star the publication as helpful.** A star toggle in the sidebar (tooltip: *"Did you find this helpful?"*) lets a viewer mark the canvas helpful, and the running total is shown next to it — compact once past 999 (e.g. `2K`, `1.2M`). On a password-protected publication, viewers enter the password before they can star.
 
 ### What they cannot see
 
@@ -210,18 +216,22 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 1. Open **Simulation Studio** from the sidebar. Scroll to the **Publications** section at the bottom of the canvas list and click **Publish**.
 2. Give the publication a **name**.
 3. Select which **canvases to include**.
-4. Optionally check **Include data tab** to expose the underlying data to viewers.
-5. Optionally set a **password** for access control.
-6. Click **Publish** — a shareable URL is generated.
+4. Optionally check **Include data tab**. This exposes the underlying data to viewers *and* lets them choose which data documents feed the canvas and re-run against their selection — it is no longer a read-only data view.
+5. For any canvas that contains an external model, a per-canvas consent toggle appears: *"Let viewers run this canvas's external model on your API key. Turn off to make it view-only."* It defaults **on**. Leave it on to let external viewers re-run those models (billed to your key); turn it off to keep them view-only.
+6. Optionally set a **password** for access control.
+7. Click **Publish** — a shareable URL is generated.
 
 > **Note:** Publications are snapshots — they do not update automatically when you change the canvas. Re-publish to push an update.
+
+The **Publications** card in Simulation Studio shows each publication's helpful-star count read-only, so you can see how many viewers found a published canvas useful.
 
 ---
 
 ## See Also
 
 - [Home → Project Overview](Home#project-overview)
-- [Glossary → Design freeze](Glossary), [Glossary → Version](Glossary)
+- [Knowledge Library → Sharing](Knowledge-Library#sharing)
+- [Glossary → Community](Glossary), [Glossary → Design freeze](Glossary), [Glossary → Version](Glossary)
 
 ---
 
