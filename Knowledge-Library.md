@@ -57,7 +57,7 @@ Protos assigns a category on ingestion, and the owner can change it at any time:
 ## Finding Knowledge
 
 1. Open **Knowledge** from the sidebar.
-2. Switch between views with the tabs at the top: **Table** (the default flat, paginated list), **Knowledge Graph**, and **Project Graph** — see [Traceability and Connections](#traceability-and-connections).
+2. Switch between views with the tabs at the top: **List** (the default flat, paginated view), **Knowledge Graph**, and **Project Graph** — see [Traceability and Connections](#traceability-and-connections).
 3. In the table, narrow the list with the **category filter chips** (Research, Article, Web, …), each showing a count. Combine them with the **tag filter** and the search box.
 4. If documents have been shared with you, **Mine** and **Shared** chips also appear so you can switch between your own documents and ones others shared. A marker on each shared row shows it came from someone else.
 5. Use the search box to find items by **title, folder name, or tag** — it doesn't search document content or notes.
@@ -93,13 +93,13 @@ For bulk ingestion of many files at once:
 
 ### Managing documents and folders
 
-Use the **⋯** menu on any document or folder row to **Rename**, **Set category**, or **Delete** it. From a document's detail page you can also edit its title inline, edit the content directly for knowledge notes, and manage its [tags](#tags).
+Use the **⋯** menu on any document or folder row to **Rename**, **Set category**, or **Delete** it. From a document's detail page you can also edit its title inline and edit the content directly for knowledge notes. (Tags are edited from the document's row in the library table — see [Tags](#tags).)
 
 ---
 
 ## Tags
 
-Documents can be organized with your own **tags**. Add or remove tags inline from a document row or its detail page, click a tag to filter the library down to matching documents, and combine the tag filter with the category chips and search. Tags are the flexible, cross-cutting complement to the fixed source categories — use them for your own groupings (a project code, a material, a review status).
+Documents can be organized with your own **tags**. Add or remove tags inline from a document's row in the library table, click a tag to filter the library down to matching documents, and combine the tag filter with the category chips and search. Tags are the flexible, cross-cutting complement to the fixed source categories — use them for your own groupings (a project code, a material, a review status).
 
 ---
 

@@ -38,7 +38,7 @@
 
 **Tutorials**
 - [Creating Your First Schema](Tutorial-Schemas)
-- [Setting Up Your Knowledge Library](Tutorial-Knowledge-Library)
+- [Setting Up and Navigating Your Knowledge Library](Tutorial-Knowledge-Library)
 - [Working with the Co-Engineer](Tutorial-Co-engineer)
 - [Using the Data Studio](Tutorial-Data-Studio)
 - [Registering Your First Model](Tutorial-Model-Library)

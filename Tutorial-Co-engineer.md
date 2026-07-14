@@ -10,7 +10,7 @@ This tutorial shows you what the Co-Engineer does when you use it — what to as
 
 ## Before you start
 
-The Co-Engineer works best when you have at least one document in the **Knowledge** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up Your Knowledge Library](Tutorial-Knowledge-Library).
+The Co-Engineer works best when you have at least one document in the **Knowledge** so it has project context to draw on. If you haven't done that yet: [Tutorial: Setting Up and Navigating Your Knowledge Library](Tutorial-Knowledge-Library).
 
 ---
 
