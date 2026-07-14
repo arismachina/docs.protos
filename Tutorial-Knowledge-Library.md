@@ -20,7 +20,7 @@ Click **Knowledge** in the sidebar.
 
 Click **+ Add**. A dropdown appears with three options:
 
-![Add dropdown showing Upload Document, Upload Folder, and Add Knowledge](images/kl-02-add-dropdown.png)
+![Knowledge Library header with the + Add dropdown open, showing Upload Document, Upload Folder, and Add Knowledge](images/kl-02-add-dropdown.png)
 
 - **Upload Document** — upload a file (PDF, DOCX, XLSX, XLS, CSV, TXT, MD, JSON, PNG, JPG, JPEG, WEBP, GIF, TIFF, and more — up to 100 MB). This is the most common option.
 - **Upload Folder** — bulk upload many files at once. A progress indicator tracks succeeded and failed files.
@@ -40,6 +40,8 @@ Notice the **Create with Co-Engineer** button at the top. Click it to open a Co-
 
 Give each document a clear, consistent title (e.g. by material or document type). You can also add **tags** to a document inline from its row in the library table, and Protos auto-classifies each document into a **source category** (Research, Datasheet, Web, …). See [Knowledge Library → Tags](Knowledge-Library#tags) for more.
 
+![A document row showing its tags and its source category](images/kl-04-row-tags.png)
+
 ---
 
 ## Step 5 — Find your way around
@@ -50,12 +52,18 @@ Once you have a few documents, the library gives you three views, switched from 
 - **Knowledge Graph** — a visual map of how your documents and the assets that cite them connect.
 - **Project Graph** — the same connections narrowed to the current project.
 
+![Knowledge Graph view — documents grouped around their source categories](images/kl-05-knowledge-graph.png)
+
+![Project Graph view — documents linked to the schemas, data documents, and simulations that use them](images/kl-05-project-graph.png)
+
 In the List view, narrow things down with:
 
-- **Category chips** (Research, Article, Web, Datasheet, …) — each shows a count; click to filter by where a document came from.
-- **Tag filter** — filter to documents carrying a given tag.
+- **Category chips** (Research, Article, Memory, Conversation, …) — each shows a count; click to filter by where a document came from.
+- **Tag filter** — click **+ Filter** to filter to documents carrying a given tag.
 - **Mine / Shared chips** — these appear once documents have been shared with you, so you can switch between your own documents and shared ones.
 - **Search** — matches titles, folder names, and tags (not document content). Search for a keyword from a document you just added to confirm it's in the library.
+
+![The Filter popover for narrowing the library by tag](images/kl-05-filter-tags.png)
 
 ---
 
@@ -68,6 +76,8 @@ Click any row to open its detail page, where you can:
 - See what it's **Used by** — the schemas, data documents, models, and canvases built from it. (For a document created from a Co-Engineer conversation, this panel is titled **"Modified in this conversation"** and links back to that chat.)
 - **Download** the original file (or the extracted text, for conversation- and note-based entries).
 - **Share** it read-only with people, teams, or an email domain.
+
+![A document's detail page showing its source, its sources, and the Used by panel](images/kl-06-document-detail.png)
 
 ---
 
