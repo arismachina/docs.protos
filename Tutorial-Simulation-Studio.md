@@ -50,7 +50,7 @@ From the **Components rail**, select **Calculation**. Write Python code that use
 
 Calculation blocks need your approval before they run. This is a safety check — you're confirming the code is safe to execute. Click **Approve & Run** on the block.
 
-After approval it runs automatically whenever its inputs change. If you edit the code, it goes back to needing approval.
+After approval it re-runs automatically whenever its inputs or code change — it stays approved.
 
 ---
 

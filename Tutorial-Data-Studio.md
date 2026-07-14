@@ -42,19 +42,19 @@ With 3 documents activated you can compare their values side by side at a glance
 
 If your project has a requirements document (your target spec), you can pin it as a column next to your designs. This makes the gap between your current designs and your target immediately visible.
 
-To add a requirements document, click **Select documents…** and choose it from the Requirements section of the popover — it appears as a fixed column alongside your design documents.
+To add a requirements document, click **Select documents…** and choose it from the Requirements section of the popover — it appears as its own column alongside your design documents.
 
 ---
 
 ## Step 5 — Edit values directly in the table
 
-Double-click any cell to change its value without leaving the Data Studio. Press **Enter** or click away to save — the change updates the original document immediately.
+Double-click a cell in a document you created to change its value without leaving the Data Studio. Press **Enter** or click away to save — the change updates the original document immediately. (Inline editing is available only on documents you own.)
 
 ---
 
 ## Step 6 — Analysis Panel
 
-**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab (comparison against requirement bounds is coming soon) plus chart tabs (bar chart, scatter plot). Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects.
+**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab (comparison against requirement bounds is coming soon) plus chart tabs (bar chart, scatter plot, histogram, spider chart). Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects.
 
 ---
 

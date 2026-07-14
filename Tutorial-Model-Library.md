@@ -28,7 +28,7 @@ Click **Models** in the sidebar, then click **+ Register model** in the top righ
 
 ![Models Library page with the Register model button](images/models-page-header.png)
 
-The registration dialog opens. Give your model a name and key, choose **Local runner** or **Cloud** for execution type, and select the runtime (Python, COMSOL, or MATLAB).
+The registration dialog opens. Give your model a name and key, then choose an execution type: **Local runner** lets you pick a runtime (Python, COMSOL, or MATLAB); **Cloud** runs Python only.
 
 ![Register a model dialog showing name, key, execution type, and runtime options](images/ml-register-dialog.png){ width="600" }
 
@@ -54,7 +54,7 @@ Open the model and click **Edit** to update its name, description, or tags — t
 
 ## Registering from GitHub instead
 
-If your model is in a public repo (GitHub, GitLab, Bitbucket, or Codeberg), use the **GitHub** tab. Protos builds a container from the repo. You can optionally click **Auto-draft wrapper** to have AI generate a starter wrapper from your function signatures. The repo needs a `run`/`main`/`execute` function or a `protos.toml` file declaring the interface.
+If your model is in a public repo (GitHub, GitLab, Bitbucket, or Codeberg), use the **GitHub** tab. Protos builds a container from the repo. The repo needs either a wrapper script or a `protos.toml` file declaring the interface — you can click **Auto-draft wrapper** to have AI draft a starter wrapper from the repo's README.
 
 If your model is already accessible via an HTTP endpoint, use the **Endpoint** tab to register it by URL.
 
