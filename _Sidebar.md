@@ -23,14 +23,14 @@
   - [SPMeT DCIR](Model-SPMeT-DCIR)
   - [SPMeT Dynamic Load](Model-SPMeT-Dynamic-Load)
 - [Knowledge Library](Knowledge-Library)
-- [Co-engineer](Co-engineer)
+- [Co-Engineer](Co-engineer)
 - [MCP Connections](MCP-Connections)
 
 ---
 
 **Working Together**
 - [Collaboration & Sharing](Collaboration-and-Sharing)
-- [Canvas Sharing](Collaboration-and-Sharing#canvas-access-levels)
+- [Canvas Sharing](Collaboration-and-Sharing#sharing-resources)
 - [Publishing Externally](Collaboration-and-Sharing#publishing-for-external-access)
 - [Versioning](Versioning)
 
@@ -38,8 +38,8 @@
 
 **Tutorials**
 - [Creating Your First Schema](Tutorial-Schemas)
-- [Setting Up Your Knowledge Library](Tutorial-Knowledge-Library)
-- [Working with the Co-engineer](Tutorial-Co-engineer)
+- [Setting Up and Navigating Your Knowledge Library](Tutorial-Knowledge-Library)
+- [Working with the Co-Engineer](Tutorial-Co-engineer)
 - [Using the Data Studio](Tutorial-Data-Studio)
 - [Registering Your First Model](Tutorial-Model-Library)
 - [Building Your First Canvas](Tutorial-Simulation-Studio)

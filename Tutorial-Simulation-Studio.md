@@ -6,7 +6,7 @@
 
 This tutorial walks you through building a canvas from an empty state. Takes about 10 minutes.
 
-> **The Co-engineer can build this for you.** Say: *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."* It will create the canvas, add the blocks, write the Python code, and wire everything together. You then review and approve the calculation before it runs. This tutorial is for when you want to understand how to build one yourself.
+> **The Co-Engineer can build this for you.** Say: *"Build a canvas that takes my electrode coating data as input and calculates the theoretical capacity."* It will create the canvas, add the blocks, write the Python code, and wire everything together. You then review and approve the calculation before it runs. This tutorial is for when you want to understand how to build one yourself.
 
 ---
 
@@ -50,7 +50,7 @@ From the **Components rail**, select **Calculation**. Write Python code that use
 
 Calculation blocks need your approval before they run. This is a safety check — you're confirming the code is safe to execute. Click **Approve & Run** on the block.
 
-After approval it runs automatically whenever its inputs change. If you edit the code, it goes back to needing approval.
+After approval it re-runs automatically whenever its inputs or code change — it stays approved.
 
 ---
 
@@ -71,6 +71,8 @@ Here's a completed canvas with three connected blocks: a data input (green), a p
 ![Canvas showing Coating Data input connected to Capacity Calculator, with temperature parameter also feeding in — arrows show data flow between blocks](images/sim-06-canvas-graph-zoom.png)
 
 Click any block to open its detail panel and see inputs, outputs, and execution status.
+
+![A calculation block's detail panel — approval status, a preview of its code, its sources, and its upstream and downstream connections](images/sim-07-node-detail-panel.png)
 
 ---
 

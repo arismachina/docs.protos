@@ -4,7 +4,7 @@
 
 Schemas define the **structure of your engineering data** in Protos. Rather than storing artifacts in disconnected spreadsheets or files, schemas give every data type a consistent, queryable shape — reusable across projects and connectable to external tools and integrations.
 
-> **You don't have to build schemas manually.** The Co-engineer can create them for you — describe what you're working on and it will propose field names, types, and units. See [Tutorial: Working with the Co-engineer](Tutorial-Co-engineer).
+> **You don't have to build schemas manually.** The Co-Engineer can create them for you — describe what you're working on and it will propose field names, types, and units. See [Tutorial: Working with the Co-Engineer](Tutorial-Co-engineer).
 
 ---
 
@@ -97,14 +97,14 @@ See [Versioning](Versioning) for the full picture, including how this works acro
 
 ## Bringing External Data into Schemas
 
-Protos uses the **Co-engineer** to extract data from your existing files and create structured data documents that follow your schema.
+Protos uses the **Co-Engineer** to extract data from your existing files and create structured data documents that follow your schema.
 
 ### How it works
 
-1. Define your schema first — the Co-engineer needs a schema to fill.
-2. In the Co-engineer chat, upload a file or pull one in from SharePoint.
-3. Ask the Co-engineer to create a data document from it — e.g. *"Create an Electrode Formulation document from this test report."*
-4. The Co-engineer reads the file, maps what it finds to your schema fields, and creates the document. It will flag anything it couldn't find or wasn't sure about.
+1. Define your schema first — the Co-Engineer needs a schema to fill.
+2. In the Co-Engineer chat, upload a file or pull one in from SharePoint.
+3. Ask the Co-Engineer to create a data document from it — e.g. *"Create an Electrode Formulation document from this test report."*
+4. The Co-Engineer reads the file, maps what it finds to your schema fields, and creates the document. It will flag anything it couldn't find or wasn't sure about.
 
 You review and correct the result before saving.
 
@@ -112,14 +112,14 @@ You review and correct the result before saving.
 
 | Source | How to bring it in |
 |--------|--------------------|
-| **Local file** | Upload directly in the Co-engineer chat (PDF, Excel, TXT) |
-| **SharePoint / OneDrive** | Browse your SharePoint from the Co-engineer and select a file |
+| **Local file** | Upload directly in the Co-Engineer chat (PDF, Excel, TXT) |
+| **SharePoint / OneDrive** | Browse your SharePoint from the Co-Engineer and select a file |
 
 > **Note:** GitHub is not used for data import. GitHub integration in Protos is for registering computational models only — see [Model Library](Model-Library).
 
 ### When to use this
 
-This approach works well when you have existing reports, datasheets, or spreadsheets with values you want to capture as structured data. The Co-engineer handles the messy extraction; your schema guarantees the result is consistent and comparable with other documents of the same type.
+This approach works well when you have existing reports, datasheets, or spreadsheets with values you want to capture as structured data. The Co-Engineer handles the messy extraction; your schema guarantees the result is consistent and comparable with other documents of the same type.
 
 ---
 

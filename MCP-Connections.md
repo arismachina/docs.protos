@@ -2,12 +2,17 @@
 
 [← Home](Home) · **MCP Connections**
 
-MCP (Model Context Protocol) lets you connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer. Any MCP-compatible server works; there's no fixed list of supported integrations. Once connected, the Co-engineer can use those tools directly in chat, pulling in data and taking actions across your other systems without you switching tabs.
+MCP (Model Context Protocol) connects Protos and external tools. It works in **two directions**:
+
+- **Protos → external tools (outbound):** connect tools like Notion, Linear, or Sentry *into* the Co-Engineer, so it can use them during a conversation. This is the bulk of this page.
+- **An MCP client → Protos (inbound):** Protos is itself a standard MCP server, so an MCP-compatible client can connect *to* Protos and drive your Co-Engineer from outside the app. Claude (desktop or web) is the worked example, with in-app setup steps. See [Use Protos from an MCP client](#use-protos-from-an-mcp-client).
 
 ---
 
 ## On This Page
 
+- [Use Protos from an MCP client](#use-protos-from-an-mcp-client)
+- [Connecting external tools to the Co-Engineer](#connecting-external-tools-to-the-co-engineer)
 - [How It Works](#how-it-works)
 - [Setting Up a Connection](#setting-up-a-connection)
 - [Discovering and Enabling Tools](#discovering-and-enabling-tools)
@@ -16,9 +21,36 @@ MCP (Model Context Protocol) lets you connect external tools — e.g. Notion, Li
 
 ---
 
+## Use Protos from an MCP client
+
+*This is the **inbound** direction: an MCP client connecting to Protos.*
+
+Protos exposes a **standard remote MCP server** so an MCP-compatible client can talk to your Co-Engineer directly — list and create projects, browse conversations, and send messages — without opening Protos. The server URL is `https://<your-protos-domain>/mcp` (for example `https://protos.arismachina.com/mcp`); any client that supports remote MCP servers with OAuth can point at it. The steps below use **Claude**, which has a built-in setup path in Protos.
+
+At the top of the **MCP servers** page (Integrations → MCP servers) you'll see a **"Use your Co-Engineer in Claude"** card. It shows the MCP server URL with a copy button and the steps to add it as a custom connector in Claude:
+
+1. In Claude, open **Settings → Connectors**.
+2. Click **Add custom connector**.
+3. Paste the URL above and continue.
+4. Approve the connection when Protos asks you to.
+
+### Signing in (OAuth)
+
+Connecting starts a standard **OAuth 2.1** consent flow. Claude redirects you to a Protos consent screen where you **Allow** or **Deny** access; on approval, Claude receives scoped, revocable access tokens. No API keys are exchanged, and you can revoke access at any time.
+
+> **A Pro plan is required** to use Protos as an MCP server — the same gate as the in-app Co-Engineer.
+
+---
+
+## Connecting external tools to the Co-Engineer
+
+*This is the **outbound** direction: external servers plugged into your Co-Engineer. Everything below covers this direction.*
+
+Any MCP-compatible server works — e.g. Notion, Linear, or Sentry — with no fixed list of supported integrations. Once connected, the Co-Engineer can use those tools directly in chat, pulling in data and taking actions across your other systems without you switching tabs.
+
 ## How It Works
 
-Each MCP connection points to an MCP-compatible server. Once you connect and enable tools, the Co-engineer can call those tools during a conversation — for example, searching your Notion workspace, creating a Linear issue, or fetching an error from Sentry.
+Each MCP connection points to an MCP-compatible server. Once you connect and enable tools, the Co-Engineer can call those tools during a conversation — for example, searching your Notion workspace, creating a Linear issue, or fetching an error from Sentry.
 
 ---
 
@@ -26,12 +58,12 @@ Each MCP connection points to an MCP-compatible server. Once you connect and ena
 
 1. Open the **Integrations** section in the left sidebar (near the bottom) and click **MCP servers**.
 2. Click **Add connection**, give it a name, enter the server URL, and choose your authentication method (see below).
-3. Select which tools you want the Co-engineer to be able to use.
+3. Select which tools you want the Co-Engineer to be able to use.
 4. Tool discovery runs automatically after you save.
 
 After saving, use the **⋯** menu on the connection card and choose **Test connection** to verify it.
 
-The Co-engineer can now use those tools in chat.
+The Co-Engineer can now use those tools in chat.
 
 ### Authentication options
 
@@ -51,7 +83,7 @@ For public endpoints that require no authentication.
 
 ## Discovering and Enabling Tools
 
-After connecting, tool discovery runs automatically. You then choose which tools to enable — only enabled tools are available to the Co-engineer.
+After connecting, tool discovery runs automatically. You then choose which tools to enable — only enabled tools are available to the Co-Engineer.
 
 If the tools on a server change, open the **⋯** menu on the connection card and choose **Run tools discovery** to sync the list.
 
@@ -59,7 +91,7 @@ If the tools on a server change, open the **⋯** menu on the connection card an
 
 ## Using MCP servers in a conversation
 
-Once servers are configured, you can control which ones are active per conversation directly from the chat. Click the **MCP** button in the lower-left of the Co-engineer composer to open a popover listing your connected servers. Toggle individual servers on or off for the current conversation. The popover also includes **Enable all** and **Disable all** buttons to apply to every server at once. Check **Default in new conversations** per server to carry your preferred setup forward automatically.
+Once servers are configured, you can control which ones are active per conversation directly from the chat. Click the **MCP** button in the lower-left of the Co-Engineer composer to open a popover listing your connected servers. Toggle individual servers on or off for the current conversation. The popover also includes **Enable all** and **Disable all** buttons to apply to every server at once. Check **Default in new conversations** per server to carry your preferred setup forward automatically.
 
 ---
 
@@ -76,7 +108,7 @@ Once servers are configured, you can control which ones are active per conversat
 
 ## See Also
 
-- [Co-engineer](Co-engineer) — the assistant that uses your connected tools
+- [Co-Engineer](Co-engineer) — the assistant that uses your connected tools
 
 ---
 

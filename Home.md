@@ -16,11 +16,11 @@
 
 ## Getting Started
 
-> **The [Co-engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
+> **The [Co-Engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
 1. Go to [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} and tell Protos what you want to create — this creates your first project and kicks off guided onboarding.
-2. From that description, the Co-engineer creates one artifact at a time — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, and a starter **canvas** in Simulation Studio.
-3. After each one it tells you what it made and pauses, so send another message to move on to the next step. Once all four exist, onboarding hands off to the general-purpose Co-engineer so you can keep building or adjust anything it set up.
+2. From that description, the Co-Engineer creates one artifact at a time — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, and a starter **canvas** in Simulation Studio.
+3. After each one it tells you what it made and pauses, so send another message to move on to the next step. Once all four exist, onboarding hands off to the general-purpose Co-Engineer so you can keep building or adjust anything it set up.
 
 ---
 
@@ -33,7 +33,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 | Concept | Description |
 |---------|-------------|
 | **Canvas** | A graph of connected blocks (parameters, inputs, calculations, models, visualizations). Data flows through the chain automatically. |
-| **Traceability** | Field values created by the Co-engineer link back to the Knowledge Library source they came from. |
+| **Traceability** | Field values created by the Co-Engineer link back to the Knowledge Library source they came from. |
 | **PSPP** | The reasoning framework underlying Protos: Process → Structure → Property → Performance. |
 
 ### Creating a Project
@@ -41,7 +41,7 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 1. Click **Create new project**.
 2. Add a name and description for your project.
 3. Answer questions about your project — goals, constraints, and any other relevant context.
-4. The [Co-engineer](Co-engineer) automatically generates and runs a kickoff plan to set up your workspace.
+4. The [Co-Engineer](Co-engineer) automatically generates and runs a kickoff plan to set up your workspace.
 
 ### Finding an Existing Project
 
@@ -70,7 +70,7 @@ The project switcher in the header — click your current project's name — is 
 
 Define the structure of your engineering data. Instead of disconnected spreadsheets, schemas give every artifact a consistent, queryable shape — reusable across all projects and connectable to external tools.
 
-Use schemas for: designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-engineer.
+Use schemas for: designs, test data, model parameterizations, operating conditions, and data extracted from external files via the Co-Engineer.
 
 [→ Schemas guide](Schemas)
 
@@ -110,17 +110,17 @@ What lives here: academic papers, internal reports, decisions and rationale, exp
 
 ---
 
-### [Co-engineer](Co-engineer)
+### [Co-Engineer](Co-engineer)
 
 An AI assistant available across all features. It accelerates work by structuring data, configuring simulations, and surfacing connections that would otherwise take hours to find manually — always with traceable sources.
 
-[→ Co-engineer guide](Co-engineer)
+[→ Co-Engineer guide](Co-engineer)
 
 ---
 
 ### [MCP Connections](MCP-Connections)
 
-Connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer. Once connected, the Co-engineer can use those tools directly in chat without you switching tabs. Found under **Integrations** in the sidebar, not as a top-level page.
+Connect external tools — e.g. Notion, Linear, or Sentry — to the Co-Engineer. Once connected, the Co-Engineer can use those tools directly in chat without you switching tabs. Found under **Integrations** in the sidebar, not as a top-level page.
 
 [→ MCP Connections guide](MCP-Connections)
 
@@ -128,7 +128,7 @@ Connect external tools — e.g. Notion, Linear, or Sentry — to the Co-engineer
 
 ### [Collaboration & Sharing](Collaboration-and-Sharing)
 
-A cross-cutting capability, not a page of its own — share canvases, schemas, data documents, models, and co-engineer chats from each resource's own Share dialog. Two sharing roles: **Editor** (can co-edit in place, on some resource types) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole organisation. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
+A cross-cutting capability, not a page of its own — share canvases, schemas, data documents, models, and Co-Engineer chats from each resource's own Share dialog. Two sharing roles: **Editor** (can co-edit in place, on some resource types) and **Viewer** (read-only). The resource creator is always the owner. Organise teammates into teams or share with your whole community. Publications is a separate feature that lets you publish canvases as interactive snapshots for external stakeholders.
 
 [→ Collaboration & Sharing guide](Collaboration-and-Sharing)
 
@@ -148,9 +148,9 @@ Integrations are accessible from the **Integrations** section in the left sideba
 
 | System | What Protos does |
 |--------|-----------------|
-| SharePoint / OneDrive | Browse and import files into the Co-engineer for data extraction |
+| SharePoint / OneDrive | Browse and import files into the Co-Engineer for data extraction |
 | GitHub | Register computational models (Python, scripts) from a repo into the Models Library |
-| MCP servers | Connect external tools to the Co-engineer so it can use them directly in chat |
+| MCP servers | Connect external tools to the Co-Engineer so it can use them directly in chat |
 | Register a Model | Register external computational models into the Model Library |
 
 > **Note:** GitHub is for model registration only — not for importing data into schemas. See [Model Library](Model-Library) for details.
