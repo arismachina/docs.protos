@@ -202,8 +202,9 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 - See the canvas parameters and outputs
 - Adjust parameter values and re-run the canvas interactively
 - **Choose which data documents feed the canvas.** When a canvas has input or data-input components and the owner enabled the data tab at publish time, the Visualization tab shows a checkbox for each data document. Viewers pick which documents to feed in and re-run against their own selection, rather than being locked to the snapshot's defaults.
-- **Re-run the canvas's external models** — *if the owner allows it.* When the owner has enabled it for a canvas, viewers can re-run model components that call external providers. Otherwise those models stay view-only.
 - **Star the publication as helpful.** A star toggle in the sidebar (tooltip: *"Did you find this helpful?"*) lets a viewer mark the canvas helpful, and the running total is shown next to it — compact once past 999 (e.g. `2K`, `1.2M`). On a password-protected publication, viewers enter the password before they can star.
+
+> **External models can make a canvas view-only.** The re-run abilities above apply to any canvas the owner left runnable. If a canvas includes a model that calls an external provider, the owner chooses at publish time whether viewers may run it; if they don't opt in, that entire canvas is **view-only** — parameter changes and data-document selections can't be re-run either. Canvases with no external models are always runnable.
 
 ### What they cannot see
 
@@ -217,7 +218,7 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 2. Give the publication a **name**.
 3. Select which **canvases to include**.
 4. Optionally check **Include data tab**. This exposes the underlying data to viewers *and* lets them choose which data documents feed the canvas and re-run against their selection — it is no longer a read-only data view.
-5. For any canvas that contains an external model, a per-canvas consent toggle appears: *"Let viewers run this canvas's external model on your API key. Turn off to make it view-only."* It defaults **on**. Leave it on to let external viewers re-run those models (billed to your key); turn it off to keep them view-only.
+5. For any canvas that contains an external model, a per-canvas consent toggle appears: *"Let viewers run this canvas's external model on your API key. Turn off to make it view-only."* It defaults **on**. Leave it on to let external viewers re-run the canvas — its external models run on your key, billed to you. Turn it off to make **that whole canvas view-only** (viewers can't re-run it at all).
 6. Optionally set a **password** for access control.
 7. Click **Publish** — a shareable URL is generated.
 
