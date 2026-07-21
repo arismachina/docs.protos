@@ -57,7 +57,7 @@ Each MCP connection points to an MCP-compatible server. Once you connect and ena
 
 ## Discovering servers
 
-The MCP servers page doesn't open on a blank slate. Your first stop is a grid of **preset cards** for well-known servers, so you can connect the popular ones without hunting down their endpoint URLs. Presets currently include **Linear**, **Notion**, **Wolfram Cloud**, **Atlassian**, **Mendeley**, **arXiv**, **Semantic Scholar**, **PubMed Central**, and **Perplexity** (where the built-in Onshape CAD connector is enabled, it appears first).
+The MCP servers page doesn't open on a blank slate. Your first stop is a grid of **preset cards** for well-known servers, so you can connect the popular ones without hunting down their endpoint URLs. Presets currently include **Linear**, **Notion**, **Wolfram Cloud**, **Atlassian**, **Mendeley**, **arXiv**, **Semantic Scholar**, **PubMed Central**, and **Perplexity**.
 
 Each preset card already carries that server's name, endpoint URL, and authentication type. Click **Connect** on a card and Protos creates the connection for you — no form to fill in — and takes you straight into authentication:
 
