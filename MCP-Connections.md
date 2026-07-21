@@ -14,6 +14,7 @@ MCP (Model Context Protocol) connects Protos and external tools. It works in **t
 - [Use Protos from an MCP client](#use-protos-from-an-mcp-client)
 - [Connecting external tools to the Co-Engineer](#connecting-external-tools-to-the-co-engineer)
 - [How It Works](#how-it-works)
+- [Discovering servers](#discovering-servers)
 - [Setting Up a Connection](#setting-up-a-connection)
 - [Discovering and Enabling Tools](#discovering-and-enabling-tools)
 - [Using MCP servers in a conversation](#using-mcp-servers-in-a-conversation)
@@ -54,7 +55,22 @@ Each MCP connection points to an MCP-compatible server. Once you connect and ena
 
 ---
 
+## Discovering servers
+
+The MCP servers page doesn't open on a blank slate. Your first stop is a grid of **preset cards** for well-known servers, so you can connect the popular ones without hunting down their endpoint URLs. Presets currently include **Linear**, **Notion**, **Wolfram Cloud**, **Atlassian**, **Mendeley**, **arXiv**, **Semantic Scholar**, **PubMed Central**, and **Perplexity**.
+
+Each preset card already carries that server's name, endpoint URL, and authentication type. Click **Connect** on a card and Protos creates the connection for you — no form to fill in — and takes you straight into authentication:
+
+- **OAuth servers** (most presets) — you're redirected to the provider to authorise access, then returned to Protos.
+- **No-auth servers** (e.g. Wolfram Cloud) — tool discovery runs and the tool picker opens so you can choose which tools to enable.
+
+Servers you've already connected sort to the top of the grid, and a preset that matches one of your existing connections is shown once — as the live connection. To connect a server that isn't in the grid, use **Add connection** in the top-right, described below.
+
+---
+
 ## Setting Up a Connection
+
+*Use this for any server that isn't already a preset card — the **Add connection** button handles arbitrary MCP servers.*
 
 1. Open the **Integrations** section in the left sidebar (near the bottom) and click **MCP servers**.
 2. Click **Add connection**, give it a name, enter the server URL, and choose your authentication method (see below).
