@@ -10,6 +10,7 @@
 - [Projects & the Canvas](#project-overview)
 - [Features at a Glance](#features-at-a-glance)
 - [Integrations](#integrations)
+- [Your Account](#your-account)
 - [Glossary Quick Reference](#glossary-quick-reference)
 
 ---
@@ -19,8 +20,8 @@
 > **The [Co-Engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
 1. Go to [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} and tell Protos what you want to create — this creates your first project and kicks off guided onboarding.
-2. From that description, the Co-Engineer creates one artifact at a time — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, and a starter **canvas** in Simulation Studio.
-3. After each one it tells you what it made and pauses, so send another message to move on to the next step. Once all four exist, onboarding hands off to the general-purpose Co-Engineer so you can keep building or adjust anything it set up.
+2. From that description, the Co-Engineer works through five steps, one per turn — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, a guided stop at the **Models Library**, and a starter **canvas** in Simulation Studio.
+3. After the five steps, onboarding hands off to the general-purpose Co-Engineer so you can keep building or adjust anything it set up.
 
 ---
 
@@ -38,10 +39,12 @@ A **Project** is your central workspace in Protos. It brings together all artifa
 
 ### Creating a Project
 
-1. Click **Create new project**.
-2. Add a name and description for your project.
-3. Answer questions about your project — goals, constraints, and any other relevant context.
-4. The [Co-Engineer](Co-engineer) automatically generates and runs a kickoff plan to set up your workspace.
+Setup runs as a short wizard — **Name → Details → Data → Configure** — and once the project exists you can click any step in the progress bar to jump back to it. Your progress is saved, so a setup you leave part-way through picks up where you stopped.
+
+1. Click **Create new project**. Add a **name** and **description**.
+2. **Details** — answer a few questions about the project, one at a time. Each is generated from your name and description, with clickable suggested answers you can take or type over. The first — *"What are you trying to achieve in this project?"* — sets the goal. Later questions are marked **(optional)** and have a **Skip** button, and **Skip** in the footer moves past the whole step.
+3. **Data** — optionally bring in what you already have, grouped into three panels: **BOM**, **Materials & supplier data**, and **Simulation & design candidates**. Each panel's **Ingest data** menu takes files **From device**, **From SharePoint**, or **From GitHub**, or pulls in existing **Knowledge library** documents and **Data documents**. Leave any panel empty to skip it. A drop zone at the bottom takes any other supporting documents.
+4. **Configure** — the [Co-Engineer](Co-engineer) sets up your workspace and drafts a kickoff plan from everything you gave it. You land on the new project with the plan waiting as a pill in the chat: **Run** it as drafted, **Edit** it first, or dismiss it and start on your own.
 
 ### Finding an Existing Project
 
@@ -148,12 +151,27 @@ Integrations are accessible from the **Integrations** section in the left sideba
 
 | System | What Protos does |
 |--------|-----------------|
+| Onshape | Connect your own Onshape account and give the Co-Engineer CAD tools — search your documents, inspect geometry, and build it |
 | SharePoint / OneDrive | Browse and import files into the Co-Engineer for data extraction |
 | GitHub | Register computational models (Python, scripts) from a repo into the Models Library |
 | MCP servers | Connect external tools to the Co-Engineer so it can use them directly in chat |
 | Register a Model | Register external computational models into the Model Library |
 
 > **Note:** GitHub is for model registration only — not for importing data into schemas. See [Model Library](Model-Library) for details.
+
+---
+
+## Your Account
+
+Click your name or avatar at the bottom of the left sidebar and choose **Billing & Usage**. Alongside your plan and usage, that page holds your account settings:
+
+| Card | What you can do |
+|------|-----------------|
+| **Display name** | Set or change the name shown across the app — in the user menu, on your avatar, and anywhere your work is attributed. The card tells you the current one, and the button reads **Change name** (or **Set name** if you haven't set one). |
+| **Password** | **Change password**. Accounts that sign in with Google don't have one to change, and the card says so instead. |
+| **Email preferences** | Turn **Marketing emails** on or off. Account emails — sign-in, security, and billing notices — are always sent. |
+
+The same page has a **Danger Zone** for deleting your account.
 
 ---
 

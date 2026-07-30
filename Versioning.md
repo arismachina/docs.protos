@@ -2,7 +2,7 @@
 
 [← Home](Home) · **Versioning**
 
-Protos keeps a version history for your key assets — so you can see what changed, when, and roll back if a change turns out to be wrong. Versioning is currently a pilot feature.
+Protos keeps a version history for your key assets — so you can see what changed, when, and roll back if a change turns out to be wrong.
 
 ---
 
@@ -16,6 +16,7 @@ Protos keeps a version history for your key assets — so you can see what chang
 - [Keeping Dependencies Up to Date](#keeping-dependencies-up-to-date)
 - [Data Documents Version Differently](#data-documents-version-differently)
 - [Co-Engineer and Versioning](#co-engineer-and-versioning)
+- [Project History](#project-history)
 - [Community Changelog](#community-changelog)
 - [How This Relates to Publications](#how-this-relates-to-publications)
 
@@ -81,6 +82,29 @@ Unlike schemas, canvases, and models, a data document doesn't get a new version 
 ## Co-Engineer and Versioning
 
 Ask the Co-Engineer about version history directly — things like *"What changed between v2 and v3 of this schema?"*, *"Show me this canvas's version history,"* or *"Is this canvas up to date with its dependencies?"* It can list a resource's versions, show a diff between any two, check whether a canvas's pinned dependencies are outdated, and — with your confirmation — restore a **schema**, **canvas**, or **data document** to a past version, or re-pin a canvas to the latest dependency versions. Model and knowledge-document versions can only be browsed, not restored, through the Co-Engineer; restore those from their own version-history UI instead.
+
+---
+
+## Project History
+
+Everything above is the history of a single asset. **Project History** is the view across a whole project: open a project and go to the **History** tab for a feed of every version event in it — schemas, data documents, models, and canvases together. Filter it by asset type (**Schema**, **Data document**, **Model**, **Canvas**) or by how significant the change was (**Major**, **Minor**, **Initial**). The project summary tab also carries a short preview of the most recent changes, with a link through to the full tab.
+
+### Sessions
+
+The feed groups changes into **sessions** rather than listing them one by one. A session is a run of consecutive changes by the same actor — the same person, or the Co-Engineer — with no gap longer than 30 minutes. Each card names who did the work and lists what changed, which makes it easy to see a single sitting's worth of edits as one unit.
+
+### Discarding and restoring
+
+With edit access, each session card offers one action, depending on where it sits in the timeline:
+
+| Session | Action | What it does |
+|---------|--------|--------------|
+| The **most recent** one | **Discard session** | Discards the changes made in that session and returns the project to its previous state |
+| Any **older** one | **Restore session** | Rebuilds the whole project to the state it was in at the end of that session |
+
+Both ask for confirmation first and then report what they changed. A restore is itself recorded in the feed — shown as **Restored** — and carries no action of its own, since it's already an undo.
+
+> This works on the project as a whole, which is what makes it different from [restoring a single asset](#restoring-a-previous-version). Reach for a session restore when a stretch of work went wrong across several assets at once; reach for an asset restore when one schema or canvas needs rolling back on its own.
 
 ---
 

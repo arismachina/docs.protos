@@ -48,7 +48,6 @@ Every document is automatically classified by where it came from, so you can tel
 | **Memory** | Knowledge notes you (or the Co-Engineer) captured as text |
 | **Model Run** | Content generated from a model run |
 | **Conversation** | Knowledge captured from a Co-Engineer conversation |
-| **Reference Knowledge** | Reference material surfaced for grounding |
 
 Protos assigns a category on ingestion, and the owner can change it at any time: open the **⋯** row actions and use **Set category** (or select several rows to set the category in bulk).
 

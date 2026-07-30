@@ -71,6 +71,8 @@ Owners and managers can use the **⋯** menu on any node in the community chart 
 - **Move** — reassign the team to a different parent (also available by dragging a node onto another)
 - **Delete** — remove the team (only possible if it has no sub-teams)
 
+The community itself sits at the top of the chart and isn't a team, so its node offers only **Add sub-team**. To rename the community, use the pencil button beside its name in the page header.
+
 To add or remove members from a specific team, click the team's node in the community chart and use the **Members** tab in the detail panel below.
 
 ---
@@ -89,14 +91,16 @@ When you share a resource, the person you share it with gets one of three roles:
 
 ## Sharing Resources
 
-Sharing works across projects, canvases, schemas, data documents, models, and Co-Engineer chats — all through the same **Share** dialog. Sharing is currently in beta.
+Sharing works across projects, canvases, schemas, data documents, models, and Co-Engineer chats — all through the same **Share** dialog.
 
 ### How to share
 
+The dialog has two sides: **Add access** on the left, where you grant access, and [**Who has access**](#who-has-access) on the right, listing everyone who already has it.
+
 1. Open the resource you want to share (project, canvas, schema, data document, model, or Co-Engineer chat).
 2. Click the **⋯** menu and select **Share**.
-3. Select a role (**Editor** or **Viewer**) from the role dropdown.
-4. Choose who to add access for — pick one of the three tabs:
+3. Under **Add access**, confirm which community you're sharing into. If you belong to more than one, pick it from the dropdown at the top of the card — you can share into any of your communities without switching workspaces.
+4. Choose who to add — pick one of the three tabs, and set the role (**Editor** or **Viewer**) from the **Role** dropdown beside them:
 
 | Tab | How it works |
 |-----|-------------|
@@ -104,11 +108,11 @@ Sharing works across projects, canvases, schemas, data documents, models, and Co
 | **Team** | Pick a team from the tree — access flows down to all sub-teams |
 | **Domain** | Enter an email domain (e.g. `example.com`) — any community member with that domain gets access |
 
-To share with your entire community at once, click **Share with everyone** above the tabs. This gives every community member Viewer access; you can adjust the role afterwards from the **Who has access** list.
+To share with your whole community at once, click **Share with everyone** next to the community name. This gives every member Viewer access, and the button then reads **Shared community-wide**; adjust individual roles afterwards from the **Who has access** list.
 
 Access is given immediately as you add people. Click **Close** when done.
 
-> For projects and Co-Engineer chats, **owners and editors** can manage sharing. For canvases, schemas, data documents, and models, only the **owner** can manage sharing — editors cannot reshare.
+> **Who can manage sharing.** For projects and Co-Engineer chats, **owners and editors** can share. For canvases, schemas, data documents, and models, only the **owner** can — editors cannot reshare. Making a resource public is **owner-only** in every case, even where editors can otherwise share it. Without permission to manage sharing you still get the dialog, read-only, to see who has access.
 
 ### Who has access
 
@@ -123,15 +127,15 @@ The share dialog shows a **Who has access** list that groups recipients by audie
 
 Each entry uses an avatar appropriate to its audience type. A subtitle beneath each entry describes the scope of that grant — for example, **"Team — includes sub-teams"** for a team grant or **"Everyone in this community"** for a community-wide grant.
 
-If you belong to more than one community, a **community-context picker** lets you share the resource into any of your communities without switching workspaces.
-
 ### Sharing also shares the sources behind your work
 
 When you share a project or an asset (schema, data document, model, or canvas), Protos additively shares the **Knowledge Library documents that asset was built from**, read-only, with the same people. This lets a collaborator open and reason over the sources behind your work without you sharing your whole library. See [Knowledge Library → Sharing](Knowledge-Library#sharing) for details.
 
 ### Making a resource public
 
-The Share dialog includes **Make public** and **Make private** buttons. Clicking **Make public** shows an inline confirmation before taking effect. Click **Make private** to revert.
+The **Public** section of the Share dialog is a wider scope than sharing with your community: a public resource is visible to **everyone on Protos**, across all communities, not just yours.
+
+Only the resource's **owner** can change this. Click **Make public** and an inline confirmation spells out the scope before it takes effect; **Make private** reverts it. Editors see the button disabled, with a tooltip explaining that it's owner-only.
 
 ---
 
@@ -148,7 +152,7 @@ Resource lists for schemas, data documents, and models have scope tabs at the to
 
 If you've [set an active community](#communities), **Shared with me** on these three pages automatically narrows to that community — see [Setting an active community](#communities).
 
-Canvases don't use these scope tabs — to browse shared or public canvases, click **New → Import Canvas**, which has its own Shared / Community / Public tabs.
+Canvases don't use these scope tabs — to browse shared or public canvases, click **New → Import Canvas**, which has its own **Shared with Me**, **Community Canvases**, and **Public Canvases** tabs.
 
 ---
 
@@ -205,6 +209,8 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 - **View and edit the underlying data** when the owner has enabled the **Data tab**. It exposes the linked documents' field values, which viewers can adjust and re-run against.
 - **Star the publication as helpful.** A star toggle in the sidebar (tooltip: *"Did you find this helpful?"*) lets a viewer mark the canvas helpful, with the total shown next to it.
 
+When a viewer changes a parameter, an input, or a data document, the results on screen are out of date with respect to those edits, so the canvas shows **"Values changed — run again to see updated results."** Running the canvas clears the hint, and so does putting a changed value back to what it was.
+
 > **External models can make a canvas view-only.** The re-run abilities above apply to any canvas the owner left runnable. If a canvas includes a model that calls an external provider, the owner chooses at publish time whether viewers may run it; if they don't opt in, that entire canvas is **view-only** — parameter changes and data-document selections can't be re-run either. Canvases with no external models are always runnable.
 
 ### What they cannot see
@@ -215,17 +221,28 @@ A publication is a **snapshot of a canvas** at a point in time, accessible via a
 
 ### How to publish
 
+Publishing is **owner-only**: only the project's owner sees an active **Publish** button. For everyone else it's disabled.
+
 1. Open **Simulation Studio** from the sidebar. Scroll to the **Publications** section at the bottom of the canvas list and click **Publish**.
 2. Give the publication a **name**.
-3. Select which **canvases to include**.
+3. Select which **canvases to include**. A canvas can only be included once it has a successful run behind it — until then its checkbox is disabled and reads *"Run this canvas to include it."* Run the canvas in Simulation Studio, then come back.
 4. Optionally check **Include data tab**. This adds a separate **Data** tab to the publication that exposes the linked documents' field values, which viewers can view, edit, and re-run against. (This is separate from the per-input document picker: viewers can choose which documents feed a canvas and re-run whether or not the data tab is on.)
 5. For any canvas that contains an external model, a per-canvas consent toggle appears: *"Let viewers run this canvas's external model on your API key. Turn off to make it view-only."* It defaults **on**. Leave it on to let external viewers re-run the canvas — its external models run on your key, billed to you. Turn it off to make **that whole canvas view-only** (viewers can't re-run it at all).
-6. Optionally set a **password** for access control.
+6. Optionally set a **password** for access control. Viewers are then asked for it before the publication opens, and you can [change or remove it later](#managing-a-publication).
 7. Click **Publish** — a shareable URL is generated.
 
 > **Note:** Publications are snapshots — they do not update automatically when you change the canvas. Re-publish to push an update.
 
-The **Publications** card in Simulation Studio shows each publication's helpful-star count read-only, so you can see how many viewers found a published canvas useful.
+### Managing a publication
+
+The **Publications** card in Simulation Studio lists each publication with its canvas count and its helpful-star count. Click a publication's name to open its detail dialog, which shows:
+
+- **Published** and **Last republished** timestamps
+- **Included canvases**, and a **Data tab included** badge when that option is on
+- **Password** — a **Protected** or **No password** badge, a field to **Set** or **Update** the password, and **Remove password** to drop it. Copy a password you've just set from the field beside it before you close the dialog: it isn't stored in a form Protos can show you again, so a lost one has to be replaced rather than looked up.
+- **Copy link**, **Open**, **Re-publish (refresh snapshot)**, and **Delete** — deleting stops the shared link working and can't be undone
+
+In a project with no publications yet, members who aren't the owner see *"Publications are managed by the project owner."* in place of the prompt to publish one.
 
 ---
 
