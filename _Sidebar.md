@@ -33,6 +33,7 @@
 - [Canvas Sharing](Collaboration-and-Sharing#sharing-resources)
 - [Publishing Externally](Collaboration-and-Sharing#publishing-for-external-access)
 - [Versioning](Versioning)
+- [Project History](Versioning#project-history)
 
 ---
 
@@ -49,3 +50,4 @@
 **Reference**
 - [Glossary](Glossary)
 - [Integrations](Home#integrations)
+- [Your Account](Home#your-account)
