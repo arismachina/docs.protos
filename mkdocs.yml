@@ -54,6 +54,7 @@ nav:
   - Co-Engineer: Co-engineer.md
   - MCP Connections: MCP-Connections.md
   - Collaboration & Sharing: Collaboration-and-Sharing.md
+  - FAQ: FAQ.md
   - Glossary: Glossary.md
   - Tutorials:
     - Creating Your First Schema: Tutorial-Schemas.md
@@ -67,6 +68,7 @@ markdown_extensions:
   - tables
   - admonition
   - attr_list
+  - pymdownx.details
   - pymdownx.highlight
   - pymdownx.superfences
   - toc
