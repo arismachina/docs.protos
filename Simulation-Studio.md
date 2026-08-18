@@ -131,7 +131,7 @@ Runs happen on the server, so you can navigate away and come back — a run in f
 
 A sweep means running your canvas across a range of values for a parameter instead of a single value — so instead of one result, you get a full curve.
 
-You do this with an **array parameter**. Instead of setting temperature = 25, you set it as an array from 10 to 60 across 20 points. Protos generates the list automatically (linear or logarithmic spacing). When the canvas runs, the downstream calculation executes once for each value and returns all results together.
+You do this with an **array parameter**. Instead of setting temperature = 25, you set it as an array from 10 to 60 across 20 points. Protos generates the list automatically (linear or logarithmic spacing). Protos hands the whole list to the downstream calculation as a single input, so the calculation runs once and works across every value at once, returning all the results together.
 
 **Example:** you want to see how dissolution rate changes with temperature. Set temperature as an array from 10°C to 60°C, run the canvas, and you get a chart of dissolution rate across the full range — one run instead of dozens.
 

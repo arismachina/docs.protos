@@ -86,7 +86,7 @@ The **Add** menu offers four ways in, described below in the order they appear.
 For bulk ingestion of many files at once:
 
 1. Click **Add → Upload Folder**.
-2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum, and each individual file is subject to the same size limit as a single upload.
+2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum. Individual files above the single-upload size limit are reported as failures rather than ingested.
 
 ### Import from SharePoint
 
@@ -96,7 +96,7 @@ For bulk ingestion of many files at once:
 4. Click **Import**. Protos scans your selection, then ingests on the server, reporting how many files were added, how many were already in the library, and how many failed.
 5. Closing the dialog only stops the progress display — **the import keeps running on the server**. Reload the page to see files that landed after you closed it.
 
-The same **500 file** and **100 MB** batch caps apply as to a folder upload, including the per-file size limit. Unlike a folder upload, the count includes unsupported file types, which are reported as failures rather than skipped up front.
+The same **500 file** and **100 MB** batch caps apply as to a folder upload, and oversized files are reported the same way. Unlike a folder upload, the count includes unsupported file types, which are reported as failures rather than skipped up front.
 
 ### Add a knowledge note
 
