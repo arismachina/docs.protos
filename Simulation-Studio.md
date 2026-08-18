@@ -30,10 +30,13 @@ Simulation Studio shows a list of your canvases. Each canvas is a graph of conne
 | **Calculation** | Python code that transforms upstream data |
 | **Model** | Calls an external model registered in Models |
 | **Visualization** | Plots the output as a chart |
+| **Action** | Triggers a step in a sequence — marked *Soon*, not yet available |
 
-You connect them left to right. Data flows through the chain automatically — when an input changes, everything downstream recalculates.
+Blocks are laid out left to right, in dependency order. You wire them up from inside a block rather than by dragging on the canvas: open a block and pick its inputs in the **Upstream Components** field. Data then flows through the chain automatically — when an input changes, everything downstream recalculates.
 
-> **Model blocks work differently.** You can't add a Model block by hand — it's set up by the Co-Engineer, and using models currently requires a paid plan.
+The Add Component dialog also splits **Parameter** into Numerical, Boolean, String, and Array.
+
+> **Model blocks work differently.** A Model block is set up by the Co-Engineer rather than built by hand — the rail's **Model** entry hands you over to it. Adding models is a **Pro** feature; a canvas that already has one runs on any plan.
 
 ---
 
@@ -59,15 +62,15 @@ You can have multiple canvases open at the same time. The tabs bar at the top of
 
 ### Graph and List views
 
-Next to the Build/Results switch is a small toggle between **Graph view** and **List view**. Graph view is the node-and-arrow canvas described above; List view replaces it with the same blocks laid out as sections grouped by type (Parameters, Data Input, Model, Calculation, Visualization, Action) — useful when you want to scan everything at once instead of following the wiring.
+Next to the Build/Results switch is a small icon toggle between **Graph view** and **List view** (hover for the labels). Graph view is the node-and-arrow canvas described above; List view replaces it with the same blocks laid out as sections grouped by type — Parameter Components, Data Input Components, Model Components, Calculation Components, Visualization Components, and Action Components — useful when you want to scan everything at once instead of following the wiring.
 
 ### Exporting and sharing
 
-The **⋯** (more actions) button in the Build toolbar opens a menu with **Share…**, plus export options for the canvas graph and any visualization as a PNG, and a PDF export of the canvas.
+The **More actions** button (vertical dots) in the Build toolbar opens a menu with **Share…** for the canvas owner, plus an **Export** group: **Graph as PNG**, **Visualization as PNG** (one entry per visualization), and **As PDF**. Importing a canvas isn't here — it's on the tab bar's **+** menu.
 
 ### Version History
 
-Every meaningful change to a canvas's components or metadata creates a new version. Open the version button in the header to browse past versions, compare any two, label one for later, or restore it — restoring creates a new version rather than erasing anything. If a schema, model, or data document this canvas depends on gets a newer version, an **"Update available"** banner appears; click **Update** to re-pin all outdated dependencies at once. Ask the Co-Engineer to check for you too — see [Versioning](Versioning) for the full picture.
+Every meaningful change to a canvas's components or metadata creates a new version — renaming or moving a block doesn't. Open the version button in the header to browse past versions, compare any two, label one for later, or restore it — restoring creates a new version rather than erasing anything. If a schema, model, or data document this canvas depends on gets a newer version, a banner tells you **a newer version of a dependency is available**, and whether the changes are backward-compatible or include a breaking one; click **Update** to re-pin all outdated dependencies at once. Ask the Co-Engineer to check for you too — see [Versioning](Versioning) for the full picture.
 
 ### Components rail
 
@@ -75,15 +78,21 @@ Along the left side of the Build view is the **Components rail** — a palette o
 
 ### Node-details panel
 
-Click any block on the canvas to open its detail panel on the right. The panel has two to three sections:
+Click any block on the canvas to open its detail panel on the right. Depending on the block type it has up to five sections:
 
 | Section | What it shows |
 |---------|--------------|
-| **Details** | Content varies by type: calculation/model → approval status; parameter → type and value; data-input → linked schema and documents |
-| **Result** | Output values from the last run — only appears for calculation and model blocks after the sequence has run |
+| **Preview** | An inline chart of the block's output — visualization blocks only. Before a run it reads *"Run the sequence to populate this visualization."* |
+| **Details** | Varies by type: calculation and model → approval status, plus a code preview and an **Edit calculation** button for calculations; parameter → type and value, or range, points, and scale for an array; data input → the schema it reads, how many documents, and which keys |
+| **Result** | Output values from the last run — or the error, if it failed. Calculation and model blocks only |
+| **Sources** | The schema and documents this block reads |
 | **Connections** | Upstream and downstream blocks this node is wired to |
 
-> **Visualization blocks:** instead of a Details section, visualization block panels show a **Preview** section with an inline chart of the block's output.
+The detail panel is available in Graph view.
+
+### Open in Data Studio
+
+Data input blocks carry an **Open in Data Studio** button — on the block's row in List view, and in its **Sources** section in Graph view. It jumps you to the [Data Studio](Data-Studio) on that block's schema, and directly to its document when the block reads exactly one. A block reading several documents takes you to the right schema with your own document selection intact.
 
 ---
 
@@ -91,8 +100,8 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 1. Open **Simulation Studio** from the sidebar — you land on the canvas list.
 2. Click an existing canvas to open it, or click **New** (a dropdown with **New Canvas** and **Import Canvas** options) to create one.
-3. The canvas opens in the **Build** tab. Add blocks from the **Components rail** on the left and connect them — the Co-Engineer can build the canvas for you if you describe what you are modelling.
-4. For any **Calculation** block, click **Approve** before it will execute (this is a trust gate — you confirm the code is safe to run).
+3. The canvas opens in the **Build** tab. Add blocks from the **Components rail** on the left, then open each one and set its **Upstream Components** to wire it up — or describe what you're modelling and let the Co-Engineer build it for you.
+4. For any **Calculation** or **Model** block, click **Approve & Run** before it will execute (this is a trust gate — you confirm the code is safe to run).
 
 ---
 
@@ -100,13 +109,21 @@ Click any block on the canvas to open its detail panel on the right. The panel h
 
 Click **Start sequence** to run the canvas. Protos finds all **calculation and model** blocks that have no upstream calculation or model dependencies, runs those first, then cascades through downstream executables.
 
-If any calculation or model blocks are unapproved, clicking Start sequence opens a confirmation dialog — you can approve all of them at once and continue, or cancel.
+If any calculation or model blocks are unapproved, clicking Start sequence opens an **Unapproved components** dialog listing them. **Approve and run** approves them all and starts the sequence; **Cancel** backs out.
 
 Switch to the **Results** tab to see visualizations and outputs after the run completes.
 
 ### Run progress indicators
 
 While a run is in flight the toolbar shows **Running · X of Y done** with a spinner so you can see how far along it is. When all components settle it updates to **Completed X of Y**. If you're in the Build tab when results land, a dot appears on the **Results** tab — click it to see what's new.
+
+### Component status
+
+Each block shows where it has got to: **Queued** (waiting to run), **Running**, **Completed**, **Failed to run**, **Cancelled**, **Unapproved**, **Approved** (approved but not yet run), and **Ready**.
+
+### Cancelling, and leaving mid-run
+
+Runs happen on the server, so you can navigate away and come back — a run in flight will still be there when you return. To stop one, use the jobs menu in the header: it lists active jobs with a **Cancel** button for each. There's no way to cancel a whole sequence in one go.
 
 ---
 
@@ -119,8 +136,8 @@ You do this with an **array parameter**. Instead of setting temperature = 25, yo
 **Example:** you want to see how dissolution rate changes with temperature. Set temperature as an array from 10°C to 60°C, run the canvas, and you get a chart of dissolution rate across the full range — one run instead of dozens.
 
 To set up a sweep:
-1. Add an **array parameter** block instead of a regular parameter.
-2. Set min, max, number of points, and spacing (linear or log).
+1. Add a **Parameter: Array** block from the Add Component dialog instead of a regular parameter.
+2. Under **Array Configuration**, set **Min**, **Max**, **Number of Points**, and **Scale** (Linear or Log).
 3. Start sequence — results come back as a full output surface you can plot.
 
 ---

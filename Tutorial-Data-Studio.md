@@ -48,19 +48,21 @@ To add a requirements document, click **Select documents…** and choose it from
 
 ## Step 5 — Edit values directly in the table
 
-Double-click a cell in a document you created to change its value without leaving the Data Studio. Press **Enter** or click away to save — the change updates the original document immediately. (Inline editing is available only on documents you own.)
+Double-click a cell in a document you created to change its value without leaving the Data Studio. Press **Enter** or click away to save — the change updates the original document immediately. (Inline editing is available only on documents you created.)
 
 ---
 
 ## Step 6 — Analysis Panel
 
-**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab (comparison against requirement bounds is coming soon) plus chart tabs (bar chart, scatter plot, histogram, spider chart). Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects.
+**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab (comparison against requirement bounds is coming soon) plus chart tabs you add yourself. Each graph has a **Graph type** setting — bar chart, scatter plot, histogram, or spider chart — with histogram and spider chart marked *coming soon*. Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects.
 
 ---
 
-## Step 7 — The canvas uses whatever is activated here
+## Step 7 — Feeding the canvas
 
-Whatever documents are activated here are what the canvas runs on. Go to **Simulation Studio** and click **Start sequence** to run with the new inputs.
+Activating a document here makes it selectable in a canvas's **Data input** block — it doesn't add it to a block that already exists. Open the block in **Simulation Studio** to pick it up, then click **Start sequence** to run with the new inputs.
+
+Editing a value here does flow straight through: anything approved downstream of a block that reads this document re-runs automatically.
 
 ---
 
