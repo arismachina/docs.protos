@@ -2,9 +2,9 @@
 
 [← Home](Home) · **Co-Engineer**
 
-The Protos **Co-Engineer** is a multi-agent AI system available across all features. It structures data, configures simulations, and surfaces connections — always with traceable sources. Depending on your task, the Co-Engineer hands off to specialised sub-agents best suited to help.
+The Protos **Co-Engineer** is a multi-agent AI system available across all features. It structures data, configures simulations, and surfaces connections — always with traceable sources. Behind the scenes it calls specialist agents to do focused work, but it stays the one you're talking to.
 
-> **Important:** Co-Engineer only surfaces information it can trace. It will not speculate or fill in gaps with assumptions. Every claim links back to a source you can inspect.
+> **Important:** Co-Engineer is built to surface information it can trace rather than speculate. When a response draws on the Knowledge Library, it carries source traces you can click to see the exact passage behind it.
 
 ---
 
@@ -25,17 +25,22 @@ The Protos **Co-Engineer** is a multi-agent AI system available across all featu
 |-----------|---------|
 | **Schema authoring** | Create or update a schema based on your description — e.g. *"Create a schema for tablet formulation experiments"* |
 | **Data document creation** | Extract structured data from an uploaded file and create a data document following your schema |
-| **Canvas building** | Builds a simulation canvas — adds blocks, writes the code, and wires everything together |
+| **Canvas building** | Builds and edits a simulation canvas — adds blocks, writes the code, and wires everything together |
+| **Running models** | Run a registered model, or a component on a canvas, and report the result |
+| **Model registration** | Register a model from a script, a repo, or an API endpoint, inferring its input and output schemas |
 | **Knowledge surfacing** | Find relevant entries from the [Knowledge Library](Knowledge-Library) as you work |
+| **Web research** | Search the web and import a page straight into the Knowledge Library |
+| **SharePoint import** | Pull files and folders from SharePoint into the Knowledge Library |
 | **Requirements parsing** | Parse an uploaded spec document into structured targets and constraints |
-| **Design comparison** | Compare design variants against requirements and surface gaps |
+| **Connecting external tools** | Register an MCP server you name, then take you to the page to finish setting it up |
+| **Taking you to an asset** | Navigate you straight to the schema, canvas, or document it just worked on |
 | **Version history** | *"What changed between v2 and v3 of this schema?"* — browse and diff version history, check whether a canvas's dependencies are outdated, and restore a schema, canvas, or data document to a past version |
 
 ---
 
 ## How to Use It
 
-The Co-Engineer panel is available from any screen via the **chat icon** in the top-right corner of the header bar.
+The Co-Engineer panel opens from the **Co-Engineer icon** in the top-right corner of the header bar, on any project screen.
 
 Type in plain language:
 
@@ -44,40 +49,40 @@ Type in plain language:
 - *"Are there any prior experiments on this material in the Knowledge Library?"*
 - *"Build a canvas that takes my formulation data and calculates the adjusted capacity."*
 
-Co-Engineer responses always include **source traces** — click any claim to see where it came from.
+When a response draws on the Knowledge Library it includes **source traces** — click one to see where it came from.
 
-You can attach files to any message — PDFs, documents, images, and more. The maximum file size per attachment is **100 MB**.
+You can attach files to any message — PDFs, documents, images, and more. Up to **10 files** per message, **8 MB** each.
 
-> **Pro features:** Some Co-Engineer capabilities require a Pro plan. If you're on a free plan you'll see a prompt to upgrade when you reach a Pro-only feature.
+> **Co-Engineer is a Pro feature.** On a free plan the chat panel shows an *Upgrade to Pro* banner and messages can't be sent.
 
 ---
 
 ## Multi-agent system
 
-The Co-Engineer is built on a multi-agent architecture. Rather than a single assistant handling every task, it orchestrates specialised sub-agents and hands off to them mid-conversation depending on what you're doing.
+The Co-Engineer is built on a multi-agent architecture, but you only ever talk to one agent. Behind the scenes it calls specialists to do focused work and folds their results into its own reply.
 
-### Sub-agents
+### Specialists
 
-- **Co-Engineer** — the generalist; handles open-ended questions and coordinates with the other agents
-- **Knowledge** — searches the Knowledge Library and the web to surface relevant information and prior work
-- **Data** — creates, edits, and validates data documents against your schemas
-- **Simulation** — builds and edits canvases in the Simulation Studio
+- **Knowledge** — searches the Knowledge Library and the web, and imports sources into the library
+- **Data** — creates and edits schemas, data documents, and requirements, and sets up the Data Studio
+- **Simulation** — builds and edits canvases, and runs models
 
-### Talking to indicator
+You never talk to a specialist directly. One other agent does take over the conversation when you ask for it: **Help**, which answers questions about Protos itself (type `/help`).
 
-The chat panel shows an **agent badge** with the current agent's identity icon and accent colour. Hover the badge to see a "Talking to" label. This updates automatically when the Co-Engineer hands off to a sub-agent.
+### Sub-agent progress card
 
-### Agent handoff
+While a specialist is working, a card appears in the chat with its name and a spinner. Expand **Task** to see the brief the Co-Engineer sent it, and watch the steps as it works. The card collapses to a green check when the specialist finishes, or a red cross if it failed — click it open again at any time to see what it did.
 
-When the Co-Engineer delegates to a sub-agent, the chat shows a handoff message and the "Talking to" indicator updates. You don't need to do anything — the handoff happens automatically based on what you asked.
+### Agent badge
+
+The chat panel shows an **agent badge** with the current agent's identity icon and accent colour. Hover the badge to see a "Talking to" label. It reads Co-engineer for normal work, and changes only when you're with Help.
 
 ### Slash commands
 
 Typing `/` in the chat composer opens a command picker. Available commands:
 
-- `/agent` — switch to a specific sub-agent by name
 - `/help` — get context-aware help from the docs
-- `/feedback` — submit feedback about Co-Engineer
+- `/feedback` (or `/idea`) — submit feedback about Co-Engineer
 
 ### Versioning skill
 
@@ -85,13 +90,15 @@ Ask about version history, whether a canvas's dependencies are current, or to re
 
 ### MCP servers
 
-An **MCP** button in the lower-left of the chat composer lets you toggle individual MCP servers on or off for the current conversation. You can also check **Default in new conversations** per server so your preferred setup carries over automatically. If no servers are configured yet, the popover links you to [MCP Connections](MCP-Connections) to add one.
+An **MCP** button in the lower-left of the chat composer lets you toggle individual MCP servers on or off for the current conversation. You can also check **Default in new conversations** per server so your preferred setup carries over automatically. The popover also has **Enable all** and **Disable all**. If no servers are configured yet, it links you to [MCP Connections](MCP-Connections) to add one.
+
+You can also just ask the Co-Engineer to connect a server — give it the URL and it will register it and take you to the MCP servers page to run tool discovery.
 
 ---
 
 ## Sharing a chat session
 
-Co-Engineer sessions can be shared with community members. Open a chat session, click **Share**, and assign **Editor** or **Viewer** access to individuals, teams, or the whole community. Shared sessions appear under **Shared with me** in the chat session list. See [Collaboration & Sharing](Collaboration-and-Sharing) for details.
+Co-Engineer sessions can be shared with community members. Open a chat session, click the **Share** icon, and assign **Editor** or **Viewer** access to individuals, teams, or the whole community — chats can't be made public. Sessions shared with you appear under **Shared with me** in the project's Co-Engineer sessions panel, and open as a read-only transcript. See [Collaboration & Sharing](Collaboration-and-Sharing) for details.
 
 ---
 

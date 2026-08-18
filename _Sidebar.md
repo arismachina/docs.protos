@@ -48,6 +48,7 @@
 ---
 
 **Reference**
+- [FAQ](FAQ)
 - [Glossary](Glossary)
 - [Integrations](Home#integrations)
 - [Your Account](Home#your-account)

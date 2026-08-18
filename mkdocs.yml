@@ -40,13 +40,14 @@ nav:
     - Schemas: Schemas.md
     - Models Library:
       - Overview: Model-Library.md
-      - Cell Performance: Model-Cell-Performance.md
-      - Cell Optimizer: Model-Cell-Optimizer.md
-      - DFN Calendar Ageing: Model-DFN-Calendar-Ageing.md
-      - DFN Cyclic Ageing: Model-DFN-Cyclic-Ageing.md
-      - SPMeT Power: Model-SPMeT-Power.md
-      - SPMeT DCIR: Model-SPMeT-DCIR.md
-      - SPMeT Dynamic Load: Model-SPMeT-Dynamic-Load.md
+      - Battery & cell design models:
+        - Cell Performance: Model-Cell-Performance.md
+        - Cell Optimizer: Model-Cell-Optimizer.md
+        - DFN Calendar Ageing: Model-DFN-Calendar-Ageing.md
+        - DFN Cyclic Ageing: Model-DFN-Cyclic-Ageing.md
+        - SPMeT Power: Model-SPMeT-Power.md
+        - SPMeT DCIR: Model-SPMeT-DCIR.md
+        - SPMeT Dynamic Load: Model-SPMeT-Dynamic-Load.md
     - Knowledge Library: Knowledge-Library.md
   - Design:
     - Data Studio: Data-Studio.md
@@ -54,6 +55,7 @@ nav:
   - Co-Engineer: Co-engineer.md
   - MCP Connections: MCP-Connections.md
   - Collaboration & Sharing: Collaboration-and-Sharing.md
+  - Versioning: Versioning.md
   - FAQ: FAQ.md
   - Glossary: Glossary.md
   - Tutorials:

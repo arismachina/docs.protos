@@ -18,12 +18,13 @@ Click **Knowledge** in the sidebar.
 
 ## Step 2 — Add your documents
 
-Click **+ Add**. A dropdown appears with three options:
+Click **+ Add**. A dropdown appears with four options:
 
-![Knowledge Library header with the + Add dropdown open, showing Upload Document, Upload Folder, and Add Knowledge](images/kl-02-add-dropdown.png)
+![Knowledge Library header with the + Add dropdown open, showing Upload Document, Upload Folder, From SharePoint, and Add Knowledge](images/kl-02-add-dropdown.png)
 
-- **Upload Document** — upload a file (PDF, DOCX, XLSX, XLS, CSV, TXT, MD, JSON, PNG, JPG, JPEG, WEBP, GIF, TIFF, and more — up to 100 MB). This is the most common option.
+- **Upload Document** — upload a file (PDF, DOCX, XLSX, XLS, CSV, TXT, MD, JSON, PNG, JPG, JPEG, WEBP, GIF, TIFF, and more — up to about 16 MB). This is the most common option.
 - **Upload Folder** — bulk upload many files at once. A progress indicator tracks succeeded and failed files.
+- **From SharePoint** — import files, folders, or a whole document library from SharePoint. See [Import from SharePoint](Knowledge-Library#import-from-sharepoint).
 - **Add Knowledge** — type a note directly without a file. Use this for decisions and rationale captured in the moment.
 
 Choose **Upload Document**, select your file, give it a name, and click Upload. Protos splits it into chunks and embeds them so the Co-Engineer can search across the content.

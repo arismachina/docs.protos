@@ -31,45 +31,52 @@ It is the step between *"I have data"* and *"I want to run a calculation"*. You 
 
 2. **Select documents to compare** — use the document selector to choose which documents to show. Each selected document becomes a column in the table. You can show multiple variants side by side.
 
-3. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately. Inline editing is only available if you own the document.
+3. **Edit inline** — double-click any cell to edit a value directly in the table. No need to open the document separately. Inline editing is available on documents you created.
 
-4. **Add a requirement** — when creating a new document, use the **Create type** toggle to switch from Design to Requirement. Requirement documents use the same schema fields but numeric inputs become min/max ranges instead of single values. The requirement appears as a column in the table alongside your designs, and the Gap Analysis panel uses its bounds to show which designs fall within spec.
+4. **Add a requirement** — when creating a new document, use the **Create type** toggle to switch from Design to Requirement. Requirement documents use the same schema fields, but numeric inputs become bounds instead of single values — a min and a max, or a value with a tolerance in absolute or percentage terms. The requirement appears as a column in the table alongside your designs, and the Gap Analysis panel uses its bounds to show which designs fall within spec.
 
 Once you have the right documents selected, they are available as inputs to any canvas in Simulation Studio.
+
+You can also get here straight from a canvas: any Data input block in [Simulation Studio](Simulation-Studio) has an **Open in Data Studio** button that lands you on that block's schema.
+
+### The rest of the toolbar
+
+Alongside the schema and document pickers there is **New Document** — pick a schema and it opens the create form — a search box matching name or tag, and a tag filter that narrows both the document list and the schema picker. Each document column's **⋯** menu offers Tags, Copy, Edit, Publish/Unpublish, Share, Save version, and Remove.
+
+Values render with their units, and requirement values render as their bounds — `≥ x`, `≤ x`, `min–max`, or `value ± tol`. Requirement bounds are also drawn onto charts as hatched out-of-spec zones, which you can toggle from the chart legend.
 
 ---
 
 ## The Analysis Panel
 
-Below the table there is an analysis panel where you can plot the data across your selected documents. The panel opens with a **Gap Analysis** tab (always available; pass/fail comparison of design values against requirement bounds is coming soon) plus one chart tab:
+Below the table there is an analysis panel where you can plot the data across your selected documents. It opens on a **Gap Analysis** tab, which is always present — pass/fail comparison of design values against requirement bounds is coming soon, so for now it just describes your selection. Add your own charts with **New Graph**. Each graph can be one of:
 
 | Chart type | Use for |
 |-----------|---------|
 | **Bar chart** | Compare a single field across all your variants — e.g. porosity across 5 formulations |
 | **Scatter plot** | Plot one field against another — e.g. particle size vs. dissolution rate |
 
-Histogram and spider chart tabs are also available (marked as coming soon).
+Each graph tab has a **Graph type** setting with all four options — Bar chart, Scatter plot, Histogram, and Spider chart. Histogram and Spider chart are marked *Coming soon* and can't be selected yet.
 
 You configure each chart by picking which schema fields go on which axis. The chart updates as you change your document selection.
 
-Click **+ New Graph** to add as many chart tabs as you need — each is independently configured. Double-click a tab to rename it, or hover it and click the **×** to remove it. You can also pin the current set of tabs as the default layout for new projects.
+Click **New Graph** to add as many chart tabs as you need — each is independently configured, and they're named Graph 1, Graph 2, and so on. Double-click a tab to rename it, or hover it and click the **×** to remove it. Gap Analysis can't be renamed or removed. You can also **pin** the current set of tabs as your default layout for new projects; the pin belongs to one project at a time, so pinning here moves it from wherever it was.
 
 ---
 
 ## How It Connects to the Canvas
 
-A canvas contains **Input components** that read from whichever documents are active in the Data Studio. This means:
+A canvas's **Data input** blocks read specific data documents. You pick those documents when you add the block, choosing from whatever is active in the Data Studio — so the Data Studio decides what is *available* to a canvas, and the block decides what it *reads*.
 
-- You do not hardwire specific documents into a canvas — you choose them in the Data Studio
-- Swapping which documents are active is enough to re-run the canvas on different data
-- You can test a new variant by activating it in the Data Studio without touching the canvas at all
+- Activating a document here makes it selectable in a Data input block. It doesn't add it to a block that already exists — to run on a new variant, open the block and add it there.
+- Editing a value here does flow straight through: any approved calculation or model downstream of a block that reads that document re-runs automatically.
 
-Once you have the right documents active, go to Simulation Studio and click **Start sequence** to run the canvas against the new data.
+To run a canvas against a changed selection, go to Simulation Studio and click **Start sequence**.
 
 **The relationship in one line:**
 
 ```
-Data Studio (which data) → Canvas (what to do with it) → Results
+Data Studio (what's available) → Data input block (what this canvas reads) → Results
 ```
 
 ---

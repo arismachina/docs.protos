@@ -123,7 +123,7 @@ An AI assistant available across all features. It accelerates work by structurin
 
 ### [MCP Connections](MCP-Connections)
 
-Connect external tools — e.g. Notion, Linear, or Sentry — to the Co-Engineer. Once connected, the Co-Engineer can use those tools directly in chat without you switching tabs. Found under **Integrations** in the sidebar, not as a top-level page.
+Connect external tools — e.g. Notion, Linear, or Atlassian — to the Co-Engineer. Once connected, the Co-Engineer can use those tools directly in chat without you switching tabs. Found under **Integrations** in the sidebar, not as a top-level page.
 
 [→ MCP Connections guide](MCP-Connections)
 
@@ -151,8 +151,7 @@ Integrations are accessible from the **Integrations** section in the left sideba
 
 | System | What Protos does |
 |--------|-----------------|
-| Onshape | Connect your own Onshape account and give the Co-Engineer CAD tools — search your documents, inspect geometry, and build it |
-| SharePoint / OneDrive | Browse and import files into the Co-Engineer for data extraction |
+| SharePoint | Browse and import files and folders into the Knowledge Library |
 | GitHub | Register computational models (Python, scripts) from a repo into the Models Library |
 | MCP servers | Connect external tools to the Co-Engineer so it can use them directly in chat |
 | Register a Model | Register external computational models into the Model Library |
@@ -163,15 +162,23 @@ Integrations are accessible from the **Integrations** section in the left sideba
 
 ## Your Account
 
-Click your name or avatar at the bottom of the left sidebar and choose **Billing & Usage**. Alongside your plan and usage, that page holds your account settings:
+Click your name or avatar at the bottom of the left sidebar and choose **Billing & Usage**. That page holds your subscription and your account settings:
 
 | Card | What you can do |
 |------|-----------------|
-| **Display name** | Set or change the name shown across the app — in the user menu, on your avatar, and anywhere your work is attributed. The card tells you the current one, and the button reads **Change name** (or **Set name** if you haven't set one). |
-| **Password** | **Change password**. Accounts that sign in with Google don't have one to change, and the card says so instead. |
+| **Subscription** | See your current plan and trial status. **Subscribe to Pro** opens Stripe Checkout, which collects your full billing address for invoicing and tax. **Change Plan** and **Manage Subscription** open the Stripe customer portal. |
+| **Refer friends, earn free Pro** | Share a referral link — a referred signup gets a longer trial, and so do you. |
 | **Email preferences** | Turn **Marketing emails** on or off. Account emails — sign-in, security, and billing notices — are always sent. |
+| **Display name** | Set or change the name shown across the app — in the user menu and on your avatar. The card tells you the current one, and the button reads **Change name** (or **Set name** if you haven't set one). |
+| **Password** | **Change password**. Accounts that sign in with Google don't have one to change, and the card says so instead. |
 
 The same page has a **Danger Zone** for deleting your account.
+
+New accounts start on a **15-day Pro trial** with no card required — 30 days if you were referred. There is no free tier behind it, so subscribe before it ends to keep working.
+
+### What's new
+
+The same user menu has **What's new** — a searchable history of everything shipped, with the full changelog alongside it. Click any entry to read the detail, and **Check it out** takes you straight to the feature. Browsing never marks an update as read, so anything you haven't seen yet still appears in the pop-up.
 
 ---
 
@@ -184,7 +191,7 @@ The same page has a **Danger Zone** for deleting your account.
 | **Node** | A block on the canvas — parameter, input, calculation, model, or visualization |
 | **PSPP** | Process → Structure → Property → Performance |
 | **Schema** | A defined structure for a type of engineering data |
-| **Sweep** | A batch simulation run across a parameter space |
+| **Sweep** | A single run that varies one or more parameters across a range, returning an output surface |
 | **TRL** | Technology Readiness Level — Protos is optimized for TRL 0–3 |
 | **Trace** | The ability to follow any value back to its original source |
 
