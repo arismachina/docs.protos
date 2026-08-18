@@ -25,7 +25,7 @@ The **Knowledge Library** is Protos's institutional memory. Every decision, data
 
 | Type | Examples |
 |------|---------|
-| **Academic literature** | Papers, standards, patents — uploaded as PDF, DOCX, XLSX, XLS, CSV, TXT, Markdown, JSON, and common image formats up to 32 MB |
+| **Academic literature** | Papers, standards, patents — uploaded as PDF, DOCX, XLSX, XLS, CSV, TXT, Markdown, JSON, and common image formats up to about 16 MB |
 | **Internal reports** | Experimental summaries, design reviews, test reports |
 | **Decisions** | Why a parameter value was chosen; why an approach was rejected |
 | **Experimental results** | Test reports and datasets uploaded as files or captured as text notes |
@@ -76,7 +76,7 @@ The **Add** menu offers four ways in, described below in the order they appear.
 ### Upload a document
 
 1. Click **Add → Upload Document**.
-2. Choose a file — PDF, DOCX, Excel, CSV, TXT, images, and more. Up to 32 MB.
+2. Choose a file — PDF, DOCX, Excel, CSV, TXT, images, and more. Up to about 16 MB.
 3. The title is auto-filled from the filename — edit it if needed.
 4. Click **Upload**. Protos parses and chunks the content, making it available to the Co-Engineer.
 5. If that file is already in the library, Protos tells you so instead of creating a duplicate, and offers **View document** to open the copy you already have.
@@ -86,7 +86,7 @@ The **Add** menu offers four ways in, described below in the order they appear.
 For bulk ingestion of many files at once:
 
 1. Click **Add → Upload Folder**.
-2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum.
+2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum, and each individual file is subject to the same size limit as a single upload.
 
 ### Import from SharePoint
 
@@ -96,7 +96,7 @@ For bulk ingestion of many files at once:
 4. Click **Import**. Protos scans your selection, then ingests on the server, reporting how many files were added, how many were already in the library, and how many failed.
 5. Closing the dialog only stops the progress display — **the import keeps running on the server**. Reload the page to see files that landed after you closed it.
 
-The same **500 file** and **100 MB** batch caps apply as to a folder upload. Unlike a folder upload, the count includes unsupported file types, which are reported as failures rather than skipped up front.
+The same **500 file** and **100 MB** batch caps apply as to a folder upload, including the per-file size limit. Unlike a folder upload, the count includes unsupported file types, which are reported as failures rather than skipped up front.
 
 ### Add a knowledge note
 
