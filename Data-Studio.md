@@ -62,6 +62,8 @@ You configure each chart by picking which schema fields go on which axis. The ch
 
 Click **New Graph** to add as many chart tabs as you need — each is independently configured, and they're named Graph 1, Graph 2, and so on. Double-click a tab to rename it, or hover it and click the **×** to remove it. Gap Analysis can't be renamed or removed. You can also **pin** the current set of tabs as your default layout for new projects; the pin belongs to one project at a time, so pinning here moves it from wherever it was.
 
+Bar chart and scatter tabs also carry a **download** button, which opens a menu offering **Download as PNG** and **Download as PDF** — the PDF is a single page sized to the chart. This works the same way as [Simulation Studio](Simulation-Studio#exporting-and-sharing) visualization exports. Gap Analysis has no download button.
+
 ---
 
 ## How It Connects to the Canvas

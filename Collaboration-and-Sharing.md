@@ -26,6 +26,8 @@ A community is a group of people you share with — its members, its team struct
 
 Everyone also has a **personal community** of their own, marked with a `Personal` badge on its card. It's the fallback when no other community is active, and it's the one community that can't be deleted.
 
+> **Enterprise deployments call these Organizations.** The label depends on your deployment — protos.arismachina.com says *Communities*, a dedicated enterprise instance says *Organizations*. It's only a name: everything on this page works the same either way.
+
 ### Finding your communities
 
 Click **Communities** in the sidebar — it sits near the bottom, just above your profile. This opens the Communities page, which shows a card for each community you belong to, along with any pending invitations.
@@ -178,6 +180,21 @@ If you've [set an active community](#communities), **Shared with me** on these t
 
 Canvases don't use these scope tabs — to browse shared or public canvases, click **New → Import Canvas**, which has its own **Shared with Me**, **Community Canvases**, and **Public Canvases** tabs.
 
+### Projects shared with you
+
+The project switcher in the header lists projects you own **and** projects shared with you together, so a project a teammate shares reaches you without a trip to the library.
+
+What a shared project's **⋯** menu offers depends on your role on it: **Delete** for the owner, **Rename** for the owner or an editor, and neither of them for a viewer. In place of the actions, the menu tells you why — and the wording depends on how the project reached you:
+
+| How it reached you | What the menu says |
+|--------------------|--------------------|
+| Shared with a team in your community | *"Shared within your community — leave the community to remove it."* |
+| Shared with you directly | *"Shared with you — only its owner can remove it."* |
+| A legacy email-domain grant | *"Shared with your organisation — only its owner can remove it."* |
+| Made public | *"A public project — only its owner can remove it."* |
+
+There's no way to take a shared project off your own list, because the share isn't yours to revoke. To stop seeing one shared through a community, [leave that community](#leaving-a-community); for a project shared with you directly, ask its owner to remove your access.
+
 ---
 
 ## Live Presence
@@ -265,6 +282,8 @@ The **Publications** card in Simulation Studio lists each publication with its c
 - **Included canvases**, and a **Data tab included** badge when that option is on
 - **Password** — a **Protected** or **No password** badge, a field to **Set** or **Update** the password, and **Remove password** to drop it. Copy a password you've just set from the field beside it before you close the dialog: it isn't stored in a form Protos can show you again, so a lost one has to be replaced rather than looked up.
 - **Copy link**, **Open**, **Re-publish (refresh snapshot)**, and **Delete** — deleting stops the shared link working and can't be undone
+
+> **Deleting a project takes its publications offline.** A publication depends on the project that owns it, so deleting the project immediately stops every one of its public links working — as does deleting your account. Neither confirmation dialog warns you about it, so take the publications into account before you delete a project that has any.
 
 In a project with no publications yet, members who aren't the owner see *"Publications are managed by the project owner."* in place of the prompt to publish one.
 
