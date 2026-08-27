@@ -30,7 +30,6 @@ Simulation Studio shows a list of your canvases. Each canvas is a graph of conne
 | **Calculation** | Python code that transforms upstream data |
 | **Model** | Calls an external model registered in Models |
 | **Visualization** | Plots the output as a chart |
-| **Action** | Triggers a step in a sequence — marked *Soon*, not yet available |
 
 Blocks are laid out left to right, in dependency order. You wire them up from inside a block rather than by dragging on the canvas: open a block and pick its inputs in the **Upstream Components** field. Data then flows through the chain automatically — when an input changes, everything downstream recalculates.
 
@@ -62,7 +61,7 @@ You can have multiple canvases open at the same time. The tabs bar at the top of
 
 ### Graph and List views
 
-Next to the Build/Results switch is a small icon toggle between **Graph view** and **List view** (hover for the labels). Graph view is the node-and-arrow canvas described above; List view replaces it with the same blocks laid out as sections grouped by type — Parameter Components, Data Input Components, Model Components, Calculation Components, Visualization Components, and Action Components — useful when you want to scan everything at once instead of following the wiring.
+Next to the Build/Results switch is a small icon toggle between **Graph view** and **List view** (hover for the labels). Graph view is the node-and-arrow canvas described above; List view replaces it with the same blocks laid out as sections grouped by type — Parameter Components, Data Input Components, Model Components, Calculation Components, and Visualization Components — useful when you want to scan everything at once instead of following the wiring.
 
 ### Exporting and sharing
 
