@@ -140,12 +140,6 @@ To set up a sweep:
 2. Under **Array Configuration**, set **Min**, **Max**, **Number of Points**, and **Scale** (Linear or Log).
 3. Start sequence — results come back as a full output surface you can plot.
 
-### The Design of Experiments section
-
-The sidebar carries a **Design of Experiments** section for the wider DOE workflow being built around sweeps: **Smart Sampling**, **Optimisation**, and **Design Candidates** pinned at the top, plus a **DOE Pipeline** group holding Exploration, Monitoring, Results, Handoff, and Library. Every entry carries a **Soon** badge and can't be opened yet.
-
-Array parameters, above, are the part that works today — one run across a range of values. Batch runs and the planned DOE workflow around them are what that section is reserved for.
-
 ---
 
 ## Tips
