@@ -184,14 +184,7 @@ Canvases don't use these scope tabs — to browse shared or public canvases, cli
 
 The project switcher in the header lists projects you own **and** projects shared with you together, so a project a teammate shares reaches you without a trip to the library.
 
-What a shared project's **⋯** menu offers depends on your role on it: **Delete** for the owner, **Rename** for the owner or an editor, and neither of them for a viewer. In place of the actions, the menu tells you why — and the wording depends on how the project reached you:
-
-| How it reached you | What the menu says |
-|--------------------|--------------------|
-| Shared with a team in your community | *"Shared within your community — leave the community to remove it."* |
-| Shared with you directly | *"Shared with you — only its owner can remove it."* |
-| A legacy email-domain grant | *"Shared with your organisation — only its owner can remove it."* |
-| Made public | *"A public project — only its owner can remove it."* |
+What a shared project's **⋯** menu offers depends on your role on it: **Delete** for the owner, **Rename** for the owner or an editor, and neither of them for a viewer. In place of the actions, the menu explains why you can't remove it.
 
 There's no way to take a shared project off your own list, because the share isn't yours to revoke. To stop seeing one shared through a community, [leave that community](#leaving-a-community); for a project shared with you directly, ask its owner to remove your access.
 
