@@ -75,7 +75,7 @@ While a specialist is working, a card appears in the chat with its name and a sp
 
 ### Agent badge
 
-The chat panel shows an **agent badge** with the current agent's identity icon and accent colour. Hover the badge to see a "Talking to" label. It reads Co-engineer for normal work, and changes when you're with another agent — with Help, or on a turn you directed somewhere else with [`/agent`](#slash-commands).
+The chat panel shows an **agent badge** with the current agent's identity icon and accent colour. Hover the badge to see a "Talking to" label. It reads Co-engineer for normal work, and changes only when you're with Help.
 
 ### Slash commands
 
@@ -83,7 +83,6 @@ Typing `/` in the chat composer opens a command picker. Available commands:
 
 - `/help` — get context-aware help from the docs
 - `/feedback` (or `/idea`) — submit feedback about Co-Engineer
-- `/agent` — send one turn to a specific agent instead of letting the Co-Engineer route it. Picking it opens a second picker for the agent, and your choice applies to that message alone
 
 ### Versioning skill
 

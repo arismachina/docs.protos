@@ -26,7 +26,7 @@ A community is a group of people you share with — its members, its team struct
 
 Everyone also has a **personal community** of their own, marked with a `Personal` badge on its card. It's the fallback when no other community is active, and it's the one community that can't be deleted.
 
-> **Enterprise deployments call these Organizations.** The label depends on your deployment — protos.arismachina.com says *Communities*, a dedicated enterprise instance says *Organizations*. It's only a name: everything on this page works the same either way.
+> **Enterprise deployments call these Organizations.** The label depends on your deployment — protos.arismachina.com says *Communities*, a dedicated enterprise instance says *Organizations*.
 
 ### Finding your communities
 
