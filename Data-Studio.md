@@ -49,18 +49,20 @@ Values render with their units, and requirement values render as their bounds �
 
 ## The Analysis Panel
 
-Below the table there is an analysis panel where you can plot the data across your selected documents. It opens on a **Gap Analysis** tab, which is always present — pass/fail comparison of design values against requirement bounds is coming soon, so for now it just describes your selection. Add your own charts with **New Graph**. Each graph can be one of:
+Below the table there is an analysis panel where you can plot the data across your selected documents. It opens on a **Gap Analysis** tab, which is always present and describes your current selection. Add your own charts with **New Graph**. Each graph can be one of:
 
 | Chart type | Use for |
 |-----------|---------|
 | **Bar chart** | Compare a single field across all your variants — e.g. porosity across 5 formulations |
 | **Scatter plot** | Plot one field against another — e.g. particle size vs. dissolution rate |
 
-Each graph tab has a **Graph type** setting with all four options — Bar chart, Scatter plot, Histogram, and Spider chart. Histogram and Spider chart are marked *Coming soon* and can't be selected yet.
+Each graph tab has a **Graph type** setting for switching between them.
 
 You configure each chart by picking which schema fields go on which axis. The chart updates as you change your document selection.
 
 Click **New Graph** to add as many chart tabs as you need — each is independently configured, and they're named Graph 1, Graph 2, and so on. Double-click a tab to rename it, or hover it and click the **×** to remove it. Gap Analysis can't be renamed or removed. You can also **pin** the current set of tabs as your default layout for new projects; the pin belongs to one project at a time, so pinning here moves it from wherever it was.
+
+Bar chart and scatter tabs also carry a **download** button, which opens a menu offering **Download as PNG** and **Download as PDF** — the PDF is a single page sized to the chart. This works the same way as [Simulation Studio](Simulation-Studio#exporting-and-sharing) visualization exports. Gap Analysis has no download button.
 
 ---
 

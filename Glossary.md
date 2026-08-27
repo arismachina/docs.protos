@@ -13,7 +13,7 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 | **Community** | A group of people you share with in Protos, together with its members and team structure. Resources stay owned by whoever created them; sharing into a community is what gives its members access. You can belong to several at once. See [Collaboration & Sharing](Collaboration-and-Sharing#communities). |
 | **Design freeze** | A concept in the PSPP framework referring to the point at which a validated design is locked for manufacturing handoff. In Protos, this is achieved by publishing a canvas snapshot. |
 | **Design space** | The range of possible parameter combinations for a design, explored via sweeps in [Simulation Studio](Simulation-Studio). |
-| **Node** | A block on the canvas. Node types are: parameter, data input, calculation, model, visualization, and Action (Coming Soon). They are connected by arrows that define the data flow. |
+| **Node** | A block on the canvas. Node types are: parameter, data input, calculation, model, and visualization. They are connected by arrows that define the data flow. |
 | **PSPP** | Process → Structure → Property → Performance. The reasoning framework underlying Protos — used to trace how manufacturing choices propagate through to physical outcomes. |
 | **Ref node** | A [schema](Schemas) field type (shown as "Ref" in the editor) that links one schema entry to another, creating relational structure across engineering data. See [Schemas → Using Reference Fields](Schemas#using-reference-fields). |
 | **Schema** | A defined structure for a type of engineering data in Protos (e.g. a test result schema, a design parameter schema). See [Schemas](Schemas). |

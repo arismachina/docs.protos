@@ -54,7 +54,7 @@ Double-click a cell in a document you created to change its value without leavin
 
 ## Step 6 — Analysis Panel
 
-**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab (comparison against requirement bounds is coming soon) plus chart tabs you add yourself. Each graph has a **Graph type** setting — bar chart, scatter plot, histogram, or spider chart — with histogram and spider chart marked *coming soon*. Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects.
+**Analysis Panel** — below the table is a resizable Analysis Panel (toggle with the **g** key) that opens with a Gap Analysis tab plus chart tabs you add yourself. Each graph has a **Graph type** setting — bar chart or scatter plot. Click **+ New Graph** to add more chart tabs, rename them by double-clicking, remove one by hovering it and clicking the **×**, or pin your layout as the default for new projects. On a bar chart or scatter tab, the **download** button exports the chart as a PNG or a PDF.
 
 ---
 

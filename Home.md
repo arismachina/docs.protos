@@ -23,6 +23,12 @@
 2. From that description, the Co-Engineer works through five steps, one per turn — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, a guided stop at the **Models Library**, and a starter **canvas** in Simulation Studio.
 3. After the five steps, onboarding hands off to the general-purpose Co-Engineer so you can keep building or adjust anything it set up.
 
+### Before you have a project
+
+Nearly everything in Protos hangs off a project, so until you have one the feature links in the sidebar are greyed out and a **Create a project** card sits at the top of it: *"You have no projects yet — create one to unlock your full workspace."* Delete your last project and you land back on the project library with that same card waiting.
+
+While guided onboarding is still in progress, a **Continue Onboarding** card takes that spot instead and returns you to the Co-Engineer to finish the remaining steps.
+
 ---
 
 ## Project Overview
@@ -48,7 +54,9 @@ Setup runs as a short wizard — **Name → Details → Data → Configure** —
 
 ### Finding an Existing Project
 
-The project switcher in the header — click your current project's name — is available from every page. At the bottom of it, click **Browse all projects** (only shown while its search box is empty) to open the full project library, where you can:
+The project switcher in the header — click your current project's name — is available from every page, and lists projects you own alongside those shared with you. Which actions a row offers depends on your role on that project; see [Projects shared with you](Collaboration-and-Sharing#projects-shared-with-you).
+
+At the bottom of the switcher, click **Browse all projects** (only shown while its search box is empty) to open the full project library, where you can:
 
 - Filter by **Mine**, **Shared with me**, **Public**, or **All**, with live counts on each tab
 - Search by name, description, tags, or domain
