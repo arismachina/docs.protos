@@ -1,0 +1,2582 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Protos R&D platform by Aris Machina">
+      
+      
+      
+        <link rel="canonical" href="https://docs.protos.arismachina.com/Collaboration-and-Sharing/">
+      
+      
+        <link rel="prev" href="../MCP-Connections/">
+      
+      
+        <link rel="next" href="../Versioning/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/aris-favicon-black.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Collaboration & Sharing - Protos Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <!-- Adaptive favicon: black in light mode, white in dark mode (matches Protos app) -->
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-white.png" sizes="32x32" media="(prefers-color-scheme: dark)" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#collaboration-sharing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Protos Docs" class="md-header__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Protos Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Collaboration & Sharing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Protos Docs" class="md-nav__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    Protos Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Models Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Models Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Battery & cell design models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Battery & cell design models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Optimizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Optimizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Calendar-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Calendar Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Cyclic-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Cyclic Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-DCIR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT DCIR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Dynamic-Load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Dynamic Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-Engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP-Connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Connections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration & Sharing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration & Sharing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-this-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On This Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-your-communities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding your communities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-an-active-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting an active community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accepting-an-invitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accepting an invitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaving-a-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaving a community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting a community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-detail-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community detail page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaving-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaving a team
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sharing Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-has-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who has access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-also-shares-the-sources-behind-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing also shares the sources behind your work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-resource-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making a resource public
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovering-shared-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discovering Shared Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discovering Shared Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects-shared-with-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects shared with you
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-presence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Presence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Live Presence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seeing-whos-in-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seeing who's in the project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft Locks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Soft Locks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canvas-component-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas component locks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-and-data-document-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema and data document locks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-co-engineer-chats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Co-Engineer Chats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-for-external-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing for External Access
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing for External Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-external-viewers-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What external viewers can do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-they-cannot-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What they cannot see
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to publish
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-a-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing a publication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Your First Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up and Navigating Your Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with the Co-Engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registering Your First Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Your First Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-this-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On This Page
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-your-communities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding your communities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-an-active-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting an active community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accepting-an-invitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accepting an invitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaving-a-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaving a community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting a community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-detail-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community detail page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaving-a-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaving a team
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sharing Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-has-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who has access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing-also-shares-the-sources-behind-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing also shares the sources behind your work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-a-resource-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making a resource public
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovering-shared-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discovering Shared Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discovering Shared Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects-shared-with-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects shared with you
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-presence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Presence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Live Presence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seeing-whos-in-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seeing who's in the project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft Locks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Soft Locks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canvas-component-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas component locks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-and-data-document-locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema and data document locks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-co-engineer-chats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Co-Engineer Chats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-for-external-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing for External Access
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing for External Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-external-viewers-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What external viewers can do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-they-cannot-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What they cannot see
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to publish
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-a-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing a publication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="collaboration-sharing">Collaboration &amp; Sharing</h1>
+<p><a href="../">← Home</a> · <strong>Collaboration &amp; Sharing</strong></p>
+<p>Protos supports sharing resources with teammates and publishing canvases for external stakeholders.</p>
+<hr />
+<h2 id="on-this-page">On This Page</h2>
+<ul>
+<li><a href="#communities">Communities</a></li>
+<li><a href="#teams">Teams</a></li>
+<li><a href="#access-roles">Access Roles</a></li>
+<li><a href="#sharing-resources">Sharing Resources</a></li>
+<li><a href="#discovering-shared-resources">Discovering Shared Resources</a></li>
+<li><a href="#live-presence">Live Presence</a></li>
+<li><a href="#soft-locks">Soft Locks</a></li>
+<li><a href="#shared-co-engineer-chats">Shared Co-Engineer Chats</a></li>
+<li><a href="#publishing-for-external-access">Publishing for External Access</a></li>
+</ul>
+<hr />
+<h2 id="communities">Communities</h2>
+<p>A community is a group of people you share with — its members, its team structure, and the assets shared into it. Resources stay owned by whoever created them; sharing into a community is what gives its members access. You can be a member of more than one community at the same time.</p>
+<p>Everyone also has a <strong>personal community</strong> of their own, marked with a <code>Personal</code> badge on its card. It's the fallback when no other community is active, and it's the one community that can't be deleted.</p>
+<blockquote>
+<p><strong>Enterprise deployments call these Organizations.</strong> The label depends on your deployment — protos.arismachina.com says <em>Communities</em>, a dedicated enterprise instance says <em>Organizations</em>.</p>
+</blockquote>
+<h3 id="finding-your-communities">Finding your communities</h3>
+<p>Click <strong>Communities</strong> in the sidebar — it sits near the bottom, just above your profile. This opens the Communities page, which shows a card for each community you belong to, along with any pending invitations.</p>
+<h3 id="setting-an-active-community">Setting an active community</h3>
+<p>Mark one community <strong>Active</strong> from its card on the Communities page (the button reads <strong>Set as active</strong> until you click it). Once set, the <strong>Shared with me</strong> tab on Schemas, Models, and Data Studio automatically scopes to that community — there's no separate per-page community filter to manage. The sidebar shows the active community's name as a subtitle under the Communities link, and hovering the link shows "filtering by {community}"; click it to go back and change or clear it.</p>
+<h3 id="creating-a-community">Creating a community</h3>
+<p>Click <strong>+ New community</strong> in the top right of the Communities page, enter a name, and confirm. You become the owner of the new community.</p>
+<h3 id="accepting-an-invitation">Accepting an invitation</h3>
+<p>Pending invitations appear on the Communities page below your active communities. Click <strong>Accept</strong> to join or <strong>Decline</strong> to dismiss.</p>
+<h3 id="leaving-a-community">Leaving a community</h3>
+<p>Click <strong>Leave</strong> in the header of the community's detail page. You lose access immediately, and you're removed from its sub-teams as well. Owners can't leave a community — transfer ownership first.</p>
+<h3 id="deleting-a-community">Deleting a community</h3>
+<p>Owners see a <strong>Delete</strong> action in the same header. This permanently deletes the community and its teams, removes every member, and revokes everything shared with the community or any of its teams. Your personal community can't be deleted.</p>
+<blockquote>
+<p><strong>What happens to work built on a revoked share.</strong> Protos tries to keep collaborators' work from breaking: where someone's canvas or document depended on an asset they've just lost access to, a private copy is usually created for them shortly afterwards. It happens in the background with no notification, so treat it as a fallback rather than a guarantee.</p>
+</blockquote>
+<h3 id="community-detail-page">Community detail page</h3>
+<p>Click any community card to open its detail page. At the top you can see your role in that community, the total number of members, and the number of teams. The page has these tabs:</p>
+<ul>
+<li><strong>Community chart</strong> — a visual map of the community's structure (see below)</li>
+<li><strong>Members</strong> — everyone in the community; owners and managers can invite new members here</li>
+<li><strong>Shared assets</strong> — schemas, data documents, and models shared with a team, including everything inherited from teams above it. Pick a team from the selector; it starts on the community itself</li>
+<li><strong>Shared projects</strong> — projects shared with a team, shown as cards; use the team selector to filter by team. Any schemas and data documents shared within each project appear nested under the project card. Inherited access (via a parent team) is indicated with an <strong>Inherited</strong> badge</li>
+<li><strong>Changelog</strong> — a history of changes made within the community</li>
+</ul>
+<h3 id="community-chart">Community chart</h3>
+<p>The <strong>Community chart</strong> tab (the default view) shows the full team hierarchy as connected node cards, with the community at the top and sub-teams branching down. Click any node to select it — a detail panel appears below showing the <strong>Members</strong> and <strong>Shared assets</strong> for that specific team.</p>
+<blockquote>
+<p>Community owners and managers can inspect any team's shared assets. A plain member can only inspect teams they belong to, and sees an explanation rather than the asset list for the rest.</p>
+</blockquote>
+<hr />
+<h2 id="teams">Teams</h2>
+<p>Teams sit inside a community and let you share resources with a group of people at once. The team structure is managed entirely from the <strong>Community chart</strong> tab.</p>
+<h3 id="managing-teams">Managing teams</h3>
+<p>Owners and managers can use the <strong>⋯</strong> menu on any node in the community chart to:</p>
+<ul>
+<li><strong>Add sub-team</strong> — create a child team under the selected node</li>
+<li><strong>Rename</strong> — rename the selected team</li>
+<li><strong>Move</strong> — reassign the team to a different parent (also available by dragging a node onto another)</li>
+<li><strong>Delete</strong> — remove the team. Only available once it has no sub-teams; until then the menu item reads <strong>Delete (remove sub-teams first)</strong></li>
+</ul>
+<p>The community itself sits at the top of the chart and isn't a team, so its node offers <strong>Add sub-team</strong> and <strong>Rename</strong>. You can also rename it with the pencil button beside its name in the page header.</p>
+<p>To add or remove members from a specific team, click the team's node in the community chart and use the <strong>Members</strong> tab in the detail panel below.</p>
+<h3 id="leaving-a-team">Leaving a team</h3>
+<p>Click a team's node in the community chart and use <strong>Leave team</strong> in the <strong>Members</strong> tab. You lose access to what's shared with that team, and anything you shared with it stops being shared. This is available on sub-teams you belong to, not on the community itself.</p>
+<hr />
+<h2 id="access-roles">Access Roles</h2>
+<p>When you share a resource, the person you share it with gets one of two roles. The person who created the resource is always its owner.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What they can do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Editor</strong></td>
+<td>Can co-edit the resource directly — no need to copy it first</td>
+</tr>
+<tr>
+<td><strong>Viewer</strong></td>
+<td>Read-only access — can view, but cannot run, edit, or share</td>
+</tr>
+</tbody>
+</table>
+<p>Community <strong>membership</strong> is a separate set of roles, and it's what governs who can manage teams and members:</p>
+<table>
+<thead>
+<tr>
+<th>Membership role</th>
+<th>What they can do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Full control of the community, including deleting it</td>
+</tr>
+<tr>
+<td><strong>Manager</strong></td>
+<td>Invite and manage members, and manage the team structure</td>
+</tr>
+<tr>
+<td><strong>Member</strong></td>
+<td>Belong to the community and its teams</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sharing-resources">Sharing Resources</h2>
+<p>Sharing works across projects, canvases, schemas, data documents, models, and Co-Engineer chats — all through the same <strong>Share</strong> dialog.</p>
+<h3 id="how-to-share">How to share</h3>
+<p>The dialog has two sides: <strong>Add access</strong> on the left, where you grant access, and <a href="#who-has-access"><strong>Who has access</strong></a> on the right, listing everyone who already has it.</p>
+<ol>
+<li>Open the resource you want to share (project, canvas, schema, data document, model, or Co-Engineer chat).</li>
+<li>Click the <strong>⋯</strong> menu and select <strong>Share</strong>.</li>
+<li>Under <strong>Add access</strong>, confirm which community you're sharing into. If you belong to more than one, pick it from the dropdown at the top of the card — you can share into any of your communities without switching workspaces.</li>
+<li>Choose who to add — pick one of the two tabs, and set the role (<strong>Editor</strong> or <strong>Viewer</strong>) from the <strong>Role</strong> dropdown beside them:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>How it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>People</strong></td>
+<td>Search community members by name or email and click to add</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Pick a team from the tree — access flows down to all sub-teams</td>
+</tr>
+</tbody>
+</table>
+<p>To share with your whole community at once, click <strong>Share with everyone</strong> next to the community name. This gives every member Viewer access, and the button then reads <strong>Shared community-wide</strong>; adjust individual roles afterwards from the <strong>Who has access</strong> list.</p>
+<p>Access is given immediately as you add people. Click <strong>Close</strong> when done.</p>
+<blockquote>
+<p><strong>Who can manage sharing.</strong> For projects and Co-Engineer chats, <strong>owners and editors</strong> can share. For canvases, schemas, data documents, and models, the <strong>Share</strong> action is only offered to the owner. Knowledge Library documents are owner-only too. Making a resource public is <strong>owner-only</strong> in every case.</p>
+</blockquote>
+<h3 id="who-has-access">Who has access</h3>
+<p>The share dialog shows a <strong>Who has access</strong> list that groups recipients by audience type:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Communities</strong></td>
+<td>Communities with access, subtitled <em>Everyone in this community</em></td>
+</tr>
+<tr>
+<td><strong>Teams</strong></td>
+<td>Teams granted access directly</td>
+</tr>
+<tr>
+<td><strong>People</strong></td>
+<td>Individual members with direct access</td>
+</tr>
+<tr>
+<td><strong>Domains</strong></td>
+<td>Legacy email-domain grants. Domain sharing has been retired, so these can be removed but no new ones created</td>
+</tr>
+</tbody>
+</table>
+<p>Each entry uses an avatar appropriate to its audience type. A subtitle beneath each entry describes the scope of that grant — for example, <strong>"Team — includes sub-teams"</strong> for a team grant or <strong>"Everyone in this community"</strong> for a community-wide grant.</p>
+<h3 id="sharing-also-shares-the-sources-behind-your-work">Sharing also shares the sources behind your work</h3>
+<p>When you share a project or an asset (schema, data document, model, or canvas), Protos additively shares the <strong>Knowledge Library documents that asset was built from</strong>, read-only, with the same people. This lets a collaborator open and reason over the sources behind your work without you sharing your whole library. See <a href="../Knowledge-Library/#sharing">Knowledge Library → Sharing</a> for details.</p>
+<h3 id="making-a-resource-public">Making a resource public</h3>
+<p>The <strong>Public</strong> section of the Share dialog is a wider scope than sharing with your community: a public resource is visible to <strong>everyone on Protos</strong>, across all communities, not just yours. Co-Engineer chats and Knowledge Library documents have no Public option.</p>
+<p>Only the resource's <strong>owner</strong> can change this. Click <strong>Make public</strong> and an inline confirmation spells out the scope before it takes effect; <strong>Make private</strong> reverts it. Editors see the button disabled, with a tooltip explaining that it's owner-only.</p>
+<hr />
+<h2 id="discovering-shared-resources">Discovering Shared Resources</h2>
+<p>Resource lists for schemas, data documents, and models have scope tabs at the top:</p>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mine</strong></td>
+<td>Resources you own</td>
+</tr>
+<tr>
+<td><strong>Shared with me</strong></td>
+<td>Resources others have shared directly with you</td>
+</tr>
+<tr>
+<td><strong>Public</strong></td>
+<td>Resources that have been made public across Protos</td>
+</tr>
+<tr>
+<td><strong>All</strong></td>
+<td>Everything you have access to</td>
+</tr>
+</tbody>
+</table>
+<p>The same tabs appear on the Projects library, each with a count.</p>
+<p>If you've <a href="#communities">set an active community</a>, <strong>Shared with me</strong> on these three pages automatically narrows to that community — see <a href="#communities">Setting an active community</a>.</p>
+<p>Canvases don't use these scope tabs — to browse shared or public canvases, click <strong>New → Import Canvas</strong>, which has its own <strong>Shared with Me</strong>, <strong>Community Canvases</strong>, and <strong>Public Canvases</strong> tabs.</p>
+<h3 id="projects-shared-with-you">Projects shared with you</h3>
+<p>The project switcher in the header lists projects you own <strong>and</strong> projects shared with you together, so a project a teammate shares reaches you without a trip to the library.</p>
+<p>What a shared project's <strong>⋯</strong> menu offers depends on your role on it: <strong>Delete</strong> for the owner, <strong>Rename</strong> for the owner or an editor, and neither of them for a viewer. In place of the actions, the menu explains why you can't remove it.</p>
+<p>There's no way to take a shared project off your own list, because the share isn't yours to revoke. To stop seeing one shared through a community, <a href="#leaving-a-community">leave that community</a>; for a project shared with you directly, ask its owner to remove your access.</p>
+<hr />
+<h2 id="live-presence">Live Presence</h2>
+<p>When other members of your community are in the same project, a row of <strong>overlapping coloured circles</strong> showing each person's initials appears in the top-right of the header bar. It only appears when at least one other person is present — it stays hidden when you're working alone.</p>
+<h3 id="seeing-whos-in-the-project">Seeing who's in the project</h3>
+<p>Click the circles to open a dropdown listing everyone currently in the project. Each entry shows the person's name and where they are — for example, <em>"On Cathode Coating v3"</em>, <em>"On Data Studio"</em>, or <em>"On the project overview"</em>. Click any entry to jump directly to what that person is viewing. Up to three avatars show at once, with a count for anyone beyond that.</p>
+<hr />
+<h2 id="soft-locks">Soft Locks</h2>
+<p>Soft locks prevent conflicting edits by showing you when a teammate is already editing something. They are advisory — Protos does not block writes, but makes the conflict visible.</p>
+<h3 id="canvas-component-locks">Canvas component locks</h3>
+<p>When a team member opens a canvas component for editing, that component shows a <strong>"[Name] is editing"</strong> badge. If the Co-Engineer is making the edit on their behalf, it shows <strong>"[Name]'s copilot is editing"</strong> instead. Other users can still view the component but should wait for the lock to release before editing.</p>
+<p>The lock releases when the editor closes the component panel. If their browser or connection drops instead, it expires about 60 seconds later.</p>
+<h3 id="schema-and-data-document-locks">Schema and data document locks</h3>
+<p>Opening a schema in the editor shows the same <strong>"[Name] is editing"</strong> badge in its header. In the Data Studio, trying to edit a document someone else has open tells you <strong>"[Name] is currently editing this document."</strong> Models have no lock indicator.</p>
+<hr />
+<h2 id="shared-co-engineer-chats">Shared Co-Engineer Chats</h2>
+<p>Co-Engineer sessions can be shared with community members.</p>
+<ol>
+<li>Open a chat session and click <strong>Share</strong>.</li>
+<li>Assign <strong>Editor</strong> or <strong>Viewer</strong> access to individuals, teams, or the whole community.</li>
+<li>Shared sessions appear under <strong>Shared with me</strong> in the chat session list.</li>
+<li><strong>Viewers</strong> see a read-only transcript. <strong>Editors</strong> can continue the conversation.</li>
+</ol>
+<p>When an editor sends a message in a shared session, other <strong>editors</strong> who have that session open see <strong>"A collaborator is responding — you can type once they finish."</strong> <strong>Viewers</strong>, who see the session through the read-only shared-session viewer, see the responding indicator right away, but the message and its completed reply appear together only once the Co-Engineer finishes the turn.</p>
+<hr />
+<h2 id="publishing-for-external-access">Publishing for External Access</h2>
+<p><strong>Publications</strong> let you share a canvas with people who don't have a Protos account — customers, partners, or reviewers.</p>
+<p>A publication is a <strong>snapshot of one or more canvases</strong> at a point in time, accessible via a public URL, optionally behind a password.</p>
+<h3 id="what-external-viewers-can-do">What external viewers can do</h3>
+<ul>
+<li>See the canvas parameters and outputs</li>
+<li>Adjust parameter values and re-run the canvas interactively. Boolean, numeric, and text parameters are editable; other types are shown read-only</li>
+<li><strong>Choose which data documents feed the canvas.</strong> If the canvas has input or data-input components, each one shows a multi-select document picker (limited to the documents matching that component's schema). Viewers tick which documents to feed in and re-run against their own selection.</li>
+<li><strong>View and edit the underlying data</strong> when the owner has enabled the <strong>Data tab</strong>. It exposes the linked documents' field values, which viewers can adjust and re-run against.</li>
+<li><strong>Star the publication as helpful.</strong> A star toggle in the sidebar (tooltip: <em>"Did you find this helpful?"</em>) lets a viewer mark the canvas helpful, with the total shown next to it.</li>
+</ul>
+<p>When a viewer changes a parameter, an input, or a data document, the results on screen are out of date with respect to those edits, so the canvas shows <strong>"Values changed — run again to see updated results."</strong> Editing a field value in the Data tab shows <strong>"Data changed — run again to see updated results."</strong> instead. Running the canvas clears the hint, and so does putting a changed value back to what it was.</p>
+<blockquote>
+<p><strong>External models can make a canvas view-only.</strong> The re-run abilities above apply to any canvas the owner left runnable. If a canvas includes a model that calls an external provider, the owner chooses at publish time whether viewers may run it; if they don't opt in, that entire canvas is <strong>view-only</strong> — parameter changes and data-document selections can't be re-run either. Canvases with no external models are always runnable.</p>
+</blockquote>
+<h3 id="what-they-cannot-see">What they cannot see</h3>
+<ul>
+<li>Your Python calculation code (stripped from the snapshot)</li>
+<li>Other canvases or projects</li>
+<li>The Knowledge Library or any internal data</li>
+</ul>
+<h3 id="how-to-publish">How to publish</h3>
+<p>Publishing is <strong>owner-only</strong>: only the project's owner sees an active <strong>Publish</strong> button. For everyone else it's disabled.</p>
+<ol>
+<li>Open <strong>Simulation Studio</strong> from the sidebar. Scroll to the <strong>Publications</strong> section at the bottom of the canvas list and click <strong>Publish</strong>. (This is separate from the <strong>Publish</strong> button on the project overview, which submits a project to the public Protos gallery.)</li>
+<li>Give the publication a <strong>name</strong>.</li>
+<li>Select which <strong>canvases to include</strong>. A canvas can only be included once it has a successful run behind it — until then its checkbox is disabled and reads <em>"Run this canvas to include it."</em> Run the canvas in Simulation Studio, then come back.</li>
+<li><strong>Include data tab</strong> is on by default — uncheck it to leave the Data tab out. This adds a separate <strong>Data</strong> tab to the publication that exposes the linked documents' field values, which viewers can view, edit, and re-run against. (This is separate from the per-input document picker: viewers can choose which documents feed a canvas and re-run whether or not the data tab is on.)</li>
+<li>For any <strong>included</strong> canvas that contains an external model, a per-canvas consent toggle appears: <em>"Let viewers run this canvas's external model on your API key. Turn off to make it view-only."</em> It defaults <strong>on</strong>. Leave it on to let external viewers re-run the canvas — its external models run on your key, billed to you. Turn it off to make <strong>that whole canvas view-only</strong> (viewers can't re-run it at all).</li>
+<li>Optionally set a <strong>password</strong> for access control. Viewers are then asked for it before the publication opens, and you can <a href="#managing-a-publication">change or remove it later</a>.</li>
+<li>Click <strong>Publish</strong> — a shareable URL is generated.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Publications are snapshots — they do not update automatically when you change the canvas. Re-publish to push an update.</p>
+</blockquote>
+<h3 id="managing-a-publication">Managing a publication</h3>
+<p>The <strong>Publications</strong> card in Simulation Studio lists each publication with its canvas count and its helpful-star count. Click a publication's name to open its detail dialog, which shows:</p>
+<ul>
+<li><strong>Published</strong> and <strong>Last republished</strong> timestamps</li>
+<li><strong>Included canvases</strong>, and a <strong>Data tab included</strong> badge when that option is on</li>
+<li><strong>Password</strong> — a <strong>Protected</strong> or <strong>No password</strong> badge, a field to <strong>Set</strong> or <strong>Update</strong> the password, and <strong>Remove password</strong> to drop it. Copy a password you've just set from the field beside it before you close the dialog: it isn't stored in a form Protos can show you again, so a lost one has to be replaced rather than looked up.</li>
+<li><strong>Copy link</strong>, <strong>Open</strong>, <strong>Re-publish (refresh snapshot)</strong>, and <strong>Delete</strong> — deleting stops the shared link working and can't be undone</li>
+</ul>
+<blockquote>
+<p><strong>Deleting a project takes its publications offline.</strong> A publication depends on the project that owns it, so deleting the project immediately stops every one of its public links working — as does deleting your account. Take the publications into account before you delete a project that has any.</p>
+</blockquote>
+<p>In a project with no publications yet, members who aren't the owner see <em>"Publications are managed by the project owner."</em> in place of the prompt to publish one.</p>
+<hr />
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../#project-overview">Home → Project Overview</a></li>
+<li><a href="../Knowledge-Library/#sharing">Knowledge Library → Sharing</a></li>
+<li><a href="../Glossary/">Glossary → Community</a>, <a href="../Glossary/">Glossary → Design freeze</a>, <a href="../Glossary/">Glossary → Version</a></li>
+</ul>
+<hr />
+<p><em><a href="../">← Back to Home</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../MCP-Connections/" class="md-footer__link md-footer__link--prev" aria-label="Previous: MCP Connections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                MCP Connections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Versioning/" class="md-footer__link md-footer__link--next" aria-label="Next: Versioning">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Versioning
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Maintained by Aris Machina
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/arismachina" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

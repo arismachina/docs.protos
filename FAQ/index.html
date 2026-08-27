@@ -1,0 +1,1823 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Protos R&D platform by Aris Machina">
+      
+      
+      
+        <link rel="canonical" href="https://docs.protos.arismachina.com/FAQ/">
+      
+      
+        <link rel="prev" href="../Versioning/">
+      
+      
+        <link rel="next" href="../Glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/aris-favicon-black.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>FAQ - Protos Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <!-- Adaptive favicon: black in light mode, white in dark mode (matches Protos app) -->
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-black.png" sizes="32x32" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="https://docs.protos.arismachina.com/images/aris-favicon-white.png" sizes="32x32" media="(prefers-color-scheme: dark)" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frequently-asked-questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Protos Docs" class="md-header__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Protos Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Protos Docs" class="md-nav__button md-logo" aria-label="Protos Docs" data-md-component="logo">
+      
+  <img src="../images/aris-logo.svg" alt="logo">
+
+    </a>
+    Protos Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Models Library
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Models Library
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Battery & cell design models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Battery & cell design models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-Cell-Optimizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Optimizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Calendar-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Calendar Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-DFN-Cyclic-Ageing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFN Cyclic Ageing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-DCIR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT DCIR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Model-SPMeT-Dynamic-Load/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SPMeT Dynamic Load
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Co-Engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP-Connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Connections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Collaboration-and-Sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration & Sharing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-protos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About Protos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-models-and-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your models and simulations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data and traceability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-and-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment and compute
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting started
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Your First Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Knowledge-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up and Navigating Your Knowledge Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Co-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with the Co-Engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Data-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the Data Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Model-Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registering Your First Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial-Simulation-Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Your First Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-protos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About Protos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-models-and-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your models and simulations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data and traceability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-and-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment and compute
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting started
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<p>Common questions about Protos, grouped by topic.</p>
+<hr />
+<h2 id="about-protos">About Protos</h2>
+<details class="faq">
+<summary>What is Protos?</summary>
+<p>An AI co-engineer for R&amp;D teams working on complex physical systems.</p>
+<p>You capture what you're working on as structured data (schemas), connect models and reference material to it, and assemble and run the whole thing as a visual canvas. Results come from deterministic, first-principles models rather than a language model's best guess, so an output is something you can open up, explain and defend later — not a number you take on trust. And every value stays traceable to the source it came from, so when someone asks where a figure came from months later, you can show them.</p>
+<p>Docs: <a href="../Schemas/">Schemas</a> · <a href="../Simulation-Studio/">Simulation Studio</a></p>
+</details>
+<details class="faq">
+<summary>How is this different from using ChatGPT or Claude on our data?</summary>
+<p>Deterministic physics versus plausible prose.</p>
+<p>A chat model can give you a sliver of a simulation. You can't put it in a design review. Protos runs real simulations, so the number comes from solved equations rather than from prediction, and it keeps the structure of your work in a schema instead of a conversation, so it survives after the chat window closes.</p>
+<p>Three things a chat window can't give you:</p>
+<ul>
+<li><strong>Traceability</strong> — every value is held against the document it came from, so the result is auditable.</li>
+<li><strong>Collaboration</strong> — work is shared across the team with role-based access rather than trapped in one person's session.</li>
+<li><strong>Versioning</strong> — schemas, canvases and models are versioned, so every change is attributed and you can compare or roll back.</li>
+</ul>
+<p>The language model is there to build and connect things faster, not to produce the engineering result.</p>
+<p>Docs: <a href="../Simulation-Studio/">Simulation Studio</a> · <a href="../Versioning/">Versioning</a></p>
+</details>
+<details class="faq">
+<summary>Do I need to be a simulation engineer to use it?</summary>
+<p>No, though you need to know your domain.</p>
+<p>The Co-Engineer builds schemas, populates data documents from your files and assembles canvases, so you're reviewing structure rather than writing it from scratch. Reading a simulation result and judging whether it's sensible is still your job.</p>
+<p>Docs: <a href="../Co-engineer/">Co-Engineer</a></p>
+</details>
+<details class="faq">
+<summary>What models ship with it?</summary>
+<p>Two kinds: seven first-party physics models we build and maintain (deterministic, PyBaMM-based, with no learned weights), plus a growing public catalog you can browse and add with a click. Grouped by domain:</p>
+<ul>
+<li><strong>Battery &amp; cell design</strong> (first-party physics) — Cell Performance, Cell Optimizer, DFN Calendar Ageing, DFN Cyclic Ageing, SPMeT Power, SPMeT DCIR, SPMeT Dynamic Load</li>
+<li><strong>Protein structure &amp; design</strong> — AlphaFold2, AlphaFold2-Multimer, OpenFold2, OpenFold3, Boltz2, ESM3 / ESMC (Biohub: fold, inverse-fold, generate, sample, encode/decode), ProteinMPNN, RFdiffusion, ColabFold MSA Search</li>
+<li><strong>Drug discovery &amp; chemistry</strong> — DiffDock (docking), GenMol, MolMIM (molecular generation &amp; optimization)</li>
+<li><strong>Genomics</strong> — Evo2 40B (DNA/RNA sequence generation)</li>
+<li><strong>Logistics &amp; operations</strong> — NVIDIA cuOpt (vehicle routing)</li>
+<li><strong>General-purpose AI</strong> — Google Gemini Interactions (chat, tools, document understanding, image / TTS / music, deep research)</li>
+</ul>
+<p>The battery models are deterministic simulations, not trained models; several catalog models (folding, generative chemistry, genomics, Gemini) are trained or foundation models, and many run GPU-accelerated on NVIDIA NIM. You can also register your own from a script, a repo or an existing API endpoint.</p>
+<p>Docs: <a href="../Model-Library/">Models Library</a></p>
+</details>
+<hr />
+<h2 id="your-models-and-simulations">Your models and simulations</h2>
+<details class="faq">
+<summary>How are models executed, and where do they run?</summary>
+<p>You choose how each model runs — on our cloud, on your own machine, or behind an API you already host.</p>
+<p>The Models Library takes three intake options — Local code (upload a script, Protos runs it in a managed environment), Endpoint (point at an existing API, with optional auth), and Version control (public GitHub / GitLab / Bitbucket / Codeberg repo URL). Each registered model runs in one of two execution modes: <strong>Local runner</strong>, where your model runs on your own machine and the platform dispatches inputs, or <strong>Cloud</strong>, where you upload Python code and Protos containerises and runs it. MATLAB and COMSOL are supported as Local runner runtimes. In every case the contract with Protos is a JSON input schema and a JSON output schema, not the solver file itself.</p>
+<p>The three routes:</p>
+<ul>
+<li><strong>Local runner</strong> — the model runs on your own hardware with your existing licences and toolboxes; Protos dispatches inputs and collects results, so no licence migration and no model or data IP leaves your network.</li>
+<li><strong>Cloud</strong> — upload Python code (or point at a public GitHub / GitLab / Bitbucket / Codeberg repo) and Protos containerises and runs it on our infrastructure, with no runner machine to maintain.</li>
+<li><strong>Endpoint</strong> — point Protos at an existing API you already host, with optional auth.</li>
+</ul>
+<p><strong>Licensed tools (MATLAB, COMSOL, Simulink, …):</strong> these run only via the Local runner or your own Endpoint, on a machine that already holds the licences — they are not available in Cloud execution, and Aris Machina never ships, hosts or resells them. A licence-bound solver therefore stays on your hardware with its existing toolboxes. For Simulink specifically: keep it local, wrap it behind REST (MATLAB Production Server / Compiler SDK), or export a co-simulation FMU and register a short Python runner as a Cloud model.</p>
+<p><strong>Running a Local runner — one trust step:</strong> Aris Machina is not currently enrolled in the Apple Developer Program or the equivalent Microsoft signing program, so the Local runner executable is not OS-code-signed. The first time you launch it, your operating system will flag it as coming from an unidentified developer and you'll need to explicitly allow it to run.</p>
+<p>Docs: <a href="../Model-Library/">Models Library</a></p>
+</details>
+<details class="faq">
+<summary>Are MATLAB toolbox dependencies supported, and are MATLAB licences required?</summary>
+<p>Supported. Licences stay with you — Aris Machina neither requires nor resells MATLAB entitlements.</p>
+<p>Toolbox support is a property of the execution environment, not of Protos: whatever MATLAB, Simscape or Powertrain Blockset licences the executing machine holds are the toolboxes available to the model. With Local runner and Endpoint modes, that machine is yours, so your full toolbox stack is available unchanged.</p>
+<p>With the FMU route, a co-simulation FMU is intended to embed the compiled solver, so it would execute without consuming a MATLAB licence at run time. Whether that holds for a given model depends on it being code-generation compatible. Simulink Compiler is needed to produce the FMU, and Simscape-derived FMUs carry MathWorks redistribution terms worth confirming with your legal team.</p>
+<p>Docs: <a href="../Model-Library/">Models Library</a></p>
+</details>
+<details class="faq">
+<summary>How do we register a compiled or encapsulated model?</summary>
+<p>Five steps, and the Co-Engineer can do most of it for you.</p>
+<ol>
+<li>Models Library → Register Model.</li>
+<li>Choose the source: Local code (needs Name, Key, Description), Endpoint (URL plus auth), or Version control (repo URL).</li>
+<li>Define the input and output schemas. The JSON schema builders let you specify each parameter's name, type, and whether it's required.</li>
+<li>For repo-based models Protos builds a container: <em>Preparing build context → Building image → Finalising</em>. This takes a few minutes.</li>
+<li>Drop the model onto a Simulation Studio canvas as a model node and wire inputs.</li>
+</ol>
+<p>Shortcut: upload a Python script or point the Co-Engineer at a repo and ask it to register the model. It will infer the input and output schema automatically.</p>
+<p>For an encapsulated Simulink model, register the thin Python runner (FMPy loading the FMU, or a client calling your MATLAB Production Server) rather than the .slx. Put that runner in a repo, let the Co-Engineer infer the schema, then hand-check the input schema against your parameter naming and units. The documented path uses a public repo URL; private repos can be connected via a deploy token or mirror during onboarding.</p>
+<p>Docs: <a href="../Model-Library/">Models Library</a></p>
+</details>
+<details class="faq">
+<summary>Can simulation criteria be modelled as structured requirements or KPIs, and linked to results?</summary>
+<p>Yes. This is core to the product, not an add-on.</p>
+<p>Schemas define the structure of your engineering data with typed fields (string, number with units, boolean, enum, date) and Ref fields that link across schemas. In Data Studio, Design documents use single values and Requirement documents use min/max ranges, so a KPI corridor is a first-class object. Simulation Studio can pull schema values directly as simulation inputs, and the Co-Engineer will parse an uploaded spec document into structured targets and constraints, then compare design variants against requirements and surface gaps.</p>
+<p>Everything stays traceable: you can follow any value in Protos back through its chain of sources to the original reference.</p>
+<p>Today that comparison surfaces gaps through the Co-Engineer rather than emitting a formal signed verification matrix.</p>
+<p>Docs: <a href="../Schemas/">Schemas</a> · <a href="../Data-Studio/">Data Studio</a> · <a href="../Co-engineer/">Co-Engineer</a></p>
+</details>
+<details class="faq">
+<summary>Can it handle batch runs and parameter sweeps (DoE)?</summary>
+<p>Coming soon.</p>
+</details>
+<hr />
+<h2 id="data-and-traceability">Data and traceability</h2>
+<details class="faq">
+<summary>How is data input handled, and which formats are supported?</summary>
+<p>Four routes in, covering documents, structured data, model I/O and live parameters.</p>
+<ul>
+<li><strong>Knowledge Library</strong> (unstructured and reference material) — PDF, DOCX, XLSX, CSV, TXT, Markdown, JSON and common image formats, up to 100 MB per file. Upload singly, as knowledge notes, or as bulk folders up to 500 files or 100 MB per batch. Content is parsed and chunked for the Co-Engineer.</li>
+<li><strong>Data Studio</strong> (structured) — data documents conforming to your schemas. The Co-Engineer can extract structured data from an uploaded file and create a data document following your schema. Spec and requirements ingest accepts files up to 32 MB.</li>
+<li><strong>Canvas</strong> — parameter nodes and data input nodes feed simulations directly, wired up from data you enter yourself or that the Co-Engineer finds for you.</li>
+<li><strong>Models</strong> — JSON in, JSON out, against the schema you define at registration.</li>
+</ul>
+<p>For test and load-profile data, CSV or XLSX into Data Studio against a schema makes every value traceable back to its source file. For very large measurement files that exceed the document cap, pass them by reference to a Local runner or Endpoint model so the bulk data never has to move.</p>
+<p>Docs: <a href="../Knowledge-Library/">Knowledge Library</a> · <a href="../Data-Studio/">Data Studio</a></p>
+</details>
+<details class="faq">
+<summary>How do we know where a number came from?</summary>
+<p>Every value traces back to its source document, permanently.</p>
+<p>A value links through the knowledge chunk that produced it to the original source document, and each document shows every schema, data document, model and canvas built from it. The chain survives people leaving and projects being archived, which is usually the real reason teams want it.</p>
+<p>Docs: <a href="../Data-Studio/">Data Studio</a> · <a href="../Knowledge-Library/">Knowledge Library</a></p>
+</details>
+<details class="faq">
+<summary>Can we roll back a mistake?</summary>
+<p>Yes, non-destructively, with attribution.</p>
+<p>Schemas, canvases, models and knowledge documents are versioned. Changes are attributed to whoever made them and grouped into sessions. Restoring writes a new version applying the old content rather than erasing what happened in between. You can label versions, compare any two side by side, and ask the Co-Engineer what changed in plain language.</p>
+<p>Docs: <a href="../Versioning/">Versioning</a></p>
+</details>
+<details class="faq">
+<summary>Can we show results to people without a Protos account?</summary>
+<p>Yes, by publishing a canvas to a public URL.</p>
+<p>Whoever opens the publication can change input parameters and re-run the canvas themselves, which tends to land better than a PDF of your conclusions. External viewers cannot reach your Python code, your other projects, or your Knowledge Library, and you can block external model execution to avoid API charges. Publications are snapshots, so you republish when you want the public version to catch up. Making anything public is owner-only.</p>
+<p>Docs: <a href="../Collaboration-and-Sharing/">Collaboration &amp; Sharing</a></p>
+</details>
+<hr />
+<h2 id="deployment-and-compute">Deployment and compute</h2>
+<details class="faq">
+<summary>Where does the computation run — cloud or on-premise?</summary>
+<p>In our cloud, with the option to keep the heavy solver work on your own machines.</p>
+<p><strong>Self-serve accounts</strong> run on our shared cloud at <a href="https://protos.arismachina.com" target="_blank">protos.arismachina.com</a>, with nothing to set up. <strong>Enterprise Pod customers</strong> get a dedicated instance at their own web endpoint (for example <code>yourcompany.protos.arismachina.com</code>), gated by your own identity provider, with isolated storage. Your data stays inside your own pod.</p>
+<p>Enterprise Pods are sized to your workload, and compute and storage both expand on request. Contact us to size one.</p>
+<p>Separately, the Local runner execution mode means the solver itself can run on your own hardware while only inputs and results transit the pod. Where IT policy requires the data plane inside your own infrastructure, that hybrid pattern — Protos pod for orchestration, Local runner for solver execution — satisfies it today. A fully customer-hosted deployment is not the standard offer; talk to us if you need one.</p>
+<p>Docs: <a href="../Collaboration-and-Sharing/">Collaboration &amp; Sharing</a> · <a href="../Model-Library/">Models Library</a></p>
+</details>
+<details class="faq">
+<summary>Which connectors are available?</summary>
+<p>MCP, OAuth, GitHub and SharePoint.</p>
+<p>Any MCP-compatible server can be attached under Profile → Connectors → MCP Servers, with four auth modes: OAuth with token refresh handled automatically, API key with a custom header name, custom headers where all values are encrypted at rest, or none. Notion, Linear and Sentry are documented examples. GitHub is supported as a model source via repo URL. Tools are enabled per conversation, so an operator explicitly opts a tool into each session.</p>
+<p>A typical pilot enables SSO against your IdP, SharePoint against nominated document libraries, GitHub for the model runner repo, and MCP only for systems you explicitly name.</p>
+<p>Docs: <a href="../MCP-Connections/">MCP Connections</a></p>
+</details>
+<hr />
+<h2 id="security-and-compliance">Security and compliance</h2>
+<details class="faq">
+<summary>Where is our data hosted?</summary>
+<p>Google Cloud in the EU — <code>europe-west4</code>, Eemshaven, Netherlands.</p>
+</details>
+<details class="faq">
+<summary>Is our environment shared with other customers?</summary>
+<p>It depends on your deployment.</p>
+<p><strong>Enterprise Pod — no.</strong> You get a dedicated Kubernetes namespace with its own MongoDB, PostgreSQL and Redis; there is no shared database holding several companies' data behind an application permission check. Databases run <code>ClusterIP</code>-only and aren't reachable from the public internet, with Kubernetes NetworkPolicies, Shielded VM nodes (Secure Boot on the primary pool), a custom VPC and Cloud NAT for controlled egress around them.</p>
+<p><strong>Self-serve accounts — shared infrastructure.</strong> These run on our shared multi-tenant cloud at <code>protos.arismachina.com</code>. Your organisation's data is logically isolated and access-controlled per organisation, but the underlying databases and compute are shared with other self-serve customers. If you need physical isolation — a dedicated namespace, your own databases and your own endpoint — that's the Enterprise Pod.</p>
+</details>
+<details class="faq">
+<summary>Is our data encrypted?</summary>
+<p>Yes, always, in both directions. Anything travelling between you and Protos is encrypted in transit, and everything we store is encrypted at rest. It is on by default across the whole platform and there is no setting anyone can forget to switch on.</p>
+<p><strong>For technical reviewers:</strong> TLS with HSTS in transit, AES-256 at rest. Public traffic terminates TLS at a GCP global HTTPS load balancer with a Google-managed certificate. HSTS (one year), Content-Security-Policy, X-Frame-Options and X-Content-Type-Options are enforced at the web tier. All persistent storage — MongoDB, PostgreSQL, Redis and backups — is AES-256 encrypted by default. Integration credentials get a second application-layer encryption before storage, and platform secrets live in GCP Secret Manager with keyless Workload Identity rather than long-lived service-account keys.</p>
+</details>
+<details class="faq">
+<summary>Do you train AI models on our data?</summary>
+<p>No. Nothing you put into Protos trains or fine-tunes any model.</p>
+<p>The physics models are simulations with no learned weights, so there is nothing in them to train in the first place. The language models behind the Co-Engineer are called for inference only, on commercial API tiers where the no-training commitment is contractual rather than a setting someone can forget to switch on. Your documents are embedded and stored in our own database. We'll share the data processing agreements with our AI providers on request.</p>
+<p><strong>For technical reviewers:</strong> domain models are physics simulations on PyBaMM, executed inside Aris GCP/Kubernetes. Knowledge and RAG embeddings are stored in Aris PostgreSQL with pgvector. Customer-supplied model code runs sandboxed under gVisor. Provider-side retention is for abuse monitoring only, not model improvement, and does not depend on any per-conversation toggle: Anthropic currently retains data for up to 30 days for that purpose. Where you need a stricter guarantee, Zero Data Retention — the provider stores nothing at all — can be arranged.</p>
+</details>
+<details class="faq">
+<summary>Which third parties see our data?</summary>
+<p>Three AI providers, each for a specific job.</p>
+<ul>
+<li><strong>Anthropic</strong> runs the Co-Engineer and receives prompts, project and schema context, retrieved knowledge and tool arguments.</li>
+<li><strong>OpenAI</strong> handles requirements and specification ingest.</li>
+<li><strong>Mistral</strong> does OCR and embeddings, so uploaded document text passes through it.</li>
+</ul>
+<p>If you register your own external model endpoint, inputs go wherever you point it. Everything else stays inside our cloud. The current sub-processor list is available in full on request.</p>
+</details>
+<details class="faq">
+<summary>How is access controlled inside our environment?</summary>
+<p>An Organization is the top-level workspace. Teams sit inside it and can be nested.</p>
+<p>Three roles: <strong>Owner</strong> has full control — view, edit, run, share and publish. <strong>Editor</strong> can edit and run, and can share within your organisation. <strong>Viewer</strong> has read-only access — can view and run, but cannot edit or share.</p>
+<p>Only an owner can make something public. Sharing an asset additively shares only the Knowledge Library documents it was built from, read-only, never the whole library. Public sharing can be disabled across your whole tenant.</p>
+<p>Docs: <a href="../Collaboration-and-Sharing/">Collaboration &amp; Sharing</a></p>
+</details>
+<details class="faq">
+<summary>Is there an audit trail?</summary>
+<p>Yes, for changes.</p>
+<p>Version history attributes every change to a user with timestamps and groups consecutive work into sessions.</p>
+<p>This describes the feature rather than conformance to a specific regulatory standard. If you need the audit trail assessed against 21 CFR Part 11, ALCOA+ or similar, talk to us and we'll go through it.</p>
+<p>Docs: <a href="../Versioning/">Versioning</a></p>
+</details>
+<details class="faq">
+<summary>Are you SOC 2 certified?</summary>
+<p>Not yet. A Type II audit is in progress.</p>
+<p>Google Cloud, which hosts the infrastructure, holds ISO/IEC 27001, 27017 and 27018 and SOC 2 Type II today. If you need a specific compliance position for a procurement process, talk to us and we'll tell you.</p>
+</details>
+<details class="faq">
+<summary>Are you GDPR compliant?</summary>
+<p>Yes, with a DPA available and SCCs in place.</p>
+<p>Personal data is processed under the GDPR. A Data Processing Agreement is available for enterprise customers. Standard Contractual Clauses under Article 46 apply where processing happens outside the EEA. Confirmed personal data breaches are notified without undue delay and within 72 hours of Aris becoming aware, per Article 33. Every incident gets a post-mortem with corrective actions tracked to completion.</p>
+</details>
+<details class="faq">
+<summary>Can we review the architecture with our security team?</summary>
+<p>Yes. A dedicated session with your IT security team to walk through the architecture, auth flows and data residency can be arranged before any data moves.</p>
+</details>
+<hr />
+<h2 id="getting-started">Getting started</h2>
+<details class="faq">
+<summary>Is there a free trial?</summary>
+<p>Yes. You can sign up self-serve at <a href="https://protos.arismachina.com" target="_blank">protos.arismachina.com</a> and start straight away. No card, no call.</p>
+<p>If you're evaluating Protos for a team, we also run structured pilots on a dedicated Enterprise Pod, with a Forward Deployed Engineer working alongside you to get your models and data in. That's the faster route to knowing whether it works for your problem. Contact us to set one up.</p>
+</details>
+<details class="faq">
+<summary>How does pricing work?</summary>
+<p>You can subscribe to a Protos account at <a href="https://protos.arismachina.com" target="_blank">protos.arismachina.com</a> and see the pricing there.</p>
+<p>Contact us for enterprise deployment and pricing.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Versioning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Versioning">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Versioning
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Maintained by Aris Machina
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/arismachina" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
