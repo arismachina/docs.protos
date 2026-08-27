@@ -49,14 +49,14 @@ Values render with their units, and requirement values render as their bounds �
 
 ## The Analysis Panel
 
-Below the table there is an analysis panel where you can plot the data across your selected documents. It opens on a **Gap Analysis** tab, which is always present — pass/fail comparison of design values against requirement bounds is coming soon, so for now it just describes your selection. Add your own charts with **New Graph**. Each graph can be one of:
+Below the table there is an analysis panel where you can plot the data across your selected documents. It opens on a **Gap Analysis** tab, which is always present and describes your current selection. Add your own charts with **New Graph**. Each graph can be one of:
 
 | Chart type | Use for |
 |-----------|---------|
 | **Bar chart** | Compare a single field across all your variants — e.g. porosity across 5 formulations |
 | **Scatter plot** | Plot one field against another — e.g. particle size vs. dissolution rate |
 
-Each graph tab has a **Graph type** setting with all four options — Bar chart, Scatter plot, Histogram, and Spider chart. Histogram and Spider chart are marked *Coming soon* and can't be selected yet.
+Each graph tab has a **Graph type** setting for switching between them.
 
 You configure each chart by picking which schema fields go on which axis. The chart updates as you change your document selection.
 
