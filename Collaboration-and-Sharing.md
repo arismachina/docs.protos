@@ -276,7 +276,7 @@ The **Publications** card in Simulation Studio lists each publication with its c
 - **Password** — a **Protected** or **No password** badge, a field to **Set** or **Update** the password, and **Remove password** to drop it. Copy a password you've just set from the field beside it before you close the dialog: it isn't stored in a form Protos can show you again, so a lost one has to be replaced rather than looked up.
 - **Copy link**, **Open**, **Re-publish (refresh snapshot)**, and **Delete** — deleting stops the shared link working and can't be undone
 
-> **Deleting a project takes its publications offline.** A publication depends on the project that owns it, so deleting the project immediately stops every one of its public links working — as does deleting your account. Neither confirmation dialog warns you about it, so take the publications into account before you delete a project that has any.
+> **Deleting a project takes its publications offline.** A publication depends on the project that owns it, so deleting the project immediately stops every one of its public links working — as does deleting your account. Take the publications into account before you delete a project that has any.
 
 In a project with no publications yet, members who aren't the owner see *"Publications are managed by the project owner."* in place of the prompt to publish one.
 
