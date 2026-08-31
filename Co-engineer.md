@@ -31,6 +31,7 @@ The Protos **Co-Engineer** is a multi-agent AI system available across all featu
 | **Knowledge surfacing** | Find relevant entries from the [Knowledge Library](Knowledge-Library) as you work |
 | **Web research** | Search the web and import a page straight into the Knowledge Library |
 | **SharePoint import** | Pull files and folders from SharePoint into the Knowledge Library |
+| **CAD modelling** | Author and edit parametric 3D geometry in your own Onshape documents, and land the fabrication files back in the project |
 | **Requirements parsing** | Parse an uploaded spec document into structured targets and constraints |
 | **Connecting external tools** | Register an MCP server you name, then take you to the page to finish setting it up |
 | **Taking you to an asset** | Navigate you straight to the schema, canvas, or document it just worked on |
@@ -51,9 +52,24 @@ Type in plain language:
 
 When a response draws on the Knowledge Library it includes **source traces** — click one to see where it came from.
 
-You can attach files to any message — PDFs, documents, images, and more. Up to **10 files** per message, **8 MB** each.
+You can attach files to any message — PDFs, documents, images, and more. Up to **10 files** per message, **32 MB** each.
 
 > **Co-Engineer is a Pro feature.** On a free plan the chat panel shows an *Upgrade to Pro* banner and messages can't be sent.
+
+### Build and Brainstorm modes
+
+The mode pill sits in the lower-left of the chat composer, next to the **MCP** button. It sets the mode for the next message, so you can switch at any point in a conversation.
+
+| Mode | What it can do |
+|------|----------------|
+| **Build** (default) | Everything. Creates and edits schemas, data documents, canvases, requirements, and runs models. |
+| **Brainstorm** | Reads and researches only. It searches the [Knowledge Library](Knowledge-Library) and the web, and can import sources into the library — but it cannot change any project asset. |
+
+Use **Brainstorm** when you want to think something through without the Co-Engineer building as it goes: scoping an approach, reviewing what the library already holds, or asking what a set of results implies. If you ask it for something that would write to the project, it says the mode doesn't allow it rather than doing it.
+
+Importing into the Knowledge Library is deliberately allowed in Brainstorm — filing a source enriches what you can both draw on, rather than changing anything you have designed.
+
+The `/help` agent doesn't use modes; while you're with it the pill shows a plain read-only badge.
 
 ---
 
@@ -66,16 +82,25 @@ The Co-Engineer is built on a multi-agent architecture, but you only ever talk t
 - **Knowledge** — searches the Knowledge Library and the web, and imports sources into the library
 - **Data** — creates and edits schemas, data documents, and requirements, and sets up the Data Studio
 - **Simulation** — builds and edits canvases, and runs models
+- **CAD** — models parametric 3D geometry in your Onshape documents (see below)
 
-You never talk to a specialist directly. One other agent does take over the conversation when you ask for it: **Help**, which answers questions about Protos itself (type `/help`).
+You never talk to the first three directly — they run in the background and the Co-Engineer folds their results into its reply. Two agents work differently and take over the conversation instead: **CAD**, and **Help**, which answers questions about Protos itself (type `/help`). When one of them has the conversation you are talking to it, until it hands back.
+
+#### CAD (Onshape)
+
+The **CAD** specialist authors and edits parametric 3D geometry in your own Onshape documents. It writes native FeatureScript rather than importing a STEP file, so the model stays parametric and Onshape stays the single source of truth for the geometry. It can measure live geometry, check the result visually as it builds, and save fabrication files back into the project.
+
+CAD work is iterative — a build can run across dozens of steps — so unlike the background specialists, CAD takes over the conversation and drives the work itself, then hands back to the Co-Engineer.
+
+It needs **Onshape connected** as an MCP server. If it isn't, the agent says so and points you at [MCP Connections](MCP-Connections) instead of attempting the work.
 
 ### Sub-agent progress card
 
 While a specialist is working, a card appears in the chat with its name and a spinner. Expand **Task** to see the brief the Co-Engineer sent it, and watch the steps as it works. The card collapses to a green check when the specialist finishes, or a red cross if it failed — click it open again at any time to see what it did.
 
-### Agent badge
+### Knowing which agent you're with
 
-The chat panel shows an **agent badge** with the current agent's identity icon and accent colour. Hover the badge to see a "Talking to" label. It reads Co-engineer for normal work, and changes only when you're with Help.
+The pill in the composer shows the [mode](#build-and-brainstorm-modes) rather than naming the agent. Which agent has the conversation shows in its colour instead: the pill's tint, the accent ring on the composer, and the border on each message all follow the active agent. An agent that doesn't use modes — Help — shows a plain read-only badge in the same slot.
 
 ### Slash commands
 

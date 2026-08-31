@@ -61,6 +61,8 @@ The MCP servers page doesn't open on a blank slate. Your first stop is a grid of
 
 **Onshape** is the built-in CAD connector — *"Read and build CAD in your Onshape documents"*. Connecting it authorises Protos against **your own** Onshape account, and the Co-Engineer can then search your Onshape documents, inspect and build geometry, and work with the Onshape API on your behalf. It answers CAD and FeatureScript questions from a built-in Onshape reference as well.
 
+Once Onshape is connected, the Co-Engineer's [CAD specialist](Co-engineer#cad-onshape) can author and edit parametric geometry in those documents and save fabrication files back into the project. Until it is connected, the specialist explains what it needs and sends you here.
+
 Each preset card already carries that server's name, endpoint URL, and authentication type. Click **Connect** on a card and Protos creates the connection for you — no form to fill in — and takes you straight into authentication:
 
 - **OAuth servers** (most presets) — you're redirected to the provider to authorise access, then returned to Protos.

@@ -35,6 +35,8 @@ It is the step between *"I have data"* and *"I want to run a calculation"*. You 
 
 4. **Add a requirement** — when creating a new document, use the **Create type** toggle to switch from Design to Requirement. Requirement documents use the same schema fields, but numeric inputs become bounds instead of single values — a min and a max, or a value with a tolerance in absolute or percentage terms. The requirement appears as a column in the table alongside your designs, and the Gap Analysis panel uses its bounds to show which designs fall within spec.
 
+5. **Start a DOE** — with a design and a requirement both on the table, **Start a DOE** turns the sheet into the starting point for a [Design of Experiments](Design-of-Experiments) loop. Mark which fields to chase and which to vary, and the loop recommends the experiments worth running. Designs it produces come back here, beside the one it started from.
+
 Once you have the right documents selected, they are available as inputs to any canvas in Simulation Studio.
 
 You can also get here straight from a canvas: any Data input block in [Simulation Studio](Simulation-Studio) has an **Open in Data Studio** button that lands you on that block's schema.
@@ -87,6 +89,7 @@ Data Studio (what's available) → Data input block (what this canvas reads) →
 
 - [Schemas](Schemas) — define the structure your data documents follow
 - [Simulation Studio](Simulation-Studio) — build and run the calculations that use your activated documents
+- [Design of Experiments](Design-of-Experiments) — starts from a design and a requirement on this table
 - [Co-Engineer](Co-engineer) — the Co-Engineer can create data documents and activate them in the Data Studio on your behalf
 
 ---
