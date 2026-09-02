@@ -69,8 +69,6 @@ Use **Brainstorm** when you want to think something through without the Co-Engin
 
 Importing into the Knowledge Library is deliberately allowed in Brainstorm — filing a source enriches what you can both draw on, rather than changing anything you have designed.
 
-The `/help` agent doesn't use modes; while you're with it the pill shows a plain read-only badge.
-
 ---
 
 ## Multi-agent system
