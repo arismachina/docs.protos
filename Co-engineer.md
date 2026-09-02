@@ -65,7 +65,7 @@ The mode pill sits in the lower-left of the chat composer, next to the **MCP** b
 | **Build** (default) | Everything. Creates and edits schemas, data documents, canvases, requirements, and runs models. |
 | **Brainstorm** | Reads and researches only. It searches the [Knowledge Library](Knowledge-Library) and the web, and can import sources into the library — but it cannot change any project asset. |
 
-Use **Brainstorm** when you want to think something through without the Co-Engineer building as it goes: scoping an approach, reviewing what the library already holds, or asking what a set of results implies. If you ask it for something that would write to the project, it says the mode doesn't allow it rather than doing it.
+Use **Brainstorm** when you want to think something through without the Co-Engineer building as it goes: scoping an approach, reviewing what the library already holds, or asking what a set of results implies.
 
 Importing into the Knowledge Library is deliberately allowed in Brainstorm — filing a source enriches what you can both draw on, rather than changing anything you have designed.
 
