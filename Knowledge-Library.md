@@ -88,7 +88,7 @@ For bulk ingestion of many files at once:
 1. Click **Add → Upload Folder**.
 2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum. Individual files above the single-upload size limit are reported as failures rather than ingested.
 
-Folder uploads run independently of each other, so a second one started before the first has finished runs alongside it rather than waiting its turn.
+Folder uploads run independently of each other, so a second one started before the first has finished runs alongside it.
 
 ### Import from SharePoint
 
