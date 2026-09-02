@@ -67,7 +67,7 @@ The mode pill sits in the lower-left of the chat composer, next to the **MCP** b
 
 Use **Brainstorm** when you want to think something through without the Co-Engineer building as it goes: scoping an approach, reviewing what the library already holds, or asking what a set of results implies.
 
-Importing into the Knowledge Library is deliberately allowed in Brainstorm — filing a source enriches what you can both draw on, rather than changing anything you have designed.
+Importing into the Knowledge Library is deliberately allowed in Brainstorm — filing a source enriches what you can both draw on, without changing anything you have designed.
 
 ---
 
@@ -82,15 +82,15 @@ The Co-Engineer is built on a multi-agent architecture, but you only ever talk t
 - **Simulation** — builds and edits canvases, and runs models
 - **CAD** — models parametric 3D geometry in your Onshape documents (see below)
 
-You never talk to the first three directly — they run in the background and the Co-Engineer folds their results into its reply. Two agents work differently and take over the conversation instead: **CAD**, and **Help**, which answers questions about Protos itself (type `/help`). When one of them has the conversation you are talking to it, until it hands back.
+You never talk to Knowledge, Data, or Simulation directly — they run in the background and the Co-Engineer folds their results into its reply. **CAD** and **Help** work differently: each takes over the conversation, so while one of them has it you are talking to that agent, until it hands back. Help answers questions about Protos itself (type `/help`).
 
 #### CAD (Onshape)
 
-The **CAD** specialist authors and edits parametric 3D geometry in your own Onshape documents. It writes native FeatureScript rather than importing a STEP file, so the model stays parametric and Onshape stays the single source of truth for the geometry. It can measure live geometry, check the result visually as it builds, and save fabrication files back into the project.
+The **CAD** specialist authors and edits parametric 3D geometry in your own Onshape documents. It writes native FeatureScript, so the geometry stays parametric and Onshape remains the single source of truth for it. It can measure live geometry, check the result visually as it builds, and save fabrication files back into the project.
 
-CAD work is iterative — a build can run across dozens of steps — so unlike the background specialists, CAD takes over the conversation and drives the work itself, then hands back to the Co-Engineer.
+CAD work is iterative — a build can run across dozens of steps — so CAD takes over the conversation and drives the work itself, then hands back to the Co-Engineer.
 
-It needs **Onshape connected** as an MCP server. If it isn't, the agent says so and points you at [MCP Connections](MCP-Connections) instead of attempting the work.
+It needs **Onshape connected** as an MCP server. If it isn't, the agent explains what it needs and points you at [MCP Connections](MCP-Connections).
 
 ### Sub-agent progress card
 

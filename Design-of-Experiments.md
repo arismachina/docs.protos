@@ -72,7 +72,7 @@ Each row on the **Experiments** tab carries the reason it's there — which KPI 
 
 Each experiment can be filled however suits it, and one loop can mix all three:
 
-- **Type a measured value** straight into the row. You can also give a **±** — one standard deviation in the KPI's own units. Supply it and the model treats that reading as less certain instead of chasing the scatter; leave it out and the value is taken as exact.
+- **Type a measured value** straight into the row. You can also give a **±** — one standard deviation in the KPI's own units. Supply it and the model treats that reading as less certain; leave it out and the value is taken as exact.
 - **Run it on a canvas.** Pick which [Simulation Studio](Simulation-Studio) canvas runs the row and it's dispatched against a temporary copy of that canvas, so your canvas is never modified. Rows show as *queued* and *computing* while they run, and a failed row can be retried. If no canvas suits the loop yet, the Co-Engineer can build one for it.
 - **Compute it from a formula**, when the schema field carries one.
 
@@ -80,7 +80,7 @@ Mark each row **Physical experiment** or **Simulated** under **Run as**. The loo
 
 ### Bulk entry
 
-- **Attach measured results** takes a CSV of the whole round. Each row is matched to the experiment it names by its input values, so the sheet can be in any order — but a row matching no planned experiment, or two of them, stops the attach rather than being filed on a guess.
+- **Attach measured results** takes a CSV of the whole round. Each row is matched to the experiment it names by its input values, so the sheet can be in any order. A row that matches no planned experiment, or two of them, stops the whole attach.
 - **Upload experimental data** records past experiments the loop never planned. Name each column after a schema field — its label, its name, or its full path.
 - **Export** downloads this round, or all measured data, as CSV. The columns match the upload format, so an export from one loop can seed another.
 
@@ -101,11 +101,11 @@ The **Model** tab is fitted from the data, not configured.
 - **What is still uncertain** — which KPIs are pinned down across the whole lever range and which are still learning. If everything is pinned down, more rounds in these bounds buy little.
 - **What drives the variation** — how much of what a response does across the lever ranges each lever accounts for, alone and in combination. A lever swung narrowly accounts for little because it was barely moved, not because it doesn't matter.
 
-> **The model refuses rather than guessing.** If the runs so far can't support a model — too few of them, a lever that never varied on its own, failures clustered in one region, or a fit that is over-confident about its own uncertainty — the loop says so and tells you what would fix it.
+> **The model refuses when the data can't support it.** If the runs so far can't support a model — too few of them, a lever that never varied on its own, failures clustered in one region, or a fit that is over-confident about its own uncertainty — the loop says so and tells you what would fix it.
 
 ### The Gaps tab
 
-**Gap against requirements** shows each KPI as a distance from its target, and **Is the gap closing?** plots that distance after each round. Bars that stop shrinking mean more rounds aren't buying anything — widen the bounds or revise the requirement rather than running more batches.
+**Gap against requirements** shows each KPI as a distance from its target, and **Is the gap closing?** plots that distance after each round. Bars that stop shrinking mean more rounds aren't buying anything — widen the bounds or revise the requirement.
 
 **Original design vs best run so far** answers two separate questions side by side: did this move from where you started, and does it satisfy the requirement right now. A design can do either without the other. **Best in project** is the same KPI's best value anywhere on this schema, even from a different loop.
 
@@ -125,17 +125,17 @@ When every requirement is met the loop says so, and you can save the design you 
 
 ## Changing What the Loop Varies
 
-**Change what this loop varies** lets you widen a bound, add a lever, or retire one. The next round runs in the new space and keeps every past experiment the new space can still hold — the dialog tells you how much survives before you commit. If nothing does, it says so rather than silently starting from nothing.
+**Change what this loop varies** lets you widen a bound, add a lever, or retire one. The next round runs in the new space and keeps every past experiment the new space can still hold — the dialog tells you how much survives before you commit, and says so when nothing does.
 
 ---
 
 ## Where Measurements Live
 
-Measurements belong to the **project and the schema**, not to the loop that recorded them. So a new loop on a system this project has already measured starts from that whole history instead of from nothing, and the **Data** tab shows every measurement on the system regardless of which loop produced it.
+Measurements belong to the **project and the schema**, not to the loop that recorded them. So a new loop on a system this project has already measured starts from that whole history, and the **Data** tab shows every measurement on the system regardless of which loop produced it.
 
 Each value keeps where it came from — measured, simulated, or computed — so the loop can weigh a number without ever having to guess at its provenance.
 
-Access is by loop: if a project has loops you can't read, the Data tab tells you there is measured data it isn't showing rather than quietly leaving it out.
+Access is by loop: if a project has loops you can't read, the Data tab tells you there is measured data it isn't showing.
 
 ---
 

@@ -98,7 +98,7 @@ Folder uploads run independently of each other, so a second one started before t
 4. Click **Import**. Protos scans your selection, then ingests on the server, reporting how many files were added, how many were already in the library, and how many failed.
 5. Closing the dialog only stops the progress display — **the import keeps running on the server**. Reload the page to see files that landed after you closed it.
 
-A SharePoint import is not held to the folder-upload batch caps — it can carry up to **12,000 files** and about **22 GB** in one go, and a selection larger than a single ingestion batch is split into several that run in turn. Individual files above the per-file size limit are still reported as failures. Unlike a folder upload, the count includes unsupported file types, which are reported as failures rather than skipped up front.
+A SharePoint import has its own, much larger limits: up to **12,000 files** and about **22 GB** in one go, with a selection bigger than a single ingestion batch split into several that run in turn. Individual files above the per-file size limit are reported as failures, and unsupported file types count toward the total and are reported the same way.
 
 > **Why the two differ.** A folder upload stages every byte in your browser before ingestion starts, which is what holds it to 100 MB. A SharePoint import is fetched server-side and never stages, so it can be much larger.
 
