@@ -60,14 +60,18 @@ You can attach files to any message — PDFs, documents, images, and more. Up to
 
 The mode pill sits in the lower-left of the chat composer, next to the **MCP** button. It sets the mode for the next message, so you can switch at any point in a conversation.
 
+Some agents don't use modes — guided onboarding and Help — and while one of them has the conversation the slot holds a plain badge. Hover it to see which agent you're talking to. Modes are back as soon as the Co-Engineer has the conversation again.
+
 | Mode | What it can do |
 |------|----------------|
 | **Build** (default) | Everything. Creates and edits schemas, data documents, canvases, requirements, and runs models. |
-| **Brainstorm** | Reads and researches only. It searches the [Knowledge Library](Knowledge-Library) and the web, and can import sources into the library — but it cannot change any project asset. |
+| **Brainstorm** | Reads and researches. It searches the [Knowledge Library](Knowledge-Library) and the web, and can import sources into the library, but it cannot change a schema, data document, canvas, or requirement. |
 
 Use **Brainstorm** when you want to think something through without the Co-Engineer building as it goes: scoping an approach, reviewing what the library already holds, or asking what a set of results implies.
 
 Importing into the Knowledge Library is deliberately allowed in Brainstorm — filing a source enriches what you can both draw on, without changing anything you have designed.
+
+> **Brainstorm's limit covers your Protos project, not the tools you've connected to it.** Tools reached over [MCP](MCP-Connections) are outside it, and some of them can write: a connected issue tracker can open an issue, and Onshape can be driven to change a document. If you want a guarantee that nothing outside Protos is touched either, turn those servers off for the conversation from the **MCP** button.
 
 ---
 
@@ -98,7 +102,7 @@ While a specialist is working, a card appears in the chat with its name and a sp
 
 ### Knowing which agent you're with
 
-Which agent has the conversation shows in its colour: the pill's tint, the accent ring on the composer, and the border on each message all follow the active agent. An agent that doesn't use modes — Help — shows a plain read-only badge in the same slot.
+Which agent has the conversation shows in its colour: the pill's tint, the accent ring on the composer, and the border on each message all follow the active agent. Where the slot holds a plain badge — guided onboarding, or Help — hovering it names the agent outright.
 
 ### Slash commands
 

@@ -2,6 +2,8 @@
 
 [← Home](Home) · **Design of Experiments**
 
+> **Design of Experiments is in beta.** It carries a **beta** tag in the sidebar. It works end to end, but expect rougher edges than the rest of Protos.
+
 **Design of Experiments** is for when you have a limited budget of runs — simulations or bench experiments — and need to spend them where they buy the most information. You say what you're chasing and what you're free to vary; each round recommends the next batch of experiments from everything measured so far.
 
 > **A loop, not a one-off design.** You don't get a single table of experiments to go and run. You run a batch, record what came back, and the recommender uses it to choose the next batch. Each pass is a **round**, and the loop keeps going until the requirement is met or it stops learning anything new.
@@ -47,7 +49,7 @@ If you have no requirement yet, create one from the Data Studio's **Create type*
    - **Experiments per round** — how many you can run in parallel. The loop recommends this many each round.
 5. Click **Plan the first round**. Protos opens the loop screen with the opening batch ready.
 
-Loops are listed under **Design of Experiments** in the sidebar, and each one is linkable — the URL carries the loop, so you can share a running loop with a colleague who can read it.
+**Design of Experiments** in the sidebar opens the loop list for the project — a single entry, so a loop you're looking for is on that page. Each loop is linkable: the URL carries the loop, so you can send a colleague who can read it straight to a running one.
 
 ---
 
@@ -81,7 +83,7 @@ Mark each row **Physical experiment** or **Simulated** under **Run as**. The loo
 ### Bulk entry
 
 - **Attach measured results** takes a CSV of the whole round. Each row is matched to the experiment it names by its input values, so the sheet can be in any order. A row that matches no planned experiment, or two of them, stops the whole attach.
-- **Upload experimental data** records past experiments the loop never planned. Name each column after a schema field — its label, its name, or its full path.
+- **Upload experiments** records past experiments the loop never planned. Name each column after a schema field — its label, its name, or its full path.
 - **Export** downloads this round, or all measured data, as CSV. The columns match the upload format, so an export from one loop can seed another.
 
 ### Letting it run itself
@@ -135,7 +137,7 @@ Measurements belong to the **project and the schema**, not to the loop that reco
 
 Each value keeps where it came from — measured, simulated, or computed — so the loop can weigh a number without ever having to guess at its provenance.
 
-Access is by loop: if a project has loops you can't read, the Data tab tells you there is measured data it isn't showing.
+Access is by loop, so the Data tab shows the measurements from loops you can read. If you can read none of the project's loops, it tells you there is measured data it isn't showing. If you can read some, the systems covered only by the others are absent from the picker without being flagged — and naming one of those directly is refused with an explanation.
 
 ---
 

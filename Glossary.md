@@ -14,8 +14,8 @@ Definitions for terms used throughout the Protos platform and this wiki. Terms a
 | **Design freeze** | A concept in the PSPP framework referring to the point at which a validated design is locked for manufacturing handoff. In Protos, this is achieved by publishing a canvas snapshot. |
 | **Design space** | The range of possible parameter combinations for a design, explored via sweeps in [Simulation Studio](Simulation-Studio). |
 | **DOE (Design of Experiments)** | Choosing which experiments to run so a limited budget of runs buys the most information. In Protos it is a **loop**: each round's results decide the next round's experiments. See [Design of Experiments](Design-of-Experiments). |
-| **KPI** | In a [DOE](Design-of-Experiments) loop, a field the loop is chasing — it tries to move it toward the target its requirement document states. |
-| **Lever** | In a [DOE](Design-of-Experiments) loop, a field the loop may vary. It chooses values for each lever, within the range the schema allows. |
+| **KPI** | In a [DOE](Design-of-Experiments) loop, a field the loop is chasing. It tries to move the KPI toward a target, taken from the requirement document or stated when the loop is set up. |
+| **Lever** | In a [DOE](Design-of-Experiments) loop, a field the loop may vary. It chooses values for each lever within a range, taken from the schema or set on the loop, and the range can be widened later. |
 | **Node** | A block on the canvas. Node types are: parameter, data input, calculation, model, and visualization. They are connected by arrows that define the data flow. |
 | **PSPP** | Process → Structure → Property → Performance. The reasoning framework underlying Protos — used to trace how manufacturing choices propagate through to physical outcomes. |
 | **Ref node** | A [schema](Schemas) field type (shown as "Ref" in the editor) that links one schema entry to another, creating relational structure across engineering data. See [Schemas → Using Reference Fields](Schemas#using-reference-fields). |
