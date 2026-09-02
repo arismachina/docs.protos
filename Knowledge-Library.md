@@ -86,7 +86,7 @@ The **Add** menu offers four ways in, described below in the order they appear.
 For bulk ingestion of many files at once:
 
 1. Click **Add → Upload Folder**.
-2. Select a folder — Protos processes the files in the background and reports real progress as each one lands, so the count you see is what has actually been ingested. Batches are capped at **100 MB** and **500 files** maximum. Individual files above the single-upload size limit are reported as failures rather than ingested.
+2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum. Individual files above the single-upload size limit are reported as failures rather than ingested.
 
 Upload a second folder before the first has finished and both run — the second no longer waits behind the first.
 
