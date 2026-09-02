@@ -94,7 +94,7 @@ Several uploads can be in progress at once; Protos works through them as capacit
 
 1. Click **Add → From SharePoint**. The **Browse SharePoint** dialog opens.
 2. If your Microsoft account isn't connected yet, connect it here — or from **Integrations** in the sidebar. In a tenant where individual users can't grant access themselves, a Microsoft administrator approves Protos once for the whole organisation, and everyone connects normally afterwards. Your IT team can also limit that approval to named sites and folders.
-3. Browse sites, then document libraries and folders, or switch to **Search** to find a file by name. Tick anything you want to bring in: individual files, whole folders including everything nested inside them, or an entire document library. One selection can mix all three within a site — moving to a different site clears it.
+3. Browse sites, then document libraries and folders, or switch to **Search** to find a file by name within the site you're in. Tick anything you want to bring in: individual files, whole folders including everything nested inside them, or an entire document library. One selection can mix all three within a site — moving to a different site clears it.
 4. Click **Import**. Protos scans your selection, then ingests on the server, reporting how many files were added, how many were already in the library, and how many failed.
 5. Closing the dialog only stops the progress display — **the import keeps running on the server**. Reload the page to see files that landed after you closed it.
 
