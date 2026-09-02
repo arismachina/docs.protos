@@ -98,7 +98,7 @@ While a specialist is working, a card appears in the chat with its name and a sp
 
 ### Knowing which agent you're with
 
-The pill in the composer shows the [mode](#build-and-brainstorm-modes) rather than naming the agent. Which agent has the conversation shows in its colour instead: the pill's tint, the accent ring on the composer, and the border on each message all follow the active agent. An agent that doesn't use modes — Help — shows a plain read-only badge in the same slot.
+Which agent has the conversation shows in its colour: the pill's tint, the accent ring on the composer, and the border on each message all follow the active agent. An agent that doesn't use modes — Help — shows a plain read-only badge in the same slot.
 
 ### Slash commands
 
