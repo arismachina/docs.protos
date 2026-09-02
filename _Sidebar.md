@@ -14,6 +14,7 @@
 - [Schemas](Schemas)
 - [Data Studio](Data-Studio)
 - [Simulation Studio](Simulation-Studio)
+- [Design of Experiments](Design-of-Experiments)
 - [Models Library](Model-Library)
   - [Cell Performance](Model-Cell-Performance)
   - [Cell Optimizer](Model-Cell-Optimizer)

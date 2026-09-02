@@ -76,7 +76,7 @@ The **Add** menu offers four ways in, described below in the order they appear.
 ### Upload a document
 
 1. Click **Add → Upload Document**.
-2. Choose a file — PDF, DOCX, Excel, CSV, TXT, images, and more. Up to about 16 MB.
+2. Choose a file — PDF, DOCX, Excel, CSV, TXT, images, and more. Up to **100 MB** per file.
 3. The title is auto-filled from the filename — edit it if needed.
 4. Click **Upload**. Protos parses and chunks the content, making it available to the Co-Engineer.
 5. If that file is already in the library, Protos tells you so instead of creating a duplicate, and offers **View document** to open the copy you already have.
@@ -86,17 +86,21 @@ The **Add** menu offers four ways in, described below in the order they appear.
 For bulk ingestion of many files at once:
 
 1. Click **Add → Upload Folder**.
-2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum. Individual files above the single-upload size limit are reported as failures rather than ingested.
+2. Select a folder — Protos processes the files in the background. Batches are capped at **100 MB** and **500 files** maximum. A file Protos can't parse is reported as a failure, and the rest of the batch is ingested as normal.
+
+Several uploads can be in progress at once; Protos works through them as capacity allows.
 
 ### Import from SharePoint
 
 1. Click **Add → From SharePoint**. The **Browse SharePoint** dialog opens.
-2. If your Microsoft account isn't connected yet, connect it here — or from **Integrations** in the sidebar.
-3. Browse sites, then document libraries and folders, or switch to **Search** to find a file by name. Tick anything you want to bring in: individual files, whole folders including everything nested inside them, or an entire document library. One selection can mix all three within a site — moving to a different site clears it.
+2. If your Microsoft account isn't connected yet, connect it here — or from **Integrations** in the sidebar. In a tenant where individual users can't grant access themselves, a Microsoft administrator approves Protos once for the whole organisation, and everyone connects normally afterwards. Your IT team can also limit that approval to named sites and folders.
+3. Browse sites, then document libraries and folders, or switch to **Search** to find a file by name within the site you're in. Tick anything you want to bring in: individual files, whole folders including everything nested inside them, or an entire document library. One selection can mix all three within a site — moving to a different site clears it.
 4. Click **Import**. Protos scans your selection, then ingests on the server, reporting how many files were added, how many were already in the library, and how many failed.
 5. Closing the dialog only stops the progress display — **the import keeps running on the server**. Reload the page to see files that landed after you closed it.
 
-The same **500 file** and **100 MB** batch caps apply as to a folder upload, and oversized files are reported the same way. Unlike a folder upload, the count includes unsupported file types, which are reported as failures rather than skipped up front.
+A SharePoint import has its own, much larger limits: up to **12,000 files** and about **22 GB** in one go. A selection bigger than a single ingestion batch is split across several background jobs. Individual files above the per-file size limit are reported as failures, and unsupported file types count toward the total and are reported the same way.
+
+> **Why the two differ.** A folder upload is staged whole on the server before ingestion starts, on storage shared with everything else in your deployment — the 100 MB cap is what protects it. A SharePoint import is read straight from SharePoint as it ingests and is never staged, so it can be far larger.
 
 ### Add a knowledge note
 
@@ -105,6 +109,14 @@ To capture a decision, insight, or observation as text:
 1. Click **Add → Add Knowledge**.
 2. Enter a **Title** and the **Content**.
 3. Click **Save Knowledge**.
+
+### What Protos reads from a file
+
+- **Text** is extracted, chunked, and embedded so the Co-Engineer can search it and quote it back with a source trace.
+- **Tables in spreadsheets** are read as tables, not as flattened text. That lets the Co-Engineer answer questions about a specific column, filter on a value, or compare figures across workbooks. Where a sheet is too ambiguous to read confidently, Protos says so on the document instead of guessing at it.
+- **Drawings and scanned PDFs** are searchable: a page with no usable text layer is read by a vision model.
+
+> **Spot-check critical values from large drawing sheets.** Very small text on A0/A1-sized pages can be misread.
 
 ### Managing documents and folders
 
