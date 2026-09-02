@@ -101,7 +101,7 @@ The **Model** tab is fitted from the data, not configured.
 - **What is still uncertain** — which KPIs are pinned down across the whole lever range and which are still learning. If everything is pinned down, more rounds in these bounds buy little.
 - **What drives the variation** — how much of what a response does across the lever ranges each lever accounts for, alone and in combination. A lever swung narrowly accounts for little because it was barely moved, not because it doesn't matter.
 
-> **The model refuses rather than guessing.** If the runs so far can't support a model — too few of them, a lever that never varied on its own, failures clustered in one region, or a fit that is over-confident about its own uncertainty — the loop says so and tells you what would fix it. It does not produce a smooth response surface you shouldn't trust.
+> **The model refuses rather than guessing.** If the runs so far can't support a model — too few of them, a lever that never varied on its own, failures clustered in one region, or a fit that is over-confident about its own uncertainty — the loop says so and tells you what would fix it.
 
 ### The Gaps tab
 
