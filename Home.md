@@ -19,15 +19,22 @@
 
 > **The [Co-Engineer](Co-engineer) can help throughout your workflow.** It can create schemas, populate data documents, build canvases, and search the Knowledge Library — all from a chat. Use it as much or as little as you like alongside the features directly.
 
-1. Go to [protos.arismachina.com](https://protos.arismachina.com){target="_blank"} and tell Protos what you want to create — this creates your first project and kicks off guided onboarding.
+1. Go to [protos.arismachina.com](https://protos.arismachina.com){target="_blank"}. With no project yet you land on the Co-Engineer, in the same chat window you'll use from then on: tell it what you want to create, and sending that message creates your first project and kicks off guided onboarding. Example projects sit below the composer — opening one shows it read-only, so you can look without starting anything.
 2. From that description, the Co-Engineer works through five steps, one per turn — a starter **schema**, a **data document** from it, an entry in the **Knowledge Library**, a guided stop at the **Models Library**, and a starter **canvas** in Simulation Studio.
 3. After the five steps, onboarding hands off to the general-purpose Co-Engineer so you can keep building or adjust anything it set up.
 
 ### Before you have a project
 
-Nearly everything in Protos hangs off a project, so until you have one the feature links in the sidebar are greyed out and a **Create a project** card sits at the top of it: *"You have no projects yet — create one to unlock your full workspace."* Delete your last project and you land back on the project library with that same card waiting.
+Nearly everything in Protos hangs off a project, so until you have one the feature links in the sidebar are greyed out. A card at the top of the sidebar always says why, and which one you get depends on where you are:
 
-While guided onboarding is still in progress, a **Continue Onboarding** card takes that spot instead and returns you to the Co-Engineer to finish the remaining steps.
+| Card | When you see it | Where it takes you |
+|------|-----------------|--------------------|
+| **Create a project** | You have no projects at all | The project library |
+| **Start with Co-Engineer** | You've signed up but haven't sent a first message, and you've navigated away from the home screen | Back to the Co-Engineer home |
+| **Choose a project** | You have projects but none is selected — typically a bookmark or an emailed link opened on a new browser | The project library |
+| **Continue Onboarding** | Guided onboarding is still in progress | Back to the Co-Engineer to finish the remaining steps |
+
+Delete your last project and you land back on the project library with the **Create a project** card waiting.
 
 ---
 
@@ -100,6 +107,14 @@ Your workbench for managing and comparing design data before running a simulatio
 Build and run calculation canvases — connect your data to models and calculations, and see results update automatically. Supports Python calculations, external models, parameter sweeps, and in-canvas visualization.
 
 [→ Simulation Studio guide](Simulation-Studio)
+
+---
+
+### [Design of Experiments](Design-of-Experiments)
+
+Spend a limited budget of experiments where they buy the most information. Mark what you're chasing and what you're free to vary, and each round recommends the next batch from everything measured so far — whether the results come from a simulation canvas, a formula, or a lab bench.
+
+[→ Design of Experiments guide](Design-of-Experiments)
 
 ---
 
