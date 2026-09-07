@@ -49,7 +49,7 @@ If you have no requirement yet, create one from the Data Studio's **Create type*
    - **Experiments per round** — how many you can run in parallel. The loop recommends this many each round.
 5. Click **Plan the first round**. Protos opens the loop screen with the opening batch ready.
 
-**Design of Experiments** in the sidebar opens the loop list for the project — a single entry, so a loop you're looking for is on that page. Each loop is linkable: the URL carries the loop, so you can send a colleague who can read it straight to a running one.
+**Design of Experiments** in the sidebar opens the project's loop list — one row per loop, however many rounds it has run. A search box above the list matches a loop's name or the name of the schema it runs on. Each loop is linkable: the URL carries the loop, so you can send a colleague who can read it straight to a running one.
 
 ---
 
@@ -121,7 +121,7 @@ The **Model** tab is fitted from the data, not configured.
 
 When every requirement is met the loop says so, and you can save the design you want or keep going to look for a better one.
 
-**Abandon** gives up on a loop for good and deletes every draft design it created that you haven't adopted. This can't be undone.
+**Abandon** gives up on a loop for good and deletes every draft design it created that you haven't adopted. This can't be undone. It is unavailable while a round is in flight, and on a loop you have validated — finish or stop the round first.
 
 ---
 
@@ -137,7 +137,7 @@ Measurements belong to the **project and the schema**, not to the loop that reco
 
 Each value keeps where it came from — measured, simulated, or computed — so the loop can weigh a number without ever having to guess at its provenance.
 
-Access is by loop, so the Data tab shows the measurements from loops you can read. If you can read none of the project's loops, it tells you there is measured data it isn't showing. If you can read some, the systems covered only by the others are absent from the picker without being flagged — and naming one of those directly is refused with an explanation.
+Access is by loop, so the Data tab shows the measurements from loops you can read. If you can read none of the project's loops, it tells you there is measured data it isn't showing.
 
 ---
 
