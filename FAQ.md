@@ -18,22 +18,24 @@ Common questions about Protos, grouped by topic.
 ??? faq "How is this different from using ChatGPT or Claude on our data?"
     A chat session gives you the model and nothing else. You paste in your context, get an answer back, and when the window closes the structure of the work goes with it.
 
-    In Protos the model has somewhere to put things. It writes the calculation components, pulls structured data out of your documents and wires up canvases, and what it builds stays: your data in schemas, your models registered and ready to run.
+    Protos is a workspace that holds your knowledge and decisions all in one place.
 
-    Three things that come from the workspace rather than the model:
+    In Protos the Co-Engineer has somewhere to put things. It writes calculation components, pulls structured data out of your documentation and wires up canvases/workflows, and what it builds stays: your data in schemas, your knowledge connected and your models registered.
 
-    - **Traceability.** Every value is held against the document it came from, so a result can be audited.
-    - **Collaboration.** Work is shared across the team with role-based access, instead of sitting in one person's session.
+    Three things that come from the workspace:
+
+    - **Traceability.** Every value is held against the document it came from, so a result can be audited and traced back to its source.
+    - **Collaboration.** Work is shared across the team with role-based access and real-time updates, instead of sitting in one person's session.
     - **Versioning.** Schemas, canvases and models are versioned, so every change is attributed and you can compare or roll back.
 
-    The number itself comes from running those components, not from the model predicting it. You're still trusting the calculation, the same as code you wrote yourself. What you can do is open it.
+    The numbers themselves come from running components and workflows, not from a model predicting them. You're still trusting the underlying math and code.
 
     The AI isn't doing the engineering. It's making everything around it quicker to set up.
 
     Docs: [Simulation Studio](Simulation-Studio) · [Versioning](Versioning)
 
 ??? faq "Do I need to be a simulation engineer to use it?"
-    No, but you need to know your domain. The Co-Engineer builds schemas, populates data documents from your files and assembles canvases, so most of the time you're reviewing structure rather than writing it. Reading a simulation result and judging whether it's sensible is still your job.
+    No, the platform can be used at any level of expertise, but to cover a complex domain the person behind the workflows needs to know their domain. The Co-Engineer builds schemas, populates data documents from your files and assembles canvases, so most of the time you're reviewing structure rather than writing it. Reading a simulation result and judging whether it's sensible is still where we want to see the humans in the loop.
 
     Docs: [Co-Engineer](Co-engineer)
 
@@ -196,11 +198,7 @@ Common questions about Protos, grouped by topic.
     **For technical reviewers:** Domain models are physics simulations on PyBaMM, executed inside Aris GCP/Kubernetes. Knowledge and RAG embeddings are stored in Aris PostgreSQL with pgvector. Customer-supplied model code runs sandboxed under gVisor. Provider-side retention is for abuse monitoring only, not model improvement, and doesn't depend on any per-conversation toggle. Anthropic currently retains data for up to 30 days for that purpose. Where you need a stricter guarantee, Zero Data Retention can be arranged, meaning the provider stores nothing at all.
 
 ??? faq "Which third parties see our data?"
-    Three AI providers, each for a specific job.
-
-    - **Anthropic** runs the Co-Engineer and receives prompts, project and schema context, retrieved knowledge and tool arguments.
-    - **OpenAI** handles requirements and specification ingest.
-    - **Mistral** does OCR and embeddings, so uploaded document text passes through it.
+    Three AI providers see your content: Anthropic, OpenAI and Mistral.
 
     If you register your own external model endpoint, inputs go wherever you point it. Everything else stays inside our cloud. The current sub-processor list is available in full on request.
 
